@@ -1,5 +1,5 @@
 #Other libs
-from random import *
+from random import randint
 
 #Global constants
 
@@ -59,11 +59,17 @@ class Table(object):
         #Award the pot to a random player
         self._players[randint(0, 4)]._chips += self._pot
         self._pot = 0
-        #When implementing sensible players, the button should also move
-
-        #Not implementing busting/moving up or down yet
-
+        
+        #Move button
+        self._button = (self._button + 1) % 5
         self._rounds += 1
+
+        #Return busted player (if any)
+        bb = (self._button + 2) % 5
+        if(self._players[bb]._chips < MIN_STAKE * MIN_UNITS):
+            return self._players.pop(bb)
+        else:
+            return None
 
     def reportStacks(self):
         """Report the stack sizes for the players"""
@@ -76,12 +82,14 @@ class Table(object):
 class Manager(object):
     """A stake manager (responsible for all tables having a certain stake)"""
 
-    def __init__(self, stake = MIN_STAKE, tables = MAX_TABLES):
+    def __init__(self, stake = MIN_STAKE, tables = MAX_TABLES, cashier = None):
         """Setting up variables for the manager"""
 
         self._stake = stake
         self._numtables = tables
+        self._cashier = cashier
         self._tables = list()
+        self._freeTables = list()   #Tables that are not filled
         self._waitList = list()
         self._rounds = 0
 
@@ -105,7 +113,12 @@ class Manager(object):
         """Starts a new hand at all tables"""
         
         for table in self._tables:
-            table.playHand()
+            busto = table.playHand()
+
+            if busto is not None:
+                self._tables.remove(table)
+                self._freeTables.append(table)
+                self._cashier.handleBust(busto)
 
         self._rounds += 1
 
@@ -116,3 +129,32 @@ class Manager(object):
             header = "Table #" + str(i) +"\n"
             print(header)
             self._tables[i].reportStacks()
+
+        for j in range(len(self._freeTables)):
+            header = "Table #" + str(j) +"\n"
+            print(header)
+            self._freeTables[j].reportStacks()            
+
+class Cashier(object):
+    """A cashier that gives players back cash based on their amount of chips"""
+
+    def __init__(self):
+        """Setting up variables for the cashier"""
+
+        self._bustos = list()   #Keeps track of the players that leaves and the amount of cash they take with them
+
+    def handleBust(self, busto, stake = MIN_STAKE):
+        """Handles a player that has too few chips to keep playing"""
+
+        busto._cash += busto._chips * stake / MIN_STAKE
+        busto._chips = 0
+
+        #Keep track of the player
+        self._bustos.append(busto)
+
+    def makeReport(self):
+        """Report on the players that have left the casino"""
+
+        print("Cash of bustos:")
+        for busto in self._bustos:
+            print("\t" + str(busto._cash))
