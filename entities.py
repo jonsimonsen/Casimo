@@ -8,7 +8,7 @@ BUY_IN = 120        #Number of big bets required to sit down at a table
 MAX_STACK = 240     #When posting the BB, this is the max amount of big bets allowed (must move up otherwise)
 MIN_STACK = 60      #When posting the BB, this is the least amount of big bets allowed (must move down otherwise)
 MIN_UNITS = 30      #When posting the BB at the lowest stakes, this is the least amount of big bets allowed (must leave otherwise)
-MAX_TABLES = 1      #Maximum amount of tables at a stake
+MAX_TABLES = 10      #Maximum amount of tables at a stake
 SEATS = 5           #Number of seats at a table
 
 class Player(object):
