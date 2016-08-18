@@ -2,16 +2,16 @@
 from entities import *
 
 #Global constants
-HANDS_PER_ROUND = 10    #Number of hands played in each round (per table)
+HANDS_PER_ROUND = 20    #Number of hands played in each round (per table)
 ROUNDS = 10             #Number of rounds to run the simulator
 
 #initialising variables
 moneyBags = Cashier()
-boss = Manager(cashier = moneyBags)
+sheepDog = Recruiter()
+boss = Manager(cashier = moneyBags, recruiter = sheepDog)
 
-#Initialise the maximum amount of tables for the manager
-for i in range(MAX_TABLES):
-    boss.fillWaitList()
+#Initialize the waitList with enough players for one table
+boss.getPlayers(SEATS)
 
 #main loop (for now testing ten rounds, presumably at a single table)
 

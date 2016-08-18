@@ -4,13 +4,15 @@ from random import randint
 #Global constants
 
 MIN_STAKE = 4       #Number of chips for a big bet at the smallest stakes
-MAX_STAKE = 8       #Number of chips for a big bet at the highest stakes
+MAX_STAKE = 16      #Number of chips for a big bet at the highest stakes
 BUY_IN = 120        #Number of big bets required to sit down at a table
-MAX_STACK = 240     #When posting the BB, this is the max amount of big bets allowed (must move up otherwise)
-MIN_STACK = 60      #When posting the BB, this is the least amount of big bets allowed (must move down otherwise)
-MIN_UNITS = 30      #When posting the BB at the lowest stakes, this is the least amount of big bets allowed (must leave otherwise)
-MAX_TABLES = 100    #Maximum amount of tables at a stake
+MAX_TABLES = 64     #Maximum amount of tables at a stake
 SEATS = 5           #Number of seats at a table
+
+#For moving between stakes
+MAX_STACK = BUY_IN * 2          #When posting the BB, this is the max amount of big bets allowed (must move up otherwise)
+MIN_STACK = BUY_IN // 2         #When posting the BB, this is the least amount of big bets allowed (must move down otherwise)
+MIN_UNITS = MIN_STAKE * SEATS   #When posting the BB at the lowest stakes, this is the least amount of big bets allowed (must leave otherwise)
 
 class Player(object):
     """A poker player"""
@@ -94,12 +96,13 @@ class Table(object):
 class Manager(object):
     """A stake manager (responsible for all tables having a certain stake)"""
 
-    def __init__(self, stake = MIN_STAKE, tables = MAX_TABLES, cashier = None):
+    def __init__(self, stake = MIN_STAKE, tables = MAX_TABLES, cashier = None, recruiter = None):
         """Setting up variables for the manager"""
 
         self._stake = stake
         self._numtables = tables
         self._cashier = cashier
+        self._recruiter = recruiter
         self._tables = list()
         self._freeTables = list()   #Tables that are not filled
         self._waitList = list()
@@ -108,11 +111,10 @@ class Manager(object):
         self._upList = list()
         self._downList = list()
 
-    def fillWaitList(self):
-        """Fills the waitlist with players for one table (populating the waitlist will be implemented differently later)"""
-        for i in range(SEATS):
-            newFace = Player()
-            self._waitList.append(newFace)
+    def getPlayers(self, n = 1):
+        """Fills the waitlist with n players"""
+        
+        self._waitList.extend(self._recruiter.findPlayers(n))
 
     def startTables(self):
         """Start new tables, populating them with players from the waitList. This process repeats until there are not enough player left in the waitList for another full table."""
@@ -135,6 +137,11 @@ class Manager(object):
                 self._waitList.append(mover)
 
             self._boss._downList = list()
+
+        #If there are too many empty tables, ask the recruiter to find a new player
+        if(self._recruiter is not None):
+            if((len(self._tables) + len(self._freeTables) < self._numtables) or (len(self._freeTables) > len(self._waitList))):
+                self.getPlayers()
 
         #Fill tables from the waitList
         for i in range(len(self._waitList)):
@@ -262,4 +269,27 @@ class Cashier(object):
             print("\t" + str(busto._cash))
 
         print("")
-        
+
+class Recruiter(object):
+    """A recruiter that finds new players for the casino"""
+
+    def __init__(self):
+        """Setting up variables for the recruiter"""
+
+        #No necessary variables have been identified yet
+
+    def findPlayers(self, n):
+        """Finding several players in one go"""
+
+        recruits = list()
+
+        for i in range(n):
+            newFace = Player()
+            recruits.append(newFace)
+
+        return recruits
+
+    def findPlayer(self):
+        """Find a single player"""
+
+        return self.findPlayers(1)
