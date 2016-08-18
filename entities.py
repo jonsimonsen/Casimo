@@ -9,7 +9,7 @@ BUY_IN = 120        #Number of big bets required to sit down at a table
 MAX_STACK = 240     #When posting the BB, this is the max amount of big bets allowed (must move up otherwise)
 MIN_STACK = 60      #When posting the BB, this is the least amount of big bets allowed (must move down otherwise)
 MIN_UNITS = 30      #When posting the BB at the lowest stakes, this is the least amount of big bets allowed (must leave otherwise)
-MAX_TABLES = 10     #Maximum amount of tables at a stake
+MAX_TABLES = 100    #Maximum amount of tables at a stake
 SEATS = 5           #Number of seats at a table
 
 class Player(object):
@@ -25,10 +25,10 @@ class Player(object):
         self._ups = 0               #Number of times the player has moved up in stakes
         self._downs = 0             #Number of times the player has moved down in stakes
 
-    def allin(self, stake = 4):
+    def allin(self):
         """Bet the maximum amount on a hand. Used for testing. The finished simulator should be based on a limit structure."""
 
-        self._chips -= stake * 6     #2 big bets predraw, 4 postdraw
+        self._chips -= MIN_STAKE * 6     #2 big bets predraw, 4 postdraw
 
 class Table(object):
     """A poker table"""
@@ -57,7 +57,7 @@ class Table(object):
         """Play one hand at the table"""
 
         for player in self._players:
-            player.allin(self._stake)
+            player.allin()
             player._played += 1
             self._pot += 6 * MIN_STAKE
 
@@ -71,13 +71,13 @@ class Table(object):
 
         #Move the new big blind up or down if required
         bb = (self._button + 2) % 5
-        if(self._players[bb]._chips >= self._stake * MAX_STACK):
+        if(self._players[bb]._chips >= MIN_STAKE * MAX_STACK):
             self._players[bb]._status = 1
             return self._players.pop(bb)
-        elif((self._stake > MIN_STAKE) and (self._players[bb]._chips <= self._stake * MIN_STACK)):
+        elif((self._stake > MIN_STAKE) and (self._players[bb]._chips <= MIN_STAKE * MIN_STACK)):
             self._players[bb]._status = 2
             return self._players.pop(bb)
-        elif((self._stake <= MIN_STAKE) and (self._players[bb]._chips <= self._stake * MIN_UNITS)):
+        elif((self._stake <= MIN_STAKE) and (self._players[bb]._chips < MIN_STAKE * MIN_UNITS)):
             self._players[bb]._status = 3
             return self._players.pop(bb)
         else:
@@ -117,7 +117,7 @@ class Manager(object):
     def startTables(self):
         """Start new tables, populating them with players from the waitList. This process repeats until there are not enough player left in the waitList for another full table."""
 
-        while((len(self._tables) < MAX_TABLES) and (len(self._waitList) > SEATS)):
+        while((len(self._tables) < self._numtables) and (len(self._waitList) >= SEATS)):
             newTab = Table(self._stake)
 
             for i in range(SEATS):
@@ -134,19 +134,20 @@ class Manager(object):
                 self._cashier.handleMover(mover, self._boss._stake, self._stake)
                 self._waitList.append(mover)
 
-            self._boss.downList = list()
+            self._boss._downList = list()
 
         #Fill tables from the waitList
         for i in range(len(self._waitList)):
             if(len(self._freeTables) > 0):
-                self._freeTables[0].seat(self._waitList.pop(0))
                 self._tables.append(self._freeTables.pop(0))
+                self._tables[-1].seat(self._waitList.pop(0))
             else:
                 break
 
         #Make new tables for the remaining players in the waitlist
         self.startTables()
-        
+
+        #Play a hand at each table. Handle moving players between stakes
         for table in self._tables:
             mover = table.playHand()
 
@@ -157,11 +158,13 @@ class Manager(object):
                 if(mover._status == 3):
                     self._cashier.handleBust(mover)
                 elif(mover._status == 2):
-                    mover._ups += 1
-                    self._upList.append(mover)
-                elif(mover._status == 1):
-                    self._downList.append(mover)
                     mover._downs += 1
+                    self._downList.append(mover)
+                elif(mover._status == 1):
+                    self._upList.append(mover)
+                    mover._ups += 1
+                else:
+                    print("Error: Illegal status on a player.")
 
         self._rounds += 1
 
@@ -174,9 +177,13 @@ class Manager(object):
 
             for mover in self._upList:
                 self._cashier.handleMover(mover, self._stake, self._boss._stake)
-                self._boss.waitList.append(mover)
+                self._boss._waitList.append(mover)
 
         self._upList = list()   #All move ups have been handled, so reset the list
+
+        #Start a new hand at the next level of stakes
+        if self._boss is not None:
+            self._boss.startHand()
 
     def hireBoss(self):
         """When there is noone responsible for the next level of stakes, a boss is hired for the manager"""
@@ -187,15 +194,22 @@ class Manager(object):
     def makeReport(self):
         """Report the stack sizes at the tables"""
 
+        mainhead = "Report for " + str(self._stake) + " unit stakes after " + str(self._rounds) + " hands played.\n"
+        print(mainhead)
+        
         for i in range(len(self._tables)):
-            header = "Table #" + str(i) +"\n"
+            header = "Table #" + str(i) + " after " + str(self._tables[i]._rounds) + " hands.\n"
             print(header)
             self._tables[i].reportStacks()
 
         for j in range(len(self._freeTables)):
-            header = "Table #" + str(j) +"\n"
+            header = "Table #" + str(len(self._tables) + j) + " after " + str(self._freeTables[j]._rounds) + " hands.\n"
             print(header)
-            self._freeTables[j].reportStacks()            
+            self._freeTables[j].reportStacks()
+
+
+        if(self._boss is not None):
+            self._boss.makeReport()
 
 class Cashier(object):
     """A cashier that gives players back cash based on their amount of chips"""
@@ -209,7 +223,7 @@ class Cashier(object):
     def handleBust(self, busto, stake = MIN_STAKE):
         """Handles a player that has too few chips to keep playing"""
 
-        busto._cash += busto._chips * stake / MIN_STAKE
+        busto._cash += busto._chips * stake // MIN_STAKE
         busto._chips = 0
 
         #Keep track of the player
@@ -218,7 +232,7 @@ class Cashier(object):
     def handleBreak(self, winner, stake = MAX_STAKE):
         """Handle a player that has too many chips to keep playing at the simulated tables"""
 
-        winner._cash += winner._chips * stake / MIN_STAKE
+        winner._cash += winner._chips * stake // MIN_STAKE
         winner._chips = 0
 
         #Keep track of the player
@@ -227,9 +241,14 @@ class Cashier(object):
     def handleMover(self, mover, oldstake, newstake):
         """Handle a player that is about to move up or down"""
 
-        mover._cash += winner._chips * oldstake / MIN_STAKE
-        mover._chips = mover._cash // newstake
-        mover._cash %= newstake
+        #print("Before:")
+        #print(str(mover._chips))
+        mover._cash += mover._chips * oldstake // MIN_STAKE
+        mover._chips = mover._cash // (newstake // MIN_STAKE)
+        mover._cash = mover._cash % (newstake // MIN_STAKE)
+        #print("After:")
+        #print(str(mover._chips))
+        #print(str(mover._cash))
 
     def makeReport(self):
         """Report on the players that have left the casino"""
@@ -238,6 +257,9 @@ class Cashier(object):
         for winner in self._highRollers:
             print("\t" + str(winner._cash))
 
-        print("Cash of bustos:")
+        print("\nCash of bustos:")
         for busto in self._bustos:
             print("\t" + str(busto._cash))
+
+        print("")
+        

@@ -1,0 +1,8208 @@
+Report for 4 unit stakes after 10 hands played.
+
+Table #0 after 10 hands.
+
+	Seat #0: 840 chips
+	Seat #1: 360 chips
+	Seat #2: 240 chips
+	Seat #3: 480 chips
+	Seat #4: 480 chips
+
+Table #1 after 10 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 600 chips
+	Seat #2: 480 chips
+	Seat #3: 360 chips
+	Seat #4: 360 chips
+
+Table #2 after 10 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 480 chips
+	Seat #2: 600 chips
+	Seat #3: 360 chips
+	Seat #4: 360 chips
+
+Table #3 after 9 hands.
+
+	Seat #0: 384 chips
+	Seat #1: 264 chips
+	Seat #2: 864 chips
+	Seat #3: 384 chips
+	Seat #4: 504 chips
+
+Table #4 after 10 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 840 chips
+	Seat #2: 480 chips
+	Seat #3: 480 chips
+	Seat #4: 240 chips
+
+Table #5 after 10 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 480 chips
+	Seat #2: 360 chips
+	Seat #3: 600 chips
+	Seat #4: 480 chips
+
+Table #6 after 10 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 480 chips
+	Seat #2: 360 chips
+	Seat #3: 480 chips
+	Seat #4: 480 chips
+
+Table #7 after 10 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 240 chips
+	Seat #2: 720 chips
+	Seat #3: 600 chips
+	Seat #4: 360 chips
+
+Table #8 after 10 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 600 chips
+	Seat #2: 360 chips
+	Seat #3: 480 chips
+	Seat #4: 480 chips
+
+Table #9 after 10 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 360 chips
+	Seat #2: 480 chips
+	Seat #3: 360 chips
+	Seat #4: 720 chips
+
+Table #10 after 10 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 360 chips
+	Seat #2: 600 chips
+	Seat #3: 720 chips
+	Seat #4: 360 chips
+
+Table #11 after 10 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 360 chips
+	Seat #2: 600 chips
+	Seat #3: 360 chips
+	Seat #4: 720 chips
+
+Table #12 after 10 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 360 chips
+	Seat #2: 240 chips
+	Seat #3: 720 chips
+	Seat #4: 480 chips
+
+Table #13 after 10 hands.
+
+	Seat #0: 240 chips
+	Seat #1: 480 chips
+	Seat #2: 240 chips
+	Seat #3: 720 chips
+	Seat #4: 720 chips
+
+Table #14 after 10 hands.
+
+	Seat #0: 720 chips
+	Seat #1: 480 chips
+	Seat #2: 480 chips
+	Seat #3: 360 chips
+	Seat #4: 360 chips
+
+Table #15 after 10 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 480 chips
+	Seat #2: 480 chips
+	Seat #3: 600 chips
+	Seat #4: 480 chips
+
+Table #16 after 10 hands.
+
+	Seat #0: 240 chips
+	Seat #1: 480 chips
+	Seat #2: 360 chips
+	Seat #3: 840 chips
+	Seat #4: 480 chips
+
+Table #17 after 10 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 480 chips
+	Seat #2: 600 chips
+	Seat #3: 360 chips
+	Seat #4: 480 chips
+
+Table #18 after 10 hands.
+
+	Seat #0: 720 chips
+	Seat #1: 480 chips
+	Seat #2: 480 chips
+	Seat #3: 480 chips
+	Seat #4: 240 chips
+
+Table #19 after 10 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 720 chips
+	Seat #2: 600 chips
+	Seat #3: 480 chips
+	Seat #4: 240 chips
+
+Table #20 after 10 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 480 chips
+	Seat #2: 480 chips
+	Seat #3: 600 chips
+	Seat #4: 360 chips
+
+Table #21 after 10 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 720 chips
+	Seat #2: 240 chips
+	Seat #3: 600 chips
+	Seat #4: 240 chips
+
+Table #22 after 10 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 480 chips
+	Seat #2: 480 chips
+	Seat #3: 480 chips
+	Seat #4: 480 chips
+
+Table #23 after 10 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 360 chips
+	Seat #2: 600 chips
+	Seat #3: 480 chips
+	Seat #4: 600 chips
+
+Table #24 after 10 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 480 chips
+	Seat #2: 480 chips
+	Seat #3: 720 chips
+	Seat #4: 360 chips
+
+Table #25 after 10 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 720 chips
+	Seat #2: 360 chips
+	Seat #3: 480 chips
+	Seat #4: 480 chips
+
+Table #26 after 10 hands.
+
+	Seat #0: 720 chips
+	Seat #1: 240 chips
+	Seat #2: 480 chips
+	Seat #3: 360 chips
+	Seat #4: 600 chips
+
+Table #27 after 10 hands.
+
+	Seat #0: 720 chips
+	Seat #1: 480 chips
+	Seat #2: 360 chips
+	Seat #3: 600 chips
+	Seat #4: 240 chips
+
+Table #28 after 10 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 720 chips
+	Seat #2: 600 chips
+	Seat #3: 360 chips
+	Seat #4: 240 chips
+
+Table #29 after 10 hands.
+
+	Seat #0: 960 chips
+	Seat #1: 480 chips
+	Seat #2: 240 chips
+	Seat #3: 240 chips
+	Seat #4: 480 chips
+
+Table #30 after 10 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 360 chips
+	Seat #2: 480 chips
+	Seat #3: 240 chips
+	Seat #4: 840 chips
+
+Table #31 after 10 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 480 chips
+	Seat #2: 360 chips
+	Seat #3: 240 chips
+	Seat #4: 720 chips
+
+Table #32 after 10 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 360 chips
+	Seat #2: 480 chips
+	Seat #3: 720 chips
+	Seat #4: 480 chips
+
+Table #33 after 10 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 480 chips
+	Seat #2: 360 chips
+	Seat #3: 480 chips
+	Seat #4: 600 chips
+
+Table #34 after 10 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 600 chips
+	Seat #2: 600 chips
+	Seat #3: 480 chips
+	Seat #4: 360 chips
+
+Table #35 after 10 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 480 chips
+	Seat #2: 480 chips
+	Seat #3: 360 chips
+	Seat #4: 720 chips
+
+Table #36 after 10 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 480 chips
+	Seat #2: 480 chips
+	Seat #3: 240 chips
+	Seat #4: 600 chips
+
+Table #37 after 10 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 240 chips
+	Seat #2: 600 chips
+	Seat #3: 600 chips
+	Seat #4: 480 chips
+
+Table #38 after 10 hands.
+
+	Seat #0: 960 chips
+	Seat #1: 360 chips
+	Seat #2: 360 chips
+	Seat #3: 360 chips
+	Seat #4: 360 chips
+
+Table #39 after 10 hands.
+
+	Seat #0: 240 chips
+	Seat #1: 360 chips
+	Seat #2: 480 chips
+	Seat #3: 600 chips
+	Seat #4: 720 chips
+
+Table #40 after 10 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 480 chips
+	Seat #2: 720 chips
+	Seat #3: 360 chips
+	Seat #4: 240 chips
+
+Table #41 after 10 hands.
+
+	Seat #0: 840 chips
+	Seat #1: 240 chips
+	Seat #2: 360 chips
+	Seat #3: 600 chips
+	Seat #4: 360 chips
+
+Table #42 after 10 hands.
+
+	Seat #0: 840 chips
+	Seat #1: 360 chips
+	Seat #2: 600 chips
+	Seat #3: 360 chips
+	Seat #4: 240 chips
+
+Table #43 after 10 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 480 chips
+	Seat #2: 480 chips
+	Seat #3: 720 chips
+	Seat #4: 240 chips
+
+Table #44 after 10 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 360 chips
+	Seat #2: 360 chips
+	Seat #3: 600 chips
+	Seat #4: 480 chips
+
+Table #45 after 10 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 600 chips
+	Seat #2: 360 chips
+	Seat #3: 240 chips
+	Seat #4: 840 chips
+
+Table #46 after 10 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 480 chips
+	Seat #2: 600 chips
+	Seat #3: 360 chips
+	Seat #4: 600 chips
+
+Table #47 after 10 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 480 chips
+	Seat #2: 840 chips
+	Seat #3: 480 chips
+	Seat #4: 240 chips
+
+Table #48 after 10 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 480 chips
+	Seat #2: 480 chips
+	Seat #3: 480 chips
+	Seat #4: 360 chips
+
+Table #49 after 10 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 600 chips
+	Seat #2: 480 chips
+	Seat #3: 240 chips
+	Seat #4: 600 chips
+
+Table #50 after 10 hands.
+
+	Seat #0: 720 chips
+	Seat #1: 480 chips
+	Seat #2: 240 chips
+	Seat #3: 480 chips
+	Seat #4: 480 chips
+
+Table #51 after 10 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 480 chips
+	Seat #2: 360 chips
+	Seat #3: 360 chips
+	Seat #4: 720 chips
+
+Table #52 after 10 hands.
+
+	Seat #0: 240 chips
+	Seat #1: 480 chips
+	Seat #2: 600 chips
+	Seat #3: 480 chips
+	Seat #4: 600 chips
+
+Table #53 after 10 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 360 chips
+	Seat #2: 720 chips
+	Seat #3: 360 chips
+	Seat #4: 360 chips
+
+Table #54 after 10 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 360 chips
+	Seat #2: 600 chips
+	Seat #3: 360 chips
+	Seat #4: 480 chips
+
+Table #55 after 10 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 480 chips
+	Seat #2: 360 chips
+	Seat #3: 600 chips
+	Seat #4: 360 chips
+
+Table #56 after 10 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 240 chips
+	Seat #2: 600 chips
+	Seat #3: 720 chips
+	Seat #4: 360 chips
+
+Table #57 after 10 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 480 chips
+	Seat #2: 360 chips
+	Seat #3: 600 chips
+	Seat #4: 480 chips
+
+Table #58 after 10 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 840 chips
+	Seat #2: 240 chips
+	Seat #3: 360 chips
+	Seat #4: 600 chips
+
+Table #59 after 10 hands.
+
+	Seat #0: 720 chips
+	Seat #1: 600 chips
+	Seat #2: 360 chips
+	Seat #3: 360 chips
+	Seat #4: 360 chips
+
+Table #60 after 10 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 480 chips
+	Seat #2: 600 chips
+	Seat #3: 360 chips
+	Seat #4: 360 chips
+
+Table #61 after 10 hands.
+
+	Seat #0: 240 chips
+	Seat #1: 480 chips
+	Seat #2: 480 chips
+	Seat #3: 720 chips
+	Seat #4: 480 chips
+
+Table #62 after 10 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 720 chips
+	Seat #2: 480 chips
+	Seat #3: 240 chips
+	Seat #4: 480 chips
+
+Table #63 after 10 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 480 chips
+	Seat #2: 360 chips
+	Seat #3: 720 chips
+	Seat #4: 480 chips
+
+Table #64 after 9 hands.
+
+	Seat #0: 384 chips
+	Seat #1: 264 chips
+	Seat #2: 744 chips
+	Seat #3: 624 chips
+	Seat #4: 384 chips
+
+Table #65 after 10 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 480 chips
+	Seat #2: 360 chips
+	Seat #3: 720 chips
+	Seat #4: 480 chips
+
+Table #66 after 10 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 240 chips
+	Seat #2: 480 chips
+	Seat #3: 720 chips
+	Seat #4: 360 chips
+
+Table #67 after 10 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 240 chips
+	Seat #2: 600 chips
+	Seat #3: 480 chips
+	Seat #4: 480 chips
+
+Table #68 after 10 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 240 chips
+	Seat #2: 840 chips
+	Seat #3: 360 chips
+	Seat #4: 600 chips
+
+Table #69 after 10 hands.
+
+	Seat #0: 960 chips
+	Seat #1: 360 chips
+	Seat #2: 360 chips
+	Seat #3: 240 chips
+	Seat #4: 480 chips
+
+Table #70 after 10 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 720 chips
+	Seat #2: 480 chips
+	Seat #3: 360 chips
+	Seat #4: 480 chips
+
+Table #71 after 10 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 360 chips
+	Seat #2: 480 chips
+	Seat #3: 480 chips
+	Seat #4: 600 chips
+
+Table #72 after 10 hands.
+
+	Seat #0: 720 chips
+	Seat #1: 480 chips
+	Seat #2: 360 chips
+	Seat #3: 360 chips
+	Seat #4: 480 chips
+
+Table #73 after 10 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 240 chips
+	Seat #2: 600 chips
+	Seat #3: 720 chips
+	Seat #4: 360 chips
+
+Table #74 after 10 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 600 chips
+	Seat #2: 480 chips
+	Seat #3: 600 chips
+	Seat #4: 360 chips
+
+Table #75 after 10 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 720 chips
+	Seat #2: 240 chips
+	Seat #3: 480 chips
+	Seat #4: 360 chips
+
+Table #76 after 10 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 600 chips
+	Seat #2: 600 chips
+	Seat #3: 360 chips
+	Seat #4: 360 chips
+
+Table #77 after 10 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 360 chips
+	Seat #2: 600 chips
+	Seat #3: 480 chips
+	Seat #4: 480 chips
+
+Table #78 after 10 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 360 chips
+	Seat #2: 600 chips
+	Seat #3: 480 chips
+	Seat #4: 600 chips
+
+Table #79 after 10 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 600 chips
+	Seat #2: 360 chips
+	Seat #3: 600 chips
+	Seat #4: 480 chips
+
+Table #80 after 10 hands.
+
+	Seat #0: 240 chips
+	Seat #1: 840 chips
+	Seat #2: 480 chips
+	Seat #3: 480 chips
+	Seat #4: 360 chips
+
+Table #81 after 10 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 360 chips
+	Seat #2: 480 chips
+	Seat #3: 600 chips
+	Seat #4: 600 chips
+
+Table #82 after 10 hands.
+
+	Seat #0: 960 chips
+	Seat #1: 360 chips
+	Seat #2: 480 chips
+	Seat #3: 360 chips
+	Seat #4: 240 chips
+
+Table #83 after 10 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 600 chips
+	Seat #2: 360 chips
+	Seat #3: 360 chips
+	Seat #4: 720 chips
+
+Table #84 after 10 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 600 chips
+	Seat #2: 480 chips
+	Seat #3: 480 chips
+	Seat #4: 480 chips
+
+Table #85 after 10 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 600 chips
+	Seat #2: 480 chips
+	Seat #3: 240 chips
+	Seat #4: 600 chips
+
+Table #86 after 10 hands.
+
+	Seat #0: 720 chips
+	Seat #1: 720 chips
+	Seat #2: 240 chips
+	Seat #3: 240 chips
+	Seat #4: 480 chips
+
+Table #87 after 10 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 480 chips
+	Seat #2: 600 chips
+	Seat #3: 600 chips
+	Seat #4: 240 chips
+
+Table #88 after 10 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 600 chips
+	Seat #2: 480 chips
+	Seat #3: 480 chips
+	Seat #4: 360 chips
+
+Table #89 after 10 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 360 chips
+	Seat #2: 480 chips
+	Seat #3: 600 chips
+	Seat #4: 360 chips
+
+Table #90 after 10 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 720 chips
+	Seat #2: 360 chips
+	Seat #3: 360 chips
+	Seat #4: 480 chips
+
+Table #91 after 10 hands.
+
+	Seat #0: 240 chips
+	Seat #1: 480 chips
+	Seat #2: 480 chips
+	Seat #3: 360 chips
+	Seat #4: 840 chips
+
+Table #92 after 10 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 600 chips
+	Seat #2: 480 chips
+	Seat #3: 480 chips
+	Seat #4: 360 chips
+
+Table #93 after 10 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 600 chips
+	Seat #2: 360 chips
+	Seat #3: 720 chips
+	Seat #4: 240 chips
+
+Table #94 after 10 hands.
+
+	Seat #0: 240 chips
+	Seat #1: 600 chips
+	Seat #2: 360 chips
+	Seat #3: 600 chips
+	Seat #4: 600 chips
+
+Table #95 after 10 hands.
+
+	Seat #0: 240 chips
+	Seat #1: 720 chips
+	Seat #2: 240 chips
+	Seat #3: 600 chips
+	Seat #4: 600 chips
+
+Table #96 after 10 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 240 chips
+	Seat #2: 360 chips
+	Seat #3: 720 chips
+	Seat #4: 600 chips
+
+Table #97 after 10 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 360 chips
+	Seat #2: 360 chips
+	Seat #3: 600 chips
+	Seat #4: 720 chips
+
+Table #98 after 7 hands.
+
+	Seat #0: 312 chips
+	Seat #1: 312 chips
+	Seat #2: 432 chips
+	Seat #3: 312 chips
+
+Table #99 after 9 hands.
+
+	Seat #0: 384 chips
+	Seat #1: 384 chips
+	Seat #2: 384 chips
+	Seat #3: 264 chips
+
+Report for 8 unit stakes after 4 hands played.
+
+Cash of highrollers:
+
+Cash of bustos:
+
+Report for 4 unit stakes after 20 hands played.
+
+Table #0 after 20 hands.
+
+	Seat #0: 960 chips
+	Seat #1: 360 chips
+	Seat #2: 240 chips
+	Seat #3: 360 chips
+	Seat #4: 480 chips
+
+Table #1 after 19 hands.
+
+	Seat #0: 504 chips
+	Seat #1: 504 chips
+	Seat #2: 744 chips
+	Seat #3: 504 chips
+	Seat #4: 144 chips
+
+Table #2 after 19 hands.
+
+	Seat #0: 384 chips
+	Seat #1: 264 chips
+	Seat #2: 624 chips
+	Seat #3: 504 chips
+	Seat #4: 624 chips
+
+Table #3 after 19 hands.
+
+	Seat #0: 504 chips
+	Seat #1: 384 chips
+	Seat #2: 384 chips
+	Seat #3: 624 chips
+	Seat #4: 504 chips
+
+Table #4 after 20 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 360 chips
+	Seat #2: 360 chips
+	Seat #3: 600 chips
+	Seat #4: 600 chips
+
+Table #5 after 20 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 360 chips
+	Seat #2: 840 chips
+	Seat #3: 360 chips
+	Seat #4: 360 chips
+
+Table #6 after 20 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 480 chips
+	Seat #2: 360 chips
+	Seat #3: 600 chips
+	Seat #4: 360 chips
+
+Table #7 after 20 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 360 chips
+	Seat #2: 720 chips
+	Seat #3: 240 chips
+	Seat #4: 600 chips
+
+Table #8 after 20 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 360 chips
+	Seat #2: 480 chips
+	Seat #3: 600 chips
+	Seat #4: 360 chips
+
+Table #9 after 20 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 120 chips
+	Seat #2: 600 chips
+	Seat #3: 600 chips
+	Seat #4: 600 chips
+
+Table #10 after 20 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 240 chips
+	Seat #2: 360 chips
+	Seat #3: 960 chips
+	Seat #4: 360 chips
+
+Table #11 after 19 hands.
+
+	Seat #0: 744 chips
+	Seat #1: 384 chips
+	Seat #2: 504 chips
+	Seat #3: 144 chips
+	Seat #4: 624 chips
+
+Table #12 after 20 hands.
+
+	Seat #0: 240 chips
+	Seat #1: 360 chips
+	Seat #2: 720 chips
+	Seat #3: 480 chips
+	Seat #4: 600 chips
+
+Table #13 after 20 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 360 chips
+	Seat #2: 360 chips
+	Seat #3: 720 chips
+	Seat #4: 600 chips
+
+Table #14 after 20 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 600 chips
+	Seat #2: 480 chips
+	Seat #3: 360 chips
+	Seat #4: 600 chips
+
+Table #15 after 20 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 480 chips
+	Seat #2: 480 chips
+	Seat #3: 600 chips
+	Seat #4: 240 chips
+
+Table #16 after 19 hands.
+
+	Seat #0: 504 chips
+	Seat #1: 264 chips
+	Seat #2: 264 chips
+	Seat #3: 744 chips
+	Seat #4: 624 chips
+
+Table #17 after 20 hands.
+
+	Seat #0: 720 chips
+	Seat #1: 720 chips
+	Seat #2: 120 chips
+	Seat #3: 600 chips
+	Seat #4: 240 chips
+
+Table #18 after 20 hands.
+
+	Seat #0: 240 chips
+	Seat #1: 360 chips
+	Seat #2: 600 chips
+	Seat #3: 600 chips
+	Seat #4: 600 chips
+
+Table #19 after 20 hands.
+
+	Seat #0: 720 chips
+	Seat #1: 360 chips
+	Seat #2: 360 chips
+	Seat #3: 360 chips
+	Seat #4: 600 chips
+
+Table #20 after 20 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 480 chips
+	Seat #2: 480 chips
+	Seat #3: 960 chips
+	Seat #4: 120 chips
+
+Table #21 after 20 hands.
+
+	Seat #0: 240 chips
+	Seat #1: 720 chips
+	Seat #2: 240 chips
+	Seat #3: 720 chips
+	Seat #4: 480 chips
+
+Table #22 after 20 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 480 chips
+	Seat #2: 480 chips
+	Seat #3: 240 chips
+	Seat #4: 600 chips
+
+Table #23 after 20 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 600 chips
+	Seat #2: 240 chips
+	Seat #3: 600 chips
+	Seat #4: 360 chips
+
+Table #24 after 18 hands.
+
+	Seat #0: 408 chips
+	Seat #1: 408 chips
+	Seat #2: 408 chips
+	Seat #3: 528 chips
+	Seat #4: 648 chips
+
+Table #25 after 20 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 480 chips
+	Seat #2: 360 chips
+	Seat #3: 360 chips
+	Seat #4: 600 chips
+
+Table #26 after 20 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 360 chips
+	Seat #2: 600 chips
+	Seat #3: 600 chips
+	Seat #4: 480 chips
+
+Table #27 after 20 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 480 chips
+	Seat #2: 480 chips
+	Seat #3: 600 chips
+	Seat #4: 480 chips
+
+Table #28 after 20 hands.
+
+	Seat #0: 240 chips
+	Seat #1: 720 chips
+	Seat #2: 600 chips
+	Seat #3: 720 chips
+	Seat #4: 120 chips
+
+Table #29 after 20 hands.
+
+	Seat #0: 240 chips
+	Seat #1: 480 chips
+	Seat #2: 360 chips
+	Seat #3: 720 chips
+	Seat #4: 600 chips
+
+Table #30 after 20 hands.
+
+	Seat #0: 720 chips
+	Seat #1: 360 chips
+	Seat #2: 480 chips
+	Seat #3: 120 chips
+	Seat #4: 720 chips
+
+Table #31 after 20 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 240 chips
+	Seat #2: 600 chips
+	Seat #3: 840 chips
+	Seat #4: 360 chips
+
+Table #32 after 20 hands.
+
+	Seat #0: 720 chips
+	Seat #1: 120 chips
+	Seat #2: 600 chips
+	Seat #3: 360 chips
+	Seat #4: 600 chips
+
+Table #33 after 20 hands.
+
+	Seat #0: 240 chips
+	Seat #1: 360 chips
+	Seat #2: 480 chips
+	Seat #3: 720 chips
+	Seat #4: 600 chips
+
+Table #34 after 19 hands.
+
+	Seat #0: 864 chips
+	Seat #1: 264 chips
+	Seat #2: 624 chips
+	Seat #3: 384 chips
+	Seat #4: 264 chips
+
+Table #35 after 20 hands.
+
+	Seat #0: 240 chips
+	Seat #1: 840 chips
+	Seat #2: 600 chips
+	Seat #3: 600 chips
+	Seat #4: 120 chips
+
+Table #36 after 20 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 360 chips
+	Seat #2: 240 chips
+	Seat #3: 600 chips
+	Seat #4: 600 chips
+
+Table #37 after 20 hands.
+
+	Seat #0: 120 chips
+	Seat #1: 720 chips
+	Seat #2: 360 chips
+	Seat #3: 240 chips
+	Seat #4: 960 chips
+
+Table #38 after 20 hands.
+
+	Seat #0: 240 chips
+	Seat #1: 600 chips
+	Seat #2: 600 chips
+	Seat #3: 600 chips
+	Seat #4: 360 chips
+
+Table #39 after 19 hands.
+
+	Seat #0: 624 chips
+	Seat #1: 384 chips
+	Seat #2: 384 chips
+	Seat #3: 384 chips
+	Seat #4: 624 chips
+
+Table #40 after 20 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 600 chips
+	Seat #2: 600 chips
+	Seat #3: 240 chips
+	Seat #4: 600 chips
+
+Table #41 after 20 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 240 chips
+	Seat #2: 120 chips
+	Seat #3: 480 chips
+	Seat #4: 960 chips
+
+Table #42 after 20 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 600 chips
+	Seat #2: 120 chips
+	Seat #3: 480 chips
+	Seat #4: 840 chips
+
+Table #43 after 20 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 240 chips
+	Seat #2: 480 chips
+	Seat #3: 480 chips
+	Seat #4: 720 chips
+
+Table #44 after 20 hands.
+
+	Seat #0: 720 chips
+	Seat #1: 360 chips
+	Seat #2: 600 chips
+	Seat #3: 360 chips
+	Seat #4: 360 chips
+
+Table #45 after 20 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 240 chips
+	Seat #2: 600 chips
+	Seat #3: 480 chips
+	Seat #4: 600 chips
+
+Table #46 after 20 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 720 chips
+	Seat #2: 240 chips
+	Seat #3: 600 chips
+	Seat #4: 240 chips
+
+Table #47 after 19 hands.
+
+	Seat #0: 384 chips
+	Seat #1: 384 chips
+	Seat #2: 384 chips
+	Seat #3: 624 chips
+	Seat #4: 624 chips
+
+Table #48 after 20 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 840 chips
+	Seat #2: 360 chips
+	Seat #3: 240 chips
+	Seat #4: 600 chips
+
+Table #49 after 20 hands.
+
+	Seat #0: 720 chips
+	Seat #1: 480 chips
+	Seat #2: 120 chips
+	Seat #3: 480 chips
+	Seat #4: 600 chips
+
+Table #50 after 20 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 480 chips
+	Seat #2: 720 chips
+	Seat #3: 240 chips
+	Seat #4: 480 chips
+
+Table #51 after 20 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 480 chips
+	Seat #2: 360 chips
+	Seat #3: 720 chips
+	Seat #4: 480 chips
+
+Table #52 after 19 hands.
+
+	Seat #0: 504 chips
+	Seat #1: 384 chips
+	Seat #2: 144 chips
+	Seat #3: 864 chips
+	Seat #4: 504 chips
+
+Table #53 after 19 hands.
+
+	Seat #0: 504 chips
+	Seat #1: 264 chips
+	Seat #2: 744 chips
+	Seat #3: 504 chips
+	Seat #4: 384 chips
+
+Table #54 after 20 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 360 chips
+	Seat #2: 360 chips
+	Seat #3: 840 chips
+	Seat #4: 360 chips
+
+Table #55 after 19 hands.
+
+	Seat #0: 624 chips
+	Seat #1: 144 chips
+	Seat #2: 504 chips
+	Seat #3: 504 chips
+	Seat #4: 624 chips
+
+Table #56 after 20 hands.
+
+	Seat #0: 240 chips
+	Seat #1: 480 chips
+	Seat #2: 720 chips
+	Seat #3: 240 chips
+	Seat #4: 720 chips
+
+Table #57 after 19 hands.
+
+	Seat #0: 264 chips
+	Seat #1: 744 chips
+	Seat #2: 624 chips
+	Seat #3: 504 chips
+	Seat #4: 264 chips
+
+Table #58 after 20 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 360 chips
+	Seat #2: 480 chips
+	Seat #3: 480 chips
+	Seat #4: 600 chips
+
+Table #59 after 20 hands.
+
+	Seat #0: 840 chips
+	Seat #1: 600 chips
+	Seat #2: 240 chips
+	Seat #3: 360 chips
+	Seat #4: 360 chips
+
+Table #60 after 20 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 360 chips
+	Seat #2: 480 chips
+	Seat #3: 960 chips
+	Seat #4: 240 chips
+
+Table #61 after 20 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 600 chips
+	Seat #2: 360 chips
+	Seat #3: 840 chips
+	Seat #4: 240 chips
+
+Table #62 after 19 hands.
+
+	Seat #0: 504 chips
+	Seat #1: 504 chips
+	Seat #2: 624 chips
+	Seat #3: 384 chips
+	Seat #4: 384 chips
+
+Table #63 after 20 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 360 chips
+	Seat #2: 480 chips
+	Seat #3: 360 chips
+	Seat #4: 600 chips
+
+Table #64 after 20 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 480 chips
+	Seat #2: 360 chips
+	Seat #3: 480 chips
+	Seat #4: 600 chips
+
+Table #65 after 20 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 480 chips
+	Seat #2: 360 chips
+	Seat #3: 840 chips
+	Seat #4: 240 chips
+
+Table #66 after 20 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 720 chips
+	Seat #2: 600 chips
+	Seat #3: 360 chips
+	Seat #4: 360 chips
+
+Table #67 after 20 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 360 chips
+	Seat #2: 600 chips
+	Seat #3: 480 chips
+	Seat #4: 480 chips
+
+Table #68 after 20 hands.
+
+	Seat #0: 840 chips
+	Seat #1: 720 chips
+	Seat #2: 240 chips
+	Seat #3: 120 chips
+	Seat #4: 480 chips
+
+Table #69 after 20 hands.
+
+	Seat #0: 240 chips
+	Seat #1: 720 chips
+	Seat #2: 360 chips
+	Seat #3: 480 chips
+	Seat #4: 600 chips
+
+Table #70 after 20 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 840 chips
+	Seat #2: 360 chips
+	Seat #3: 240 chips
+	Seat #4: 360 chips
+
+Table #71 after 19 hands.
+
+	Seat #0: 624 chips
+	Seat #1: 744 chips
+	Seat #2: 384 chips
+	Seat #3: 144 chips
+	Seat #4: 504 chips
+
+Table #72 after 20 hands.
+
+	Seat #0: 240 chips
+	Seat #1: 720 chips
+	Seat #2: 360 chips
+	Seat #3: 960 chips
+	Seat #4: 120 chips
+
+Table #73 after 20 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 720 chips
+	Seat #2: 600 chips
+	Seat #3: 360 chips
+	Seat #4: 240 chips
+
+Table #74 after 20 hands.
+
+	Seat #0: 720 chips
+	Seat #1: 360 chips
+	Seat #2: 480 chips
+	Seat #3: 480 chips
+	Seat #4: 360 chips
+
+Table #75 after 20 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 480 chips
+	Seat #2: 360 chips
+	Seat #3: 360 chips
+	Seat #4: 720 chips
+
+Table #76 after 20 hands.
+
+	Seat #0: 240 chips
+	Seat #1: 600 chips
+	Seat #2: 240 chips
+	Seat #3: 600 chips
+	Seat #4: 720 chips
+
+Table #77 after 20 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 360 chips
+	Seat #2: 600 chips
+	Seat #3: 480 chips
+	Seat #4: 480 chips
+
+Table #78 after 20 hands.
+
+	Seat #0: 720 chips
+	Seat #1: 600 chips
+	Seat #2: 240 chips
+	Seat #3: 600 chips
+	Seat #4: 240 chips
+
+Table #79 after 20 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 600 chips
+	Seat #2: 120 chips
+	Seat #3: 720 chips
+	Seat #4: 360 chips
+
+Table #80 after 20 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 720 chips
+	Seat #2: 240 chips
+	Seat #3: 480 chips
+	Seat #4: 600 chips
+
+Table #81 after 20 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 120 chips
+	Seat #2: 480 chips
+	Seat #3: 960 chips
+	Seat #4: 360 chips
+
+Table #82 after 20 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 240 chips
+	Seat #2: 360 chips
+	Seat #3: 960 chips
+	Seat #4: 480 chips
+
+Table #83 after 7 hands.
+
+	Seat #0: 312 chips
+	Seat #1: 312 chips
+	Seat #2: 432 chips
+	Seat #3: 312 chips
+
+Table #84 after 9 hands.
+
+	Seat #0: 384 chips
+	Seat #1: 384 chips
+	Seat #2: 384 chips
+	Seat #3: 264 chips
+
+Table #85 after 13 hands.
+
+	Seat #0: 408 chips
+	Seat #1: 288 chips
+	Seat #2: 168 chips
+	Seat #3: 408 chips
+
+Table #86 after 13 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 288 chips
+	Seat #2: 408 chips
+	Seat #3: 408 chips
+
+Table #87 after 15 hands.
+
+	Seat #0: 240 chips
+	Seat #1: 360 chips
+	Seat #2: 600 chips
+	Seat #3: 240 chips
+
+Table #88 after 16 hands.
+
+	Seat #0: 336 chips
+	Seat #1: 816 chips
+	Seat #2: 456 chips
+	Seat #3: 696 chips
+
+Table #89 after 16 hands.
+
+	Seat #0: 576 chips
+	Seat #1: 816 chips
+	Seat #2: 456 chips
+	Seat #3: 456 chips
+
+Table #90 after 17 hands.
+
+	Seat #0: 432 chips
+	Seat #1: 672 chips
+	Seat #2: 672 chips
+	Seat #3: 552 chips
+
+Table #91 after 17 hands.
+
+	Seat #0: 672 chips
+	Seat #1: 672 chips
+	Seat #2: 672 chips
+	Seat #3: 312 chips
+
+Table #92 after 19 hands.
+
+	Seat #0: 624 chips
+	Seat #1: 264 chips
+	Seat #2: 144 chips
+	Seat #3: 264 chips
+
+Table #93 after 19 hands.
+
+	Seat #0: 264 chips
+	Seat #1: 504 chips
+	Seat #2: 384 chips
+	Seat #3: 264 chips
+
+Table #94 after 18 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 288 chips
+	Seat #2: 408 chips
+	Seat #3: 408 chips
+
+Table #95 after 19 hands.
+
+	Seat #0: 504 chips
+	Seat #1: 624 chips
+	Seat #2: 624 chips
+	Seat #3: 624 chips
+
+Table #96 after 19 hands.
+
+	Seat #0: 624 chips
+	Seat #1: 744 chips
+	Seat #2: 744 chips
+	Seat #3: 264 chips
+
+Table #97 after 19 hands.
+
+	Seat #0: 504 chips
+	Seat #1: 384 chips
+	Seat #2: 264 chips
+	Seat #3: 264 chips
+
+Table #98 after 20 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 360 chips
+	Seat #2: 720 chips
+	Seat #3: 840 chips
+
+Table #99 after 20 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 480 chips
+	Seat #2: 360 chips
+	Seat #3: 120 chips
+
+Report for 8 unit stakes after 14 hands played.
+
+Table #0 after 6 hands.
+
+	Seat #0: 492 chips
+	Seat #1: 348 chips
+	Seat #2: 540 chips
+	Seat #3: 480 chips
+	Seat #4: 696 chips
+
+Table #1 after 1 hands.
+
+	Seat #0: 528 chips
+	Seat #1: 468 chips
+	Seat #2: 480 chips
+	Seat #3: 588 chips
+	Seat #4: 456 chips
+
+Cash of highrollers:
+
+Cash of bustos:
+	96
+	96
+	72
+	72
+	24
+	24
+	0
+
+Report for 4 unit stakes after 30 hands played.
+
+Table #0 after 28 hands.
+
+	Seat #0: 168 chips
+	Seat #1: 168 chips
+	Seat #2: 528 chips
+	Seat #3: 648 chips
+	Seat #4: 888 chips
+
+Table #1 after 29 hands.
+
+	Seat #0: 384 chips
+	Seat #1: 384 chips
+	Seat #2: 624 chips
+	Seat #3: 624 chips
+	Seat #4: 384 chips
+
+Table #2 after 30 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 240 chips
+	Seat #2: 240 chips
+	Seat #3: 600 chips
+	Seat #4: 960 chips
+
+Table #3 after 30 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 240 chips
+	Seat #2: 720 chips
+	Seat #3: 480 chips
+	Seat #4: 360 chips
+
+Table #4 after 29 hands.
+
+	Seat #0: 504 chips
+	Seat #1: 384 chips
+	Seat #2: 624 chips
+	Seat #3: 264 chips
+	Seat #4: 624 chips
+
+Table #5 after 30 hands.
+
+	Seat #0: 1080 chips
+	Seat #1: 240 chips
+	Seat #2: 240 chips
+	Seat #3: 600 chips
+	Seat #4: 240 chips
+
+Table #6 after 29 hands.
+
+	Seat #0: 504 chips
+	Seat #1: 384 chips
+	Seat #2: 264 chips
+	Seat #3: 1104 chips
+	Seat #4: 144 chips
+
+Table #7 after 29 hands.
+
+	Seat #0: 264 chips
+	Seat #1: 264 chips
+	Seat #2: 864 chips
+	Seat #3: 384 chips
+	Seat #4: 624 chips
+
+Table #8 after 30 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 480 chips
+	Seat #2: 240 chips
+	Seat #3: 840 chips
+	Seat #4: 360 chips
+
+Table #9 after 30 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 600 chips
+	Seat #2: 360 chips
+	Seat #3: 480 chips
+	Seat #4: 600 chips
+
+Table #10 after 30 hands.
+
+	Seat #0: 720 chips
+	Seat #1: 360 chips
+	Seat #2: 360 chips
+	Seat #3: 600 chips
+	Seat #4: 360 chips
+
+Table #11 after 29 hands.
+
+	Seat #0: 264 chips
+	Seat #1: 384 chips
+	Seat #2: 384 chips
+	Seat #3: 744 chips
+	Seat #4: 624 chips
+
+Table #12 after 29 hands.
+
+	Seat #0: 264 chips
+	Seat #1: 144 chips
+	Seat #2: 744 chips
+	Seat #3: 624 chips
+	Seat #4: 624 chips
+
+Table #13 after 30 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 600 chips
+	Seat #2: 480 chips
+	Seat #3: 240 chips
+	Seat #4: 480 chips
+
+Table #14 after 28 hands.
+
+	Seat #0: 648 chips
+	Seat #1: 408 chips
+	Seat #2: 168 chips
+	Seat #3: 888 chips
+	Seat #4: 288 chips
+
+Table #15 after 28 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 408 chips
+	Seat #2: 288 chips
+	Seat #3: 768 chips
+	Seat #4: 648 chips
+
+Table #16 after 30 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 480 chips
+	Seat #2: 480 chips
+	Seat #3: 600 chips
+	Seat #4: 360 chips
+
+Table #17 after 30 hands.
+
+	Seat #0: 240 chips
+	Seat #1: 480 chips
+	Seat #2: 480 chips
+	Seat #3: 600 chips
+	Seat #4: 600 chips
+
+Table #18 after 30 hands.
+
+	Seat #0: 240 chips
+	Seat #1: 720 chips
+	Seat #2: 360 chips
+	Seat #3: 600 chips
+	Seat #4: 480 chips
+
+Table #19 after 29 hands.
+
+	Seat #0: 384 chips
+	Seat #1: 264 chips
+	Seat #2: 264 chips
+	Seat #3: 984 chips
+	Seat #4: 504 chips
+
+Table #20 after 29 hands.
+
+	Seat #0: 264 chips
+	Seat #1: 264 chips
+	Seat #2: 624 chips
+	Seat #3: 864 chips
+	Seat #4: 384 chips
+
+Table #21 after 27 hands.
+
+	Seat #0: 552 chips
+	Seat #1: 312 chips
+	Seat #2: 432 chips
+	Seat #3: 552 chips
+	Seat #4: 552 chips
+
+Table #22 after 29 hands.
+
+	Seat #0: 264 chips
+	Seat #1: 504 chips
+	Seat #2: 744 chips
+	Seat #3: 624 chips
+	Seat #4: 264 chips
+
+Table #23 after 29 hands.
+
+	Seat #0: 504 chips
+	Seat #1: 744 chips
+	Seat #2: 264 chips
+	Seat #3: 144 chips
+	Seat #4: 744 chips
+
+Table #24 after 29 hands.
+
+	Seat #0: 384 chips
+	Seat #1: 624 chips
+	Seat #2: 264 chips
+	Seat #3: 384 chips
+	Seat #4: 744 chips
+
+Table #25 after 30 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 600 chips
+	Seat #2: 240 chips
+	Seat #3: 480 chips
+	Seat #4: 720 chips
+
+Table #26 after 30 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 240 chips
+	Seat #2: 360 chips
+	Seat #3: 360 chips
+	Seat #4: 840 chips
+
+Table #27 after 30 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 600 chips
+	Seat #2: 840 chips
+	Seat #3: 240 chips
+	Seat #4: 240 chips
+
+Table #28 after 30 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 240 chips
+	Seat #2: 360 chips
+	Seat #3: 720 chips
+	Seat #4: 720 chips
+
+Table #29 after 30 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 840 chips
+	Seat #2: 120 chips
+	Seat #3: 720 chips
+	Seat #4: 120 chips
+
+Table #30 after 29 hands.
+
+	Seat #0: 384 chips
+	Seat #1: 144 chips
+	Seat #2: 504 chips
+	Seat #3: 504 chips
+	Seat #4: 864 chips
+
+Table #31 after 30 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 840 chips
+	Seat #2: 240 chips
+	Seat #3: 120 chips
+	Seat #4: 600 chips
+
+Table #32 after 29 hands.
+
+	Seat #0: 624 chips
+	Seat #1: 264 chips
+	Seat #2: 744 chips
+	Seat #3: 384 chips
+	Seat #4: 384 chips
+
+Table #33 after 30 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 480 chips
+	Seat #2: 240 chips
+	Seat #3: 600 chips
+	Seat #4: 720 chips
+
+Table #34 after 29 hands.
+
+	Seat #0: 264 chips
+	Seat #1: 384 chips
+	Seat #2: 384 chips
+	Seat #3: 864 chips
+	Seat #4: 504 chips
+
+Table #35 after 29 hands.
+
+	Seat #0: 624 chips
+	Seat #1: 264 chips
+	Seat #2: 744 chips
+	Seat #3: 384 chips
+	Seat #4: 384 chips
+
+Table #36 after 28 hands.
+
+	Seat #0: 408 chips
+	Seat #1: 168 chips
+	Seat #2: 288 chips
+	Seat #3: 888 chips
+	Seat #4: 648 chips
+
+Table #37 after 28 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 768 chips
+	Seat #2: 528 chips
+	Seat #3: 528 chips
+	Seat #4: 288 chips
+
+Table #38 after 30 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 240 chips
+	Seat #2: 480 chips
+	Seat #3: 720 chips
+	Seat #4: 480 chips
+
+Table #39 after 30 hands.
+
+	Seat #0: 840 chips
+	Seat #1: 600 chips
+	Seat #2: 240 chips
+	Seat #3: 480 chips
+	Seat #4: 240 chips
+
+Table #40 after 30 hands.
+
+	Seat #0: 120 chips
+	Seat #1: 120 chips
+	Seat #2: 840 chips
+	Seat #3: 840 chips
+	Seat #4: 480 chips
+
+Table #41 after 30 hands.
+
+	Seat #0: 240 chips
+	Seat #1: 360 chips
+	Seat #2: 480 chips
+	Seat #3: 840 chips
+	Seat #4: 480 chips
+
+Table #42 after 29 hands.
+
+	Seat #0: 384 chips
+	Seat #1: 384 chips
+	Seat #2: 384 chips
+	Seat #3: 744 chips
+	Seat #4: 504 chips
+
+Table #43 after 30 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 600 chips
+	Seat #2: 600 chips
+	Seat #3: 360 chips
+	Seat #4: 480 chips
+
+Table #44 after 30 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 360 chips
+	Seat #2: 120 chips
+	Seat #3: 960 chips
+	Seat #4: 600 chips
+
+Table #45 after 30 hands.
+
+	Seat #0: 240 chips
+	Seat #1: 840 chips
+	Seat #2: 720 chips
+	Seat #3: 120 chips
+	Seat #4: 480 chips
+
+Table #46 after 30 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 360 chips
+	Seat #2: 720 chips
+	Seat #3: 600 chips
+	Seat #4: 360 chips
+
+Table #47 after 29 hands.
+
+	Seat #0: 504 chips
+	Seat #1: 744 chips
+	Seat #2: 504 chips
+	Seat #3: 264 chips
+	Seat #4: 384 chips
+
+Table #48 after 30 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 720 chips
+	Seat #2: 360 chips
+	Seat #3: 480 chips
+	Seat #4: 240 chips
+
+Table #49 after 29 hands.
+
+	Seat #0: 384 chips
+	Seat #1: 744 chips
+	Seat #2: 384 chips
+	Seat #3: 744 chips
+	Seat #4: 144 chips
+
+Table #50 after 30 hands.
+
+	Seat #0: 840 chips
+	Seat #1: 120 chips
+	Seat #2: 480 chips
+	Seat #3: 360 chips
+	Seat #4: 600 chips
+
+Table #51 after 30 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 480 chips
+	Seat #2: 480 chips
+	Seat #3: 360 chips
+	Seat #4: 600 chips
+
+Table #52 after 30 hands.
+
+	Seat #0: 240 chips
+	Seat #1: 720 chips
+	Seat #2: 120 chips
+	Seat #3: 720 chips
+	Seat #4: 600 chips
+
+Table #53 after 30 hands.
+
+	Seat #0: 240 chips
+	Seat #1: 360 chips
+	Seat #2: 480 chips
+	Seat #3: 480 chips
+	Seat #4: 840 chips
+
+Table #54 after 30 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 600 chips
+	Seat #2: 360 chips
+	Seat #3: 480 chips
+	Seat #4: 480 chips
+
+Table #55 after 28 hands.
+
+	Seat #0: 168 chips
+	Seat #1: 408 chips
+	Seat #2: 408 chips
+	Seat #3: 1008 chips
+	Seat #4: 408 chips
+
+Table #56 after 7 hands.
+
+	Seat #0: 312 chips
+	Seat #1: 312 chips
+	Seat #2: 432 chips
+	Seat #3: 312 chips
+
+Table #57 after 9 hands.
+
+	Seat #0: 384 chips
+	Seat #1: 384 chips
+	Seat #2: 384 chips
+	Seat #3: 264 chips
+
+Table #58 after 13 hands.
+
+	Seat #0: 408 chips
+	Seat #1: 288 chips
+	Seat #2: 168 chips
+	Seat #3: 408 chips
+
+Table #59 after 13 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 288 chips
+	Seat #2: 408 chips
+	Seat #3: 408 chips
+
+Table #60 after 15 hands.
+
+	Seat #0: 240 chips
+	Seat #1: 360 chips
+	Seat #2: 600 chips
+	Seat #3: 240 chips
+
+Table #61 after 16 hands.
+
+	Seat #0: 336 chips
+	Seat #1: 816 chips
+	Seat #2: 456 chips
+	Seat #3: 696 chips
+
+Table #62 after 16 hands.
+
+	Seat #0: 576 chips
+	Seat #1: 816 chips
+	Seat #2: 456 chips
+	Seat #3: 456 chips
+
+Table #63 after 17 hands.
+
+	Seat #0: 432 chips
+	Seat #1: 672 chips
+	Seat #2: 672 chips
+	Seat #3: 552 chips
+
+Table #64 after 17 hands.
+
+	Seat #0: 672 chips
+	Seat #1: 672 chips
+	Seat #2: 672 chips
+	Seat #3: 312 chips
+
+Table #65 after 19 hands.
+
+	Seat #0: 624 chips
+	Seat #1: 264 chips
+	Seat #2: 144 chips
+	Seat #3: 264 chips
+
+Table #66 after 19 hands.
+
+	Seat #0: 264 chips
+	Seat #1: 504 chips
+	Seat #2: 384 chips
+	Seat #3: 264 chips
+
+Table #67 after 18 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 288 chips
+	Seat #2: 408 chips
+	Seat #3: 408 chips
+
+Table #68 after 19 hands.
+
+	Seat #0: 504 chips
+	Seat #1: 624 chips
+	Seat #2: 624 chips
+	Seat #3: 624 chips
+
+Table #69 after 19 hands.
+
+	Seat #0: 624 chips
+	Seat #1: 744 chips
+	Seat #2: 744 chips
+	Seat #3: 264 chips
+
+Table #70 after 19 hands.
+
+	Seat #0: 504 chips
+	Seat #1: 384 chips
+	Seat #2: 264 chips
+	Seat #3: 264 chips
+
+Table #71 after 20 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 360 chips
+	Seat #2: 720 chips
+	Seat #3: 840 chips
+
+Table #72 after 20 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 480 chips
+	Seat #2: 360 chips
+	Seat #3: 120 chips
+
+Table #73 after 21 hands.
+
+	Seat #0: 696 chips
+	Seat #1: 456 chips
+	Seat #2: 456 chips
+	Seat #3: 696 chips
+
+Table #74 after 21 hands.
+
+	Seat #0: 816 chips
+	Seat #1: 696 chips
+	Seat #2: 216 chips
+	Seat #3: 576 chips
+
+Table #75 after 21 hands.
+
+	Seat #0: 816 chips
+	Seat #1: 336 chips
+	Seat #2: 456 chips
+	Seat #3: 696 chips
+
+Table #76 after 22 hands.
+
+	Seat #0: 432 chips
+	Seat #1: 432 chips
+	Seat #2: 552 chips
+	Seat #3: 912 chips
+
+Table #77 after 22 hands.
+
+	Seat #0: 312 chips
+	Seat #1: 792 chips
+	Seat #2: 552 chips
+	Seat #3: 672 chips
+
+Table #78 after 22 hands.
+
+	Seat #0: 192 chips
+	Seat #1: 912 chips
+	Seat #2: 552 chips
+	Seat #3: 672 chips
+
+Table #79 after 21 hands.
+
+	Seat #0: 576 chips
+	Seat #1: 696 chips
+	Seat #2: 456 chips
+	Seat #3: 576 chips
+
+Table #80 after 23 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 288 chips
+	Seat #2: 408 chips
+	Seat #3: 408 chips
+
+Table #81 after 22 hands.
+
+	Seat #0: 192 chips
+	Seat #1: 792 chips
+	Seat #2: 432 chips
+	Seat #3: 912 chips
+
+Table #82 after 22 hands.
+
+	Seat #0: 432 chips
+	Seat #1: 552 chips
+	Seat #2: 792 chips
+	Seat #3: 552 chips
+
+Table #83 after 24 hands.
+
+	Seat #0: 624 chips
+	Seat #1: 504 chips
+	Seat #2: 504 chips
+	Seat #3: 744 chips
+
+Table #84 after 24 hands.
+
+	Seat #0: 864 chips
+	Seat #1: 624 chips
+	Seat #2: 384 chips
+	Seat #3: 504 chips
+
+Table #85 after 23 hands.
+
+	Seat #0: 168 chips
+	Seat #1: 648 chips
+	Seat #2: 288 chips
+	Seat #3: 288 chips
+
+Table #86 after 24 hands.
+
+	Seat #0: 504 chips
+	Seat #1: 624 chips
+	Seat #2: 984 chips
+	Seat #3: 264 chips
+
+Table #87 after 25 hands.
+
+	Seat #0: 840 chips
+	Seat #1: 600 chips
+	Seat #2: 840 chips
+	Seat #3: 120 chips
+
+Table #88 after 25 hands.
+
+	Seat #0: 840 chips
+	Seat #1: 480 chips
+	Seat #2: 360 chips
+	Seat #3: 720 chips
+
+Table #89 after 25 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 600 chips
+	Seat #2: 840 chips
+	Seat #3: 480 chips
+
+Table #90 after 26 hands.
+
+	Seat #0: 576 chips
+	Seat #1: 456 chips
+	Seat #2: 456 chips
+	Seat #3: 816 chips
+
+Table #91 after 26 hands.
+
+	Seat #0: 336 chips
+	Seat #1: 456 chips
+	Seat #2: 336 chips
+	Seat #3: 216 chips
+
+Table #92 after 26 hands.
+
+	Seat #0: 216 chips
+	Seat #1: 456 chips
+	Seat #2: 696 chips
+	Seat #3: 936 chips
+
+Table #93 after 25 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 360 chips
+	Seat #2: 240 chips
+	Seat #3: 240 chips
+
+Table #94 after 27 hands.
+
+	Seat #0: 192 chips
+	Seat #1: 672 chips
+	Seat #2: 312 chips
+	Seat #3: 192 chips
+
+Table #95 after 28 hands.
+
+	Seat #0: 408 chips
+	Seat #1: 288 chips
+	Seat #2: 408 chips
+	Seat #3: 288 chips
+
+Table #96 after 28 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 408 chips
+	Seat #2: 1008 chips
+	Seat #3: 648 chips
+
+Table #97 after 29 hands.
+
+	Seat #0: 144 chips
+	Seat #1: 144 chips
+	Seat #2: 744 chips
+	Seat #3: 384 chips
+
+Table #98 after 30 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 480 chips
+	Seat #2: 240 chips
+	Seat #3: 360 chips
+
+Table #99 after 29 hands.
+
+	Seat #0: 264 chips
+	Seat #1: 144 chips
+	Seat #2: 624 chips
+	Seat #3: 384 chips
+
+Report for 8 unit stakes after 24 hands played.
+
+Table #0 after 16 hands.
+
+	Seat #0: 492 chips
+	Seat #1: 348 chips
+	Seat #2: 420 chips
+	Seat #3: 360 chips
+	Seat #4: 936 chips
+
+Table #1 after 11 hands.
+
+	Seat #0: 408 chips
+	Seat #1: 828 chips
+	Seat #2: 480 chips
+	Seat #3: 468 chips
+	Seat #4: 336 chips
+
+Table #2 after 4 hands.
+
+	Seat #0: 408 chips
+	Seat #1: 408 chips
+	Seat #2: 672 chips
+	Seat #3: 504 chips
+	Seat #4: 540 chips
+
+Cash of highrollers:
+
+Cash of bustos:
+	96
+	96
+	72
+	72
+	24
+	24
+	0
+	96
+	96
+	96
+	72
+	72
+	72
+	96
+	72
+	72
+	24
+	24
+	24
+	0
+	0
+	0
+	96
+	96
+	48
+
+Report for 4 unit stakes after 40 hands played.
+
+Table #0 after 38 hands.
+
+	Seat #0: 528 chips
+	Seat #1: 528 chips
+	Seat #2: 528 chips
+	Seat #3: 408 chips
+	Seat #4: 408 chips
+
+Table #1 after 39 hands.
+
+	Seat #0: 744 chips
+	Seat #1: 384 chips
+	Seat #2: 504 chips
+	Seat #3: 504 chips
+	Seat #4: 264 chips
+
+Table #2 after 39 hands.
+
+	Seat #0: 624 chips
+	Seat #1: 504 chips
+	Seat #2: 384 chips
+	Seat #3: 144 chips
+	Seat #4: 744 chips
+
+Table #3 after 37 hands.
+
+	Seat #0: 552 chips
+	Seat #1: 552 chips
+	Seat #2: 72 chips
+	Seat #3: 792 chips
+	Seat #4: 432 chips
+
+Table #4 after 40 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 480 chips
+	Seat #2: 240 chips
+	Seat #3: 720 chips
+	Seat #4: 600 chips
+
+Table #5 after 40 hands.
+
+	Seat #0: 840 chips
+	Seat #1: 720 chips
+	Seat #2: 120 chips
+	Seat #3: 480 chips
+	Seat #4: 240 chips
+
+Table #6 after 39 hands.
+
+	Seat #0: 264 chips
+	Seat #1: 504 chips
+	Seat #2: 264 chips
+	Seat #3: 744 chips
+	Seat #4: 624 chips
+
+Table #7 after 39 hands.
+
+	Seat #0: 264 chips
+	Seat #1: 144 chips
+	Seat #2: 984 chips
+	Seat #3: 624 chips
+	Seat #4: 384 chips
+
+Table #8 after 36 hands.
+
+	Seat #0: 216 chips
+	Seat #1: 456 chips
+	Seat #2: 336 chips
+	Seat #3: 816 chips
+	Seat #4: 576 chips
+
+Table #9 after 40 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 480 chips
+	Seat #2: 360 chips
+	Seat #3: 360 chips
+	Seat #4: 840 chips
+
+Table #10 after 39 hands.
+
+	Seat #0: 144 chips
+	Seat #1: 744 chips
+	Seat #2: 624 chips
+	Seat #3: 624 chips
+	Seat #4: 264 chips
+
+Table #11 after 38 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 408 chips
+	Seat #2: 648 chips
+	Seat #3: 768 chips
+	Seat #4: 288 chips
+
+Table #12 after 37 hands.
+
+	Seat #0: 672 chips
+	Seat #1: 432 chips
+	Seat #2: 432 chips
+	Seat #3: 432 chips
+	Seat #4: 432 chips
+
+Table #13 after 37 hands.
+
+	Seat #0: 552 chips
+	Seat #1: 552 chips
+	Seat #2: 72 chips
+	Seat #3: 552 chips
+	Seat #4: 672 chips
+
+Table #14 after 39 hands.
+
+	Seat #0: 864 chips
+	Seat #1: 144 chips
+	Seat #2: 264 chips
+	Seat #3: 504 chips
+	Seat #4: 624 chips
+
+Table #15 after 40 hands.
+
+	Seat #0: 840 chips
+	Seat #1: 480 chips
+	Seat #2: 720 chips
+	Seat #3: 240 chips
+	Seat #4: 120 chips
+
+Table #16 after 40 hands.
+
+	Seat #0: 240 chips
+	Seat #1: 360 chips
+	Seat #2: 240 chips
+	Seat #3: 1080 chips
+	Seat #4: 480 chips
+
+Table #17 after 38 hands.
+
+	Seat #0: 408 chips
+	Seat #1: 168 chips
+	Seat #2: 648 chips
+	Seat #3: 288 chips
+	Seat #4: 888 chips
+
+Table #18 after 38 hands.
+
+	Seat #0: 528 chips
+	Seat #1: 168 chips
+	Seat #2: 888 chips
+	Seat #3: 528 chips
+	Seat #4: 288 chips
+
+Table #19 after 40 hands.
+
+	Seat #0: 120 chips
+	Seat #1: 360 chips
+	Seat #2: 600 chips
+	Seat #3: 840 chips
+	Seat #4: 480 chips
+
+Table #20 after 38 hands.
+
+	Seat #0: 648 chips
+	Seat #1: 288 chips
+	Seat #2: 648 chips
+	Seat #3: 408 chips
+	Seat #4: 408 chips
+
+Table #21 after 37 hands.
+
+	Seat #0: 432 chips
+	Seat #1: 552 chips
+	Seat #2: 552 chips
+	Seat #3: 552 chips
+	Seat #4: 312 chips
+
+Table #22 after 40 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 120 chips
+	Seat #2: 600 chips
+	Seat #3: 840 chips
+	Seat #4: 360 chips
+
+Table #23 after 40 hands.
+
+	Seat #0: 720 chips
+	Seat #1: 600 chips
+	Seat #2: 240 chips
+	Seat #3: 360 chips
+	Seat #4: 480 chips
+
+Table #24 after 39 hands.
+
+	Seat #0: 264 chips
+	Seat #1: 264 chips
+	Seat #2: 384 chips
+	Seat #3: 864 chips
+	Seat #4: 624 chips
+
+Table #25 after 39 hands.
+
+	Seat #0: 384 chips
+	Seat #1: 624 chips
+	Seat #2: 144 chips
+	Seat #3: 864 chips
+	Seat #4: 384 chips
+
+Table #26 after 40 hands.
+
+	Seat #0: 240 chips
+	Seat #1: 720 chips
+	Seat #2: 720 chips
+	Seat #3: 240 chips
+	Seat #4: 480 chips
+
+Table #27 after 38 hands.
+
+	Seat #0: 528 chips
+	Seat #1: 408 chips
+	Seat #2: 648 chips
+	Seat #3: 408 chips
+	Seat #4: 408 chips
+
+Table #28 after 39 hands.
+
+	Seat #0: 504 chips
+	Seat #1: 744 chips
+	Seat #2: 624 chips
+	Seat #3: 264 chips
+	Seat #4: 264 chips
+
+Table #29 after 40 hands.
+
+	Seat #0: 720 chips
+	Seat #1: 600 chips
+	Seat #2: 120 chips
+	Seat #3: 600 chips
+	Seat #4: 360 chips
+
+Table #30 after 39 hands.
+
+	Seat #0: 144 chips
+	Seat #1: 744 chips
+	Seat #2: 264 chips
+	Seat #3: 864 chips
+	Seat #4: 384 chips
+
+Table #31 after 39 hands.
+
+	Seat #0: 504 chips
+	Seat #1: 384 chips
+	Seat #2: 504 chips
+	Seat #3: 264 chips
+	Seat #4: 744 chips
+
+Table #32 after 39 hands.
+
+	Seat #0: 264 chips
+	Seat #1: 504 chips
+	Seat #2: 384 chips
+	Seat #3: 504 chips
+	Seat #4: 744 chips
+
+Table #33 after 7 hands.
+
+	Seat #0: 312 chips
+	Seat #1: 312 chips
+	Seat #2: 432 chips
+	Seat #3: 312 chips
+
+Table #34 after 9 hands.
+
+	Seat #0: 384 chips
+	Seat #1: 384 chips
+	Seat #2: 384 chips
+	Seat #3: 264 chips
+
+Table #35 after 13 hands.
+
+	Seat #0: 408 chips
+	Seat #1: 288 chips
+	Seat #2: 168 chips
+	Seat #3: 408 chips
+
+Table #36 after 13 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 288 chips
+	Seat #2: 408 chips
+	Seat #3: 408 chips
+
+Table #37 after 15 hands.
+
+	Seat #0: 240 chips
+	Seat #1: 360 chips
+	Seat #2: 600 chips
+	Seat #3: 240 chips
+
+Table #38 after 16 hands.
+
+	Seat #0: 336 chips
+	Seat #1: 816 chips
+	Seat #2: 456 chips
+	Seat #3: 696 chips
+
+Table #39 after 16 hands.
+
+	Seat #0: 576 chips
+	Seat #1: 816 chips
+	Seat #2: 456 chips
+	Seat #3: 456 chips
+
+Table #40 after 17 hands.
+
+	Seat #0: 432 chips
+	Seat #1: 672 chips
+	Seat #2: 672 chips
+	Seat #3: 552 chips
+
+Table #41 after 17 hands.
+
+	Seat #0: 672 chips
+	Seat #1: 672 chips
+	Seat #2: 672 chips
+	Seat #3: 312 chips
+
+Table #42 after 19 hands.
+
+	Seat #0: 624 chips
+	Seat #1: 264 chips
+	Seat #2: 144 chips
+	Seat #3: 264 chips
+
+Table #43 after 19 hands.
+
+	Seat #0: 264 chips
+	Seat #1: 504 chips
+	Seat #2: 384 chips
+	Seat #3: 264 chips
+
+Table #44 after 18 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 288 chips
+	Seat #2: 408 chips
+	Seat #3: 408 chips
+
+Table #45 after 19 hands.
+
+	Seat #0: 504 chips
+	Seat #1: 624 chips
+	Seat #2: 624 chips
+	Seat #3: 624 chips
+
+Table #46 after 19 hands.
+
+	Seat #0: 624 chips
+	Seat #1: 744 chips
+	Seat #2: 744 chips
+	Seat #3: 264 chips
+
+Table #47 after 19 hands.
+
+	Seat #0: 504 chips
+	Seat #1: 384 chips
+	Seat #2: 264 chips
+	Seat #3: 264 chips
+
+Table #48 after 20 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 360 chips
+	Seat #2: 720 chips
+	Seat #3: 840 chips
+
+Table #49 after 20 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 480 chips
+	Seat #2: 360 chips
+	Seat #3: 120 chips
+
+Table #50 after 21 hands.
+
+	Seat #0: 696 chips
+	Seat #1: 456 chips
+	Seat #2: 456 chips
+	Seat #3: 696 chips
+
+Table #51 after 21 hands.
+
+	Seat #0: 816 chips
+	Seat #1: 696 chips
+	Seat #2: 216 chips
+	Seat #3: 576 chips
+
+Table #52 after 21 hands.
+
+	Seat #0: 816 chips
+	Seat #1: 336 chips
+	Seat #2: 456 chips
+	Seat #3: 696 chips
+
+Table #53 after 22 hands.
+
+	Seat #0: 432 chips
+	Seat #1: 432 chips
+	Seat #2: 552 chips
+	Seat #3: 912 chips
+
+Table #54 after 22 hands.
+
+	Seat #0: 312 chips
+	Seat #1: 792 chips
+	Seat #2: 552 chips
+	Seat #3: 672 chips
+
+Table #55 after 22 hands.
+
+	Seat #0: 192 chips
+	Seat #1: 912 chips
+	Seat #2: 552 chips
+	Seat #3: 672 chips
+
+Table #56 after 21 hands.
+
+	Seat #0: 576 chips
+	Seat #1: 696 chips
+	Seat #2: 456 chips
+	Seat #3: 576 chips
+
+Table #57 after 23 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 288 chips
+	Seat #2: 408 chips
+	Seat #3: 408 chips
+
+Table #58 after 22 hands.
+
+	Seat #0: 192 chips
+	Seat #1: 792 chips
+	Seat #2: 432 chips
+	Seat #3: 912 chips
+
+Table #59 after 22 hands.
+
+	Seat #0: 432 chips
+	Seat #1: 552 chips
+	Seat #2: 792 chips
+	Seat #3: 552 chips
+
+Table #60 after 24 hands.
+
+	Seat #0: 624 chips
+	Seat #1: 504 chips
+	Seat #2: 504 chips
+	Seat #3: 744 chips
+
+Table #61 after 24 hands.
+
+	Seat #0: 864 chips
+	Seat #1: 624 chips
+	Seat #2: 384 chips
+	Seat #3: 504 chips
+
+Table #62 after 23 hands.
+
+	Seat #0: 168 chips
+	Seat #1: 648 chips
+	Seat #2: 288 chips
+	Seat #3: 288 chips
+
+Table #63 after 24 hands.
+
+	Seat #0: 504 chips
+	Seat #1: 624 chips
+	Seat #2: 984 chips
+	Seat #3: 264 chips
+
+Table #64 after 25 hands.
+
+	Seat #0: 840 chips
+	Seat #1: 600 chips
+	Seat #2: 840 chips
+	Seat #3: 120 chips
+
+Table #65 after 25 hands.
+
+	Seat #0: 840 chips
+	Seat #1: 480 chips
+	Seat #2: 360 chips
+	Seat #3: 720 chips
+
+Table #66 after 25 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 600 chips
+	Seat #2: 840 chips
+	Seat #3: 480 chips
+
+Table #67 after 26 hands.
+
+	Seat #0: 576 chips
+	Seat #1: 456 chips
+	Seat #2: 456 chips
+	Seat #3: 816 chips
+
+Table #68 after 26 hands.
+
+	Seat #0: 336 chips
+	Seat #1: 456 chips
+	Seat #2: 336 chips
+	Seat #3: 216 chips
+
+Table #69 after 26 hands.
+
+	Seat #0: 216 chips
+	Seat #1: 456 chips
+	Seat #2: 696 chips
+	Seat #3: 936 chips
+
+Table #70 after 25 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 360 chips
+	Seat #2: 240 chips
+	Seat #3: 240 chips
+
+Table #71 after 27 hands.
+
+	Seat #0: 192 chips
+	Seat #1: 672 chips
+	Seat #2: 312 chips
+	Seat #3: 192 chips
+
+Table #72 after 28 hands.
+
+	Seat #0: 408 chips
+	Seat #1: 288 chips
+	Seat #2: 408 chips
+	Seat #3: 288 chips
+
+Table #73 after 28 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 408 chips
+	Seat #2: 1008 chips
+	Seat #3: 648 chips
+
+Table #74 after 29 hands.
+
+	Seat #0: 144 chips
+	Seat #1: 144 chips
+	Seat #2: 744 chips
+	Seat #3: 384 chips
+
+Table #75 after 30 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 480 chips
+	Seat #2: 240 chips
+	Seat #3: 360 chips
+
+Table #76 after 29 hands.
+
+	Seat #0: 264 chips
+	Seat #1: 144 chips
+	Seat #2: 624 chips
+	Seat #3: 384 chips
+
+Table #77 after 30 hands.
+
+	Seat #0: 240 chips
+	Seat #1: 240 chips
+	Seat #2: 360 chips
+	Seat #3: 600 chips
+
+Table #78 after 31 hands.
+
+	Seat #0: 696 chips
+	Seat #1: 816 chips
+	Seat #2: 216 chips
+	Seat #3: 576 chips
+
+Table #79 after 31 hands.
+
+	Seat #0: 216 chips
+	Seat #1: 936 chips
+	Seat #2: 696 chips
+	Seat #3: 456 chips
+
+Table #80 after 31 hands.
+
+	Seat #0: 576 chips
+	Seat #1: 336 chips
+	Seat #2: 216 chips
+	Seat #3: 96 chips
+
+Table #81 after 31 hands.
+
+	Seat #0: 456 chips
+	Seat #1: 816 chips
+	Seat #2: 216 chips
+	Seat #3: 816 chips
+
+Table #82 after 33 hands.
+
+	Seat #0: 168 chips
+	Seat #1: 408 chips
+	Seat #2: 528 chips
+	Seat #3: 168 chips
+
+Table #83 after 31 hands.
+
+	Seat #0: 576 chips
+	Seat #1: 336 chips
+	Seat #2: 216 chips
+	Seat #3: 216 chips
+
+Table #84 after 33 hands.
+
+	Seat #0: 48 chips
+	Seat #1: 888 chips
+	Seat #2: 768 chips
+	Seat #3: 648 chips
+
+Table #85 after 31 hands.
+
+	Seat #0: 96 chips
+	Seat #1: 336 chips
+	Seat #2: 336 chips
+	Seat #3: 576 chips
+
+Table #86 after 34 hands.
+
+	Seat #0: 864 chips
+	Seat #1: 384 chips
+	Seat #2: 264 chips
+	Seat #3: 864 chips
+
+Table #87 after 35 hands.
+
+	Seat #0: 720 chips
+	Seat #1: 840 chips
+	Seat #2: 720 chips
+	Seat #3: 120 chips
+
+Table #88 after 35 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 600 chips
+	Seat #2: 960 chips
+	Seat #3: 480 chips
+
+Table #89 after 34 hands.
+
+	Seat #0: 144 chips
+	Seat #1: 624 chips
+	Seat #2: 744 chips
+	Seat #3: 864 chips
+
+Table #90 after 36 hands.
+
+	Seat #0: 696 chips
+	Seat #1: 576 chips
+	Seat #2: 456 chips
+	Seat #3: 576 chips
+
+Table #91 after 34 hands.
+
+	Seat #0: 384 chips
+	Seat #1: 264 chips
+	Seat #2: 1104 chips
+	Seat #3: 624 chips
+
+Table #92 after 36 hands.
+
+	Seat #0: 336 chips
+	Seat #1: 456 chips
+	Seat #2: 96 chips
+	Seat #3: 456 chips
+
+Table #93 after 36 hands.
+
+	Seat #0: 456 chips
+	Seat #1: 216 chips
+	Seat #2: 216 chips
+	Seat #3: 456 chips
+
+Table #94 after 36 hands.
+
+	Seat #0: 96 chips
+	Seat #1: 336 chips
+	Seat #2: 336 chips
+	Seat #3: 456 chips
+
+Table #95 after 38 hands.
+
+	Seat #0: 528 chips
+	Seat #1: 648 chips
+	Seat #2: 528 chips
+	Seat #3: 648 chips
+
+Table #96 after 38 hands.
+
+	Seat #0: 408 chips
+	Seat #1: 648 chips
+	Seat #2: 768 chips
+	Seat #3: 528 chips
+
+Table #97 after 38 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 888 chips
+	Seat #2: 408 chips
+	Seat #3: 768 chips
+
+Table #98 after 40 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 480 chips
+	Seat #2: 720 chips
+	Seat #3: 720 chips
+
+Table #99 after 40 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 480 chips
+	Seat #2: 600 chips
+	Seat #3: 840 chips
+
+Report for 8 unit stakes after 34 hands played.
+
+Table #0 after 20 hands.
+
+	Seat #0: 432 chips
+	Seat #1: 852 chips
+	Seat #2: 624 chips
+	Seat #3: 252 chips
+	Seat #4: 360 chips
+
+Table #1 after 14 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 408 chips
+	Seat #2: 792 chips
+	Seat #3: 504 chips
+	Seat #4: 540 chips
+
+Table #2 after 10 hands.
+
+	Seat #0: 264 chips
+	Seat #1: 732 chips
+	Seat #2: 480 chips
+	Seat #3: 492 chips
+	Seat #4: 480 chips
+
+Table #3 after 5 hands.
+
+	Seat #0: 468 chips
+	Seat #1: 444 chips
+	Seat #2: 768 chips
+	Seat #3: 528 chips
+	Seat #4: 528 chips
+
+Table #4 after 26 hands.
+
+	Seat #0: 372 chips
+	Seat #1: 228 chips
+	Seat #2: 420 chips
+	Seat #3: 480 chips
+	Seat #4: 432 chips
+
+Cash of highrollers:
+	2304
+
+Cash of bustos:
+	96
+	96
+	72
+	72
+	24
+	24
+	0
+	96
+	96
+	96
+	72
+	72
+	72
+	96
+	72
+	72
+	24
+	24
+	24
+	0
+	0
+	0
+	96
+	96
+	48
+	96
+	96
+	96
+	48
+	24
+	0
+	0
+	24
+	96
+	24
+	48
+	48
+	48
+	0
+	0
+
+Report for 4 unit stakes after 50 hands played.
+
+Table #0 after 48 hands.
+
+	Seat #0: 528 chips
+	Seat #1: 768 chips
+	Seat #2: 288 chips
+	Seat #3: 408 chips
+	Seat #4: 408 chips
+
+Table #1 after 49 hands.
+
+	Seat #0: 624 chips
+	Seat #1: 384 chips
+	Seat #2: 504 chips
+	Seat #3: 744 chips
+	Seat #4: 144 chips
+
+Table #2 after 49 hands.
+
+	Seat #0: 384 chips
+	Seat #1: 504 chips
+	Seat #2: 144 chips
+	Seat #3: 864 chips
+	Seat #4: 504 chips
+
+Table #3 after 44 hands.
+
+	Seat #0: 264 chips
+	Seat #1: 384 chips
+	Seat #2: 384 chips
+	Seat #3: 864 chips
+	Seat #4: 504 chips
+
+Table #4 after 50 hands.
+
+	Seat #0: 720 chips
+	Seat #1: 480 chips
+	Seat #2: 360 chips
+	Seat #3: 240 chips
+	Seat #4: 600 chips
+
+Table #5 after 46 hands.
+
+	Seat #0: 816 chips
+	Seat #1: 576 chips
+	Seat #2: 336 chips
+	Seat #3: 456 chips
+	Seat #4: 216 chips
+
+Table #6 after 48 hands.
+
+	Seat #0: 768 chips
+	Seat #1: 288 chips
+	Seat #2: 288 chips
+	Seat #3: 408 chips
+	Seat #4: 648 chips
+
+Table #7 after 46 hands.
+
+	Seat #0: 456 chips
+	Seat #1: 216 chips
+	Seat #2: 696 chips
+	Seat #3: 216 chips
+	Seat #4: 816 chips
+
+Table #8 after 47 hands.
+
+	Seat #0: 552 chips
+	Seat #1: 192 chips
+	Seat #2: 792 chips
+	Seat #3: 552 chips
+	Seat #4: 312 chips
+
+Table #9 after 47 hands.
+
+	Seat #0: 552 chips
+	Seat #1: 552 chips
+	Seat #2: 432 chips
+	Seat #3: 432 chips
+	Seat #4: 432 chips
+
+Table #10 after 48 hands.
+
+	Seat #0: 168 chips
+	Seat #1: 528 chips
+	Seat #2: 288 chips
+	Seat #3: 1008 chips
+	Seat #4: 408 chips
+
+Table #11 after 49 hands.
+
+	Seat #0: 264 chips
+	Seat #1: 504 chips
+	Seat #2: 264 chips
+	Seat #3: 864 chips
+	Seat #4: 504 chips
+
+Table #12 after 47 hands.
+
+	Seat #0: 432 chips
+	Seat #1: 432 chips
+	Seat #2: 672 chips
+	Seat #3: 552 chips
+	Seat #4: 312 chips
+
+Table #13 after 48 hands.
+
+	Seat #0: 408 chips
+	Seat #1: 648 chips
+	Seat #2: 168 chips
+	Seat #3: 768 chips
+	Seat #4: 408 chips
+
+Table #14 after 49 hands.
+
+	Seat #0: 504 chips
+	Seat #1: 384 chips
+	Seat #2: 384 chips
+	Seat #3: 504 chips
+	Seat #4: 624 chips
+
+Table #15 after 49 hands.
+
+	Seat #0: 384 chips
+	Seat #1: 624 chips
+	Seat #2: 384 chips
+	Seat #3: 504 chips
+	Seat #4: 504 chips
+
+Table #16 after 15 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 240 chips
+	Seat #2: 240 chips
+	Seat #3: 600 chips
+	Seat #4: 360 chips
+
+Table #17 after 15 hands.
+
+	Seat #0: 456 chips
+	Seat #1: 360 chips
+	Seat #2: 240 chips
+	Seat #3: 360 chips
+	Seat #4: 360 chips
+
+Table #18 after 15 hands.
+
+	Seat #0: 240 chips
+	Seat #1: 360 chips
+	Seat #2: 600 chips
+	Seat #3: 240 chips
+
+Table #19 after 16 hands.
+
+	Seat #0: 336 chips
+	Seat #1: 816 chips
+	Seat #2: 456 chips
+	Seat #3: 696 chips
+
+Table #20 after 16 hands.
+
+	Seat #0: 576 chips
+	Seat #1: 816 chips
+	Seat #2: 456 chips
+	Seat #3: 456 chips
+
+Table #21 after 17 hands.
+
+	Seat #0: 432 chips
+	Seat #1: 672 chips
+	Seat #2: 672 chips
+	Seat #3: 552 chips
+
+Table #22 after 17 hands.
+
+	Seat #0: 672 chips
+	Seat #1: 672 chips
+	Seat #2: 672 chips
+	Seat #3: 312 chips
+
+Table #23 after 19 hands.
+
+	Seat #0: 624 chips
+	Seat #1: 264 chips
+	Seat #2: 144 chips
+	Seat #3: 264 chips
+
+Table #24 after 19 hands.
+
+	Seat #0: 264 chips
+	Seat #1: 504 chips
+	Seat #2: 384 chips
+	Seat #3: 264 chips
+
+Table #25 after 18 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 288 chips
+	Seat #2: 408 chips
+	Seat #3: 408 chips
+
+Table #26 after 19 hands.
+
+	Seat #0: 504 chips
+	Seat #1: 624 chips
+	Seat #2: 624 chips
+	Seat #3: 624 chips
+
+Table #27 after 19 hands.
+
+	Seat #0: 624 chips
+	Seat #1: 744 chips
+	Seat #2: 744 chips
+	Seat #3: 264 chips
+
+Table #28 after 19 hands.
+
+	Seat #0: 504 chips
+	Seat #1: 384 chips
+	Seat #2: 264 chips
+	Seat #3: 264 chips
+
+Table #29 after 20 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 360 chips
+	Seat #2: 720 chips
+	Seat #3: 840 chips
+
+Table #30 after 20 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 480 chips
+	Seat #2: 360 chips
+	Seat #3: 120 chips
+
+Table #31 after 21 hands.
+
+	Seat #0: 696 chips
+	Seat #1: 456 chips
+	Seat #2: 456 chips
+	Seat #3: 696 chips
+
+Table #32 after 21 hands.
+
+	Seat #0: 816 chips
+	Seat #1: 696 chips
+	Seat #2: 216 chips
+	Seat #3: 576 chips
+
+Table #33 after 21 hands.
+
+	Seat #0: 816 chips
+	Seat #1: 336 chips
+	Seat #2: 456 chips
+	Seat #3: 696 chips
+
+Table #34 after 22 hands.
+
+	Seat #0: 432 chips
+	Seat #1: 432 chips
+	Seat #2: 552 chips
+	Seat #3: 912 chips
+
+Table #35 after 22 hands.
+
+	Seat #0: 312 chips
+	Seat #1: 792 chips
+	Seat #2: 552 chips
+	Seat #3: 672 chips
+
+Table #36 after 22 hands.
+
+	Seat #0: 192 chips
+	Seat #1: 912 chips
+	Seat #2: 552 chips
+	Seat #3: 672 chips
+
+Table #37 after 21 hands.
+
+	Seat #0: 576 chips
+	Seat #1: 696 chips
+	Seat #2: 456 chips
+	Seat #3: 576 chips
+
+Table #38 after 23 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 288 chips
+	Seat #2: 408 chips
+	Seat #3: 408 chips
+
+Table #39 after 22 hands.
+
+	Seat #0: 192 chips
+	Seat #1: 792 chips
+	Seat #2: 432 chips
+	Seat #3: 912 chips
+
+Table #40 after 22 hands.
+
+	Seat #0: 432 chips
+	Seat #1: 552 chips
+	Seat #2: 792 chips
+	Seat #3: 552 chips
+
+Table #41 after 24 hands.
+
+	Seat #0: 624 chips
+	Seat #1: 504 chips
+	Seat #2: 504 chips
+	Seat #3: 744 chips
+
+Table #42 after 24 hands.
+
+	Seat #0: 864 chips
+	Seat #1: 624 chips
+	Seat #2: 384 chips
+	Seat #3: 504 chips
+
+Table #43 after 23 hands.
+
+	Seat #0: 168 chips
+	Seat #1: 648 chips
+	Seat #2: 288 chips
+	Seat #3: 288 chips
+
+Table #44 after 24 hands.
+
+	Seat #0: 504 chips
+	Seat #1: 624 chips
+	Seat #2: 984 chips
+	Seat #3: 264 chips
+
+Table #45 after 25 hands.
+
+	Seat #0: 840 chips
+	Seat #1: 600 chips
+	Seat #2: 840 chips
+	Seat #3: 120 chips
+
+Table #46 after 25 hands.
+
+	Seat #0: 840 chips
+	Seat #1: 480 chips
+	Seat #2: 360 chips
+	Seat #3: 720 chips
+
+Table #47 after 25 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 600 chips
+	Seat #2: 840 chips
+	Seat #3: 480 chips
+
+Table #48 after 26 hands.
+
+	Seat #0: 576 chips
+	Seat #1: 456 chips
+	Seat #2: 456 chips
+	Seat #3: 816 chips
+
+Table #49 after 26 hands.
+
+	Seat #0: 336 chips
+	Seat #1: 456 chips
+	Seat #2: 336 chips
+	Seat #3: 216 chips
+
+Table #50 after 26 hands.
+
+	Seat #0: 216 chips
+	Seat #1: 456 chips
+	Seat #2: 696 chips
+	Seat #3: 936 chips
+
+Table #51 after 25 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 360 chips
+	Seat #2: 240 chips
+	Seat #3: 240 chips
+
+Table #52 after 27 hands.
+
+	Seat #0: 192 chips
+	Seat #1: 672 chips
+	Seat #2: 312 chips
+	Seat #3: 192 chips
+
+Table #53 after 28 hands.
+
+	Seat #0: 408 chips
+	Seat #1: 288 chips
+	Seat #2: 408 chips
+	Seat #3: 288 chips
+
+Table #54 after 28 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 408 chips
+	Seat #2: 1008 chips
+	Seat #3: 648 chips
+
+Table #55 after 29 hands.
+
+	Seat #0: 144 chips
+	Seat #1: 144 chips
+	Seat #2: 744 chips
+	Seat #3: 384 chips
+
+Table #56 after 30 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 480 chips
+	Seat #2: 240 chips
+	Seat #3: 360 chips
+
+Table #57 after 29 hands.
+
+	Seat #0: 264 chips
+	Seat #1: 144 chips
+	Seat #2: 624 chips
+	Seat #3: 384 chips
+
+Table #58 after 30 hands.
+
+	Seat #0: 240 chips
+	Seat #1: 240 chips
+	Seat #2: 360 chips
+	Seat #3: 600 chips
+
+Table #59 after 31 hands.
+
+	Seat #0: 696 chips
+	Seat #1: 816 chips
+	Seat #2: 216 chips
+	Seat #3: 576 chips
+
+Table #60 after 31 hands.
+
+	Seat #0: 216 chips
+	Seat #1: 936 chips
+	Seat #2: 696 chips
+	Seat #3: 456 chips
+
+Table #61 after 31 hands.
+
+	Seat #0: 576 chips
+	Seat #1: 336 chips
+	Seat #2: 216 chips
+	Seat #3: 96 chips
+
+Table #62 after 31 hands.
+
+	Seat #0: 456 chips
+	Seat #1: 816 chips
+	Seat #2: 216 chips
+	Seat #3: 816 chips
+
+Table #63 after 33 hands.
+
+	Seat #0: 168 chips
+	Seat #1: 408 chips
+	Seat #2: 528 chips
+	Seat #3: 168 chips
+
+Table #64 after 31 hands.
+
+	Seat #0: 576 chips
+	Seat #1: 336 chips
+	Seat #2: 216 chips
+	Seat #3: 216 chips
+
+Table #65 after 33 hands.
+
+	Seat #0: 48 chips
+	Seat #1: 888 chips
+	Seat #2: 768 chips
+	Seat #3: 648 chips
+
+Table #66 after 31 hands.
+
+	Seat #0: 96 chips
+	Seat #1: 336 chips
+	Seat #2: 336 chips
+	Seat #3: 576 chips
+
+Table #67 after 34 hands.
+
+	Seat #0: 864 chips
+	Seat #1: 384 chips
+	Seat #2: 264 chips
+	Seat #3: 864 chips
+
+Table #68 after 35 hands.
+
+	Seat #0: 720 chips
+	Seat #1: 840 chips
+	Seat #2: 720 chips
+	Seat #3: 120 chips
+
+Table #69 after 35 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 600 chips
+	Seat #2: 960 chips
+	Seat #3: 480 chips
+
+Table #70 after 34 hands.
+
+	Seat #0: 144 chips
+	Seat #1: 624 chips
+	Seat #2: 744 chips
+	Seat #3: 864 chips
+
+Table #71 after 36 hands.
+
+	Seat #0: 696 chips
+	Seat #1: 576 chips
+	Seat #2: 456 chips
+	Seat #3: 576 chips
+
+Table #72 after 34 hands.
+
+	Seat #0: 384 chips
+	Seat #1: 264 chips
+	Seat #2: 1104 chips
+	Seat #3: 624 chips
+
+Table #73 after 36 hands.
+
+	Seat #0: 336 chips
+	Seat #1: 456 chips
+	Seat #2: 96 chips
+	Seat #3: 456 chips
+
+Table #74 after 36 hands.
+
+	Seat #0: 456 chips
+	Seat #1: 216 chips
+	Seat #2: 216 chips
+	Seat #3: 456 chips
+
+Table #75 after 36 hands.
+
+	Seat #0: 96 chips
+	Seat #1: 336 chips
+	Seat #2: 336 chips
+	Seat #3: 456 chips
+
+Table #76 after 38 hands.
+
+	Seat #0: 528 chips
+	Seat #1: 648 chips
+	Seat #2: 528 chips
+	Seat #3: 648 chips
+
+Table #77 after 38 hands.
+
+	Seat #0: 408 chips
+	Seat #1: 648 chips
+	Seat #2: 768 chips
+	Seat #3: 528 chips
+
+Table #78 after 38 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 888 chips
+	Seat #2: 408 chips
+	Seat #3: 768 chips
+
+Table #79 after 40 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 480 chips
+	Seat #2: 720 chips
+	Seat #3: 720 chips
+
+Table #80 after 40 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 480 chips
+	Seat #2: 600 chips
+	Seat #3: 840 chips
+
+Table #81 after 40 hands.
+
+	Seat #0: 240 chips
+	Seat #1: 120 chips
+	Seat #2: 600 chips
+	Seat #3: 480 chips
+
+Table #82 after 41 hands.
+
+	Seat #0: 336 chips
+	Seat #1: 336 chips
+	Seat #2: 216 chips
+	Seat #3: 456 chips
+
+Table #83 after 41 hands.
+
+	Seat #0: 576 chips
+	Seat #1: 576 chips
+	Seat #2: 456 chips
+	Seat #3: 696 chips
+
+Table #84 after 42 hands.
+
+	Seat #0: 792 chips
+	Seat #1: 432 chips
+	Seat #2: 912 chips
+	Seat #3: 192 chips
+
+Table #85 after 40 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 120 chips
+	Seat #2: 480 chips
+	Seat #3: 360 chips
+
+Table #86 after 43 hands.
+
+	Seat #0: 648 chips
+	Seat #1: 168 chips
+	Seat #2: 408 chips
+	Seat #3: 168 chips
+
+Table #87 after 40 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 480 chips
+	Seat #2: 720 chips
+	Seat #3: 720 chips
+
+Table #88 after 43 hands.
+
+	Seat #0: 768 chips
+	Seat #1: 648 chips
+	Seat #2: 768 chips
+	Seat #3: 168 chips
+
+Table #89 after 43 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 648 chips
+	Seat #2: 888 chips
+	Seat #3: 528 chips
+
+Table #90 after 44 hands.
+
+	Seat #0: 624 chips
+	Seat #1: 504 chips
+	Seat #2: 744 chips
+	Seat #3: 504 chips
+
+Table #91 after 44 hands.
+
+	Seat #0: 384 chips
+	Seat #1: 624 chips
+	Seat #2: 264 chips
+	Seat #3: 144 chips
+
+Table #92 after 44 hands.
+
+	Seat #0: 144 chips
+	Seat #1: 144 chips
+	Seat #2: 624 chips
+	Seat #3: 504 chips
+
+Table #93 after 46 hands.
+
+	Seat #0: 216 chips
+	Seat #1: 576 chips
+	Seat #2: 696 chips
+	Seat #3: 816 chips
+
+Table #94 after 45 hands.
+
+	Seat #0: 720 chips
+	Seat #1: 600 chips
+	Seat #2: 480 chips
+	Seat #3: 600 chips
+
+Table #95 after 16 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 456 chips
+	Seat #2: 336 chips
+	Seat #3: 336 chips
+
+Table #96 after 45 hands.
+
+	Seat #0: 960 chips
+	Seat #1: 360 chips
+	Seat #2: 840 chips
+	Seat #3: 240 chips
+
+Table #97 after 46 hands.
+
+	Seat #0: 96 chips
+	Seat #1: 456 chips
+	Seat #2: 576 chips
+	Seat #3: 216 chips
+
+Table #98 after 48 hands.
+
+	Seat #0: 408 chips
+	Seat #1: 48 chips
+	Seat #2: 288 chips
+	Seat #3: 528 chips
+
+Table #99 after 16 hands.
+
+	Seat #0: 696 chips
+	Seat #1: 216 chips
+	Seat #2: 336 chips
+	Seat #3: 480 chips
+
+Report for 8 unit stakes after 44 hands played.
+
+Table #0 after 23 hands.
+
+	Seat #0: 312 chips
+	Seat #1: 312 chips
+	Seat #2: 576 chips
+	Seat #3: 648 chips
+	Seat #4: 684 chips
+
+Table #1 after 14 hands.
+
+	Seat #0: 372 chips
+	Seat #1: 828 chips
+	Seat #2: 552 chips
+	Seat #3: 432 chips
+	Seat #4: 552 chips
+
+Table #2 after 19 hands.
+
+	Seat #0: 576 chips
+	Seat #1: 636 chips
+	Seat #2: 384 chips
+	Seat #3: 756 chips
+	Seat #4: 384 chips
+
+Table #3 after 36 hands.
+
+	Seat #0: 372 chips
+	Seat #1: 480 chips
+	Seat #2: 420 chips
+	Seat #3: 480 chips
+	Seat #4: 552 chips
+
+Table #4 after 29 hands.
+
+	Seat #0: 696 chips
+	Seat #1: 876 chips
+	Seat #2: 648 chips
+	Seat #3: 516 chips
+	Seat #4: 432 chips
+
+Table #5 after 2 hands.
+
+	Seat #0: 456 chips
+	Seat #1: 564 chips
+	Seat #2: 564 chips
+	Seat #3: 480 chips
+	Seat #4: 516 chips
+
+Cash of highrollers:
+	2304
+
+Cash of bustos:
+	96
+	96
+	72
+	72
+	24
+	24
+	0
+	96
+	96
+	96
+	72
+	72
+	72
+	96
+	72
+	72
+	24
+	24
+	24
+	0
+	0
+	0
+	96
+	96
+	48
+	96
+	96
+	96
+	48
+	24
+	0
+	0
+	24
+	96
+	24
+	48
+	48
+	48
+	0
+	0
+	96
+	72
+	0
+	48
+	48
+	24
+	96
+	0
+	96
+	0
+	96
+
+Report for 4 unit stakes after 60 hands played.
+
+Table #0 after 58 hands.
+
+	Seat #0: 408 chips
+	Seat #1: 768 chips
+	Seat #2: 168 chips
+	Seat #3: 408 chips
+	Seat #4: 648 chips
+
+Table #1 after 58 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 408 chips
+	Seat #2: 168 chips
+	Seat #3: 1008 chips
+	Seat #4: 528 chips
+
+Table #2 after 55 hands.
+
+	Seat #0: 720 chips
+	Seat #1: 360 chips
+	Seat #2: 360 chips
+	Seat #3: 480 chips
+	Seat #4: 480 chips
+
+Table #3 after 56 hands.
+
+	Seat #0: 456 chips
+	Seat #1: 216 chips
+	Seat #2: 696 chips
+	Seat #3: 216 chips
+	Seat #4: 816 chips
+
+Table #4 after 56 hands.
+
+	Seat #0: 456 chips
+	Seat #1: 336 chips
+	Seat #2: 456 chips
+	Seat #3: 696 chips
+	Seat #4: 456 chips
+
+Table #5 after 56 hands.
+
+	Seat #0: 336 chips
+	Seat #1: 456 chips
+	Seat #2: 576 chips
+	Seat #3: 576 chips
+	Seat #4: 456 chips
+
+Table #6 after 58 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 768 chips
+	Seat #2: 48 chips
+	Seat #3: 648 chips
+	Seat #4: 648 chips
+
+Table #7 after 59 hands.
+
+	Seat #0: 624 chips
+	Seat #1: 144 chips
+	Seat #2: 264 chips
+	Seat #3: 624 chips
+	Seat #4: 744 chips
+
+Table #8 after 59 hands.
+
+	Seat #0: 384 chips
+	Seat #1: 864 chips
+	Seat #2: 384 chips
+	Seat #3: 504 chips
+	Seat #4: 264 chips
+
+Table #9 after 25 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 240 chips
+	Seat #2: 240 chips
+	Seat #3: 360 chips
+	Seat #4: 360 chips
+
+Table #10 after 25 hands.
+
+	Seat #0: 336 chips
+	Seat #1: 480 chips
+	Seat #2: 240 chips
+	Seat #3: 600 chips
+	Seat #4: 120 chips
+
+Table #11 after 19 hands.
+
+	Seat #0: 264 chips
+	Seat #1: 384 chips
+	Seat #2: 504 chips
+	Seat #3: 504 chips
+	Seat #4: 264 chips
+
+Table #12 after 16 hands.
+
+	Seat #0: 336 chips
+	Seat #1: 816 chips
+	Seat #2: 456 chips
+	Seat #3: 696 chips
+
+Table #13 after 16 hands.
+
+	Seat #0: 576 chips
+	Seat #1: 816 chips
+	Seat #2: 456 chips
+	Seat #3: 456 chips
+
+Table #14 after 17 hands.
+
+	Seat #0: 432 chips
+	Seat #1: 672 chips
+	Seat #2: 672 chips
+	Seat #3: 552 chips
+
+Table #15 after 17 hands.
+
+	Seat #0: 672 chips
+	Seat #1: 672 chips
+	Seat #2: 672 chips
+	Seat #3: 312 chips
+
+Table #16 after 19 hands.
+
+	Seat #0: 624 chips
+	Seat #1: 264 chips
+	Seat #2: 144 chips
+	Seat #3: 264 chips
+
+Table #17 after 19 hands.
+
+	Seat #0: 264 chips
+	Seat #1: 504 chips
+	Seat #2: 384 chips
+	Seat #3: 264 chips
+
+Table #18 after 18 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 288 chips
+	Seat #2: 408 chips
+	Seat #3: 408 chips
+
+Table #19 after 19 hands.
+
+	Seat #0: 504 chips
+	Seat #1: 624 chips
+	Seat #2: 624 chips
+	Seat #3: 624 chips
+
+Table #20 after 19 hands.
+
+	Seat #0: 624 chips
+	Seat #1: 744 chips
+	Seat #2: 744 chips
+	Seat #3: 264 chips
+
+Table #21 after 19 hands.
+
+	Seat #0: 504 chips
+	Seat #1: 384 chips
+	Seat #2: 264 chips
+	Seat #3: 264 chips
+
+Table #22 after 20 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 360 chips
+	Seat #2: 720 chips
+	Seat #3: 840 chips
+
+Table #23 after 20 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 480 chips
+	Seat #2: 360 chips
+	Seat #3: 120 chips
+
+Table #24 after 21 hands.
+
+	Seat #0: 696 chips
+	Seat #1: 456 chips
+	Seat #2: 456 chips
+	Seat #3: 696 chips
+
+Table #25 after 21 hands.
+
+	Seat #0: 816 chips
+	Seat #1: 696 chips
+	Seat #2: 216 chips
+	Seat #3: 576 chips
+
+Table #26 after 21 hands.
+
+	Seat #0: 816 chips
+	Seat #1: 336 chips
+	Seat #2: 456 chips
+	Seat #3: 696 chips
+
+Table #27 after 22 hands.
+
+	Seat #0: 432 chips
+	Seat #1: 432 chips
+	Seat #2: 552 chips
+	Seat #3: 912 chips
+
+Table #28 after 22 hands.
+
+	Seat #0: 312 chips
+	Seat #1: 792 chips
+	Seat #2: 552 chips
+	Seat #3: 672 chips
+
+Table #29 after 22 hands.
+
+	Seat #0: 192 chips
+	Seat #1: 912 chips
+	Seat #2: 552 chips
+	Seat #3: 672 chips
+
+Table #30 after 21 hands.
+
+	Seat #0: 576 chips
+	Seat #1: 696 chips
+	Seat #2: 456 chips
+	Seat #3: 576 chips
+
+Table #31 after 23 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 288 chips
+	Seat #2: 408 chips
+	Seat #3: 408 chips
+
+Table #32 after 22 hands.
+
+	Seat #0: 192 chips
+	Seat #1: 792 chips
+	Seat #2: 432 chips
+	Seat #3: 912 chips
+
+Table #33 after 22 hands.
+
+	Seat #0: 432 chips
+	Seat #1: 552 chips
+	Seat #2: 792 chips
+	Seat #3: 552 chips
+
+Table #34 after 24 hands.
+
+	Seat #0: 624 chips
+	Seat #1: 504 chips
+	Seat #2: 504 chips
+	Seat #3: 744 chips
+
+Table #35 after 24 hands.
+
+	Seat #0: 864 chips
+	Seat #1: 624 chips
+	Seat #2: 384 chips
+	Seat #3: 504 chips
+
+Table #36 after 23 hands.
+
+	Seat #0: 168 chips
+	Seat #1: 648 chips
+	Seat #2: 288 chips
+	Seat #3: 288 chips
+
+Table #37 after 24 hands.
+
+	Seat #0: 504 chips
+	Seat #1: 624 chips
+	Seat #2: 984 chips
+	Seat #3: 264 chips
+
+Table #38 after 25 hands.
+
+	Seat #0: 840 chips
+	Seat #1: 600 chips
+	Seat #2: 840 chips
+	Seat #3: 120 chips
+
+Table #39 after 25 hands.
+
+	Seat #0: 840 chips
+	Seat #1: 480 chips
+	Seat #2: 360 chips
+	Seat #3: 720 chips
+
+Table #40 after 25 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 600 chips
+	Seat #2: 840 chips
+	Seat #3: 480 chips
+
+Table #41 after 26 hands.
+
+	Seat #0: 576 chips
+	Seat #1: 456 chips
+	Seat #2: 456 chips
+	Seat #3: 816 chips
+
+Table #42 after 26 hands.
+
+	Seat #0: 336 chips
+	Seat #1: 456 chips
+	Seat #2: 336 chips
+	Seat #3: 216 chips
+
+Table #43 after 26 hands.
+
+	Seat #0: 216 chips
+	Seat #1: 456 chips
+	Seat #2: 696 chips
+	Seat #3: 936 chips
+
+Table #44 after 25 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 360 chips
+	Seat #2: 240 chips
+	Seat #3: 240 chips
+
+Table #45 after 27 hands.
+
+	Seat #0: 192 chips
+	Seat #1: 672 chips
+	Seat #2: 312 chips
+	Seat #3: 192 chips
+
+Table #46 after 28 hands.
+
+	Seat #0: 408 chips
+	Seat #1: 288 chips
+	Seat #2: 408 chips
+	Seat #3: 288 chips
+
+Table #47 after 28 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 408 chips
+	Seat #2: 1008 chips
+	Seat #3: 648 chips
+
+Table #48 after 29 hands.
+
+	Seat #0: 144 chips
+	Seat #1: 144 chips
+	Seat #2: 744 chips
+	Seat #3: 384 chips
+
+Table #49 after 30 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 480 chips
+	Seat #2: 240 chips
+	Seat #3: 360 chips
+
+Table #50 after 29 hands.
+
+	Seat #0: 264 chips
+	Seat #1: 144 chips
+	Seat #2: 624 chips
+	Seat #3: 384 chips
+
+Table #51 after 30 hands.
+
+	Seat #0: 240 chips
+	Seat #1: 240 chips
+	Seat #2: 360 chips
+	Seat #3: 600 chips
+
+Table #52 after 31 hands.
+
+	Seat #0: 696 chips
+	Seat #1: 816 chips
+	Seat #2: 216 chips
+	Seat #3: 576 chips
+
+Table #53 after 31 hands.
+
+	Seat #0: 216 chips
+	Seat #1: 936 chips
+	Seat #2: 696 chips
+	Seat #3: 456 chips
+
+Table #54 after 31 hands.
+
+	Seat #0: 576 chips
+	Seat #1: 336 chips
+	Seat #2: 216 chips
+	Seat #3: 96 chips
+
+Table #55 after 31 hands.
+
+	Seat #0: 456 chips
+	Seat #1: 816 chips
+	Seat #2: 216 chips
+	Seat #3: 816 chips
+
+Table #56 after 33 hands.
+
+	Seat #0: 168 chips
+	Seat #1: 408 chips
+	Seat #2: 528 chips
+	Seat #3: 168 chips
+
+Table #57 after 31 hands.
+
+	Seat #0: 576 chips
+	Seat #1: 336 chips
+	Seat #2: 216 chips
+	Seat #3: 216 chips
+
+Table #58 after 33 hands.
+
+	Seat #0: 48 chips
+	Seat #1: 888 chips
+	Seat #2: 768 chips
+	Seat #3: 648 chips
+
+Table #59 after 31 hands.
+
+	Seat #0: 96 chips
+	Seat #1: 336 chips
+	Seat #2: 336 chips
+	Seat #3: 576 chips
+
+Table #60 after 34 hands.
+
+	Seat #0: 864 chips
+	Seat #1: 384 chips
+	Seat #2: 264 chips
+	Seat #3: 864 chips
+
+Table #61 after 35 hands.
+
+	Seat #0: 720 chips
+	Seat #1: 840 chips
+	Seat #2: 720 chips
+	Seat #3: 120 chips
+
+Table #62 after 35 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 600 chips
+	Seat #2: 960 chips
+	Seat #3: 480 chips
+
+Table #63 after 34 hands.
+
+	Seat #0: 144 chips
+	Seat #1: 624 chips
+	Seat #2: 744 chips
+	Seat #3: 864 chips
+
+Table #64 after 36 hands.
+
+	Seat #0: 696 chips
+	Seat #1: 576 chips
+	Seat #2: 456 chips
+	Seat #3: 576 chips
+
+Table #65 after 34 hands.
+
+	Seat #0: 384 chips
+	Seat #1: 264 chips
+	Seat #2: 1104 chips
+	Seat #3: 624 chips
+
+Table #66 after 36 hands.
+
+	Seat #0: 336 chips
+	Seat #1: 456 chips
+	Seat #2: 96 chips
+	Seat #3: 456 chips
+
+Table #67 after 36 hands.
+
+	Seat #0: 456 chips
+	Seat #1: 216 chips
+	Seat #2: 216 chips
+	Seat #3: 456 chips
+
+Table #68 after 36 hands.
+
+	Seat #0: 96 chips
+	Seat #1: 336 chips
+	Seat #2: 336 chips
+	Seat #3: 456 chips
+
+Table #69 after 38 hands.
+
+	Seat #0: 528 chips
+	Seat #1: 648 chips
+	Seat #2: 528 chips
+	Seat #3: 648 chips
+
+Table #70 after 38 hands.
+
+	Seat #0: 408 chips
+	Seat #1: 648 chips
+	Seat #2: 768 chips
+	Seat #3: 528 chips
+
+Table #71 after 38 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 888 chips
+	Seat #2: 408 chips
+	Seat #3: 768 chips
+
+Table #72 after 40 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 480 chips
+	Seat #2: 720 chips
+	Seat #3: 720 chips
+
+Table #73 after 40 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 480 chips
+	Seat #2: 600 chips
+	Seat #3: 840 chips
+
+Table #74 after 40 hands.
+
+	Seat #0: 240 chips
+	Seat #1: 120 chips
+	Seat #2: 600 chips
+	Seat #3: 480 chips
+
+Table #75 after 41 hands.
+
+	Seat #0: 336 chips
+	Seat #1: 336 chips
+	Seat #2: 216 chips
+	Seat #3: 456 chips
+
+Table #76 after 41 hands.
+
+	Seat #0: 576 chips
+	Seat #1: 576 chips
+	Seat #2: 456 chips
+	Seat #3: 696 chips
+
+Table #77 after 42 hands.
+
+	Seat #0: 792 chips
+	Seat #1: 432 chips
+	Seat #2: 912 chips
+	Seat #3: 192 chips
+
+Table #78 after 40 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 120 chips
+	Seat #2: 480 chips
+	Seat #3: 360 chips
+
+Table #79 after 43 hands.
+
+	Seat #0: 648 chips
+	Seat #1: 168 chips
+	Seat #2: 408 chips
+	Seat #3: 168 chips
+
+Table #80 after 40 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 480 chips
+	Seat #2: 720 chips
+	Seat #3: 720 chips
+
+Table #81 after 43 hands.
+
+	Seat #0: 768 chips
+	Seat #1: 648 chips
+	Seat #2: 768 chips
+	Seat #3: 168 chips
+
+Table #82 after 43 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 648 chips
+	Seat #2: 888 chips
+	Seat #3: 528 chips
+
+Table #83 after 44 hands.
+
+	Seat #0: 624 chips
+	Seat #1: 504 chips
+	Seat #2: 744 chips
+	Seat #3: 504 chips
+
+Table #84 after 44 hands.
+
+	Seat #0: 384 chips
+	Seat #1: 624 chips
+	Seat #2: 264 chips
+	Seat #3: 144 chips
+
+Table #85 after 44 hands.
+
+	Seat #0: 144 chips
+	Seat #1: 144 chips
+	Seat #2: 624 chips
+	Seat #3: 504 chips
+
+Table #86 after 46 hands.
+
+	Seat #0: 216 chips
+	Seat #1: 576 chips
+	Seat #2: 696 chips
+	Seat #3: 816 chips
+
+Table #87 after 45 hands.
+
+	Seat #0: 720 chips
+	Seat #1: 600 chips
+	Seat #2: 480 chips
+	Seat #3: 600 chips
+
+Table #88 after 16 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 456 chips
+	Seat #2: 336 chips
+	Seat #3: 336 chips
+
+Table #89 after 45 hands.
+
+	Seat #0: 960 chips
+	Seat #1: 360 chips
+	Seat #2: 840 chips
+	Seat #3: 240 chips
+
+Table #90 after 46 hands.
+
+	Seat #0: 96 chips
+	Seat #1: 456 chips
+	Seat #2: 576 chips
+	Seat #3: 216 chips
+
+Table #91 after 48 hands.
+
+	Seat #0: 408 chips
+	Seat #1: 48 chips
+	Seat #2: 288 chips
+	Seat #3: 528 chips
+
+Table #92 after 16 hands.
+
+	Seat #0: 696 chips
+	Seat #1: 216 chips
+	Seat #2: 336 chips
+	Seat #3: 480 chips
+
+Table #93 after 52 hands.
+
+	Seat #0: 552 chips
+	Seat #1: 432 chips
+	Seat #2: 552 chips
+	Seat #3: 792 chips
+
+Table #94 after 51 hands.
+
+	Seat #0: 216 chips
+	Seat #1: 456 chips
+	Seat #2: 216 chips
+	Seat #3: 456 chips
+
+Table #95 after 53 hands.
+
+	Seat #0: 528 chips
+	Seat #1: 288 chips
+	Seat #2: 288 chips
+	Seat #3: 288 chips
+
+Table #96 after 58 hands.
+
+	Seat #0: 408 chips
+	Seat #1: 408 chips
+	Seat #2: 168 chips
+	Seat #3: 408 chips
+
+Table #97 after 55 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 240 chips
+	Seat #2: 360 chips
+	Seat #3: 240 chips
+
+Table #98 after 53 hands.
+
+	Seat #0: 408 chips
+	Seat #1: 408 chips
+	Seat #2: 888 chips
+	Seat #3: 648 chips
+
+Table #99 after 58 hands.
+
+	Seat #0: 768 chips
+	Seat #1: 168 chips
+	Seat #2: 1008 chips
+	Seat #3: 408 chips
+
+Report for 8 unit stakes after 54 hands played.
+
+Table #0 after 23 hands.
+
+	Seat #0: 516 chips
+	Seat #1: 852 chips
+	Seat #2: 456 chips
+	Seat #3: 456 chips
+	Seat #4: 456 chips
+
+Table #1 after 45 hands.
+
+	Seat #0: 396 chips
+	Seat #1: 384 chips
+	Seat #2: 564 chips
+	Seat #3: 264 chips
+	Seat #4: 696 chips
+
+Table #2 after 11 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 588 chips
+	Seat #2: 468 chips
+	Seat #3: 504 chips
+	Seat #4: 540 chips
+
+Table #3 after 29 hands.
+
+	Seat #0: 696 chips
+	Seat #1: 876 chips
+	Seat #2: 672 chips
+	Seat #3: 516 chips
+	Seat #4: 264 chips
+
+Table #4 after 39 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 876 chips
+	Seat #2: 408 chips
+	Seat #3: 276 chips
+	Seat #4: 672 chips
+
+Table #5 after 33 hands.
+
+	Seat #0: 552 chips
+	Seat #1: 456 chips
+	Seat #2: 528 chips
+	Seat #3: 804 chips
+
+Cash of highrollers:
+	2304
+	1920
+
+Cash of bustos:
+	96
+	96
+	72
+	72
+	24
+	24
+	0
+	96
+	96
+	96
+	72
+	72
+	72
+	96
+	72
+	72
+	24
+	24
+	24
+	0
+	0
+	0
+	96
+	96
+	48
+	96
+	96
+	96
+	48
+	24
+	0
+	0
+	24
+	96
+	24
+	48
+	48
+	48
+	0
+	0
+	96
+	72
+	0
+	48
+	48
+	24
+	96
+	0
+	96
+	0
+	96
+	72
+	48
+	48
+
+Report for 4 unit stakes after 70 hands played.
+
+Table #0 after 68 hands.
+
+	Seat #0: 408 chips
+	Seat #1: 768 chips
+	Seat #2: 168 chips
+	Seat #3: 528 chips
+	Seat #4: 528 chips
+
+Table #1 after 68 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 288 chips
+	Seat #2: 288 chips
+	Seat #3: 888 chips
+	Seat #4: 648 chips
+
+Table #2 after 65 hands.
+
+	Seat #0: 720 chips
+	Seat #1: 360 chips
+	Seat #2: 480 chips
+	Seat #3: 480 chips
+	Seat #4: 360 chips
+
+Table #3 after 66 hands.
+
+	Seat #0: 456 chips
+	Seat #1: 216 chips
+	Seat #2: 576 chips
+	Seat #3: 336 chips
+	Seat #4: 816 chips
+
+Table #4 after 66 hands.
+
+	Seat #0: 456 chips
+	Seat #1: 456 chips
+	Seat #2: 456 chips
+	Seat #3: 696 chips
+	Seat #4: 336 chips
+
+Table #5 after 66 hands.
+
+	Seat #0: 216 chips
+	Seat #1: 696 chips
+	Seat #2: 456 chips
+	Seat #3: 696 chips
+	Seat #4: 336 chips
+
+Table #6 after 68 hands.
+
+	Seat #0: 888 chips
+	Seat #1: 168 chips
+	Seat #2: 48 chips
+	Seat #3: 528 chips
+	Seat #4: 768 chips
+
+Table #7 after 69 hands.
+
+	Seat #0: 144 chips
+	Seat #1: 864 chips
+	Seat #2: 384 chips
+	Seat #3: 504 chips
+	Seat #4: 504 chips
+
+Table #8 after 35 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 120 chips
+	Seat #2: 240 chips
+	Seat #3: 600 chips
+	Seat #4: 240 chips
+
+Table #9 after 28 hands.
+
+	Seat #0: 168 chips
+	Seat #1: 288 chips
+	Seat #2: 528 chips
+	Seat #3: 648 chips
+	Seat #4: 288 chips
+
+Table #10 after 24 hands.
+
+	Seat #0: 624 chips
+	Seat #1: 864 chips
+	Seat #2: 384 chips
+	Seat #3: 528 chips
+	Seat #4: 384 chips
+
+Table #11 after 25 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 600 chips
+	Seat #2: 480 chips
+	Seat #3: 600 chips
+	Seat #4: 504 chips
+
+Table #12 after 17 hands.
+
+	Seat #0: 672 chips
+	Seat #1: 672 chips
+	Seat #2: 672 chips
+	Seat #3: 312 chips
+
+Table #13 after 19 hands.
+
+	Seat #0: 624 chips
+	Seat #1: 264 chips
+	Seat #2: 144 chips
+	Seat #3: 264 chips
+
+Table #14 after 19 hands.
+
+	Seat #0: 264 chips
+	Seat #1: 504 chips
+	Seat #2: 384 chips
+	Seat #3: 264 chips
+
+Table #15 after 18 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 288 chips
+	Seat #2: 408 chips
+	Seat #3: 408 chips
+
+Table #16 after 19 hands.
+
+	Seat #0: 504 chips
+	Seat #1: 624 chips
+	Seat #2: 624 chips
+	Seat #3: 624 chips
+
+Table #17 after 19 hands.
+
+	Seat #0: 624 chips
+	Seat #1: 744 chips
+	Seat #2: 744 chips
+	Seat #3: 264 chips
+
+Table #18 after 19 hands.
+
+	Seat #0: 504 chips
+	Seat #1: 384 chips
+	Seat #2: 264 chips
+	Seat #3: 264 chips
+
+Table #19 after 20 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 360 chips
+	Seat #2: 720 chips
+	Seat #3: 840 chips
+
+Table #20 after 20 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 480 chips
+	Seat #2: 360 chips
+	Seat #3: 120 chips
+
+Table #21 after 21 hands.
+
+	Seat #0: 696 chips
+	Seat #1: 456 chips
+	Seat #2: 456 chips
+	Seat #3: 696 chips
+
+Table #22 after 21 hands.
+
+	Seat #0: 816 chips
+	Seat #1: 696 chips
+	Seat #2: 216 chips
+	Seat #3: 576 chips
+
+Table #23 after 21 hands.
+
+	Seat #0: 816 chips
+	Seat #1: 336 chips
+	Seat #2: 456 chips
+	Seat #3: 696 chips
+
+Table #24 after 22 hands.
+
+	Seat #0: 432 chips
+	Seat #1: 432 chips
+	Seat #2: 552 chips
+	Seat #3: 912 chips
+
+Table #25 after 22 hands.
+
+	Seat #0: 312 chips
+	Seat #1: 792 chips
+	Seat #2: 552 chips
+	Seat #3: 672 chips
+
+Table #26 after 22 hands.
+
+	Seat #0: 192 chips
+	Seat #1: 912 chips
+	Seat #2: 552 chips
+	Seat #3: 672 chips
+
+Table #27 after 21 hands.
+
+	Seat #0: 576 chips
+	Seat #1: 696 chips
+	Seat #2: 456 chips
+	Seat #3: 576 chips
+
+Table #28 after 23 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 288 chips
+	Seat #2: 408 chips
+	Seat #3: 408 chips
+
+Table #29 after 22 hands.
+
+	Seat #0: 192 chips
+	Seat #1: 792 chips
+	Seat #2: 432 chips
+	Seat #3: 912 chips
+
+Table #30 after 22 hands.
+
+	Seat #0: 432 chips
+	Seat #1: 552 chips
+	Seat #2: 792 chips
+	Seat #3: 552 chips
+
+Table #31 after 24 hands.
+
+	Seat #0: 624 chips
+	Seat #1: 504 chips
+	Seat #2: 504 chips
+	Seat #3: 744 chips
+
+Table #32 after 24 hands.
+
+	Seat #0: 864 chips
+	Seat #1: 624 chips
+	Seat #2: 384 chips
+	Seat #3: 504 chips
+
+Table #33 after 23 hands.
+
+	Seat #0: 168 chips
+	Seat #1: 648 chips
+	Seat #2: 288 chips
+	Seat #3: 288 chips
+
+Table #34 after 24 hands.
+
+	Seat #0: 504 chips
+	Seat #1: 624 chips
+	Seat #2: 984 chips
+	Seat #3: 264 chips
+
+Table #35 after 25 hands.
+
+	Seat #0: 840 chips
+	Seat #1: 600 chips
+	Seat #2: 840 chips
+	Seat #3: 120 chips
+
+Table #36 after 25 hands.
+
+	Seat #0: 840 chips
+	Seat #1: 480 chips
+	Seat #2: 360 chips
+	Seat #3: 720 chips
+
+Table #37 after 25 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 600 chips
+	Seat #2: 840 chips
+	Seat #3: 480 chips
+
+Table #38 after 26 hands.
+
+	Seat #0: 576 chips
+	Seat #1: 456 chips
+	Seat #2: 456 chips
+	Seat #3: 816 chips
+
+Table #39 after 26 hands.
+
+	Seat #0: 336 chips
+	Seat #1: 456 chips
+	Seat #2: 336 chips
+	Seat #3: 216 chips
+
+Table #40 after 26 hands.
+
+	Seat #0: 216 chips
+	Seat #1: 456 chips
+	Seat #2: 696 chips
+	Seat #3: 936 chips
+
+Table #41 after 25 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 360 chips
+	Seat #2: 240 chips
+	Seat #3: 240 chips
+
+Table #42 after 27 hands.
+
+	Seat #0: 192 chips
+	Seat #1: 672 chips
+	Seat #2: 312 chips
+	Seat #3: 192 chips
+
+Table #43 after 28 hands.
+
+	Seat #0: 408 chips
+	Seat #1: 288 chips
+	Seat #2: 408 chips
+	Seat #3: 288 chips
+
+Table #44 after 28 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 408 chips
+	Seat #2: 1008 chips
+	Seat #3: 648 chips
+
+Table #45 after 29 hands.
+
+	Seat #0: 144 chips
+	Seat #1: 144 chips
+	Seat #2: 744 chips
+	Seat #3: 384 chips
+
+Table #46 after 30 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 480 chips
+	Seat #2: 240 chips
+	Seat #3: 360 chips
+
+Table #47 after 29 hands.
+
+	Seat #0: 264 chips
+	Seat #1: 144 chips
+	Seat #2: 624 chips
+	Seat #3: 384 chips
+
+Table #48 after 30 hands.
+
+	Seat #0: 240 chips
+	Seat #1: 240 chips
+	Seat #2: 360 chips
+	Seat #3: 600 chips
+
+Table #49 after 31 hands.
+
+	Seat #0: 696 chips
+	Seat #1: 816 chips
+	Seat #2: 216 chips
+	Seat #3: 576 chips
+
+Table #50 after 31 hands.
+
+	Seat #0: 216 chips
+	Seat #1: 936 chips
+	Seat #2: 696 chips
+	Seat #3: 456 chips
+
+Table #51 after 31 hands.
+
+	Seat #0: 576 chips
+	Seat #1: 336 chips
+	Seat #2: 216 chips
+	Seat #3: 96 chips
+
+Table #52 after 31 hands.
+
+	Seat #0: 456 chips
+	Seat #1: 816 chips
+	Seat #2: 216 chips
+	Seat #3: 816 chips
+
+Table #53 after 33 hands.
+
+	Seat #0: 168 chips
+	Seat #1: 408 chips
+	Seat #2: 528 chips
+	Seat #3: 168 chips
+
+Table #54 after 31 hands.
+
+	Seat #0: 576 chips
+	Seat #1: 336 chips
+	Seat #2: 216 chips
+	Seat #3: 216 chips
+
+Table #55 after 33 hands.
+
+	Seat #0: 48 chips
+	Seat #1: 888 chips
+	Seat #2: 768 chips
+	Seat #3: 648 chips
+
+Table #56 after 31 hands.
+
+	Seat #0: 96 chips
+	Seat #1: 336 chips
+	Seat #2: 336 chips
+	Seat #3: 576 chips
+
+Table #57 after 34 hands.
+
+	Seat #0: 864 chips
+	Seat #1: 384 chips
+	Seat #2: 264 chips
+	Seat #3: 864 chips
+
+Table #58 after 35 hands.
+
+	Seat #0: 720 chips
+	Seat #1: 840 chips
+	Seat #2: 720 chips
+	Seat #3: 120 chips
+
+Table #59 after 35 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 600 chips
+	Seat #2: 960 chips
+	Seat #3: 480 chips
+
+Table #60 after 34 hands.
+
+	Seat #0: 144 chips
+	Seat #1: 624 chips
+	Seat #2: 744 chips
+	Seat #3: 864 chips
+
+Table #61 after 36 hands.
+
+	Seat #0: 696 chips
+	Seat #1: 576 chips
+	Seat #2: 456 chips
+	Seat #3: 576 chips
+
+Table #62 after 34 hands.
+
+	Seat #0: 384 chips
+	Seat #1: 264 chips
+	Seat #2: 1104 chips
+	Seat #3: 624 chips
+
+Table #63 after 36 hands.
+
+	Seat #0: 336 chips
+	Seat #1: 456 chips
+	Seat #2: 96 chips
+	Seat #3: 456 chips
+
+Table #64 after 36 hands.
+
+	Seat #0: 456 chips
+	Seat #1: 216 chips
+	Seat #2: 216 chips
+	Seat #3: 456 chips
+
+Table #65 after 36 hands.
+
+	Seat #0: 96 chips
+	Seat #1: 336 chips
+	Seat #2: 336 chips
+	Seat #3: 456 chips
+
+Table #66 after 38 hands.
+
+	Seat #0: 528 chips
+	Seat #1: 648 chips
+	Seat #2: 528 chips
+	Seat #3: 648 chips
+
+Table #67 after 38 hands.
+
+	Seat #0: 408 chips
+	Seat #1: 648 chips
+	Seat #2: 768 chips
+	Seat #3: 528 chips
+
+Table #68 after 38 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 888 chips
+	Seat #2: 408 chips
+	Seat #3: 768 chips
+
+Table #69 after 40 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 480 chips
+	Seat #2: 720 chips
+	Seat #3: 720 chips
+
+Table #70 after 40 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 480 chips
+	Seat #2: 600 chips
+	Seat #3: 840 chips
+
+Table #71 after 40 hands.
+
+	Seat #0: 240 chips
+	Seat #1: 120 chips
+	Seat #2: 600 chips
+	Seat #3: 480 chips
+
+Table #72 after 41 hands.
+
+	Seat #0: 336 chips
+	Seat #1: 336 chips
+	Seat #2: 216 chips
+	Seat #3: 456 chips
+
+Table #73 after 41 hands.
+
+	Seat #0: 576 chips
+	Seat #1: 576 chips
+	Seat #2: 456 chips
+	Seat #3: 696 chips
+
+Table #74 after 42 hands.
+
+	Seat #0: 792 chips
+	Seat #1: 432 chips
+	Seat #2: 912 chips
+	Seat #3: 192 chips
+
+Table #75 after 40 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 120 chips
+	Seat #2: 480 chips
+	Seat #3: 360 chips
+
+Table #76 after 43 hands.
+
+	Seat #0: 648 chips
+	Seat #1: 168 chips
+	Seat #2: 408 chips
+	Seat #3: 168 chips
+
+Table #77 after 40 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 480 chips
+	Seat #2: 720 chips
+	Seat #3: 720 chips
+
+Table #78 after 43 hands.
+
+	Seat #0: 768 chips
+	Seat #1: 648 chips
+	Seat #2: 768 chips
+	Seat #3: 168 chips
+
+Table #79 after 43 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 648 chips
+	Seat #2: 888 chips
+	Seat #3: 528 chips
+
+Table #80 after 44 hands.
+
+	Seat #0: 624 chips
+	Seat #1: 504 chips
+	Seat #2: 744 chips
+	Seat #3: 504 chips
+
+Table #81 after 44 hands.
+
+	Seat #0: 384 chips
+	Seat #1: 624 chips
+	Seat #2: 264 chips
+	Seat #3: 144 chips
+
+Table #82 after 44 hands.
+
+	Seat #0: 144 chips
+	Seat #1: 144 chips
+	Seat #2: 624 chips
+	Seat #3: 504 chips
+
+Table #83 after 46 hands.
+
+	Seat #0: 216 chips
+	Seat #1: 576 chips
+	Seat #2: 696 chips
+	Seat #3: 816 chips
+
+Table #84 after 45 hands.
+
+	Seat #0: 720 chips
+	Seat #1: 600 chips
+	Seat #2: 480 chips
+	Seat #3: 600 chips
+
+Table #85 after 16 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 456 chips
+	Seat #2: 336 chips
+	Seat #3: 336 chips
+
+Table #86 after 45 hands.
+
+	Seat #0: 960 chips
+	Seat #1: 360 chips
+	Seat #2: 840 chips
+	Seat #3: 240 chips
+
+Table #87 after 46 hands.
+
+	Seat #0: 96 chips
+	Seat #1: 456 chips
+	Seat #2: 576 chips
+	Seat #3: 216 chips
+
+Table #88 after 48 hands.
+
+	Seat #0: 408 chips
+	Seat #1: 48 chips
+	Seat #2: 288 chips
+	Seat #3: 528 chips
+
+Table #89 after 16 hands.
+
+	Seat #0: 696 chips
+	Seat #1: 216 chips
+	Seat #2: 336 chips
+	Seat #3: 480 chips
+
+Table #90 after 52 hands.
+
+	Seat #0: 552 chips
+	Seat #1: 432 chips
+	Seat #2: 552 chips
+	Seat #3: 792 chips
+
+Table #91 after 51 hands.
+
+	Seat #0: 216 chips
+	Seat #1: 456 chips
+	Seat #2: 216 chips
+	Seat #3: 456 chips
+
+Table #92 after 53 hands.
+
+	Seat #0: 528 chips
+	Seat #1: 288 chips
+	Seat #2: 288 chips
+	Seat #3: 288 chips
+
+Table #93 after 58 hands.
+
+	Seat #0: 408 chips
+	Seat #1: 408 chips
+	Seat #2: 168 chips
+	Seat #3: 408 chips
+
+Table #94 after 55 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 240 chips
+	Seat #2: 360 chips
+	Seat #3: 240 chips
+
+Table #95 after 53 hands.
+
+	Seat #0: 408 chips
+	Seat #1: 408 chips
+	Seat #2: 888 chips
+	Seat #3: 648 chips
+
+Table #96 after 58 hands.
+
+	Seat #0: 768 chips
+	Seat #1: 168 chips
+	Seat #2: 1008 chips
+	Seat #3: 408 chips
+
+Table #97 after 60 hands.
+
+	Seat #0: 240 chips
+	Seat #1: 960 chips
+	Seat #2: 600 chips
+	Seat #3: 600 chips
+
+Table #98 after 27 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 552 chips
+	Seat #2: 312 chips
+	Seat #3: 552 chips
+
+Table #99 after 24 hands.
+
+	Seat #0: 384 chips
+	Seat #1: 384 chips
+	Seat #2: 432 chips
+	Seat #3: 504 chips
+
+Report for 8 unit stakes after 64 hands played.
+
+Table #0 after 33 hands.
+
+	Seat #0: 876 chips
+	Seat #1: 732 chips
+	Seat #2: 456 chips
+	Seat #3: 216 chips
+	Seat #4: 456 chips
+
+Table #1 after 20 hands.
+
+	Seat #0: 384 chips
+	Seat #1: 612 chips
+	Seat #2: 612 chips
+	Seat #3: 528 chips
+	Seat #4: 444 chips
+
+Table #2 after 39 hands.
+
+	Seat #0: 456 chips
+	Seat #1: 756 chips
+	Seat #2: 432 chips
+	Seat #3: 516 chips
+	Seat #4: 864 chips
+
+Table #3 after 42 hands.
+
+	Seat #0: 648 chips
+	Seat #1: 456 chips
+	Seat #2: 480 chips
+	Seat #3: 432 chips
+	Seat #4: 828 chips
+
+Table #4 after 55 hands.
+
+	Seat #0: 756 chips
+	Seat #1: 264 chips
+	Seat #2: 564 chips
+	Seat #3: 504 chips
+	Seat #4: 456 chips
+
+Table #5 after 44 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 876 chips
+	Seat #2: 528 chips
+	Seat #3: 420 chips
+	Seat #4: 552 chips
+
+Cash of highrollers:
+	2304
+	1920
+
+Cash of bustos:
+	96
+	96
+	72
+	72
+	24
+	24
+	0
+	96
+	96
+	96
+	72
+	72
+	72
+	96
+	72
+	72
+	24
+	24
+	24
+	0
+	0
+	0
+	96
+	96
+	48
+	96
+	96
+	96
+	48
+	24
+	0
+	0
+	24
+	96
+	24
+	48
+	48
+	48
+	0
+	0
+	96
+	72
+	0
+	48
+	48
+	24
+	96
+	0
+	96
+	0
+	96
+	72
+	48
+	48
+	0
+	72
+
+Report for 4 unit stakes after 80 hands played.
+
+Table #0 after 78 hands.
+
+	Seat #0: 528 chips
+	Seat #1: 768 chips
+	Seat #2: 288 chips
+	Seat #3: 408 chips
+	Seat #4: 408 chips
+
+Table #1 after 74 hands.
+
+	Seat #0: 504 chips
+	Seat #1: 504 chips
+	Seat #2: 504 chips
+	Seat #3: 504 chips
+	Seat #4: 384 chips
+
+Table #2 after 76 hands.
+
+	Seat #0: 456 chips
+	Seat #1: 576 chips
+	Seat #2: 336 chips
+	Seat #3: 216 chips
+	Seat #4: 816 chips
+
+Table #3 after 76 hands.
+
+	Seat #0: 336 chips
+	Seat #1: 576 chips
+	Seat #2: 576 chips
+	Seat #3: 456 chips
+	Seat #4: 456 chips
+
+Table #4 after 78 hands.
+
+	Seat #0: 168 chips
+	Seat #1: 1008 chips
+	Seat #2: 288 chips
+	Seat #3: 408 chips
+	Seat #4: 528 chips
+
+Table #5 after 45 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 120 chips
+	Seat #2: 240 chips
+	Seat #3: 480 chips
+	Seat #4: 480 chips
+
+Table #6 after 33 hands.
+
+	Seat #0: 648 chips
+	Seat #1: 768 chips
+	Seat #2: 528 chips
+	Seat #3: 432 chips
+	Seat #4: 408 chips
+
+Table #7 after 35 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 480 chips
+	Seat #2: 480 chips
+	Seat #3: 840 chips
+	Seat #4: 624 chips
+
+Table #8 after 18 hands.
+
+	Seat #0: 768 chips
+	Seat #1: 648 chips
+	Seat #2: 648 chips
+	Seat #3: 288 chips
+	Seat #4: 312 chips
+
+Table #9 after 19 hands.
+
+	Seat #0: 624 chips
+	Seat #1: 264 chips
+	Seat #2: 144 chips
+	Seat #3: 264 chips
+
+Table #10 after 19 hands.
+
+	Seat #0: 264 chips
+	Seat #1: 504 chips
+	Seat #2: 384 chips
+	Seat #3: 264 chips
+
+Table #11 after 18 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 288 chips
+	Seat #2: 408 chips
+	Seat #3: 408 chips
+
+Table #12 after 19 hands.
+
+	Seat #0: 504 chips
+	Seat #1: 624 chips
+	Seat #2: 624 chips
+	Seat #3: 624 chips
+
+Table #13 after 19 hands.
+
+	Seat #0: 624 chips
+	Seat #1: 744 chips
+	Seat #2: 744 chips
+	Seat #3: 264 chips
+
+Table #14 after 19 hands.
+
+	Seat #0: 504 chips
+	Seat #1: 384 chips
+	Seat #2: 264 chips
+	Seat #3: 264 chips
+
+Table #15 after 20 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 360 chips
+	Seat #2: 720 chips
+	Seat #3: 840 chips
+
+Table #16 after 20 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 480 chips
+	Seat #2: 360 chips
+	Seat #3: 120 chips
+
+Table #17 after 21 hands.
+
+	Seat #0: 696 chips
+	Seat #1: 456 chips
+	Seat #2: 456 chips
+	Seat #3: 696 chips
+
+Table #18 after 21 hands.
+
+	Seat #0: 816 chips
+	Seat #1: 696 chips
+	Seat #2: 216 chips
+	Seat #3: 576 chips
+
+Table #19 after 21 hands.
+
+	Seat #0: 816 chips
+	Seat #1: 336 chips
+	Seat #2: 456 chips
+	Seat #3: 696 chips
+
+Table #20 after 22 hands.
+
+	Seat #0: 432 chips
+	Seat #1: 432 chips
+	Seat #2: 552 chips
+	Seat #3: 912 chips
+
+Table #21 after 22 hands.
+
+	Seat #0: 312 chips
+	Seat #1: 792 chips
+	Seat #2: 552 chips
+	Seat #3: 672 chips
+
+Table #22 after 22 hands.
+
+	Seat #0: 192 chips
+	Seat #1: 912 chips
+	Seat #2: 552 chips
+	Seat #3: 672 chips
+
+Table #23 after 21 hands.
+
+	Seat #0: 576 chips
+	Seat #1: 696 chips
+	Seat #2: 456 chips
+	Seat #3: 576 chips
+
+Table #24 after 23 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 288 chips
+	Seat #2: 408 chips
+	Seat #3: 408 chips
+
+Table #25 after 22 hands.
+
+	Seat #0: 192 chips
+	Seat #1: 792 chips
+	Seat #2: 432 chips
+	Seat #3: 912 chips
+
+Table #26 after 22 hands.
+
+	Seat #0: 432 chips
+	Seat #1: 552 chips
+	Seat #2: 792 chips
+	Seat #3: 552 chips
+
+Table #27 after 24 hands.
+
+	Seat #0: 624 chips
+	Seat #1: 504 chips
+	Seat #2: 504 chips
+	Seat #3: 744 chips
+
+Table #28 after 24 hands.
+
+	Seat #0: 864 chips
+	Seat #1: 624 chips
+	Seat #2: 384 chips
+	Seat #3: 504 chips
+
+Table #29 after 23 hands.
+
+	Seat #0: 168 chips
+	Seat #1: 648 chips
+	Seat #2: 288 chips
+	Seat #3: 288 chips
+
+Table #30 after 24 hands.
+
+	Seat #0: 504 chips
+	Seat #1: 624 chips
+	Seat #2: 984 chips
+	Seat #3: 264 chips
+
+Table #31 after 25 hands.
+
+	Seat #0: 840 chips
+	Seat #1: 600 chips
+	Seat #2: 840 chips
+	Seat #3: 120 chips
+
+Table #32 after 25 hands.
+
+	Seat #0: 840 chips
+	Seat #1: 480 chips
+	Seat #2: 360 chips
+	Seat #3: 720 chips
+
+Table #33 after 25 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 600 chips
+	Seat #2: 840 chips
+	Seat #3: 480 chips
+
+Table #34 after 26 hands.
+
+	Seat #0: 576 chips
+	Seat #1: 456 chips
+	Seat #2: 456 chips
+	Seat #3: 816 chips
+
+Table #35 after 26 hands.
+
+	Seat #0: 336 chips
+	Seat #1: 456 chips
+	Seat #2: 336 chips
+	Seat #3: 216 chips
+
+Table #36 after 26 hands.
+
+	Seat #0: 216 chips
+	Seat #1: 456 chips
+	Seat #2: 696 chips
+	Seat #3: 936 chips
+
+Table #37 after 25 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 360 chips
+	Seat #2: 240 chips
+	Seat #3: 240 chips
+
+Table #38 after 27 hands.
+
+	Seat #0: 192 chips
+	Seat #1: 672 chips
+	Seat #2: 312 chips
+	Seat #3: 192 chips
+
+Table #39 after 28 hands.
+
+	Seat #0: 408 chips
+	Seat #1: 288 chips
+	Seat #2: 408 chips
+	Seat #3: 288 chips
+
+Table #40 after 28 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 408 chips
+	Seat #2: 1008 chips
+	Seat #3: 648 chips
+
+Table #41 after 29 hands.
+
+	Seat #0: 144 chips
+	Seat #1: 144 chips
+	Seat #2: 744 chips
+	Seat #3: 384 chips
+
+Table #42 after 30 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 480 chips
+	Seat #2: 240 chips
+	Seat #3: 360 chips
+
+Table #43 after 29 hands.
+
+	Seat #0: 264 chips
+	Seat #1: 144 chips
+	Seat #2: 624 chips
+	Seat #3: 384 chips
+
+Table #44 after 30 hands.
+
+	Seat #0: 240 chips
+	Seat #1: 240 chips
+	Seat #2: 360 chips
+	Seat #3: 600 chips
+
+Table #45 after 31 hands.
+
+	Seat #0: 696 chips
+	Seat #1: 816 chips
+	Seat #2: 216 chips
+	Seat #3: 576 chips
+
+Table #46 after 31 hands.
+
+	Seat #0: 216 chips
+	Seat #1: 936 chips
+	Seat #2: 696 chips
+	Seat #3: 456 chips
+
+Table #47 after 31 hands.
+
+	Seat #0: 576 chips
+	Seat #1: 336 chips
+	Seat #2: 216 chips
+	Seat #3: 96 chips
+
+Table #48 after 31 hands.
+
+	Seat #0: 456 chips
+	Seat #1: 816 chips
+	Seat #2: 216 chips
+	Seat #3: 816 chips
+
+Table #49 after 33 hands.
+
+	Seat #0: 168 chips
+	Seat #1: 408 chips
+	Seat #2: 528 chips
+	Seat #3: 168 chips
+
+Table #50 after 31 hands.
+
+	Seat #0: 576 chips
+	Seat #1: 336 chips
+	Seat #2: 216 chips
+	Seat #3: 216 chips
+
+Table #51 after 33 hands.
+
+	Seat #0: 48 chips
+	Seat #1: 888 chips
+	Seat #2: 768 chips
+	Seat #3: 648 chips
+
+Table #52 after 31 hands.
+
+	Seat #0: 96 chips
+	Seat #1: 336 chips
+	Seat #2: 336 chips
+	Seat #3: 576 chips
+
+Table #53 after 34 hands.
+
+	Seat #0: 864 chips
+	Seat #1: 384 chips
+	Seat #2: 264 chips
+	Seat #3: 864 chips
+
+Table #54 after 35 hands.
+
+	Seat #0: 720 chips
+	Seat #1: 840 chips
+	Seat #2: 720 chips
+	Seat #3: 120 chips
+
+Table #55 after 35 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 600 chips
+	Seat #2: 960 chips
+	Seat #3: 480 chips
+
+Table #56 after 34 hands.
+
+	Seat #0: 144 chips
+	Seat #1: 624 chips
+	Seat #2: 744 chips
+	Seat #3: 864 chips
+
+Table #57 after 36 hands.
+
+	Seat #0: 696 chips
+	Seat #1: 576 chips
+	Seat #2: 456 chips
+	Seat #3: 576 chips
+
+Table #58 after 34 hands.
+
+	Seat #0: 384 chips
+	Seat #1: 264 chips
+	Seat #2: 1104 chips
+	Seat #3: 624 chips
+
+Table #59 after 36 hands.
+
+	Seat #0: 336 chips
+	Seat #1: 456 chips
+	Seat #2: 96 chips
+	Seat #3: 456 chips
+
+Table #60 after 36 hands.
+
+	Seat #0: 456 chips
+	Seat #1: 216 chips
+	Seat #2: 216 chips
+	Seat #3: 456 chips
+
+Table #61 after 36 hands.
+
+	Seat #0: 96 chips
+	Seat #1: 336 chips
+	Seat #2: 336 chips
+	Seat #3: 456 chips
+
+Table #62 after 38 hands.
+
+	Seat #0: 528 chips
+	Seat #1: 648 chips
+	Seat #2: 528 chips
+	Seat #3: 648 chips
+
+Table #63 after 38 hands.
+
+	Seat #0: 408 chips
+	Seat #1: 648 chips
+	Seat #2: 768 chips
+	Seat #3: 528 chips
+
+Table #64 after 38 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 888 chips
+	Seat #2: 408 chips
+	Seat #3: 768 chips
+
+Table #65 after 40 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 480 chips
+	Seat #2: 720 chips
+	Seat #3: 720 chips
+
+Table #66 after 40 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 480 chips
+	Seat #2: 600 chips
+	Seat #3: 840 chips
+
+Table #67 after 40 hands.
+
+	Seat #0: 240 chips
+	Seat #1: 120 chips
+	Seat #2: 600 chips
+	Seat #3: 480 chips
+
+Table #68 after 41 hands.
+
+	Seat #0: 336 chips
+	Seat #1: 336 chips
+	Seat #2: 216 chips
+	Seat #3: 456 chips
+
+Table #69 after 41 hands.
+
+	Seat #0: 576 chips
+	Seat #1: 576 chips
+	Seat #2: 456 chips
+	Seat #3: 696 chips
+
+Table #70 after 42 hands.
+
+	Seat #0: 792 chips
+	Seat #1: 432 chips
+	Seat #2: 912 chips
+	Seat #3: 192 chips
+
+Table #71 after 40 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 120 chips
+	Seat #2: 480 chips
+	Seat #3: 360 chips
+
+Table #72 after 43 hands.
+
+	Seat #0: 648 chips
+	Seat #1: 168 chips
+	Seat #2: 408 chips
+	Seat #3: 168 chips
+
+Table #73 after 40 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 480 chips
+	Seat #2: 720 chips
+	Seat #3: 720 chips
+
+Table #74 after 43 hands.
+
+	Seat #0: 768 chips
+	Seat #1: 648 chips
+	Seat #2: 768 chips
+	Seat #3: 168 chips
+
+Table #75 after 43 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 648 chips
+	Seat #2: 888 chips
+	Seat #3: 528 chips
+
+Table #76 after 44 hands.
+
+	Seat #0: 624 chips
+	Seat #1: 504 chips
+	Seat #2: 744 chips
+	Seat #3: 504 chips
+
+Table #77 after 44 hands.
+
+	Seat #0: 384 chips
+	Seat #1: 624 chips
+	Seat #2: 264 chips
+	Seat #3: 144 chips
+
+Table #78 after 44 hands.
+
+	Seat #0: 144 chips
+	Seat #1: 144 chips
+	Seat #2: 624 chips
+	Seat #3: 504 chips
+
+Table #79 after 46 hands.
+
+	Seat #0: 216 chips
+	Seat #1: 576 chips
+	Seat #2: 696 chips
+	Seat #3: 816 chips
+
+Table #80 after 45 hands.
+
+	Seat #0: 720 chips
+	Seat #1: 600 chips
+	Seat #2: 480 chips
+	Seat #3: 600 chips
+
+Table #81 after 16 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 456 chips
+	Seat #2: 336 chips
+	Seat #3: 336 chips
+
+Table #82 after 45 hands.
+
+	Seat #0: 960 chips
+	Seat #1: 360 chips
+	Seat #2: 840 chips
+	Seat #3: 240 chips
+
+Table #83 after 46 hands.
+
+	Seat #0: 96 chips
+	Seat #1: 456 chips
+	Seat #2: 576 chips
+	Seat #3: 216 chips
+
+Table #84 after 48 hands.
+
+	Seat #0: 408 chips
+	Seat #1: 48 chips
+	Seat #2: 288 chips
+	Seat #3: 528 chips
+
+Table #85 after 16 hands.
+
+	Seat #0: 696 chips
+	Seat #1: 216 chips
+	Seat #2: 336 chips
+	Seat #3: 480 chips
+
+Table #86 after 52 hands.
+
+	Seat #0: 552 chips
+	Seat #1: 432 chips
+	Seat #2: 552 chips
+	Seat #3: 792 chips
+
+Table #87 after 51 hands.
+
+	Seat #0: 216 chips
+	Seat #1: 456 chips
+	Seat #2: 216 chips
+	Seat #3: 456 chips
+
+Table #88 after 53 hands.
+
+	Seat #0: 528 chips
+	Seat #1: 288 chips
+	Seat #2: 288 chips
+	Seat #3: 288 chips
+
+Table #89 after 58 hands.
+
+	Seat #0: 408 chips
+	Seat #1: 408 chips
+	Seat #2: 168 chips
+	Seat #3: 408 chips
+
+Table #90 after 55 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 240 chips
+	Seat #2: 360 chips
+	Seat #3: 240 chips
+
+Table #91 after 53 hands.
+
+	Seat #0: 408 chips
+	Seat #1: 408 chips
+	Seat #2: 888 chips
+	Seat #3: 648 chips
+
+Table #92 after 58 hands.
+
+	Seat #0: 768 chips
+	Seat #1: 168 chips
+	Seat #2: 1008 chips
+	Seat #3: 408 chips
+
+Table #93 after 60 hands.
+
+	Seat #0: 240 chips
+	Seat #1: 960 chips
+	Seat #2: 600 chips
+	Seat #3: 600 chips
+
+Table #94 after 27 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 552 chips
+	Seat #2: 312 chips
+	Seat #3: 552 chips
+
+Table #95 after 24 hands.
+
+	Seat #0: 384 chips
+	Seat #1: 384 chips
+	Seat #2: 432 chips
+	Seat #3: 504 chips
+
+Table #96 after 73 hands.
+
+	Seat #0: 648 chips
+	Seat #1: 528 chips
+	Seat #2: 1008 chips
+	Seat #3: 168 chips
+
+Table #97 after 76 hands.
+
+	Seat #0: 456 chips
+	Seat #1: 96 chips
+	Seat #2: 336 chips
+	Seat #3: 456 chips
+
+Table #98 after 75 hands.
+
+	Seat #0: 720 chips
+	Seat #1: 240 chips
+	Seat #2: 600 chips
+	Seat #3: 840 chips
+
+Table #99 after 38 hands.
+
+	Seat #0: 768 chips
+	Seat #1: 408 chips
+	Seat #2: 528 chips
+	Seat #3: 168 chips
+
+Report for 8 unit stakes after 74 hands played.
+
+Table #0 after 29 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 636 chips
+	Seat #2: 756 chips
+	Seat #3: 432 chips
+	Seat #4: 468 chips
+
+Table #1 after 51 hands.
+
+	Seat #0: 792 chips
+	Seat #1: 480 chips
+	Seat #2: 384 chips
+	Seat #3: 456 chips
+	Seat #4: 732 chips
+
+Table #2 after 53 hands.
+
+	Seat #0: 624 chips
+	Seat #1: 660 chips
+	Seat #2: 792 chips
+	Seat #3: 444 chips
+	Seat #4: 456 chips
+
+Table #3 after 45 hands.
+
+	Seat #0: 552 chips
+	Seat #1: 732 chips
+	Seat #2: 408 chips
+	Seat #3: 372 chips
+	Seat #4: 456 chips
+
+Table #4 after 39 hands.
+
+	Seat #0: 732 chips
+	Seat #1: 312 chips
+	Seat #2: 192 chips
+	Seat #3: 432 chips
+
+Table #5 after 64 hands.
+
+	Seat #0: 540 chips
+	Seat #1: 828 chips
+	Seat #2: 528 chips
+	Seat #3: 480 chips
+
+Cash of highrollers:
+	2304
+	1920
+	2064
+	2136
+
+Cash of bustos:
+	96
+	96
+	72
+	72
+	24
+	24
+	0
+	96
+	96
+	96
+	72
+	72
+	72
+	96
+	72
+	72
+	24
+	24
+	24
+	0
+	0
+	0
+	96
+	96
+	48
+	96
+	96
+	96
+	48
+	24
+	0
+	0
+	24
+	96
+	24
+	48
+	48
+	48
+	0
+	0
+	96
+	72
+	0
+	48
+	48
+	24
+	96
+	0
+	96
+	0
+	96
+	72
+	48
+	48
+	0
+	72
+	48
+	0
+	48
+
+Report for 4 unit stakes after 90 hands played.
+
+Table #0 after 88 hands.
+
+	Seat #0: 888 chips
+	Seat #1: 648 chips
+	Seat #2: 408 chips
+	Seat #3: 168 chips
+	Seat #4: 288 chips
+
+Table #1 after 84 hands.
+
+	Seat #0: 264 chips
+	Seat #1: 624 chips
+	Seat #2: 624 chips
+	Seat #3: 384 chips
+	Seat #4: 504 chips
+
+Table #2 after 85 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 480 chips
+	Seat #2: 720 chips
+	Seat #3: 360 chips
+	Seat #4: 240 chips
+
+Table #3 after 42 hands.
+
+	Seat #0: 1272 chips
+	Seat #1: 672 chips
+	Seat #2: 432 chips
+	Seat #3: 216 chips
+	Seat #4: 192 chips
+
+Table #4 after 45 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 480 chips
+	Seat #2: 360 chips
+	Seat #3: 960 chips
+	Seat #4: 504 chips
+
+Table #5 after 21 hands.
+
+	Seat #0: 696 chips
+	Seat #1: 240 chips
+	Seat #2: 216 chips
+	Seat #3: 216 chips
+	Seat #4: 216 chips
+
+Table #6 after 20 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 312 chips
+	Seat #2: 480 chips
+	Seat #3: 360 chips
+	Seat #4: 240 chips
+
+Table #7 after 18 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 288 chips
+	Seat #2: 408 chips
+	Seat #3: 408 chips
+
+Table #8 after 19 hands.
+
+	Seat #0: 504 chips
+	Seat #1: 624 chips
+	Seat #2: 624 chips
+	Seat #3: 624 chips
+
+Table #9 after 19 hands.
+
+	Seat #0: 624 chips
+	Seat #1: 744 chips
+	Seat #2: 744 chips
+	Seat #3: 264 chips
+
+Table #10 after 19 hands.
+
+	Seat #0: 504 chips
+	Seat #1: 384 chips
+	Seat #2: 264 chips
+	Seat #3: 264 chips
+
+Table #11 after 20 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 360 chips
+	Seat #2: 720 chips
+	Seat #3: 840 chips
+
+Table #12 after 20 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 480 chips
+	Seat #2: 360 chips
+	Seat #3: 120 chips
+
+Table #13 after 21 hands.
+
+	Seat #0: 696 chips
+	Seat #1: 456 chips
+	Seat #2: 456 chips
+	Seat #3: 696 chips
+
+Table #14 after 21 hands.
+
+	Seat #0: 816 chips
+	Seat #1: 696 chips
+	Seat #2: 216 chips
+	Seat #3: 576 chips
+
+Table #15 after 21 hands.
+
+	Seat #0: 816 chips
+	Seat #1: 336 chips
+	Seat #2: 456 chips
+	Seat #3: 696 chips
+
+Table #16 after 22 hands.
+
+	Seat #0: 432 chips
+	Seat #1: 432 chips
+	Seat #2: 552 chips
+	Seat #3: 912 chips
+
+Table #17 after 22 hands.
+
+	Seat #0: 312 chips
+	Seat #1: 792 chips
+	Seat #2: 552 chips
+	Seat #3: 672 chips
+
+Table #18 after 22 hands.
+
+	Seat #0: 192 chips
+	Seat #1: 912 chips
+	Seat #2: 552 chips
+	Seat #3: 672 chips
+
+Table #19 after 21 hands.
+
+	Seat #0: 576 chips
+	Seat #1: 696 chips
+	Seat #2: 456 chips
+	Seat #3: 576 chips
+
+Table #20 after 23 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 288 chips
+	Seat #2: 408 chips
+	Seat #3: 408 chips
+
+Table #21 after 22 hands.
+
+	Seat #0: 192 chips
+	Seat #1: 792 chips
+	Seat #2: 432 chips
+	Seat #3: 912 chips
+
+Table #22 after 22 hands.
+
+	Seat #0: 432 chips
+	Seat #1: 552 chips
+	Seat #2: 792 chips
+	Seat #3: 552 chips
+
+Table #23 after 24 hands.
+
+	Seat #0: 624 chips
+	Seat #1: 504 chips
+	Seat #2: 504 chips
+	Seat #3: 744 chips
+
+Table #24 after 24 hands.
+
+	Seat #0: 864 chips
+	Seat #1: 624 chips
+	Seat #2: 384 chips
+	Seat #3: 504 chips
+
+Table #25 after 23 hands.
+
+	Seat #0: 168 chips
+	Seat #1: 648 chips
+	Seat #2: 288 chips
+	Seat #3: 288 chips
+
+Table #26 after 24 hands.
+
+	Seat #0: 504 chips
+	Seat #1: 624 chips
+	Seat #2: 984 chips
+	Seat #3: 264 chips
+
+Table #27 after 25 hands.
+
+	Seat #0: 840 chips
+	Seat #1: 600 chips
+	Seat #2: 840 chips
+	Seat #3: 120 chips
+
+Table #28 after 25 hands.
+
+	Seat #0: 840 chips
+	Seat #1: 480 chips
+	Seat #2: 360 chips
+	Seat #3: 720 chips
+
+Table #29 after 25 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 600 chips
+	Seat #2: 840 chips
+	Seat #3: 480 chips
+
+Table #30 after 26 hands.
+
+	Seat #0: 576 chips
+	Seat #1: 456 chips
+	Seat #2: 456 chips
+	Seat #3: 816 chips
+
+Table #31 after 26 hands.
+
+	Seat #0: 336 chips
+	Seat #1: 456 chips
+	Seat #2: 336 chips
+	Seat #3: 216 chips
+
+Table #32 after 26 hands.
+
+	Seat #0: 216 chips
+	Seat #1: 456 chips
+	Seat #2: 696 chips
+	Seat #3: 936 chips
+
+Table #33 after 25 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 360 chips
+	Seat #2: 240 chips
+	Seat #3: 240 chips
+
+Table #34 after 27 hands.
+
+	Seat #0: 192 chips
+	Seat #1: 672 chips
+	Seat #2: 312 chips
+	Seat #3: 192 chips
+
+Table #35 after 28 hands.
+
+	Seat #0: 408 chips
+	Seat #1: 288 chips
+	Seat #2: 408 chips
+	Seat #3: 288 chips
+
+Table #36 after 28 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 408 chips
+	Seat #2: 1008 chips
+	Seat #3: 648 chips
+
+Table #37 after 29 hands.
+
+	Seat #0: 144 chips
+	Seat #1: 144 chips
+	Seat #2: 744 chips
+	Seat #3: 384 chips
+
+Table #38 after 30 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 480 chips
+	Seat #2: 240 chips
+	Seat #3: 360 chips
+
+Table #39 after 29 hands.
+
+	Seat #0: 264 chips
+	Seat #1: 144 chips
+	Seat #2: 624 chips
+	Seat #3: 384 chips
+
+Table #40 after 30 hands.
+
+	Seat #0: 240 chips
+	Seat #1: 240 chips
+	Seat #2: 360 chips
+	Seat #3: 600 chips
+
+Table #41 after 31 hands.
+
+	Seat #0: 696 chips
+	Seat #1: 816 chips
+	Seat #2: 216 chips
+	Seat #3: 576 chips
+
+Table #42 after 31 hands.
+
+	Seat #0: 216 chips
+	Seat #1: 936 chips
+	Seat #2: 696 chips
+	Seat #3: 456 chips
+
+Table #43 after 31 hands.
+
+	Seat #0: 576 chips
+	Seat #1: 336 chips
+	Seat #2: 216 chips
+	Seat #3: 96 chips
+
+Table #44 after 31 hands.
+
+	Seat #0: 456 chips
+	Seat #1: 816 chips
+	Seat #2: 216 chips
+	Seat #3: 816 chips
+
+Table #45 after 33 hands.
+
+	Seat #0: 168 chips
+	Seat #1: 408 chips
+	Seat #2: 528 chips
+	Seat #3: 168 chips
+
+Table #46 after 31 hands.
+
+	Seat #0: 576 chips
+	Seat #1: 336 chips
+	Seat #2: 216 chips
+	Seat #3: 216 chips
+
+Table #47 after 33 hands.
+
+	Seat #0: 48 chips
+	Seat #1: 888 chips
+	Seat #2: 768 chips
+	Seat #3: 648 chips
+
+Table #48 after 31 hands.
+
+	Seat #0: 96 chips
+	Seat #1: 336 chips
+	Seat #2: 336 chips
+	Seat #3: 576 chips
+
+Table #49 after 34 hands.
+
+	Seat #0: 864 chips
+	Seat #1: 384 chips
+	Seat #2: 264 chips
+	Seat #3: 864 chips
+
+Table #50 after 35 hands.
+
+	Seat #0: 720 chips
+	Seat #1: 840 chips
+	Seat #2: 720 chips
+	Seat #3: 120 chips
+
+Table #51 after 35 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 600 chips
+	Seat #2: 960 chips
+	Seat #3: 480 chips
+
+Table #52 after 34 hands.
+
+	Seat #0: 144 chips
+	Seat #1: 624 chips
+	Seat #2: 744 chips
+	Seat #3: 864 chips
+
+Table #53 after 36 hands.
+
+	Seat #0: 696 chips
+	Seat #1: 576 chips
+	Seat #2: 456 chips
+	Seat #3: 576 chips
+
+Table #54 after 34 hands.
+
+	Seat #0: 384 chips
+	Seat #1: 264 chips
+	Seat #2: 1104 chips
+	Seat #3: 624 chips
+
+Table #55 after 36 hands.
+
+	Seat #0: 336 chips
+	Seat #1: 456 chips
+	Seat #2: 96 chips
+	Seat #3: 456 chips
+
+Table #56 after 36 hands.
+
+	Seat #0: 456 chips
+	Seat #1: 216 chips
+	Seat #2: 216 chips
+	Seat #3: 456 chips
+
+Table #57 after 36 hands.
+
+	Seat #0: 96 chips
+	Seat #1: 336 chips
+	Seat #2: 336 chips
+	Seat #3: 456 chips
+
+Table #58 after 38 hands.
+
+	Seat #0: 528 chips
+	Seat #1: 648 chips
+	Seat #2: 528 chips
+	Seat #3: 648 chips
+
+Table #59 after 38 hands.
+
+	Seat #0: 408 chips
+	Seat #1: 648 chips
+	Seat #2: 768 chips
+	Seat #3: 528 chips
+
+Table #60 after 38 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 888 chips
+	Seat #2: 408 chips
+	Seat #3: 768 chips
+
+Table #61 after 40 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 480 chips
+	Seat #2: 720 chips
+	Seat #3: 720 chips
+
+Table #62 after 40 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 480 chips
+	Seat #2: 600 chips
+	Seat #3: 840 chips
+
+Table #63 after 40 hands.
+
+	Seat #0: 240 chips
+	Seat #1: 120 chips
+	Seat #2: 600 chips
+	Seat #3: 480 chips
+
+Table #64 after 41 hands.
+
+	Seat #0: 336 chips
+	Seat #1: 336 chips
+	Seat #2: 216 chips
+	Seat #3: 456 chips
+
+Table #65 after 41 hands.
+
+	Seat #0: 576 chips
+	Seat #1: 576 chips
+	Seat #2: 456 chips
+	Seat #3: 696 chips
+
+Table #66 after 42 hands.
+
+	Seat #0: 792 chips
+	Seat #1: 432 chips
+	Seat #2: 912 chips
+	Seat #3: 192 chips
+
+Table #67 after 40 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 120 chips
+	Seat #2: 480 chips
+	Seat #3: 360 chips
+
+Table #68 after 43 hands.
+
+	Seat #0: 648 chips
+	Seat #1: 168 chips
+	Seat #2: 408 chips
+	Seat #3: 168 chips
+
+Table #69 after 40 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 480 chips
+	Seat #2: 720 chips
+	Seat #3: 720 chips
+
+Table #70 after 43 hands.
+
+	Seat #0: 768 chips
+	Seat #1: 648 chips
+	Seat #2: 768 chips
+	Seat #3: 168 chips
+
+Table #71 after 43 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 648 chips
+	Seat #2: 888 chips
+	Seat #3: 528 chips
+
+Table #72 after 44 hands.
+
+	Seat #0: 624 chips
+	Seat #1: 504 chips
+	Seat #2: 744 chips
+	Seat #3: 504 chips
+
+Table #73 after 44 hands.
+
+	Seat #0: 384 chips
+	Seat #1: 624 chips
+	Seat #2: 264 chips
+	Seat #3: 144 chips
+
+Table #74 after 44 hands.
+
+	Seat #0: 144 chips
+	Seat #1: 144 chips
+	Seat #2: 624 chips
+	Seat #3: 504 chips
+
+Table #75 after 46 hands.
+
+	Seat #0: 216 chips
+	Seat #1: 576 chips
+	Seat #2: 696 chips
+	Seat #3: 816 chips
+
+Table #76 after 45 hands.
+
+	Seat #0: 720 chips
+	Seat #1: 600 chips
+	Seat #2: 480 chips
+	Seat #3: 600 chips
+
+Table #77 after 16 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 456 chips
+	Seat #2: 336 chips
+	Seat #3: 336 chips
+
+Table #78 after 45 hands.
+
+	Seat #0: 960 chips
+	Seat #1: 360 chips
+	Seat #2: 840 chips
+	Seat #3: 240 chips
+
+Table #79 after 46 hands.
+
+	Seat #0: 96 chips
+	Seat #1: 456 chips
+	Seat #2: 576 chips
+	Seat #3: 216 chips
+
+Table #80 after 48 hands.
+
+	Seat #0: 408 chips
+	Seat #1: 48 chips
+	Seat #2: 288 chips
+	Seat #3: 528 chips
+
+Table #81 after 16 hands.
+
+	Seat #0: 696 chips
+	Seat #1: 216 chips
+	Seat #2: 336 chips
+	Seat #3: 480 chips
+
+Table #82 after 52 hands.
+
+	Seat #0: 552 chips
+	Seat #1: 432 chips
+	Seat #2: 552 chips
+	Seat #3: 792 chips
+
+Table #83 after 51 hands.
+
+	Seat #0: 216 chips
+	Seat #1: 456 chips
+	Seat #2: 216 chips
+	Seat #3: 456 chips
+
+Table #84 after 53 hands.
+
+	Seat #0: 528 chips
+	Seat #1: 288 chips
+	Seat #2: 288 chips
+	Seat #3: 288 chips
+
+Table #85 after 58 hands.
+
+	Seat #0: 408 chips
+	Seat #1: 408 chips
+	Seat #2: 168 chips
+	Seat #3: 408 chips
+
+Table #86 after 55 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 240 chips
+	Seat #2: 360 chips
+	Seat #3: 240 chips
+
+Table #87 after 53 hands.
+
+	Seat #0: 408 chips
+	Seat #1: 408 chips
+	Seat #2: 888 chips
+	Seat #3: 648 chips
+
+Table #88 after 58 hands.
+
+	Seat #0: 768 chips
+	Seat #1: 168 chips
+	Seat #2: 1008 chips
+	Seat #3: 408 chips
+
+Table #89 after 60 hands.
+
+	Seat #0: 240 chips
+	Seat #1: 960 chips
+	Seat #2: 600 chips
+	Seat #3: 600 chips
+
+Table #90 after 27 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 552 chips
+	Seat #2: 312 chips
+	Seat #3: 552 chips
+
+Table #91 after 24 hands.
+
+	Seat #0: 384 chips
+	Seat #1: 384 chips
+	Seat #2: 432 chips
+	Seat #3: 504 chips
+
+Table #92 after 73 hands.
+
+	Seat #0: 648 chips
+	Seat #1: 528 chips
+	Seat #2: 1008 chips
+	Seat #3: 168 chips
+
+Table #93 after 76 hands.
+
+	Seat #0: 456 chips
+	Seat #1: 96 chips
+	Seat #2: 336 chips
+	Seat #3: 456 chips
+
+Table #94 after 75 hands.
+
+	Seat #0: 720 chips
+	Seat #1: 240 chips
+	Seat #2: 600 chips
+	Seat #3: 840 chips
+
+Table #95 after 38 hands.
+
+	Seat #0: 768 chips
+	Seat #1: 408 chips
+	Seat #2: 528 chips
+	Seat #3: 168 chips
+
+Table #96 after 79 hands.
+
+	Seat #0: 264 chips
+	Seat #1: 264 chips
+	Seat #2: 384 chips
+	Seat #3: 504 chips
+
+Table #97 after 49 hands.
+
+	Seat #0: 504 chips
+	Seat #1: 264 chips
+	Seat #2: 384 chips
+	Seat #3: 624 chips
+
+Table #98 after 26 hands.
+
+	Seat #0: 816 chips
+	Seat #1: 816 chips
+	Seat #2: 576 chips
+	Seat #3: 360 chips
+
+Table #99 after 86 hands.
+
+	Seat #0: 696 chips
+	Seat #1: 576 chips
+	Seat #2: 216 chips
+	Seat #3: 816 chips
+
+Report for 8 unit stakes after 84 hands played.
+
+Table #0 after 39 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 756 chips
+	Seat #2: 756 chips
+	Seat #3: 312 chips
+	Seat #4: 468 chips
+
+Table #1 after 62 hands.
+
+	Seat #0: 648 chips
+	Seat #1: 564 chips
+	Seat #2: 576 chips
+	Seat #3: 708 chips
+	Seat #4: 480 chips
+
+Table #2 after 55 hands.
+
+	Seat #0: 432 chips
+	Seat #1: 852 chips
+	Seat #2: 408 chips
+	Seat #3: 252 chips
+	Seat #4: 576 chips
+
+Table #3 after 64 hands.
+
+	Seat #0: 540 chips
+	Seat #1: 828 chips
+	Seat #2: 528 chips
+	Seat #3: 480 chips
+
+Table #4 after 46 hands.
+
+	Seat #0: 564 chips
+	Seat #1: 564 chips
+	Seat #2: 384 chips
+	Seat #3: 504 chips
+
+Table #5 after 60 hands.
+
+	Seat #0: 816 chips
+	Seat #1: 264 chips
+	Seat #2: 720 chips
+	Seat #3: 876 chips
+
+Cash of highrollers:
+	2304
+	1920
+	2064
+	2136
+
+Cash of bustos:
+	96
+	96
+	72
+	72
+	24
+	24
+	0
+	96
+	96
+	96
+	72
+	72
+	72
+	96
+	72
+	72
+	24
+	24
+	24
+	0
+	0
+	0
+	96
+	96
+	48
+	96
+	96
+	96
+	48
+	24
+	0
+	0
+	24
+	96
+	24
+	48
+	48
+	48
+	0
+	0
+	96
+	72
+	0
+	48
+	48
+	24
+	96
+	0
+	96
+	0
+	96
+	72
+	48
+	48
+	0
+	72
+	48
+	0
+	48
+	24
+	96
+	96
+
+Report for 4 unit stakes after 100 hands played.
+
+Table #0 after 93 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 528 chips
+	Seat #2: 648 chips
+	Seat #3: 648 chips
+	Seat #4: 288 chips
+
+Table #1 after 27 hands.
+
+	Seat #0: 552 chips
+	Seat #1: 264 chips
+	Seat #2: 432 chips
+	Seat #3: 192 chips
+	Seat #4: 312 chips
+
+Table #2 after 27 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 312 chips
+	Seat #2: 72 chips
+	Seat #3: 672 chips
+	Seat #4: 312 chips
+
+Table #3 after 22 hands.
+
+	Seat #0: 432 chips
+	Seat #1: 336 chips
+	Seat #2: 672 chips
+	Seat #3: 672 chips
+	Seat #4: 552 chips
+
+Table #4 after 19 hands.
+
+	Seat #0: 624 chips
+	Seat #1: 744 chips
+	Seat #2: 744 chips
+	Seat #3: 264 chips
+
+Table #5 after 19 hands.
+
+	Seat #0: 504 chips
+	Seat #1: 384 chips
+	Seat #2: 264 chips
+	Seat #3: 264 chips
+
+Table #6 after 20 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 360 chips
+	Seat #2: 720 chips
+	Seat #3: 840 chips
+
+Table #7 after 20 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 480 chips
+	Seat #2: 360 chips
+	Seat #3: 120 chips
+
+Table #8 after 21 hands.
+
+	Seat #0: 696 chips
+	Seat #1: 456 chips
+	Seat #2: 456 chips
+	Seat #3: 696 chips
+
+Table #9 after 21 hands.
+
+	Seat #0: 816 chips
+	Seat #1: 696 chips
+	Seat #2: 216 chips
+	Seat #3: 576 chips
+
+Table #10 after 21 hands.
+
+	Seat #0: 816 chips
+	Seat #1: 336 chips
+	Seat #2: 456 chips
+	Seat #3: 696 chips
+
+Table #11 after 22 hands.
+
+	Seat #0: 432 chips
+	Seat #1: 432 chips
+	Seat #2: 552 chips
+	Seat #3: 912 chips
+
+Table #12 after 22 hands.
+
+	Seat #0: 312 chips
+	Seat #1: 792 chips
+	Seat #2: 552 chips
+	Seat #3: 672 chips
+
+Table #13 after 22 hands.
+
+	Seat #0: 192 chips
+	Seat #1: 912 chips
+	Seat #2: 552 chips
+	Seat #3: 672 chips
+
+Table #14 after 21 hands.
+
+	Seat #0: 576 chips
+	Seat #1: 696 chips
+	Seat #2: 456 chips
+	Seat #3: 576 chips
+
+Table #15 after 23 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 288 chips
+	Seat #2: 408 chips
+	Seat #3: 408 chips
+
+Table #16 after 22 hands.
+
+	Seat #0: 192 chips
+	Seat #1: 792 chips
+	Seat #2: 432 chips
+	Seat #3: 912 chips
+
+Table #17 after 22 hands.
+
+	Seat #0: 432 chips
+	Seat #1: 552 chips
+	Seat #2: 792 chips
+	Seat #3: 552 chips
+
+Table #18 after 24 hands.
+
+	Seat #0: 624 chips
+	Seat #1: 504 chips
+	Seat #2: 504 chips
+	Seat #3: 744 chips
+
+Table #19 after 24 hands.
+
+	Seat #0: 864 chips
+	Seat #1: 624 chips
+	Seat #2: 384 chips
+	Seat #3: 504 chips
+
+Table #20 after 23 hands.
+
+	Seat #0: 168 chips
+	Seat #1: 648 chips
+	Seat #2: 288 chips
+	Seat #3: 288 chips
+
+Table #21 after 24 hands.
+
+	Seat #0: 504 chips
+	Seat #1: 624 chips
+	Seat #2: 984 chips
+	Seat #3: 264 chips
+
+Table #22 after 25 hands.
+
+	Seat #0: 840 chips
+	Seat #1: 600 chips
+	Seat #2: 840 chips
+	Seat #3: 120 chips
+
+Table #23 after 25 hands.
+
+	Seat #0: 840 chips
+	Seat #1: 480 chips
+	Seat #2: 360 chips
+	Seat #3: 720 chips
+
+Table #24 after 25 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 600 chips
+	Seat #2: 840 chips
+	Seat #3: 480 chips
+
+Table #25 after 26 hands.
+
+	Seat #0: 576 chips
+	Seat #1: 456 chips
+	Seat #2: 456 chips
+	Seat #3: 816 chips
+
+Table #26 after 26 hands.
+
+	Seat #0: 336 chips
+	Seat #1: 456 chips
+	Seat #2: 336 chips
+	Seat #3: 216 chips
+
+Table #27 after 26 hands.
+
+	Seat #0: 216 chips
+	Seat #1: 456 chips
+	Seat #2: 696 chips
+	Seat #3: 936 chips
+
+Table #28 after 25 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 360 chips
+	Seat #2: 240 chips
+	Seat #3: 240 chips
+
+Table #29 after 27 hands.
+
+	Seat #0: 192 chips
+	Seat #1: 672 chips
+	Seat #2: 312 chips
+	Seat #3: 192 chips
+
+Table #30 after 28 hands.
+
+	Seat #0: 408 chips
+	Seat #1: 288 chips
+	Seat #2: 408 chips
+	Seat #3: 288 chips
+
+Table #31 after 28 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 408 chips
+	Seat #2: 1008 chips
+	Seat #3: 648 chips
+
+Table #32 after 29 hands.
+
+	Seat #0: 144 chips
+	Seat #1: 144 chips
+	Seat #2: 744 chips
+	Seat #3: 384 chips
+
+Table #33 after 30 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 480 chips
+	Seat #2: 240 chips
+	Seat #3: 360 chips
+
+Table #34 after 29 hands.
+
+	Seat #0: 264 chips
+	Seat #1: 144 chips
+	Seat #2: 624 chips
+	Seat #3: 384 chips
+
+Table #35 after 30 hands.
+
+	Seat #0: 240 chips
+	Seat #1: 240 chips
+	Seat #2: 360 chips
+	Seat #3: 600 chips
+
+Table #36 after 31 hands.
+
+	Seat #0: 696 chips
+	Seat #1: 816 chips
+	Seat #2: 216 chips
+	Seat #3: 576 chips
+
+Table #37 after 31 hands.
+
+	Seat #0: 216 chips
+	Seat #1: 936 chips
+	Seat #2: 696 chips
+	Seat #3: 456 chips
+
+Table #38 after 31 hands.
+
+	Seat #0: 576 chips
+	Seat #1: 336 chips
+	Seat #2: 216 chips
+	Seat #3: 96 chips
+
+Table #39 after 31 hands.
+
+	Seat #0: 456 chips
+	Seat #1: 816 chips
+	Seat #2: 216 chips
+	Seat #3: 816 chips
+
+Table #40 after 33 hands.
+
+	Seat #0: 168 chips
+	Seat #1: 408 chips
+	Seat #2: 528 chips
+	Seat #3: 168 chips
+
+Table #41 after 31 hands.
+
+	Seat #0: 576 chips
+	Seat #1: 336 chips
+	Seat #2: 216 chips
+	Seat #3: 216 chips
+
+Table #42 after 33 hands.
+
+	Seat #0: 48 chips
+	Seat #1: 888 chips
+	Seat #2: 768 chips
+	Seat #3: 648 chips
+
+Table #43 after 31 hands.
+
+	Seat #0: 96 chips
+	Seat #1: 336 chips
+	Seat #2: 336 chips
+	Seat #3: 576 chips
+
+Table #44 after 34 hands.
+
+	Seat #0: 864 chips
+	Seat #1: 384 chips
+	Seat #2: 264 chips
+	Seat #3: 864 chips
+
+Table #45 after 35 hands.
+
+	Seat #0: 720 chips
+	Seat #1: 840 chips
+	Seat #2: 720 chips
+	Seat #3: 120 chips
+
+Table #46 after 35 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 600 chips
+	Seat #2: 960 chips
+	Seat #3: 480 chips
+
+Table #47 after 34 hands.
+
+	Seat #0: 144 chips
+	Seat #1: 624 chips
+	Seat #2: 744 chips
+	Seat #3: 864 chips
+
+Table #48 after 36 hands.
+
+	Seat #0: 696 chips
+	Seat #1: 576 chips
+	Seat #2: 456 chips
+	Seat #3: 576 chips
+
+Table #49 after 34 hands.
+
+	Seat #0: 384 chips
+	Seat #1: 264 chips
+	Seat #2: 1104 chips
+	Seat #3: 624 chips
+
+Table #50 after 36 hands.
+
+	Seat #0: 336 chips
+	Seat #1: 456 chips
+	Seat #2: 96 chips
+	Seat #3: 456 chips
+
+Table #51 after 36 hands.
+
+	Seat #0: 456 chips
+	Seat #1: 216 chips
+	Seat #2: 216 chips
+	Seat #3: 456 chips
+
+Table #52 after 36 hands.
+
+	Seat #0: 96 chips
+	Seat #1: 336 chips
+	Seat #2: 336 chips
+	Seat #3: 456 chips
+
+Table #53 after 38 hands.
+
+	Seat #0: 528 chips
+	Seat #1: 648 chips
+	Seat #2: 528 chips
+	Seat #3: 648 chips
+
+Table #54 after 38 hands.
+
+	Seat #0: 408 chips
+	Seat #1: 648 chips
+	Seat #2: 768 chips
+	Seat #3: 528 chips
+
+Table #55 after 38 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 888 chips
+	Seat #2: 408 chips
+	Seat #3: 768 chips
+
+Table #56 after 40 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 480 chips
+	Seat #2: 720 chips
+	Seat #3: 720 chips
+
+Table #57 after 40 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 480 chips
+	Seat #2: 600 chips
+	Seat #3: 840 chips
+
+Table #58 after 40 hands.
+
+	Seat #0: 240 chips
+	Seat #1: 120 chips
+	Seat #2: 600 chips
+	Seat #3: 480 chips
+
+Table #59 after 41 hands.
+
+	Seat #0: 336 chips
+	Seat #1: 336 chips
+	Seat #2: 216 chips
+	Seat #3: 456 chips
+
+Table #60 after 41 hands.
+
+	Seat #0: 576 chips
+	Seat #1: 576 chips
+	Seat #2: 456 chips
+	Seat #3: 696 chips
+
+Table #61 after 42 hands.
+
+	Seat #0: 792 chips
+	Seat #1: 432 chips
+	Seat #2: 912 chips
+	Seat #3: 192 chips
+
+Table #62 after 40 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 120 chips
+	Seat #2: 480 chips
+	Seat #3: 360 chips
+
+Table #63 after 43 hands.
+
+	Seat #0: 648 chips
+	Seat #1: 168 chips
+	Seat #2: 408 chips
+	Seat #3: 168 chips
+
+Table #64 after 40 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 480 chips
+	Seat #2: 720 chips
+	Seat #3: 720 chips
+
+Table #65 after 43 hands.
+
+	Seat #0: 768 chips
+	Seat #1: 648 chips
+	Seat #2: 768 chips
+	Seat #3: 168 chips
+
+Table #66 after 43 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 648 chips
+	Seat #2: 888 chips
+	Seat #3: 528 chips
+
+Table #67 after 44 hands.
+
+	Seat #0: 624 chips
+	Seat #1: 504 chips
+	Seat #2: 744 chips
+	Seat #3: 504 chips
+
+Table #68 after 44 hands.
+
+	Seat #0: 384 chips
+	Seat #1: 624 chips
+	Seat #2: 264 chips
+	Seat #3: 144 chips
+
+Table #69 after 44 hands.
+
+	Seat #0: 144 chips
+	Seat #1: 144 chips
+	Seat #2: 624 chips
+	Seat #3: 504 chips
+
+Table #70 after 46 hands.
+
+	Seat #0: 216 chips
+	Seat #1: 576 chips
+	Seat #2: 696 chips
+	Seat #3: 816 chips
+
+Table #71 after 45 hands.
+
+	Seat #0: 720 chips
+	Seat #1: 600 chips
+	Seat #2: 480 chips
+	Seat #3: 600 chips
+
+Table #72 after 16 hands.
+
+	Seat #0: 360 chips
+	Seat #1: 456 chips
+	Seat #2: 336 chips
+	Seat #3: 336 chips
+
+Table #73 after 45 hands.
+
+	Seat #0: 960 chips
+	Seat #1: 360 chips
+	Seat #2: 840 chips
+	Seat #3: 240 chips
+
+Table #74 after 46 hands.
+
+	Seat #0: 96 chips
+	Seat #1: 456 chips
+	Seat #2: 576 chips
+	Seat #3: 216 chips
+
+Table #75 after 48 hands.
+
+	Seat #0: 408 chips
+	Seat #1: 48 chips
+	Seat #2: 288 chips
+	Seat #3: 528 chips
+
+Table #76 after 16 hands.
+
+	Seat #0: 696 chips
+	Seat #1: 216 chips
+	Seat #2: 336 chips
+	Seat #3: 480 chips
+
+Table #77 after 52 hands.
+
+	Seat #0: 552 chips
+	Seat #1: 432 chips
+	Seat #2: 552 chips
+	Seat #3: 792 chips
+
+Table #78 after 51 hands.
+
+	Seat #0: 216 chips
+	Seat #1: 456 chips
+	Seat #2: 216 chips
+	Seat #3: 456 chips
+
+Table #79 after 53 hands.
+
+	Seat #0: 528 chips
+	Seat #1: 288 chips
+	Seat #2: 288 chips
+	Seat #3: 288 chips
+
+Table #80 after 58 hands.
+
+	Seat #0: 408 chips
+	Seat #1: 408 chips
+	Seat #2: 168 chips
+	Seat #3: 408 chips
+
+Table #81 after 55 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 240 chips
+	Seat #2: 360 chips
+	Seat #3: 240 chips
+
+Table #82 after 53 hands.
+
+	Seat #0: 408 chips
+	Seat #1: 408 chips
+	Seat #2: 888 chips
+	Seat #3: 648 chips
+
+Table #83 after 58 hands.
+
+	Seat #0: 768 chips
+	Seat #1: 168 chips
+	Seat #2: 1008 chips
+	Seat #3: 408 chips
+
+Table #84 after 60 hands.
+
+	Seat #0: 240 chips
+	Seat #1: 960 chips
+	Seat #2: 600 chips
+	Seat #3: 600 chips
+
+Table #85 after 27 hands.
+
+	Seat #0: 288 chips
+	Seat #1: 552 chips
+	Seat #2: 312 chips
+	Seat #3: 552 chips
+
+Table #86 after 24 hands.
+
+	Seat #0: 384 chips
+	Seat #1: 384 chips
+	Seat #2: 432 chips
+	Seat #3: 504 chips
+
+Table #87 after 73 hands.
+
+	Seat #0: 648 chips
+	Seat #1: 528 chips
+	Seat #2: 1008 chips
+	Seat #3: 168 chips
+
+Table #88 after 76 hands.
+
+	Seat #0: 456 chips
+	Seat #1: 96 chips
+	Seat #2: 336 chips
+	Seat #3: 456 chips
+
+Table #89 after 75 hands.
+
+	Seat #0: 720 chips
+	Seat #1: 240 chips
+	Seat #2: 600 chips
+	Seat #3: 840 chips
+
+Table #90 after 38 hands.
+
+	Seat #0: 768 chips
+	Seat #1: 408 chips
+	Seat #2: 528 chips
+	Seat #3: 168 chips
+
+Table #91 after 79 hands.
+
+	Seat #0: 264 chips
+	Seat #1: 264 chips
+	Seat #2: 384 chips
+	Seat #3: 504 chips
+
+Table #92 after 49 hands.
+
+	Seat #0: 504 chips
+	Seat #1: 264 chips
+	Seat #2: 384 chips
+	Seat #3: 624 chips
+
+Table #93 after 26 hands.
+
+	Seat #0: 816 chips
+	Seat #1: 816 chips
+	Seat #2: 576 chips
+	Seat #3: 360 chips
+
+Table #94 after 86 hands.
+
+	Seat #0: 696 chips
+	Seat #1: 576 chips
+	Seat #2: 216 chips
+	Seat #3: 816 chips
+
+Table #95 after 43 hands.
+
+	Seat #0: 648 chips
+	Seat #1: 408 chips
+	Seat #2: 312 chips
+	Seat #3: 168 chips
+
+Table #96 after 91 hands.
+
+	Seat #0: 816 chips
+	Seat #1: 576 chips
+	Seat #2: 576 chips
+	Seat #3: 336 chips
+
+Table #97 after 27 hands.
+
+	Seat #0: 552 chips
+	Seat #1: 336 chips
+	Seat #2: 312 chips
+	Seat #3: 312 chips
+
+Table #98 after 51 hands.
+
+	Seat #0: 456 chips
+	Seat #1: 576 chips
+	Seat #2: 216 chips
+	Seat #3: 480 chips
+
+Table #99 after 95 hands.
+
+	Seat #0: 600 chips
+	Seat #1: 240 chips
+	Seat #2: 120 chips
+	Seat #3: 480 chips
+
+Report for 8 unit stakes after 94 hands played.
+
+Table #0 after 71 hands.
+
+	Seat #0: 912 chips
+	Seat #1: 468 chips
+	Seat #2: 720 chips
+	Seat #3: 612 chips
+	Seat #4: 264 chips
+
+Table #1 after 73 hands.
+
+	Seat #0: 564 chips
+	Seat #1: 648 chips
+	Seat #2: 732 chips
+	Seat #3: 672 chips
+	Seat #4: 384 chips
+
+Table #2 after 50 hands.
+
+	Seat #0: 588 chips
+	Seat #1: 468 chips
+	Seat #2: 408 chips
+	Seat #3: 672 chips
+	Seat #4: 408 chips
+
+Table #3 after 61 hands.
+
+	Seat #0: 912 chips
+	Seat #1: 240 chips
+	Seat #2: 456 chips
+	Seat #3: 696 chips
+	Seat #4: 852 chips
+
+Table #4 after 56 hands.
+
+	Seat #0: 408 chips
+	Seat #1: 948 chips
+	Seat #2: 384 chips
+	Seat #3: 552 chips
+
+Table #5 after 46 hands.
+
+	Seat #0: 480 chips
+	Seat #1: 708 chips
+	Seat #2: 588 chips
+	Seat #3: 660 chips
+
+Cash of highrollers:
+	2304
+	1920
+	2064
+	2136
+
+Cash of bustos:
+	96
+	96
+	72
+	72
+	24
+	24
+	0
+	96
+	96
+	96
+	72
+	72
+	72
+	96
+	72
+	72
+	24
+	24
+	24
+	0
+	0
+	0
+	96
+	96
+	48
+	96
+	96
+	96
+	48
+	24
+	0
+	0
+	24
+	96
+	24
+	48
+	48
+	48
+	0
+	0
+	96
+	72
+	0
+	48
+	48
+	24
+	96
+	0
+	96
+	0
+	96
+	72
+	48
+	48
+	0
+	72
+	48
+	0
+	48
+	24
+	96
+	96
+	96
+	72
+
