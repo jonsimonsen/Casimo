@@ -6,13 +6,14 @@ from random import randint
 MIN_STAKE = 4       #Number of chips for a big bet at the smallest stakes
 MAX_STAKE = 16      #Number of chips for a big bet at the highest stakes
 BUY_IN = 120        #Number of big bets required to sit down at a table
-MAX_TABLES = 64     #Maximum amount of tables at a stake
+MAX_TABLES = 32     #Maximum amount of tables at a stake
 SEATS = 5           #Number of seats at a table
+MAX_BETS = 6        #Maximum number of big bets per player per hand
 
 #For moving between stakes
 MAX_STACK = BUY_IN * 2          #When posting the BB, this is the max amount of big bets allowed (must move up otherwise)
 MIN_STACK = BUY_IN // 2         #When posting the BB, this is the least amount of big bets allowed (must move down otherwise)
-MIN_UNITS = MIN_STAKE * SEATS   #When posting the BB at the lowest stakes, this is the least amount of big bets allowed (must leave otherwise)
+MIN_UNITS = MAX_BETS * SEATS    #When posting the BB at the lowest stakes, this is the least amount of big bets allowed (must leave otherwise)
 
 class Player(object):
     """A poker player"""

@@ -37,3 +37,10 @@ v0.2: <br />
 Minor issues: <br />
   -Fixed logical errors in conversion between chips and cash that was present in a temporary version in a side branch. <br />
   
+v0.25: <br />
+  -Added a recruiter class. So far, it only contains a few methods. It should eventually be able to produce different kinds of players. <br />
+  -Made some cleanup and tested at a bigger scale (3 stakes, higher number of tables, more hands played). <br /> <br />
+  
+Minor issues: <br />
+  -Fixed erroneous global constant that caused busted players to sometimes have a negative amount of cash (from side branch). <br />
+  

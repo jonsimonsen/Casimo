@@ -2,7 +2,7 @@
 from entities import *
 
 #Global constants
-HANDS_PER_ROUND = 20    #Number of hands played in each round (per table)
+HANDS_PER_ROUND = 50    #Number of hands played in each round (per table)
 ROUNDS = 10             #Number of rounds to run the simulator
 
 #initialising variables
