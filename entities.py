@@ -65,7 +65,7 @@ class Table(object):
             self._pot += 6 * MIN_STAKE
 
         #Award the pot to a random player
-        self._players[randint(0, 4)]._chips += self._pot
+        self._players[randint(0, SEATS - 1)]._chips += self._pot
         self._pot = 0
         
         #Move button
