@@ -1,13 +1,6 @@
-#Other libs
+#Imports/libs
 from random import randint
 from config import *
-
-#Global constants
-SUITS = 4
-VALUES = 13
-HAND_SIZE = 5
-
-#Classes
 
 class Card(object):
     """A playing card"""
@@ -53,6 +46,39 @@ class Card(object):
             color = "illegal suit"
 
         print("\t" + rank + " of " + color)
+
+    def getValue(self, context = 0):
+        """Return a string corresponding to the rank of the card."""
+
+        if(self._value == 2):
+            return "deuce"
+        elif(self._value == 3):
+            return "trey"
+        elif(self._value == 4):
+            return "four"
+        elif(self._value == 5):
+            return "five"
+        elif(self._value == 6):
+            if context == 0:
+                return "six"
+            else:
+                return "sixe" #hack to get the correct plural
+        elif(self._value == 7):
+            return "seven"
+        elif(self._value == 8):
+            return "eight"
+        elif(self._value == 9):
+            return "nine"
+        elif(self._value == 10):
+            return "ten"
+        elif(self._value == 11):
+            return "jack"
+        elif(self._value == 12):
+            return "queen"
+        elif(self._value == 13):
+            return "king"
+        elif(self._value == 14):
+            return "ace" 
 
 class Dealer(object):
     """A poker dealer"""
@@ -105,12 +131,10 @@ class Dealer(object):
                 
         print("\nYour hand:")
         suits = -1  #Indicates that no card has been checked yet
-        ladder = list()
         msg = ""
 
         for card in hand:
             card.printCard()
-            ladder.append(card._value)
 
             #Check for flush
             if(suits < -1):
@@ -121,14 +145,14 @@ class Dealer(object):
                 suits = -2 #Different suits
 
         #Check for pairs etc.
-        ladder.sort(reverse = True)
+        hand.sort(key = lambda card: card._value, reverse = True)
         foot = 0
-        head = len(ladder) - 1
+        head = len(hand) - 1
         pattern = 0
         while(foot <= head):
-            counter = ladder.count(ladder[foot])
+            counter = sum(c._value == hand[foot]._value for c in hand)
             if counter == 1:
-                ladder.append(ladder.pop(foot))
+                hand.append(hand.pop(foot))
                 head -= 1
             else:
                 if counter == 4:
@@ -137,8 +161,8 @@ class Dealer(object):
                 elif counter == 3:
                     if pattern == 2:
                         pattern = 32
-                        ladder.append(ladder.pop(0))
-                        ladder.append(ladder.pop(0))
+                        hand.append(hand.pop(0))
+                        hand.append(hand.pop(0))
                         foot += counter
                     else:
                         pattern = counter
@@ -159,29 +183,37 @@ class Dealer(object):
 
         #Check for straight
         if(pattern == 0):
-            if(ladder[0] - ladder[4] == 4):
-                pattern = ladder[0]
-            elif(ladder[0] == 14 and ladder[1] == 5):
-                pattern = ladder[1]
+            if(hand[0]._value - hand[4]._value == 4):
+                pattern = hand[0]._value
+            elif(hand[0]._value == 14 and hand[1]._value == 5):
+                pattern = hand[1]._value
 
-        if((pattern > 4) and (pattern <= 14)):
-            msg = str(pattern) + "-high straight"
+        if(pattern == 5):
+            msg = hand[1].getValue() + "-high straight"
             if suits >= 0:
-                msg += " flush"
+                msg += " flush."
+            else:
+                msg += "."
+        elif((pattern > 5) and (pattern <= 14)):
+            msg = hand[0].getValue() + "-high straight"
+            if suits >= 0:
+                msg += " flush."
+            else:
+                msg += "."
         elif(suits >= 0):
-            msg = str(ladder[0]) + "-high flush"
+            msg = hand[0].getValue() + "-high flush."
         elif(pattern == 4):
-            msg = "quad " + str(ladder[0])
+            msg = "quad " + hand[0].getValue(-1) + "s."
         elif(pattern == 32):
-            msg = str(ladder[0]) + " full"
+            msg = hand[0].getValue(-1) + "s full."
         elif(pattern == 3):
-            msg = "trip " + str(ladder[0])
+            msg = "trip " + hand[0].getValue(-1) + "s."
         elif(pattern == 22):
-            msg = str(ladder[0]) + " up"
+            msg = hand[0].getValue(-1) + "s up."
         elif(pattern == 2):
-            msg = "a pair of " + str(ladder[0])
+            msg = "a pair of " + hand[0].getValue(-1) + "s."
         else:
-            msg = "high card " + str(ladder[0])
+            msg = "high card " + hand[0].getValue(-1) + "."
 
         print(msg)
 
