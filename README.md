@@ -44,3 +44,11 @@ v0.25: <br />
 Minor issues: <br />
   -Fixed erroneous global constant that caused busted players to sometimes have a negative amount of cash (from side branch). <br />
   
+v0.29: <br />
+  -Preparation for v0.3. <br />
+  -Files dealer.py and one_hand.py. At the moment, they're separate from the rest of the files. <br />
+  -Contains classes for a dealer and cards. The dealer can deal hands and print info about the cards dealt. <br />
+  -Started to implement functionality for the dealer to rearrange cards in a hand and print what hand it is (straight/pair etc.) <br />
+
+Minor issues: <br />
+  -Improved the algorithm that determines the winner from v0.1 by using a global constant. <br />
