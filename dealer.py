@@ -92,11 +92,37 @@ class Dealer(object):
     def dealHand(self):
         """Deal and display a hand from the deck"""
 
+        hand = dealCards()
         print("\nYour hand:")
+        suits = -1  #Indicates that no card has been checked yet
+        ladder = list()
 
-        for i in range(HAND_SIZE):
-            card = self._deck.pop(randint(0, len(self._deck) - 1))
+        for card in hand:
             card.printCard()
 
-        #self.printCards()
-        #self.printDeck()
+            #Check for flush
+            if(suits < -1):
+                continue
+            elif(suits == -1):
+                suits = card._suit
+            elif(suits != card._suit):
+                suits = -2 #Different suits
+
+            #Check for straight
+            if(ladder[0] = -1):
+                continue
+            if(card._value < )
+
+            #Check for pairs etc.
+
+    def dealCards(self, n = HAND_SIZE):
+        """Deal and display cards from the deck."""
+
+        hand = list()
+
+        for i in range(n):
+            hand.append(self._deck.pop(randint(0, len(self._deck) - 1)))
+
+        return hand
+
+    def readHand(self, hand)
