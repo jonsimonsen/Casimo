@@ -1,5 +1,6 @@
 #Other libs
 from random import randint
+from config import *
 
 #Global constants
 SUITS = 4
@@ -91,10 +92,17 @@ class Dealer(object):
         print("Shuffling cards...")
         self._deck = list(self._cards)
 
-    def dealHand(self):
+    def dealHand(self, template = None):
         """Deal and display a hand from the deck"""
 
-        hand = self.dealCards()
+        hand = list()
+
+        if(template is None):
+            hand = self.dealCards()
+        else:
+            for ind in template:
+                hand.append(self._deck.pop(ind))
+                
         print("\nYour hand:")
         suits = -1  #Indicates that no card has been checked yet
         ladder = list()
@@ -184,6 +192,6 @@ class Dealer(object):
 
         for i in range(n):
             hand.append(self._deck.pop(randint(0, len(self._deck) - 1)))
-            hand[i].printCard()
+            #hand[i].printCard()
 
         return hand

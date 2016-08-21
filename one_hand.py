@@ -5,9 +5,12 @@ from dealer import *
 cardRack = Dealer()
 
 #main loop
-cardRack.printCards()
+#cardRack.printCards()
 
-for i in range(5):
+for test in TESTIN:
+    cardRack.dealHand(test)
+    cardRack.resetDeck()
+"""for i in range(5):
     for j in range(5):
         cardRack.dealHand()
-    cardRack.resetDeck()
+    cardRack.resetDeck()"""
