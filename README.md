@@ -69,3 +69,7 @@ v0.31: <br />
   -Decided that the dealer should not be concerned with drawing (issue 2). Should probably handle this in the Player class eventually. <br />
   -Final version before trying to combine dealers with tables/managers/players. <br />
   
+v0.32: <br />
+  -Imports the dealer class into entities.py <br />
+  -Moved global constants to config.py <br />
+  -Minor refactoring and some new comments <br />

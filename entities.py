@@ -1,19 +1,6 @@
 #Other libs
 from random import randint
-
-#Global constants
-
-MIN_STAKE = 4       #Number of chips for a big bet at the smallest stakes
-MAX_STAKE = 16      #Number of chips for a big bet at the highest stakes
-BUY_IN = 120        #Number of big bets required to sit down at a table
-MAX_TABLES = 32     #Maximum amount of tables at a stake
-SEATS = 5           #Number of seats at a table
-MAX_BETS = 6        #Maximum number of big bets per player per hand
-
-#For moving between stakes
-MAX_STACK = BUY_IN * 2          #When posting the BB, this is the max amount of big bets allowed (must move up otherwise)
-MIN_STACK = BUY_IN // 2         #When posting the BB, this is the least amount of big bets allowed (must move down otherwise)
-MIN_UNITS = MAX_BETS * SEATS    #When posting the BB at the lowest stakes, this is the least amount of big bets allowed (must leave otherwise)
+from dealer import * #Includes global constants
 
 class Player(object):
     """A poker player"""
@@ -67,7 +54,14 @@ class Table(object):
         #Award the pot to a random player
         self._players[randint(0, SEATS - 1)]._chips += self._pot
         self._pot = 0
-        
+
+        #Return the player from the big blind if that player can no longer play at these stakes
+        mover = self.finishHand()
+        return mover
+
+    def finishHand(self):
+        """Do cleanup after the hand has finished"""
+
         #Move button
         self._button = (self._button + 1) % 5
         self._rounds += 1
@@ -106,11 +100,11 @@ class Manager(object):
         self._recruiter = recruiter
         self._tables = list()
         self._freeTables = list()   #Tables that are not filled
-        self._waitList = list()
-        self._rounds = 0
-        self._boss = None   #When higher stakes exist, this should be the Manager at the next stakes
-        self._upList = list()
-        self._downList = list()
+        self._waitList = list()     #Players waiting to be seated at the manager's stakes
+        self._rounds = 0            #Rounds played globally since the manager was hired (even if no tables at these stakes played a hand in the round)
+        self._boss = None           #When higher stakes exist, this should be the Manager at the next stakes
+        self._upList = list()       #People that were playing here, and should now be transferred to a waiting list at higher stakes
+        self._downList = list()     #People that were playing here, and should now be transferred to a waiting list at lower stakes
 
     def getPlayers(self, n = 1):
         """Fills the waitlist with n players"""
