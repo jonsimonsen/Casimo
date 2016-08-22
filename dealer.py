@@ -12,7 +12,7 @@ class Card(object):
         self._value = value
 
     def printCard(self):
-        """Print info about the card"""
+        """Print info about the card (rank and suit)"""
 
         rank = ""
         color = ""
@@ -86,18 +86,21 @@ class Dealer(object):
     def __init__(self):
         """Setting up variables for the dealer"""
 
+        #Set up a full deck that can be copied into an actual deck when starting a new hand
+        #This seemed easier than collecting cards from the muck before a new deal.
         self._cards = list()
         self.getCards()
 
+        #Initialize the actual deck
         self._deck = list()
         self.resetDeck()
 
     def getCards(self):
-        """Initialize the cards with the 52 cards of a deck"""
+        """Initialize the cards of a deck"""
 
         for s in range(SUITS):
             for v in range(VALUES):
-                newCard = Card(s, v + 2)
+                newCard = Card(s, v + 2) #Add 2, since it's convenient that values range from 2 (deuces) to 14 (aces).
                 self._cards.append(newCard)
 
     def printCards(self):
@@ -107,7 +110,7 @@ class Dealer(object):
             card.printCard()
 
     def printDeck(self):
-        """Print the cards left in the deck"""
+        """Print the cards left in the actual deck"""
 
         for card in self._deck:
             card.printCard()
@@ -119,10 +122,12 @@ class Dealer(object):
         self._deck = list(self._cards)
 
     def dealHand(self, template = None):
-        """Deal and display a hand from the deck"""
+        """Deal and display a hand from the deck."""
 
         hand = list()
 
+        #Deal a hand. The template argument can be used for testing.
+        #It provides the possibility of a backdoor/cheat, so should probably be removed if used in a game.
         if(template is None):
             hand = self.dealCards()
         else:
@@ -130,6 +135,7 @@ class Dealer(object):
                 hand.append(self._deck.pop(ind))
                 
         print("\nYour hand:")
+        
         suits = -1  #Indicates that no card has been checked yet
         msg = ""
 
@@ -186,15 +192,10 @@ class Dealer(object):
             if(hand[0]._value - hand[4]._value == 4):
                 pattern = hand[0]._value
             elif(hand[0]._value == 14 and hand[1]._value == 5):
-                pattern = hand[1]._value
+                hand.append(hand.pop(0))
+                pattern = hand[0]._value
 
-        if(pattern == 5):
-            msg = hand[1].getValue() + "-high straight"
-            if suits >= 0:
-                msg += " flush."
-            else:
-                msg += "."
-        elif((pattern > 5) and (pattern <= 14)):
+        if((pattern > 4) and (pattern <= 14)):
             msg = hand[0].getValue() + "-high straight"
             if suits >= 0:
                 msg += " flush."
@@ -213,9 +214,14 @@ class Dealer(object):
         elif(pattern == 2):
             msg = "a pair of " + hand[0].getValue(-1) + "s."
         else:
-            msg = "high card " + hand[0].getValue(-1) + "."
+            msg = "high card " + hand[0].getValue() + "."
 
         print(msg)
+
+        for card in hand:
+            card.printCard()
+
+        print("")
 
     def dealCards(self, n = HAND_SIZE):
         """Deal and display cards from the deck."""
