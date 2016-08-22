@@ -10,6 +10,8 @@ class Player(object):
 
         self._chips = balance       #Default is based on having 480 small blinds at the smallest stakes (4)
         self._cash = 0              #Cash that is not converted to chips (if moving up, the remainder of cash that cannot be used to buy new chips end up here)
+        self._wager = 0             #Chips that has been out, but is not yet in the pot
+        self._hand = list()
         self._played = 0            #Number of hands played
         self._status = 1            #0=seated, 1 = moving up (includes newly arrived players), 2 = moving down, 3 = busto
         self._ups = 0               #Number of times the player has moved up in stakes
@@ -43,17 +45,33 @@ class Table(object):
         player._status = 0 #seated
         self._players.insert(pos, player)
 
-    def playHand(self):
+    def playHand(self, dealer = None):
         """Play one hand at the table"""
 
-        for player in self._players:
-            player.allin()
-            player._played += 1
-            self._pot += 6 * MIN_STAKE
+        #If there's no dealer, players just move in and draws for who wins the pot
+        if(dealer == None):
+            for player in self._players:
+                player.allin()
+                player._played += 1
+                self._pot += 6 * MIN_STAKE
 
-        #Award the pot to a random player
-        self._players[randint(0, SEATS - 1)]._chips += self._pot
-        self._pot = 0
+            #Award the pot to a random player
+            self._players[randint(0, SEATS - 1)]._chips += self._pot
+            self._pot = 0
+        else:
+            #Post SB
+            target = (self._button + 1) % SEATS
+            self._players[target]._wager += 1
+
+            #Post BB
+            target = (target + 1) % SEATS
+            self._players[target]._wager += 1
+
+            #Deal hands
+            target = (target + 1) % SEATS
+            
+            for i in range(SEATS):
+                self._players[(target + i) % SEATS]._hand = dealer.dealHand()
 
         #Return the player from the big blind if that player can no longer play at these stakes
         mover = self.finishHand()
@@ -91,13 +109,14 @@ class Table(object):
 class Manager(object):
     """A stake manager (responsible for all tables having a certain stake)"""
 
-    def __init__(self, stake = MIN_STAKE, tables = MAX_TABLES, cashier = None, recruiter = None):
+    def __init__(self, stake = MIN_STAKE, tables = MAX_TABLES, cashier = None, recruiter = None, dealer = None):
         """Setting up variables for the manager"""
 
         self._stake = stake
         self._numtables = tables
         self._cashier = cashier
         self._recruiter = recruiter
+        self._dealer = dealer
         self._tables = list()
         self._freeTables = list()   #Tables that are not filled
         self._waitList = list()     #Players waiting to be seated at the manager's stakes
@@ -151,7 +170,7 @@ class Manager(object):
 
         #Play a hand at each table. Handle moving players between stakes
         for table in self._tables:
-            mover = table.playHand()
+            mover = table.playHand(self._dealer)
 
             if mover is not None:
                 self._tables.remove(table)
