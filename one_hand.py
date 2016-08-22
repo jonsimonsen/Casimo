@@ -5,7 +5,6 @@ from dealer import *
 cardRack = Dealer()
 
 #main loop
-#cardRack.printCards()
 
 for test in TESTIN:
     cardRack.dealHand(test)

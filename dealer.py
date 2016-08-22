@@ -121,6 +121,115 @@ class Dealer(object):
         print("Shuffling cards...")
         self._deck = list(self._cards)
 
+    def readHand(self, hand):
+        """Sorts the hand, prints what hand it is. Then returns the sorted hand."""
+
+        cards = list(hand)      #cards to be sorted/classified
+        foot = 0                #Index of the first unprocessed card
+        head = len(hand) - 1    #Index of the last unprocessed card
+        counter = 0             #To count the number of cards having the same rank as the card at foot
+        pattern = 0             #Look in config.py for an overview of the possible patterns
+        suits = -1
+
+        #Sort, with aces first and deuces last
+        cards.sort(key = lambda card: card._value, reverse = True)
+
+        #Check for hands containing more than one card of equal rank (pairs, trips, two pair etc.)
+        #The cards will be sorted so paired cards appear before unpaired and trips before pairs (in a full house)
+        while(foot <= head):
+            counter = sum(c._value == cards[foot]._value for c in cards)
+            if counter == 1:
+                #Move the card to the back. Move head forward, so the card will not be considered again.
+                #Since all unpaired are treated this way, their order is preserved.
+                cards.append(cards.pop(foot))
+                head -= 1
+            else:
+                if counter == 4:
+                    pattern = QUADS
+                    foot = head + 1     #With quads at the foot, the hand is already sorted, so no need to loop again
+                elif counter == 3:
+                    if pattern == PAIR:
+                        #A pair has already been processed. Since the trips are more interesting, the pair is moved to the end of the list
+                        pattern = FULL_HOUSE
+                        cards.append(cards.pop(0))
+                        cards.append(cards.pop(0))
+                        foot = head + 1     #With a full house, all cards have been sorted, so no need to loop again
+                    else:
+                        pattern = TRIPS
+                        foot += counter     #The trips are in the right place. Move the foot to the first card that doesn't match their rank
+                elif counter == 2:
+                    if pattern == TRIPS:
+                        #The trips have been processed, and the pair is therefore correctly placed
+                        pattern = FULL_HOUSE
+                        foot = head + 1     #With a full house, all cards have been sorted, so no need to loop again
+                    elif pattern == PAIR:
+                        #Since none of the pairs are moved, their order is preserved
+                        pattern = TWO_PAIR
+                        foot = head + 1     #With two pairs, the fifth card will always be in the correct place by now
+                    else:
+                        #The pair is likely to be correctly placed, so move the foot to the first card that doesn't match the rank
+                        pattern = PAIR
+                        foot += counter
+                else:
+                    #It is assumed that there are four suits and no jokers, so the count should never be outside the interval [1,4]
+                    pattern = NO_HAND
+                    foot = head + 1
+                    print("Illegal hand")
+
+        #If no cards were of equal rank, the hand is either a straigh flush, a flush, a straight or a hi-card hand.
+        if(pattern == 0):
+            #Check for straight, setting pattern to the highest card of the straight (5 is considered higher than A in 5-4-3-2-A)
+            if(cards[0]._value - cards[4]._value == 4):
+                pattern = cards[0]._value
+            elif(cards[0]._value == 14 and cards[1]._value == 5):
+                cards.append(cards.pop(0))
+                pattern = cards[0]._value
+
+            #Check for flush
+            for card in cards:
+                if(suits < -1):
+                    continue
+                elif(suits == -1):
+                    suits = card._suit
+                elif(suits != card._suit):
+                    suits = -2 #Different suits
+
+        self.printHandInfo(pattern, suits, cards[0])
+
+    def printHandInfo(self, category, suits, firstcard):
+        """Prints info about the hand based on its category, suitedness and most significant card"""
+
+        msg = ""    #Message to be printed about the hand
+
+        if(category < 0):
+            #Illegal value
+            msg = "Illegal value for the hand category."
+        elif((category >= LOSTRAIGHT) and (category <= HISTRAIGHT)):
+            #Straight or straight flush
+            msg = firstcard.getValue() + "-high straight"
+            if suits >= 0:
+                msg += " flush."
+            else:
+                msg += "."
+        elif(suits >= 0):
+            msg = firstcard.getValue() + "-high flush."
+        elif(category == QUADS):
+            msg = "quad " + firstcard.getValue(-1) + "s."
+        elif(category == FULL_HOUSE):
+            msg = firstcard.getValue(-1) + "s full."
+        elif(category == TRIPS):
+            msg = "trip " + firstcard.getValue(-1) + "s."
+        elif(category == TWO_PAIR):
+            msg = firstcard.getValue(-1) + "s up."
+        elif(category == PAIR):
+            msg = "a pair of " + firstcard.getValue(-1) + "s."
+        elif(category == HICARD):
+            msg = "high card " + firstcard.getValue() + "."
+        else:
+            msg = "Unknown hand type."
+
+        print(msg)
+
     def dealHand(self, template = None):
         """Deal and display a hand from the deck."""
 
@@ -133,95 +242,15 @@ class Dealer(object):
         else:
             for ind in template:
                 hand.append(self._deck.pop(ind))
-                
+
+        #Print the contents of the hand (can probably be removed after testing is complete)                
         print("\nYour hand:")
         
-        suits = -1  #Indicates that no card has been checked yet
-        msg = ""
-
         for card in hand:
             card.printCard()
 
-            #Check for flush
-            if(suits < -1):
-                continue
-            elif(suits == -1):
-                suits = card._suit
-            elif(suits != card._suit):
-                suits = -2 #Different suits
-
-        #Check for pairs etc.
-        hand.sort(key = lambda card: card._value, reverse = True)
-        foot = 0
-        head = len(hand) - 1
-        pattern = 0
-        while(foot <= head):
-            counter = sum(c._value == hand[foot]._value for c in hand)
-            if counter == 1:
-                hand.append(hand.pop(foot))
-                head -= 1
-            else:
-                if counter == 4:
-                    pattern = counter
-                    foot += counter
-                elif counter == 3:
-                    if pattern == 2:
-                        pattern = 32
-                        hand.append(hand.pop(0))
-                        hand.append(hand.pop(0))
-                        foot += counter
-                    else:
-                        pattern = counter
-                        foot += counter
-                elif counter == 2:
-                    if pattern == 3:
-                        pattern = 32
-                        foot += counter
-                    elif pattern == 2:
-                        pattern = 22
-                        foot += counter
-                    else:
-                        pattern = counter
-                        foot += counter
-                else:
-                    print("Illegal hand")
-                    foot = head + 2
-
-        #Check for straight
-        if(pattern == 0):
-            if(hand[0]._value - hand[4]._value == 4):
-                pattern = hand[0]._value
-            elif(hand[0]._value == 14 and hand[1]._value == 5):
-                hand.append(hand.pop(0))
-                pattern = hand[0]._value
-
-        if((pattern > 4) and (pattern <= 14)):
-            msg = hand[0].getValue() + "-high straight"
-            if suits >= 0:
-                msg += " flush."
-            else:
-                msg += "."
-        elif(suits >= 0):
-            msg = hand[0].getValue() + "-high flush."
-        elif(pattern == 4):
-            msg = "quad " + hand[0].getValue(-1) + "s."
-        elif(pattern == 32):
-            msg = hand[0].getValue(-1) + "s full."
-        elif(pattern == 3):
-            msg = "trip " + hand[0].getValue(-1) + "s."
-        elif(pattern == 22):
-            msg = hand[0].getValue(-1) + "s up."
-        elif(pattern == 2):
-            msg = "a pair of " + hand[0].getValue(-1) + "s."
-        else:
-            msg = "high card " + hand[0].getValue() + "."
-
-        print(msg)
-
-        for card in hand:
-            card.printCard()
-
-        print("")
+        #Sort the hand and display what kind of hand it is
+        self.readHand(hand)
 
     def dealCards(self, n = HAND_SIZE):
         """Deal and display cards from the deck."""

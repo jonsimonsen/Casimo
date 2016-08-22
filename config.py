@@ -8,6 +8,20 @@ SUITS = 4
 VALUES = 13
 HAND_SIZE = 5
 
+##patterns
+
+HICARD      = 0
+PAIR        = 2
+TWO_PAIR    = 22
+TRIPS       = 3
+LOSTRAIGHT  = 5
+HISTRAIGHT  = 14
+FLUSH       = 0
+FULL_HOUSE  = 32
+QUADS       = 4
+STRFL       = 0
+NO_HAND     = -1
+
 ##Testing
 
 STRFLH  = [12, 11, 10, 9, 8]

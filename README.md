@@ -2,7 +2,7 @@
 Casino simulator (intending to make a simulator for 5-card draw poker initially).
 
 # Implementation
-Planning to program it in Python
+The simulator is being programmed in Python
 
 # Running
 Run from terminal by navigating to the folder containing the py files and typing: <br />
@@ -11,6 +11,8 @@ From version 0.2, the output tends to be too large for a terminal. Try writing t
   python casimo.py > filename.txt <br />
 Make sure that the path you choose for the output does not cause overwriting of important files. <br />
 Sample output can be found in the file output.txt <br />
+Version 0.3 contains code for a dealer, and can be run by typing: <br />
+  python one_hand.py <br />
   
 # History
 v0.1: <br />
@@ -52,3 +54,13 @@ v0.29: <br />
 
 Minor issues: <br />
   -Improved the algorithm that determines the winner from v0.1 by using a global constant. <br />
+
+v0.3: <br />
+  -Finished implementing the functionality for sorting and categorising hands. <br />
+  -All global constants for dealers/cards are now found in config.py (Planning to move stuff here from the other classes too). <br />
+  -Functionality for testing/dealing specific hands are implemented. Not intended for use by unsophisticated users. <br />
+  
+Minor issues: <br />
+  -Should improve message passing between some of the functions. <br />
+  -Does not identify drawing hands yet. Some hands could belong in several categories (pair with draw, straight draw and flush draw etc.). <br />
+  
