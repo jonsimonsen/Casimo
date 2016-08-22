@@ -118,7 +118,7 @@ class Dealer(object):
     def resetDeck(self):
         """Make _deck a copy of _cards"""
 
-        print("Shuffling cards...")
+        print("Shuffling cards...")     #For users of the simulation, it should be ok to assume that shuffling happens here.
         self._deck = list(self._cards)
 
     def readHand(self, hand):
@@ -129,7 +129,7 @@ class Dealer(object):
         head = len(hand) - 1    #Index of the last unprocessed card
         counter = 0             #To count the number of cards having the same rank as the card at foot
         pattern = 0             #Look in config.py for an overview of the possible patterns
-        suits = -1
+        suits = -1              #-2 means that no flush is possible. -1 means that no card has been looked at. A positive number should correspond to the suit of the examined cards.
 
         #Sort, with aces first and deuces last
         cards.sort(key = lambda card: card._value, reverse = True)
@@ -233,24 +233,25 @@ class Dealer(object):
     def dealHand(self, template = None):
         """Deal and display a hand from the deck."""
 
-        hand = list()
+        cards = list()
 
         #Deal a hand. The template argument can be used for testing.
         #It provides the possibility of a backdoor/cheat, so should probably be removed if used in a game.
         if(template is None):
-            hand = self.dealCards()
+            cards = self.dealCards()
         else:
             for ind in template:
-                hand.append(self._deck.pop(ind))
+                cards.append(self._deck.pop(ind))
 
         #Print the contents of the hand (can probably be removed after testing is complete)                
         print("\nYour hand:")
         
-        for card in hand:
+        for card in cards:
             card.printCard()
 
-        #Sort the hand and display what kind of hand it is
-        self.readHand(hand)
+        #Sort the hand and display what kind of hand it is, then return it
+        hand = self.readHand(cards)
+        return hand
 
     def dealCards(self, n = HAND_SIZE):
         """Deal and display cards from the deck."""

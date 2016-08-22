@@ -64,3 +64,8 @@ Minor issues: <br />
   -Should improve message passing between some of the functions. <br />
   -Does not identify drawing hands yet. Some hands could belong in several categories (pair with draw, straight draw and flush draw etc.). <br />
   
+v0.31: <br />
+  -Added the ability to return sorted hands from readHand to its caller, and from dealHand to its caller (issue 1 in v0.3). <br />
+  -Decided that the dealer should not be concerned with drawing (issue 2). Should probably handle this in the Player class eventually. <br />
+  -Final version before trying to combine dealers with tables/managers/players. <br />
+  
