@@ -12,15 +12,113 @@ class Player(object):
         self._cash = 0              #Cash that is not converted to chips (if moving up, the remainder of cash that cannot be used to buy new chips end up here)
         self._wager = 0             #Chips that has been out, but is not yet in the pot
         self._hand = list()
+        self._strat = list()        #To hold a list that determines the strategy of the player
+        self._rating = 0            #The player's rating of the hand
         self._played = 0            #Number of hands played
         self._status = 1            #0=seated, 1 = moving up (includes newly arrived players), 2 = moving down, 3 = busto
         self._ups = 0               #Number of times the player has moved up in stakes
         self._downs = 0             #Number of times the player has moved down in stakes
 
+    def setStrat(self, strategy):
+        """Initilize strat according to the given parameter"""
+
+        self._strat = strategy
+
+
     def allin(self):
         """Bet the maximum amount on a hand. Used for testing. The finished simulator should be based on a limit structure."""
 
         self._chips -= MIN_STAKE * 6     #2 big bets predraw, 4 postdraw
+
+    def rateHand(self):
+        """Give a rating to the hand based on global constants"""
+
+        rankCount = sum(card._value == self._hand[0]._value for card in self._hand)
+
+        if rankCount == 4:
+            self._rating = TRIP_K
+        elif rankCount == 3:
+            if self._hand[3]._value == self._hand[4]._value:
+                self._rating = TRIP_K
+            elif self._hand[0]._value >= 13:
+                self._rating = TRIP_K
+            elif self._hand[0]._value >= 7:
+                self._rating = TRIP_7
+            else:
+                self._rating = A_UP
+        elif rankCount == 2:
+            if self._hand[2]._value == self._hand[3]._value:
+                if self._hand[0]._value == 14:
+                    self._rating = A_UP
+                elif self._hand[0]._value == 13:
+                    self._rating = K_UP
+                elif self._hand[0]._value == 12:
+                    self._rating = Q_UP
+                elif self._hand[0]._value >= 10:
+                    self._rating = T_UP
+                elif self._hand[0]._value >= 8:
+                    self._rating = E_UP
+                else:
+                    self._rating = ACES
+            else:
+                self._rating = ACES + ((14 - self._hand[0]._value) * 3)
+        elif rankCount != 1:
+            print("Player hand error.")
+        else:
+            if (self._hand[0]._value == 5) or (self._hand[0]._value - self._hand[4]._value == 4):
+                self._rating = TRIP_K
+            elif sum(card._suit == self._hand[0]._suit for card in self._hand) == 5:
+                self._rating = TRIP_K
+            elif self._hand[0]._value == 14:
+                if self._hand[1]._value == 13:
+                    self._rating = AK_START
+                elif self._hand[1]._value == 12:
+                    self._rating = AQ_START
+                elif self._hand[1].value == 11:
+                    self._rating = AJ_START
+                else:
+                    self._rating = TRASH
+            else:
+                self._rating = TRASH
+
+    def actPre(self, wagers):
+        """Decide on waging before the draw"""
+
+        if(wagers == 2): #No raise yet
+            if self._rating < self._strat[0]:  #Since limping has not been implemented, this is the least aggressive strat parameter
+                if self._wager < 2:            #Unless in big blind, fold and concede chips to the pot
+                    self._chips -= self._wager
+            else:
+                self._wager = 4
+        elif(wagers == 4): #The pot has been raised
+            if self._rating < self._strat[3]:
+                self._chips -= self._wagers
+            elif self._rating < self._strat[1]:
+                self._wager = 4
+            else:
+                self._wager = 6
+        elif(wagers == 6): #The pot has been reraised
+            if self._rating < self._strat[4]:
+                if((self._rating >= self._strat[3]) and (self._wager == 4)):    #Only needs to call a single raise
+                    self._wager += 2
+                else:   #Fold
+                    self._chips -= self._wagers
+            elif self._rating < self._strat[2]:
+                self._wager = 6
+            else:
+                self._wager = 8
+        elif(wagers != 8): #An incorrect argument has been given
+            return wagers #Assumes that error handling detects this case in the caller
+        else: #The betting has been capped
+            if self.rating < self._strat[5]:
+                if((self._rating >= self._strat[3]) and (self._wager == 6)):    #Only needs to call a single raise
+                    self._wager += 2
+                else:   #Fold
+                    self._chips -= self._wagers
+            else:
+                self._wager = 8
+
+        return self._wager
 
 class Table(object):
     """A poker table"""
@@ -48,6 +146,8 @@ class Table(object):
     def playHand(self, dealer = None):
         """Play one hand at the table"""
 
+        wagers = 0  #The amount that the players must match to stay in the hand
+
         #If there's no dealer, players just move in and draws for who wins the pot
         if(dealer == None):
             for player in self._players:
@@ -65,24 +165,61 @@ class Table(object):
 
             #Post BB
             target = (target + 1) % SEATS
-            self._players[target]._wager += 1
+            self._players[target]._wager += 2
 
             #Deal hands
             target = (target + 1) % SEATS
             
             for i in range(SEATS):
                 self._players[(target + i) % SEATS]._hand = dealer.dealHand()
+                print("Player #" + str(i) + " has:")
+                for card in self._players[(target + i) % SEATS]._hand:
+                    card.printCard()
+
+            #Round of betting
+            wagers = 2  #Matching the big blind
+            ind = 0     #Signifies the player to act relative to the UTG-player(using modulo)
+            newWage = 0 #Amount waged by the latest player to act
+            while((ind < SEATS) and (self._players[(target + ind) % SEATS]._wager < wagers)):
+                if((ind >= SEATS) and (self._players[(target + ind) % SEATS]._wager == 0)):
+                    ind += 1
+                else:
+                    newWage = self._players[(target + ind) % SEATS].actPre(wagers)
+
+                    if(newWage == wagers + 2):
+                        wagers = newWage
+                    elif(newWage != wagers):    #The player didn't contribute the correct amount to stay in the pot
+                        self._pot += newWage
+                        self._players[(target + ind) % SEATS]._wager = 0
+                        
+                    ind += 1
+
+            #Award the pot to the player with the best hand
+            contestants = list()
+            for player in self._players:
+                if(player._wager == wagers):
+                    self._pot += player._wager
+                    player._chips -= player._wager
+                    player._wager = 0
+                    contestants.append(player)
+
+            dealer.showDown(contestants, self._pot)
+            self._pot = 0
 
         #Return the player from the big blind if that player can no longer play at these stakes
-        mover = self.finishHand()
+        mover = self.finishHand(dealer)
         return mover
 
-    def finishHand(self):
+    def finishHand(self, dealer):
         """Do cleanup after the hand has finished"""
 
         #Move button
         self._button = (self._button + 1) % 5
         self._rounds += 1
+
+        #If there's a dealer, reset the deck
+        if dealer is not None:
+            dealer.resetDeck()
 
         #Move the new big blind up or down if required
         bb = (self._button + 2) % 5
@@ -155,7 +292,7 @@ class Manager(object):
         #If there are too many empty tables, ask the recruiter to find a new player
         if(self._recruiter is not None):
             if((len(self._tables) + len(self._freeTables) < self._numtables) or (len(self._freeTables) > len(self._waitList))):
-                self.getPlayers()
+                self.getPlayers(GROWRATE)
 
         #Fill tables from the waitList
         for i in range(len(self._waitList)):
@@ -287,10 +424,10 @@ class Cashier(object):
 class Recruiter(object):
     """A recruiter that finds new players for the casino"""
 
-    def __init__(self):
+    def __init__(self, playertypes):
         """Setting up variables for the recruiter"""
 
-        #No necessary variables have been identified yet
+        self._playerTypes = playertypes
 
     def findPlayers(self, n):
         """Finding several players in one go"""
@@ -299,6 +436,7 @@ class Recruiter(object):
 
         for i in range(n):
             newFace = Player()
+            newFace.setStrat(self._playerTypes[randint(0, len(self._playerTypes) - 1)])
             recruits.append(newFace)
 
         return recruits

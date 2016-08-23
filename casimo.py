@@ -1,14 +1,19 @@
 #Imports
 from entities import *
+from loose import *
+from regular import *
+from tight import *
 
 #Global constants
-HANDS_PER_ROUND = 50    #Number of hands played in each round (per table)
+HANDS_PER_ROUND = 1     #Number of hands played in each round (per table)
 ROUNDS = 10             #Number of rounds to run the simulator
 
 #initialising variables
+playerTypes = [LOOSE, REGULAR, TIGHT]
 moneyBags = Cashier()
-sheepDog = Recruiter()
-boss = Manager(cashier = moneyBags, recruiter = sheepDog)
+sheepDog = Recruiter(playerTypes)
+cardRack = Dealer()
+boss = Manager(cashier = moneyBags, recruiter = sheepDog, dealer = cardRack)
 
 #Initialize the waitList with enough players for one table
 boss.getPlayers(SEATS)
@@ -19,4 +24,4 @@ for i in range(ROUNDS):
     for j in range(HANDS_PER_ROUND):
         boss.startHand()
     boss.makeReport()
-    moneyBags.makeReport()
+    #moneyBags.makeReport()

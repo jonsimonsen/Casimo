@@ -195,6 +195,7 @@ class Dealer(object):
                     suits = -2 #Different suits
 
         self.printHandInfo(pattern, suits, cards[0])
+        return cards
 
     def printHandInfo(self, category, suits, firstcard):
         """Prints info about the hand based on its category, suitedness and most significant card"""
@@ -263,3 +264,80 @@ class Dealer(object):
             #hand[i].printCard()
 
         return hand
+
+    def showDown(self, players, potsize):
+        """Awards the pot to the player with the best hand."""
+
+        bestHand = self.dealHand(NUTLOW)
+        cmpVal = 0
+        contestants = list(players)
+
+        for player in contestants:
+            cmpVal = self.cmpHands(player._hand, bestHand)
+            
+            if cmpVal < 0:
+                contestants.remove(player)
+            elif cmpVal > 0:
+                bestHand = player._hand
+                while contestants.index(player) != 0:
+                    contestants.pop(0)
+
+        winnings = potsize // len(contestants)
+        rest = potsize % len(contestants)
+
+        while rest != 0:
+            contestants[randint(0, len(contestants) - 1)]._chips += 1
+            rest -= 1
+
+        for player in contestants:
+            player._chips += winnings            
+
+    def cmpHands(self, firstHand, lastHand):
+        """Return 1 if the first hand is best, 0 if they're equal and -1 otherwise."""
+
+        first = self.rateHand(firstHand)
+        last = self.rateHand(lastHand)
+
+        if first > last:
+            return 1
+        elif first < last:
+            return -1
+        else:
+            for i in range(len(firstHand)):
+                if firstHand[i]._value > lastHand[i]._value:
+                    return 1
+                elif firstHand[i]._value < lastHand[i]._value:
+                    return -1
+
+            return 0
+
+
+    def rateHand(self, hand):
+        """Returns a number telling what category the hand belongs in"""
+
+        counter = sum(card._value == hand[0]._value for card in hand)
+
+        if counter == 4:
+            return QUADS
+        elif counter == 3:
+            if hand[3]._value == hand[4]._value:
+                return FULL_HOUSE
+            else:
+                return TRIPS
+        elif counter == 2:
+            if hand[2]._value == hand[3]._value:
+                return TWO_PAIR
+            else:
+                return PAIR
+        elif counter != 1:
+            return NO_HAND
+        else:
+            if(hand[0]._value == 5) or (hand[0]._value - hand[4]._value == 4):
+                if sum(card._suit == hand[0]._suit for card in hand) == 5:
+                    return STRFL
+                else:
+                    return STRAIGHT
+            elif sum(card._suit == hand[0]._suit for card in hand) == 5:
+                return FLUSH
+            else:
+                return HICARD

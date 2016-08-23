@@ -9,19 +9,21 @@
 SUITS = 4
 VALUES = 13
 HAND_SIZE = 5
+NUTLOW = [13, 5, 3, 2, 1]
 
 ###patterns
 
 HICARD      = 0
 PAIR        = 2
 TWO_PAIR    = 22
-TRIPS       = 3
+TRIPS       = 333
 LOSTRAIGHT  = 5
 HISTRAIGHT  = 14
-FLUSH       = 0
-FULL_HOUSE  = 32
-QUADS       = 4
-STRFL       = 0
+STRAIGHT    = 1234
+FLUSH       = 11111
+FULL_HOUSE  = 33322
+QUADS       = 44441
+STRFL       = 54321
 NO_HAND     = -1
 
 ###testing hands
@@ -49,10 +51,9 @@ PHM     = [50, 37, 25, 23, 22]
 PLM     = [40, 27, 16, 15, 13]
 PLO     = [39, 26, 25, 24, 23]
 HIA     = [25, 11, 2, 1, 0]
-HIL     = [13, 5, 3, 2, 1]
 TESTIN  = [STRFLH, STRFLM, STRFLL, STRH, STRM, STRL,
            FLH, FLL, QHI, QLO, FHH, FHL, THI, TMI, TLO,
-           TPH, TPM, TPL, PHI, PHM, PLM, PLO, HIA, HIL]
+           TPH, TPM, TPL, PHI, PHM, PLM, PLO, HIA, NUTLOW]
 
 ##Tables
 
@@ -69,3 +70,32 @@ MAX_BETS = 6        #Maximum number of big bets per player per hand
 MAX_STACK = BUY_IN * 2          #When posting the BB, this is the max amount of big bets allowed (must move up otherwise)
 MIN_STACK = BUY_IN // 2         #When posting the BB, this is the least amount of big bets allowed (must move down otherwise)
 MIN_UNITS = MAX_BETS * SEATS    #When posting the BB at the lowest stakes, this is the least amount of big bets allowed (must leave otherwise)
+
+##Players
+
+###hand rankings
+
+TRIP_K      = 1
+TRIP_7      = 2
+A_UP        = 3
+K_UP        = 4
+Q_UP        = 5
+T_UP        = 6
+E_UP        = 7
+A_START     = 8
+ACES        = 10
+A_END       = 11
+P_RANGE     = 3
+AK_START    = 48
+AK_END      = 54
+AQ_START    = 55
+AQ_END      = 60
+AJ_START    = 61
+AJ_END      = 64
+TRASH       = 99
+
+##Managers
+
+###general
+
+GROWRATE    = 0
