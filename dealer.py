@@ -241,6 +241,9 @@ class Dealer(object):
         if(template is None):
             cards = self.dealCards()
         else:
+            #Reset the deck to make sure that the intended cards are drawn
+            self.resetDeck()
+            
             for ind in template:
                 cards.append(self._deck.pop(ind))
 
@@ -268,29 +271,44 @@ class Dealer(object):
     def showDown(self, players, potsize):
         """Awards the pot to the player with the best hand."""
 
+        print("---p---")
+        for p in players:
+            print(str(p._rating))
+            for card in p._hand:
+                card.printCard()
+            
         bestHand = self.dealHand(NUTLOW)
         cmpVal = 0
-        contestants = list(players)
+        cut = 0
+        winners = list()
 
-        for player in contestants:
+        for player in players:
             cmpVal = self.cmpHands(player._hand, bestHand)
-            
-            if cmpVal < 0:
-                contestants.remove(player)
-            elif cmpVal > 0:
-                bestHand = player._hand
-                while contestants.index(player) != 0:
-                    contestants.pop(0)
 
-        winnings = potsize // len(contestants)
-        rest = potsize % len(contestants)
+            if cmpVal > 0:
+                winners = list()    #Remove beaten players from the list
+                winners.append(player)
+                bestHand = player._hand
+            elif cmpVal == 0:
+                winners.append(player)
+
+        print("---w---")
+        for w in winners:
+            print(str(w._rating))
+            for card in w._hand:
+                card.printCard()
+
+        print("winners: " + str(len(winners)) + "\n")
+        
+        winnings = potsize // len(winners)
+        rest = potsize % len(winners)
 
         while rest != 0:
-            contestants[randint(0, len(contestants) - 1)]._chips += 1
+            winners[randint(0, len(winners) - 1)]._chips += 1
             rest -= 1
 
-        for player in contestants:
-            player._chips += winnings            
+        for winner in winners:
+            winner._chips += winnings            
 
     def cmpHands(self, firstHand, lastHand):
         """Return 1 if the first hand is best, 0 if they're equal and -1 otherwise."""
@@ -316,6 +334,7 @@ class Dealer(object):
         """Returns a number telling what category the hand belongs in"""
 
         counter = sum(card._value == hand[0]._value for card in hand)
+        #print(str(counter))
 
         if counter == 4:
             return QUADS

@@ -73,3 +73,15 @@ v0.32: <br />
   -Imports the dealer class into entities.py <br />
   -Moved global constants to config.py <br />
   -Minor refactoring and some new comments <br />
+
+v0.35: <br />
+  -Players can now play actual hands, instead of just winning randomly. The play does not yet contain a draw phase. <br />
+  -Have implemented three different strats for players (loose, regular and tight). The recruiter assigns a random strat to any new player. <br />
+  -The dealer has gotten a showdown function, that takes the remaining players and gives the pot to the one with the best hand. <br />
+  -The pot is split if there's a tie. Leftover chips are distributed randomly between the winners (the same person can win more than one of these). <br />
+
+Issues/shortcomings: <br />
+  -There were several bugs in the first attempts. An example was related to popping from a list while in the process of iterating over it. <br />
+  -A lack of a well planned design before starting on this version has led to some messy code. Some refactoring should be looked into soon. <br />
+  -Doing a larger scale test, and comparing the successfulness of each strat should be added soon. <br />
+

@@ -74,7 +74,7 @@ class Player(object):
                     self._rating = AK_START
                 elif self._hand[1]._value == 12:
                     self._rating = AQ_START
-                elif self._hand[1].value == 11:
+                elif self._hand[1]._value == 11:
                     self._rating = AJ_START
                 else:
                     self._rating = TRASH
@@ -85,36 +85,36 @@ class Player(object):
         """Decide on waging before the draw"""
 
         if(wagers == 2): #No raise yet
-            if self._rating < self._strat[0]:  #Since limping has not been implemented, this is the least aggressive strat parameter
+            if self._rating > self._strat[0]:  #Since limping has not been implemented, this is the least aggressive strat parameter
                 if self._wager < 2:            #Unless in big blind, fold and concede chips to the pot
                     self._chips -= self._wager
             else:
                 self._wager = 4
         elif(wagers == 4): #The pot has been raised
-            if self._rating < self._strat[3]:
-                self._chips -= self._wagers
-            elif self._rating < self._strat[1]:
+            if self._rating > self._strat[3]:
+                self._chips -= self._wager
+            elif self._rating > self._strat[1]:
                 self._wager = 4
             else:
                 self._wager = 6
         elif(wagers == 6): #The pot has been reraised
-            if self._rating < self._strat[4]:
-                if((self._rating >= self._strat[3]) and (self._wager == 4)):    #Only needs to call a single raise
+            if self._rating > self._strat[4]:
+                if((self._rating <= self._strat[3]) and (self._wager == 4)):    #Only needs to call a single raise
                     self._wager += 2
                 else:   #Fold
-                    self._chips -= self._wagers
-            elif self._rating < self._strat[2]:
+                    self._chips -= self._wager
+            elif self._rating > self._strat[2]:
                 self._wager = 6
             else:
                 self._wager = 8
         elif(wagers != 8): #An incorrect argument has been given
             return wagers #Assumes that error handling detects this case in the caller
         else: #The betting has been capped
-            if self.rating < self._strat[5]:
-                if((self._rating >= self._strat[3]) and (self._wager == 6)):    #Only needs to call a single raise
+            if self._rating > self._strat[5]:
+                if((self._rating <= self._strat[3]) and (self._wager == 6)):    #Only needs to call a single raise
                     self._wager += 2
                 else:   #Fold
-                    self._chips -= self._wagers
+                    self._chips -= self._wager
             else:
                 self._wager = 8
 
@@ -126,7 +126,7 @@ class Table(object):
     def __init__(self, stake = MIN_STAKE):
         """Setting up variables for the table"""
 
-        self._stake = stake
+        self._stake = stake     #Check if this is needed at table level
         self._players = list()
         self._pot = 0       #Amount of chips in the middle
         self._button = 0    #The position of the button based on the index of the corresponding player
@@ -172,15 +172,19 @@ class Table(object):
             
             for i in range(SEATS):
                 self._players[(target + i) % SEATS]._hand = dealer.dealHand()
+                self._players[(target + i) % SEATS].rateHand()
                 print("Player #" + str(i) + " has:")
                 for card in self._players[(target + i) % SEATS]._hand:
                     card.printCard()
+                print("Rated: " + str(self._players[(target + i) % SEATS]._rating))
 
             #Round of betting
             wagers = 2  #Matching the big blind
             ind = 0     #Signifies the player to act relative to the UTG-player(using modulo)
             newWage = 0 #Amount waged by the latest player to act
-            while((ind < SEATS) and (self._players[(target + ind) % SEATS]._wager < wagers)):
+
+            
+            while((ind < SEATS) or (self._players[(target + ind) % SEATS]._wager < wagers)):
                 if((ind >= SEATS) and (self._players[(target + ind) % SEATS]._wager == 0)):
                     ind += 1
                 else:
@@ -195,6 +199,7 @@ class Table(object):
                     ind += 1
 
             #Award the pot to the player with the best hand
+            #print(str(ind))
             contestants = list()
             for player in self._players:
                 if(player._wager == wagers):
@@ -346,7 +351,8 @@ class Manager(object):
     def hireBoss(self):
         """When there is noone responsible for the next level of stakes, a boss is hired for the manager"""
 
-        newMan = Manager(self._stake * 2, cashier = self._cashier)  #TODO: Look into scaling down the number of tables at higher stakes
+        #TODO: Look into scaling down the number of tables at higher stakes
+        newMan = Manager(self._stake * 2, cashier = self._cashier, dealer = self._dealer)
         self._boss = newMan
 
     def makeReport(self):
