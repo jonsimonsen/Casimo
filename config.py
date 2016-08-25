@@ -98,4 +98,4 @@ TRASH       = 99
 
 ###general
 
-GROWRATE    = 0
+GROWRATE    = 1

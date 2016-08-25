@@ -5,47 +5,33 @@ from config import *
 class Card(object):
     """A playing card"""
 
+    #At a later stage, it might be convenient to be able to display symbols for suits
+    #and shorter description for ranks.
+
     def __init__(self, suit, value):
-        """Setting up variables for the card"""
+        """Setting up variables for the card."""
 
         self._suit = suit
         self._value = value
 
     def printCard(self):
-        """Print info about the card (rank and suit)"""
+        """Print info about the card (rank and suit)."""
 
-        rank = ""
-        color = ""
+        print("\t" + self.getValue() + " of " + self.getSuit())
 
-        if((self._value < 2) or (self._value > 14)):
-            rank = "Illegal rank"
-        elif self._value < 10:
-            rank = str(self._value)
-        elif self._value == 10:
-            rank = "T"
-        elif self._value == 11:
-            rank = "J"
-        elif self._value == 12:
-            rank = "Q"
-        elif self._value == 13:
-            rank = "K"
-        elif self._value == 14:
-            rank = "A"
-        else:
-            rank = "Illegal rank"
+    def getSuit(self):
+        """Return a string corresponding to the suit of the card."""
 
         if self._suit == 0:
-            color = "clubs"
+            return "clubs"
         elif self._suit == 1:
-            color = "diamonds"
+            return "diamonds"
         elif self._suit == 2:
-            color = "hearts"
+            return "hearts"
         elif self._suit == 3:
-            color = "spades"
+            return "spades"
         else:
-            color = "illegal suit"
-
-        print("\t" + rank + " of " + color)
+            return "illegal suit"
 
     def getValue(self, context = 0):
         """Return a string corresponding to the rank of the card."""
@@ -78,7 +64,9 @@ class Card(object):
         elif(self._value == 13):
             return "king"
         elif(self._value == 14):
-            return "ace" 
+            return "ace"
+        else:
+            return "illegal rank"
 
 class Dealer(object):
     """A poker dealer"""
@@ -118,7 +106,8 @@ class Dealer(object):
     def resetDeck(self):
         """Make _deck a copy of _cards"""
 
-        print("Shuffling cards...")     #For users of the simulation, it should be ok to assume that shuffling happens here.
+        #For users of the simulation, it should be ok to assume that shuffling happens here.
+        #print("Shuffling cards...")     
         self._deck = list(self._cards)
 
     def readHand(self, hand):
@@ -194,7 +183,7 @@ class Dealer(object):
                 elif(suits != card._suit):
                     suits = -2 #Different suits
 
-        self.printHandInfo(pattern, suits, cards[0])
+        #self.printHandInfo(pattern, suits, cards[0])
         return cards
 
     def printHandInfo(self, category, suits, firstcard):
@@ -248,10 +237,10 @@ class Dealer(object):
                 cards.append(self._deck.pop(ind))
 
         #Print the contents of the hand (can probably be removed after testing is complete)                
-        print("\nYour hand:")
+        #print("\nYour hand:")
         
-        for card in cards:
-            card.printCard()
+        #for card in cards:
+        #    card.printCard()
 
         #Sort the hand and display what kind of hand it is, then return it
         hand = self.readHand(cards)
@@ -264,19 +253,12 @@ class Dealer(object):
 
         for i in range(n):
             hand.append(self._deck.pop(randint(0, len(self._deck) - 1)))
-            #hand[i].printCard()
 
         return hand
 
     def showDown(self, players, potsize):
         """Awards the pot to the player with the best hand."""
 
-        print("---p---")
-        for p in players:
-            print(str(p._rating))
-            for card in p._hand:
-                card.printCard()
-            
         bestHand = self.dealHand(NUTLOW)
         cmpVal = 0
         cut = 0
@@ -292,13 +274,7 @@ class Dealer(object):
             elif cmpVal == 0:
                 winners.append(player)
 
-        print("---w---")
-        for w in winners:
-            print(str(w._rating))
-            for card in w._hand:
-                card.printCard()
-
-        print("winners: " + str(len(winners)) + "\n")
+        #print("winners: " + str(len(winners)) + "\n")
         
         winnings = potsize // len(winners)
         rest = potsize % len(winners)
@@ -334,7 +310,6 @@ class Dealer(object):
         """Returns a number telling what category the hand belongs in"""
 
         counter = sum(card._value == hand[0]._value for card in hand)
-        #print(str(counter))
 
         if counter == 4:
             return QUADS

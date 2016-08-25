@@ -14,6 +14,12 @@ Sample output can be found in the file output.txt <br />
 Version 0.3 contains code for a dealer, and can be run by typing: <br />
   python one_hand.py <br />
   
+# Testing
+v0.4: The largest test was run with these parameters: 50k hands/3 different stakes/32 tables per limit/GROWRATE of 1
+It seems like the tight players are superior (all 5 highrollers and all players at the highest limit were tight). <br />
+The loose players are getting pummeled. Only 4 loose players remained at the end. <br />
+It's somewhat surprising that the regular players are not performing better. A tweak of the ranges should be considered. <br />
+
 # History
 v0.1: <br />
   -Number of rounds simulated is determined by a global constant. <br />
@@ -85,3 +91,7 @@ Issues/shortcomings: <br />
   -A lack of a well planned design before starting on this version has led to some messy code. Some refactoring should be looked into soon. <br />
   -Doing a larger scale test, and comparing the successfulness of each strat should be added soon. <br />
 
+v.0.4: <br />
+  -The code has been partly refactored. An example is making actual getter- and setter-functions. More can be done here. <br />
+  -It was looked into using heritage for some of the classes. None of the classes has enough similarities yet to make this a high priority. <br />
+  -Some larger tests have been run (see the paragraph about testing). <br />

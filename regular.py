@@ -10,8 +10,8 @@ REG_B_CR    = 25        #Calling a single raise
 REG_B_CDR   = 6         #Calling a double raise
 REG_B_CCAP  = 3         #Calling a triple raise
 
-REGULAR = [REG_B_R, REG_B_RR, REG_B_CAP,
-           REG_B_CR, REG_B_CDR, REG_B_CCAP]
+REGULAR = (REG_B_R, REG_B_RR, REG_B_CAP,
+           REG_B_CR, REG_B_CDR, REG_B_CCAP)
 
 ##After draw
 

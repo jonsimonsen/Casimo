@@ -5,7 +5,7 @@ from regular import *
 from tight import *
 
 #Global constants
-HANDS_PER_ROUND = 1     #Number of hands played in each round (per table)
+HANDS_PER_ROUND = 100   #Number of hands played in each round (per table)
 ROUNDS = 50             #Number of rounds to run the simulator
 
 #initialising variables
@@ -24,4 +24,5 @@ for i in range(ROUNDS):
     for j in range(HANDS_PER_ROUND):
         boss.startHand()
     boss.makeReport()
-    #moneyBags.makeReport()
+    
+moneyBags.makeReport()

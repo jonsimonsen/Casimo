@@ -10,20 +10,51 @@ class Player(object):
 
         self._chips = balance       #Default is based on having 480 small blinds at the smallest stakes (4)
         self._cash = 0              #Cash that is not converted to chips (if moving up, the remainder of cash that cannot be used to buy new chips end up here)
-        self._wager = 0             #Chips that has been out, but is not yet in the pot
-        self._hand = list()
+        self._wager = 0             #Chips that is on the table, but is not yet in the pot
+        self._type = -1             #0 = loose, 1 = regular, 2 = tight
         self._strat = list()        #To hold a list that determines the strategy of the player
+        self._hand = list()
         self._rating = 0            #The player's rating of the hand
         self._played = 0            #Number of hands played
         self._status = 1            #0=seated, 1 = moving up (includes newly arrived players), 2 = moving down, 3 = busto
         self._ups = 0               #Number of times the player has moved up in stakes
         self._downs = 0             #Number of times the player has moved down in stakes
 
-    def setStrat(self, strategy):
-        """Initilize strat according to the given parameter"""
+    def getChips(self):
+        """Return the number of chips the player has."""
 
-        self._strat = strategy
+        return self._chips
 
+    def getType(self):
+        """Return a string saying what type of player this is."""
+
+        if(self._type == 0):
+            return " loose "
+        elif(self._type == 1):
+            return "regular"
+        elif(self._type == 2):
+            return " tight "
+        else:
+            return "unknown"
+
+    def setStrat(self, cat, strat):
+        """Initilize player type and strat according to the given parameters"""
+
+        self._type = cat
+        self._strat = strat
+
+    def setHand(self, hand):
+        """Give a hand to the player"""
+
+        self._hand = hand
+        self._played += 1   #If using this when drawing cards, this line must be made conditional
+
+    def printHandInfo(self):
+        """Prints what cards is in the hand, and how the player rates the hand (1 = best, 99 = worst)"""
+
+        for card in self._hand:
+            card.printCard()
+        print("Rated: " + str(self._rating))
 
     def allin(self):
         """Bet the maximum amount on a hand. Used for testing. The finished simulator should be based on a limit structure."""
@@ -31,7 +62,9 @@ class Player(object):
         self._chips -= MIN_STAKE * 6     #2 big bets predraw, 4 postdraw
 
     def rateHand(self):
-        """Give a rating to the hand based on global constants"""
+        """Give a rating to the hand based on global constants. If the categories in the config file is changed, this function needs to be changed too."""
+
+        #A more adaptable way to do this would be desirable at a later stage
 
         rankCount = sum(card._value == self._hand[0]._value for card in self._hand)
 
@@ -82,7 +115,7 @@ class Player(object):
                 self._rating = TRASH
 
     def actPre(self, wagers):
-        """Decide on waging before the draw"""
+        """Decide on waging before the draw. Dependent on exact ordering of the player's strat list."""
 
         if(wagers == 2): #No raise yet
             if self._rating > self._strat[0]:  #Since limping has not been implemented, this is the least aggressive strat parameter
@@ -171,35 +204,34 @@ class Table(object):
             target = (target + 1) % SEATS
             
             for i in range(SEATS):
-                self._players[(target + i) % SEATS]._hand = dealer.dealHand()
+                self._players[(target + i) % SEATS].setHand(dealer.dealHand())
                 self._players[(target + i) % SEATS].rateHand()
-                print("Player #" + str(i) + " has:")
-                for card in self._players[(target + i) % SEATS]._hand:
-                    card.printCard()
-                print("Rated: " + str(self._players[(target + i) % SEATS]._rating))
+                #print("Player #" + str(i) + " has:")
+                #self._players[(target + i) % SEATS].printHandInfo()
 
             #Round of betting
             wagers = 2  #Matching the big blind
             ind = 0     #Signifies the player to act relative to the UTG-player(using modulo)
             newWage = 0 #Amount waged by the latest player to act
 
-            
+            #Loop until action comes to a player that has already wagered an amount equal to wagers or the big blind has checked (both means that action is closed)
             while((ind < SEATS) or (self._players[(target + ind) % SEATS]._wager < wagers)):
                 if((ind >= SEATS) and (self._players[(target + ind) % SEATS]._wager == 0)):
-                    ind += 1
+                    ind += 1    #Player is out, check next seat
                 else:
+                    #Ask player for an action (return value determines if it's a raise, call/check or fold)
                     newWage = self._players[(target + ind) % SEATS].actPre(wagers)
 
                     if(newWage == wagers + 2):
-                        wagers = newWage
-                    elif(newWage != wagers):    #The player didn't contribute the correct amount to stay in the pot
+                        wagers = newWage    #The player raised
+                    elif(newWage != wagers):
+                        #The player didn't contribute the correct amount to stay in the pot (folded)
                         self._pot += newWage
                         self._players[(target + ind) % SEATS]._wager = 0
                         
                     ind += 1
 
             #Award the pot to the player with the best hand
-            #print(str(ind))
             contestants = list()
             for player in self._players:
                 if(player._wager == wagers):
@@ -226,7 +258,7 @@ class Table(object):
         if dealer is not None:
             dealer.resetDeck()
 
-        #Move the new big blind up or down if required
+        #Move the new big blind player up or down if required
         bb = (self._button + 2) % 5
         if(self._players[bb]._chips >= MIN_STAKE * MAX_STACK):
             self._players[bb]._status = 1
@@ -243,7 +275,7 @@ class Table(object):
     def reportStacks(self):
         """Report the stack sizes for the players"""
         for i in range(len(self._players)):
-            output = "\tSeat #" + str(i) + ": " + str(self._players[i]._chips) + " chips"
+            output = "\tSeat #" + str(i) + "(" + self._players[i].getType() + "): " + str(self._players[i].getChips()) + " chips"
             print(output)
 
         print("")
@@ -324,8 +356,8 @@ class Manager(object):
                     mover._downs += 1
                     self._downList.append(mover)
                 elif(mover._status == 1):
-                    self._upList.append(mover)
                     mover._ups += 1
+                    self._upList.append(mover)
                 else:
                     print("Error: Illegal status on a player.")
 
@@ -419,11 +451,11 @@ class Cashier(object):
 
         print("Cash of highrollers:")
         for winner in self._highRollers:
-            print("\t" + str(winner._cash))
+            print("\t" + str(winner._cash) + "(" + winner.getType() + ")")
 
         print("\nCash of bustos:")
         for busto in self._bustos:
-            print("\t" + str(busto._cash))
+            print("\t" + str(busto._cash) + "(" + busto.getType() + ")")
 
         print("")
 
@@ -442,7 +474,8 @@ class Recruiter(object):
 
         for i in range(n):
             newFace = Player()
-            newFace.setStrat(self._playerTypes[randint(0, len(self._playerTypes) - 1)])
+            newType = randint(0, len(self._playerTypes) - 1)
+            newFace.setStrat(newType, self._playerTypes[newType])
             recruits.append(newFace)
 
         return recruits

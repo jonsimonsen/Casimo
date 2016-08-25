@@ -10,8 +10,8 @@ LOS_B_CR    = 37    #Calling a single raise
 LOS_B_CDR   = 19    #Calling a double raise
 LOS_B_CCAP  = 10    #Calling a triple raise
 
-LOOSE = [LOS_B_R, LOS_B_RR, LOS_B_CAP,
-         LOS_B_CR, LOS_B_CDR, LOS_B_CCAP]
+LOOSE = (LOS_B_R, LOS_B_RR, LOS_B_CAP,
+         LOS_B_CR, LOS_B_CDR, LOS_B_CCAP)
 
 ##After draw
 

@@ -10,8 +10,8 @@ TIG_B_CR    = 10    #Calling a single raise
 TIG_B_CDR   = 3     #Calling a double raise
 TIG_B_CCAP  = 1     #Calling a triple raise
 
-TIGHT = [TIG_B_R, TIG_B_RR, TIG_B_CAP,
-         TIG_B_CR, TIG_B_CDR, TIG_B_CCAP]
+TIGHT = (TIG_B_R, TIG_B_RR, TIG_B_CAP,
+         TIG_B_CR, TIG_B_CDR, TIG_B_CCAP)
 
 ##After draw
 
