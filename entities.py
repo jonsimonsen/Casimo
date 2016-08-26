@@ -16,7 +16,7 @@ class Player(object):
         self._hand = list()
         self._rating = 0            #The player's rating of the hand
         self._played = 0            #Number of hands played
-        self._status = 1            #0=seated, 1 = moving up (includes newly arrived players), 2 = moving down, 3 = busto
+        self._status = MOVE_UP      #For determining if the player is seated/moving up/moving down or busto
         self._ups = 0               #Number of times the player has moved up in stakes
         self._downs = 0             #Number of times the player has moved down in stakes
 
@@ -43,11 +43,26 @@ class Player(object):
         self._type = cat
         self._strat = strat
 
+    def getHand(self):
+        """Return the player's hand"""
+
+        return self._hand
+
     def setHand(self, hand):
         """Give a hand to the player"""
 
         self._hand = hand
         self._played += 1   #If using this when drawing cards, this line must be made conditional
+
+    def getStatus(self):
+        """Return the current status of the player."""
+
+        return self._status
+
+    def setStatus(self, status):
+        """Set the status of the player."""
+
+        self._status = status
 
     def printHandInfo(self):
         """Prints what cards is in the hand, and how the player rates the hand (1 = best, 99 = worst)"""
@@ -159,7 +174,7 @@ class Table(object):
     def __init__(self, stake = MIN_STAKE):
         """Setting up variables for the table"""
 
-        self._stake = stake     #Check if this is needed at table level
+        self._stake = stake     #Check if this is really needed at table level (currently in finishHand())
         self._players = list()
         self._pot = 0       #Amount of chips in the middle
         self._button = 0    #The position of the button based on the index of the corresponding player
@@ -173,7 +188,7 @@ class Table(object):
         else:
             pos = position
 
-        player._status = 0 #seated
+        player.setStatus(SEATED) #seated
         self._players.insert(pos, player)
 
     def playHand(self, dealer = None):
@@ -261,13 +276,13 @@ class Table(object):
         #Move the new big blind player up or down if required
         bb = (self._button + 2) % 5
         if(self._players[bb]._chips >= MIN_STAKE * MAX_STACK):
-            self._players[bb]._status = 1
+            self._players[bb].setStatus(MOVE_UP)
             return self._players.pop(bb)
         elif((self._stake > MIN_STAKE) and (self._players[bb]._chips <= MIN_STAKE * MIN_STACK)):
-            self._players[bb]._status = 2
+            self._players[bb].setStatus(MOVEDOWN)
             return self._players.pop(bb)
         elif((self._stake <= MIN_STAKE) and (self._players[bb]._chips < MIN_STAKE * MIN_UNITS)):
-            self._players[bb]._status = 3
+            self._players[bb].setStatus(BUSTO)
             return self._players.pop(bb)
         else:
             return None
@@ -349,13 +364,14 @@ class Manager(object):
             if mover is not None:
                 self._tables.remove(table)
                 self._freeTables.append(table)
+                status = mover.getStatus()
 
-                if(mover._status == 3):
+                if status == BUSTO:
                     self._cashier.handleBust(mover)
-                elif(mover._status == 2):
+                elif status == MOVE_DOWN:
                     mover._downs += 1
                     self._downList.append(mover)
-                elif(mover._status == 1):
+                elif status == MOVE_UP:
                     mover._ups += 1
                     self._upList.append(mover)
                 else:

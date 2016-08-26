@@ -22,13 +22,13 @@ class Card(object):
     def getSuit(self):
         """Return a string corresponding to the suit of the card."""
 
-        if self._suit == 0:
+        if self._suit == CLUBS:
             return "clubs"
-        elif self._suit == 1:
+        elif self._suit == DIAMONDS:
             return "diamonds"
-        elif self._suit == 2:
+        elif self._suit == HEARTS:
             return "hearts"
-        elif self._suit == 3:
+        elif self._suit == SPADES:
             return "spades"
         else:
             return "illegal suit"
@@ -77,13 +77,13 @@ class Dealer(object):
         #Set up a full deck that can be copied into an actual deck when starting a new hand
         #This seemed easier than collecting cards from the muck before a new deal.
         self._cards = list()
-        self.getCards()
+        self.initCards()
 
         #Initialize the actual deck
         self._deck = list()
         self.resetDeck()
 
-    def getCards(self):
+    def initCards(self):
         """Initialize the cards of a deck"""
 
         for s in range(SUITS):
@@ -115,7 +115,7 @@ class Dealer(object):
 
         cards = list(hand)      #cards to be sorted/classified
         foot = 0                #Index of the first unprocessed card
-        head = len(hand) - 1    #Index of the last unprocessed card
+        head = len(cards) - 1   #Index of the last unprocessed card
         counter = 0             #To count the number of cards having the same rank as the card at foot
         pattern = 0             #Look in config.py for an overview of the possible patterns
         suits = -1              #-2 means that no flush is possible. -1 means that no card has been looked at. A positive number should correspond to the suit of the examined cards.
@@ -167,54 +167,42 @@ class Dealer(object):
 
         #If no cards were of equal rank, the hand is either a straigh flush, a flush, a straight or a hi-card hand.
         if(pattern == 0):
-            #Check for straight, setting pattern to the highest card of the straight (5 is considered higher than A in 5-4-3-2-A)
-            if(cards[0]._value - cards[4]._value == 4):
-                pattern = cards[0]._value
-            elif(cards[0]._value == 14 and cards[1]._value == 5):
+            #Order a wheel (5-high straight) correctly
+            if cards[0]._value == 14 and cards[1]._value == 5:
                 cards.append(cards.pop(0))
-                pattern = cards[0]._value
-
-            #Check for flush
-            for card in cards:
-                if(suits < -1):
-                    continue
-                elif(suits == -1):
-                    suits = card._suit
-                elif(suits != card._suit):
-                    suits = -2 #Different suits
-
-        #self.printHandInfo(pattern, suits, cards[0])
+                
+            #Check for straights and flushes
+            pattern = self.findSequence(cards)
+ 
+        self.printHandInfo(pattern, cards[0])
         return cards
 
-    def printHandInfo(self, category, suits, firstcard):
+    def printHandInfo(self, category, firstcard):
         """Prints info about the hand based on its category, suitedness and most significant card"""
 
         msg = ""    #Message to be printed about the hand
 
-        if(category < 0):
+        if category < 0:
             #Illegal value
             msg = "Illegal value for the hand category."
-        elif((category >= LOSTRAIGHT) and (category <= HISTRAIGHT)):
-            #Straight or straight flush
-            msg = firstcard.getValue() + "-high straight"
-            if suits >= 0:
-                msg += " flush."
-            else:
-                msg += "."
-        elif(suits >= 0):
-            msg = firstcard.getValue() + "-high flush."
-        elif(category == QUADS):
-            msg = "quad " + firstcard.getValue(-1) + "s."
-        elif(category == FULL_HOUSE):
-            msg = firstcard.getValue(-1) + "s full."
-        elif(category == TRIPS):
-            msg = "trip " + firstcard.getValue(-1) + "s."
-        elif(category == TWO_PAIR):
-            msg = firstcard.getValue(-1) + "s up."
-        elif(category == PAIR):
-            msg = "a pair of " + firstcard.getValue(-1) + "s."
-        elif(category == HICARD):
+        elif category == HICARD:
             msg = "high card " + firstcard.getValue() + "."
+        elif category == PAIR:
+            msg = "a pair of " + firstcard.getValue(-1) + "s."
+        elif category == TWO_PAIR:
+            msg = firstcard.getValue(-1) + "s up."
+        elif category == TRIPS:
+            msg = "trip " + firstcard.getValue(-1) + "s."
+        elif category == STRAIGHT:
+            msg = firstcard.getValue() + "-high straight."
+        elif category == FLUSH:
+            msg = firstcard.getValue() + "-high flush."
+        elif category == FULL_HOUSE:
+            msg = firstcard.getValue(-1) + "s full."
+        elif category == QUADS:
+            msg = "quad " + firstcard.getValue(-1) + "s."
+        elif category == STRFL:
+            msg = firstcard.getValue() + "-high straight flush."
         else:
             msg = "Unknown hand type."
 
@@ -265,12 +253,13 @@ class Dealer(object):
         winners = list()
 
         for player in players:
-            cmpVal = self.cmpHands(player._hand, bestHand)
+            hand = player.getHand()
+            cmpVal = self.cmpHands(hand, bestHand)
 
             if cmpVal > 0:
                 winners = list()    #Remove beaten players from the list
                 winners.append(player)
-                bestHand = player._hand
+                bestHand = hand
             elif cmpVal == 0:
                 winners.append(player)
 
@@ -326,12 +315,19 @@ class Dealer(object):
         elif counter != 1:
             return NO_HAND
         else:
-            if(hand[0]._value == 5) or (hand[0]._value - hand[4]._value == 4):
-                if sum(card._suit == hand[0]._suit for card in hand) == 5:
-                    return STRFL
-                else:
-                    return STRAIGHT
-            elif sum(card._suit == hand[0]._suit for card in hand) == 5:
-                return FLUSH
+            return self.findSequence(hand)
+ 
+    def findSequence(self, hand):
+        """Returns the pattern found (straight, flush, straightflush or hicard). It is assumed that the caller has already verified that there are no duplicated ranks in the hand."""
+
+        suitCount = sum(card._suit == hand[0]._suit for card in hand) #Number of cards having the same suit as the first card
+        if(hand[0]._value == 5) or (hand[0]._value - hand[4]._value == 4):
+            if suitCount == 5:
+                return STRFL
             else:
-                return HICARD
+                return STRAIGHT
+        elif suitCount == 5:
+            return FLUSH
+        else:
+            return HICARD
+        

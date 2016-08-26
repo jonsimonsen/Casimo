@@ -15,7 +15,7 @@ Version 0.3 contains code for a dealer, and can be run by typing: <br />
   python one_hand.py <br />
   
 # Testing
-v0.4: The largest test was run with these parameters: 50k hands/3 different stakes/32 tables per limit/GROWRATE of 1
+v0.4: The largest test was run with these parameters: 50k hands/3 different stakes/32 tables per limit/GROWRATE of 1 <br />
 It seems like the tight players are superior (all 5 highrollers and all players at the highest limit were tight). <br />
 The loose players are getting pummeled. Only 4 loose players remained at the end. <br />
 It's somewhat surprising that the regular players are not performing better. A tweak of the ranges should be considered. <br />
@@ -95,3 +95,22 @@ v.0.4: <br />
   -The code has been partly refactored. An example is making actual getter- and setter-functions. More can be done here. <br />
   -It was looked into using heritage for some of the classes. None of the classes has enough similarities yet to make this a high priority. <br />
   -Some larger tests have been run (see the paragraph about testing). <br />
+  
+v0.5: <br />
+  -Further refactoring, including more getters/setters and removal of some duplication. <br />
+  -A decent amount of testing has been done, and the most apparent shortcommings have been fixed. Therefore, this is merged into the master branch. <br />
+  
+Issues/potential improvements: <br />
+  -The simulator does not handle drawing cards, so currently only has one betting round. <br />
+  -The player types that are available could be tweaked somewhat. An example is that the regulars seems to play slightly to loose to be able to reach high limits. <br />
+  -Some values that are now manipulated directly in functions, should probably rely on setter methods instead. <br />
+  -Large scale tests suggest that the code needs to be more efficient to be able to simulate a large number of hands in an acceptable amount of time. <br />
+  
+Summary: <br />
+  -Supports multiple tables at different stakes. New players start with a reasonable stack at the lowest stakes. <br />
+  -A recruiter class generates the new players by randomly picking a strategy for them (loose/regular or tight). <br />
+  -A manager handles tables, using a waitlist and the recruiter to make sure that tables are running smoothly (most of the time). <br />
+  -Players move up and down depending on their chip stack relative to global constants. <br />
+  -The cashier takes care of players moving between stakes and leaving. Players that have left are kept in a list that can be used for statistical analysis. <br />
+  -A dealer generates new hands and sorts them for the players. The dealer also distributes the pot between players at showdown. <br />
+  

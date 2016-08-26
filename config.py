@@ -6,10 +6,14 @@
 
 ###hands
 
-SUITS = 4
-VALUES = 13
-HAND_SIZE = 5
-NUTLOW = [13, 5, 3, 2, 1]
+SUITS       = 4
+CLUBS       = 0
+DIAMONDS    = 1
+HEARTS      = 2
+SPADES      = 3
+VALUES      = 13
+HAND_SIZE   = 5
+NUTLOW      = [13, 5, 3, 2, 1]
 
 ###patterns
 
@@ -72,6 +76,13 @@ MIN_STACK = BUY_IN // 2         #When posting the BB, this is the least amount o
 MIN_UNITS = MAX_BETS * SEATS    #When posting the BB at the lowest stakes, this is the least amount of big bets allowed (must leave otherwise)
 
 ##Players
+
+###general
+
+SEATED      = 0
+MOVE_UP     = 1
+MOVE_DOWN   = 2
+BUSTO       = 3
 
 ###hand rankings
 

@@ -6,7 +6,7 @@ from tight import *
 
 #Global constants
 HANDS_PER_ROUND = 100   #Number of hands played in each round (per table)
-ROUNDS = 50             #Number of rounds to run the simulator
+ROUNDS = 20             #Number of rounds to run the simulator
 
 #initialising variables
 playerTypes = [LOOSE, REGULAR, TIGHT]
