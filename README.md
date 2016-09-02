@@ -1,5 +1,7 @@
 # Casimo
-Casino simulator (intending to make a simulator for 5-card draw poker initially).
+Casino simulator (intending to make a simulator for 5-card draw poker). <br />
+Version 0.5 has been finalized. See a summary of its features under "History" below. <br />
+Since it has been difficult to make a reasonably competent AI for the players, further versions might not be available in the near future. <br />
 
 # Implementation
 The simulator is being programmed in Python
