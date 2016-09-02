@@ -4,14 +4,15 @@
 
 ##Dealing
 
-###hands
+###hands/cards
 
-SUITS       = 4
 CLUBS       = 0
 DIAMONDS    = 1
 HEARTS      = 2
 SPADES      = 3
-VALUES      = 13
+SUITS       = (CLUBS, DIAMONDS, HEARTS, SPADES)
+MIN_RANK    = 2     #deuces
+MAX_RANK    = 14    #aces
 HAND_SIZE   = 5
 NUTLOW      = [13, 5, 3, 2, 1]
 

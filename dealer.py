@@ -11,15 +11,25 @@ class Card(object):
     def __init__(self, suit, value):
         """Setting up variables for the card."""
 
-        self._suit = suit
-        self._value = value
-
-    def printCard(self):
-        """Print info about the card (rank and suit)."""
-
-        print("\t" + self.getValue() + " of " + self.getSuit())
+        #Make sure that the given parameters are valid
+        if(suit in SUITS):
+            self._suit = suit
+        else:
+            raise ValueError("suit must correspond to a member of SUITS in config.py")
+        if value >= MIN_RANK and value <= MAX_RANK:
+            self._value = value
+        else:
+            raise ValueError("value must be between MIN_RANK and MAX_RANK in config.py")
 
     def getSuit(self):
+        """Getter for _suit"""
+        return self._suit
+
+    def getValue(self):
+        """Getter for _value"""
+        return self._value
+
+    def strSuit(self):
         """Return a string corresponding to the suit of the card."""
 
         if self._suit == CLUBS:
@@ -33,7 +43,7 @@ class Card(object):
         else:
             return "illegal suit"
 
-    def getValue(self, context = 0):
+    def strValue(self, context = 0):
         """Return a string corresponding to the rank of the card."""
 
         if(self._value == 2):
@@ -68,6 +78,11 @@ class Card(object):
         else:
             return "illegal rank"
 
+    def printCard(self):
+        """Print info about the card (rank and suit)."""
+
+        print("\t" + self.strValue() + " of " + self.strSuit())
+
 class Dealer(object):
     """A poker dealer"""
 
@@ -86,29 +101,46 @@ class Dealer(object):
     def initCards(self):
         """Initialize the cards of a deck"""
 
-        for s in range(SUITS):
-            for v in range(VALUES):
-                newCard = Card(s, v + 2) #Add 2, since it's convenient that values range from 2 (deuces) to 14 (aces).
+        for s in SUITS:
+            for v in range(MIN_RANK, MAX_RANK + 1):
+                newCard = Card(s, v)
                 self._cards.append(newCard)
 
-    def printCards(self):
-        """Print the cards of the entire deck (for testing)"""
-
-        for card in self._cards:
-            card.printCard()
-
-    def printDeck(self):
-        """Print the cards left in the actual deck"""
-
-        for card in self._deck:
-            card.printCard()
-
     def resetDeck(self):
-        """Make _deck a copy of _cards"""
+        """Make _deck a copy of _cards. """
 
-        #For users of the simulation, it should be ok to assume that shuffling happens here.
-        #print("Shuffling cards...")     
+        #Copy the dummy deck     
         self._deck = list(self._cards)
+
+    def dealHand(self, template = None):
+        """Deal and display a hand from the deck."""
+
+        cards = list()
+
+        #Deal a hand. The template argument can be used for testing.
+        #It provides the possibility of a backdoor/cheat, so should probably be removed if used in a game.
+        if(template is None):
+            cards = self.dealCards()
+        else:
+            #Reset the deck to make sure that the intended cards are drawn
+            self.resetDeck()
+            
+            for ind in template:
+                cards.append(self._deck.pop(ind))
+
+        #Sort the hand and display what kind of hand it is, then return it
+        hand = self.readHand(cards)
+        return hand
+
+    def dealCards(self, n = HAND_SIZE):
+        """Deal and display cards from the deck."""
+
+        hand = list()
+
+        for i in range(n):
+            hand.append(self._deck.pop(randint(0, len(self._deck) - 1)))
+
+        return hand
 
     def readHand(self, hand):
         """Sorts the hand, prints what hand it is. Then returns the sorted hand."""
@@ -118,7 +150,6 @@ class Dealer(object):
         head = len(cards) - 1   #Index of the last unprocessed card
         counter = 0             #To count the number of cards having the same rank as the card at foot
         pattern = 0             #Look in config.py for an overview of the possible patterns
-        suits = -1              #-2 means that no flush is possible. -1 means that no card has been looked at. A positive number should correspond to the suit of the examined cards.
 
         #Sort, with aces first and deuces last
         cards.sort(key = lambda card: card._value, reverse = True)
@@ -126,7 +157,7 @@ class Dealer(object):
         #Check for hands containing more than one card of equal rank (pairs, trips, two pair etc.)
         #The cards will be sorted so paired cards appear before unpaired and trips before pairs (in a full house)
         while(foot <= head):
-            counter = sum(c._value == cards[foot]._value for c in cards)
+            counter = sum(c.getValue() == cards[foot].getValue() for c in cards)
             if counter == 1:
                 #Move the card to the back. Move head forward, so the card will not be considered again.
                 #Since all unpaired are treated this way, their order is preserved.
@@ -168,7 +199,7 @@ class Dealer(object):
         #If no cards were of equal rank, the hand is either a straigh flush, a flush, a straight or a hi-card hand.
         if(pattern == 0):
             #Order a wheel (5-high straight) correctly
-            if cards[0]._value == 14 and cards[1]._value == 5:
+            if cards[0].getValue() == 14 and cards[1].getValue() == 5:
                 cards.append(cards.pop(0))
                 
             #Check for straights and flushes
@@ -176,80 +207,12 @@ class Dealer(object):
  
         self.printHandInfo(pattern, cards[0])
         return cards
-
-    def printHandInfo(self, category, firstcard):
-        """Prints info about the hand based on its category, suitedness and most significant card"""
-
-        msg = ""    #Message to be printed about the hand
-
-        if category < 0:
-            #Illegal value
-            msg = "Illegal value for the hand category."
-        elif category == HICARD:
-            msg = "high card " + firstcard.getValue() + "."
-        elif category == PAIR:
-            msg = "a pair of " + firstcard.getValue(-1) + "s."
-        elif category == TWO_PAIR:
-            msg = firstcard.getValue(-1) + "s up."
-        elif category == TRIPS:
-            msg = "trip " + firstcard.getValue(-1) + "s."
-        elif category == STRAIGHT:
-            msg = firstcard.getValue() + "-high straight."
-        elif category == FLUSH:
-            msg = firstcard.getValue() + "-high flush."
-        elif category == FULL_HOUSE:
-            msg = firstcard.getValue(-1) + "s full."
-        elif category == QUADS:
-            msg = "quad " + firstcard.getValue(-1) + "s."
-        elif category == STRFL:
-            msg = firstcard.getValue() + "-high straight flush."
-        else:
-            msg = "Unknown hand type."
-
-        print(msg)
-
-    def dealHand(self, template = None):
-        """Deal and display a hand from the deck."""
-
-        cards = list()
-
-        #Deal a hand. The template argument can be used for testing.
-        #It provides the possibility of a backdoor/cheat, so should probably be removed if used in a game.
-        if(template is None):
-            cards = self.dealCards()
-        else:
-            #Reset the deck to make sure that the intended cards are drawn
-            self.resetDeck()
-            
-            for ind in template:
-                cards.append(self._deck.pop(ind))
-
-        #Print the contents of the hand (can probably be removed after testing is complete)                
-        #print("\nYour hand:")
-        
-        #for card in cards:
-        #    card.printCard()
-
-        #Sort the hand and display what kind of hand it is, then return it
-        hand = self.readHand(cards)
-        return hand
-
-    def dealCards(self, n = HAND_SIZE):
-        """Deal and display cards from the deck."""
-
-        hand = list()
-
-        for i in range(n):
-            hand.append(self._deck.pop(randint(0, len(self._deck) - 1)))
-
-        return hand
-
+    
     def showDown(self, players, potsize):
         """Awards the pot to the player with the best hand."""
 
         bestHand = self.dealHand(NUTLOW)
         cmpVal = 0
-        cut = 0
         winners = list()
 
         for player in players:
@@ -269,11 +232,11 @@ class Dealer(object):
         rest = potsize % len(winners)
 
         while rest != 0:
-            winners[randint(0, len(winners) - 1)]._chips += 1
+            winners[randint(0, len(winners) - 1)].chipUp(1)
             rest -= 1
 
         for winner in winners:
-            winner._chips += winnings            
+            winner.chipUp(winnings)
 
     def cmpHands(self, firstHand, lastHand):
         """Return 1 if the first hand is best, 0 if they're equal and -1 otherwise."""
@@ -287,28 +250,27 @@ class Dealer(object):
             return -1
         else:
             for i in range(len(firstHand)):
-                if firstHand[i]._value > lastHand[i]._value:
+                if firstHand[i].getValue() > lastHand[i].getValue():
                     return 1
-                elif firstHand[i]._value < lastHand[i]._value:
+                elif firstHand[i].getValue() < lastHand[i].getValue():
                     return -1
 
             return 0
 
-
     def rateHand(self, hand):
         """Returns a number telling what category the hand belongs in"""
 
-        counter = sum(card._value == hand[0]._value for card in hand)
+        counter = sum(card.getValue() == hand[0].getValue() for card in hand)
 
         if counter == 4:
             return QUADS
         elif counter == 3:
-            if hand[3]._value == hand[4]._value:
+            if hand[3].getValue() == hand[4].getValue():
                 return FULL_HOUSE
             else:
                 return TRIPS
         elif counter == 2:
-            if hand[2]._value == hand[3]._value:
+            if hand[2].getValue() == hand[3].getValue():
                 return TWO_PAIR
             else:
                 return PAIR
@@ -320,8 +282,8 @@ class Dealer(object):
     def findSequence(self, hand):
         """Returns the pattern found (straight, flush, straightflush or hicard). It is assumed that the caller has already verified that there are no duplicated ranks in the hand."""
 
-        suitCount = sum(card._suit == hand[0]._suit for card in hand) #Number of cards having the same suit as the first card
-        if(hand[0]._value == 5) or (hand[0]._value - hand[4]._value == 4):
+        suitCount = sum(card.getSuit() == hand[0].getSuit() for card in hand) #Number of cards having the same suit as the first card
+        if(hand[0].getValue() == 5) or (hand[0].getValue() - hand[4].getValue() == 4):
             if suitCount == 5:
                 return STRFL
             else:
@@ -331,3 +293,45 @@ class Dealer(object):
         else:
             return HICARD
         
+    def printCards(self):
+        """Print the cards of the entire deck (for testing)"""
+
+        for card in self._cards:
+            card.printCard()
+
+    def printDeck(self):
+        """Print the cards left in the actual deck"""
+
+        for card in self._deck:
+            card.printCard()
+
+    def printHandInfo(self, category, firstcard):
+        """Prints info about the hand based on its category, suitedness and most significant card"""
+
+        msg = ""    #Message to be printed about the hand
+
+        if category < 0:
+            #Illegal value
+            msg = "Illegal value for the hand category."
+        elif category == HICARD:
+            msg = "high card " + firstcard.strValue() + "."
+        elif category == PAIR:
+            msg = "a pair of " + firstcard.strValue(-1) + "s."
+        elif category == TWO_PAIR:
+            msg = firstcard.strValue(-1) + "s up."
+        elif category == TRIPS:
+            msg = "trip " + firstcard.strValue(-1) + "s."
+        elif category == STRAIGHT:
+            msg = firstcard.strValue() + "-high straight."
+        elif category == FLUSH:
+            msg = firstcard.strValue() + "-high flush."
+        elif category == FULL_HOUSE:
+            msg = firstcard.strValue(-1) + "s full."
+        elif category == QUADS:
+            msg = "quad " + firstcard.strValue(-1) + "s."
+        elif category == STRFL:
+            msg = firstcard.strValue() + "-high straight flush."
+        else:
+            msg = "Unknown hand type."
+
+        print(msg)

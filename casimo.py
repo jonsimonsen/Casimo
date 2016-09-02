@@ -6,7 +6,7 @@ from tight import *
 
 #Global constants
 HANDS_PER_ROUND = 100   #Number of hands played in each round (per table)
-ROUNDS = 20             #Number of rounds to run the simulator
+ROUNDS = 10             #Number of rounds to run the simulator
 
 #initialising variables
 playerTypes = [LOOSE, REGULAR, TIGHT]
@@ -16,7 +16,7 @@ cardRack = Dealer()
 boss = Manager(cashier = moneyBags, recruiter = sheepDog, dealer = cardRack)
 
 #Initialize the waitList with enough players for one table
-boss.getPlayers(SEATS)
+boss.fetchPlayers(SEATS)
 
 #main loop (for now testing ten rounds, presumably at a single table)
 
