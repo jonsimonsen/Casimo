@@ -3,13 +3,13 @@ from random import randint
 from config import *
 
 class Card(object):
-    """A playing card"""
+    """A playing card. Has a suit and a value with ranges that should be defined in config.py"""
 
     #At a later stage, it might be convenient to be able to display symbols for suits
     #and shorter description for ranks.
 
     def __init__(self, suit, value):
-        """Setting up variables for the card."""
+        """Create a card with the given suit and rank. Raises a ValueError if any of the arguments are invalid."""
 
         #Make sure that the given parameters are valid
         if(suit in SUITS):
@@ -83,23 +83,45 @@ class Card(object):
 
         print("\t" + self.strValue() + " of " + self.strSuit())
 
-class Dealer(object):
-    """A poker dealer"""
+class PokerPerson(object):
+    """An adt class for persons sitting at a poker table (players and dealer)."""
+
+    def __init(self):
+        """Default initialization of the ADT."""
+
+        print("Please don't try to initialize an object of this ADT.")
+
+    def readHand(self, hand):
+        """Default method for reading and classifying a poker hand."""
+
+        print("Please make sure to implement a readHand method for the descendant of this ADT.")
+
+class Dealer(PokerPerson):
+    """A poker dealer.
+
+    _cards: A full deck of cards that should be immutable.
+    _deck: An actual deck of cards that can be used(mutated).
+
+    It seems unnecessary to actually shuffle the cards at the start of a new round, so the dealer should just
+    pick (pop) a random card from the deck for each dealt card.
+    Since the deck will no longer contain the cards that was drawn during the latest round, a
+    resetDeck() method can be called to reassemble the deck.
+    """
 
     def __init__(self):
-        """Setting up variables for the dealer"""
+        """Create a dealer with a dummy version of a deck (that can't be altered), and an actual deck."""
 
         #Set up a full deck that can be copied into an actual deck when starting a new hand
         #This seemed easier than collecting cards from the muck before a new deal.
         self._cards = list()
-        self.initCards()
+        self._initCards()
 
         #Initialize the actual deck
         self._deck = list()
         self.resetDeck()
 
-    def initCards(self):
-        """Initialize the cards of a deck"""
+    def _initCards(self):
+        """Create the cards of a deck. Only planned use is for the constructor."""
 
         for s in SUITS:
             for v in range(MIN_RANK, MAX_RANK + 1):
@@ -107,33 +129,30 @@ class Dealer(object):
                 self._cards.append(newCard)
 
     def resetDeck(self):
-        """Make _deck a copy of _cards. """
+        """Reassemble the deck by making _deck a copy of _cards."""
 
         #Copy the dummy deck     
         self._deck = list(self._cards)
 
-    def dealHand(self, template = None):
+    def dealHand(self):
         """Deal and display a hand from the deck."""
 
         cards = list()
 
-        #Deal a hand. The template argument can be used for testing.
-        #It provides the possibility of a backdoor/cheat, so should probably be removed if used in a game.
-        if(template is None):
-            cards = self.dealCards()
-        else:
-            #Reset the deck to make sure that the intended cards are drawn
-            self.resetDeck()
-            
-            for ind in template:
-                cards.append(self._deck.pop(ind))
+        #Deal a hand.
+        cards = self.dealCards()
 
         #Sort the hand and display what kind of hand it is, then return it
         hand = self.readHand(cards)
         return hand
 
     def dealCards(self, n = HAND_SIZE):
-        """Deal and display cards from the deck."""
+        """Deal a given number of cards from the deck.
+
+        n: Number of cards to deal.
+
+        returns a list containing the dealt cards.
+"""
 
         hand = list()
 
@@ -143,7 +162,7 @@ class Dealer(object):
         return hand
 
     def readHand(self, hand):
-        """Sorts the hand, prints what hand it is. Then returns the sorted hand."""
+        """Sorts the hand. Prints what hand it is. Then returns the sorted hand."""
 
         cards = list(hand)      #cards to be sorted/classified
         foot = 0                #Index of the first unprocessed card
@@ -293,7 +312,7 @@ class Dealer(object):
         else:
             return HICARD
         
-    def printCards(self):
+    def _printCards(self):
         """Print the cards of the entire deck (for testing)"""
 
         for card in self._cards:
@@ -335,3 +354,23 @@ class Dealer(object):
             msg = "Unknown hand type."
 
         print(msg)
+
+    def _createHand(self, template):
+        """Method that creates specific hands. Details omitted to avoid unauthorized use."""
+
+        #Deal a hand.
+        #The template argument should contain a list of indices corresponding to the position of the cards in a newly reset deck.
+        #It is easiest to sort the list descending, since popping messes with the indices of the following elements.
+        #The method provides the possibility of a backdoor/cheat, so should probably be removed if used in a game.
+
+        cards = list()
+
+        #Reset the deck to make sure that the intended cards are drawn
+        self.resetDeck()
+            
+        for ind in template:
+            cards.append(self._deck.pop(ind))
+
+        #Sort the hand and display what kind of hand it is. The return it.
+        hand = self.readHand(cards)
+        return hand
