@@ -110,6 +110,7 @@ class PokerPerson(object):
 
         suitCount = sum(card.getSuit() == hand[0].getSuit() for card in hand) #Number of cards having the same suit as the first card
         firstRank = hand[0].getValue()
+        swap = False    #Determine if a pair needs to be swapped
 
         #Test for straights/flushes
         if(firstRank == 5) or (firstRank - hand[4].getValue() == 4):
@@ -123,7 +124,10 @@ class PokerPerson(object):
         #Test for draws
         if drawing:
             #Test for flush draws
-            if(suitCount == 4) or (sum(card.getSuit() == hand[1].getSuit() for card in hand) == 4):
+            if suitCount == 4:
+                flushing = True
+            elif sum(card.getSuit() == hand[1].getSuit() for card in hand) == 4:
+                swap = True
                 flushing = True
             else:
                 flushing = False
@@ -135,14 +139,20 @@ class PokerPerson(object):
                 #Broadway?
                 if fifthRank >= 10 and (firstRank == 14 or (thirdRank == 14 and firstRank >= 10)):
                     if flushing:
-                        return PSTRFLDRAW
+                        if swap:
+                            return UNPSF
+                        else:
+                            return PSTRFLDRAW
                     else:
                         return PBWDRAW
                 #Open ended?
                 if((thirdRank - fifthRank == 2 and (firstRank == thirdRank + 1 or firstRank == fifthRank - 1))
                    or thirdRank - fifthRank == 3 and firstRank < thirdRank and firstRank > fifthRank):
                     if flushing:
-                        return PSTRFLDRAW
+                        if swap:
+                            return UNPSF
+                        else:
+                            return PSTRFLDRAW
                     else:
                         return PSTRDRAW
                 #Flush draw with or without gutshot?
@@ -150,9 +160,15 @@ class PokerPerson(object):
                     if((thirdRank == fifthRank + 2 and (firstRank == thirdRank + 2 or firstRank == fifthRank - 2)) or
                        (thirdRank == fifthRank + 3 and (firstRank == thirdRank + 1 or firstRank == fifthRank - 1)) or
                        (thirdRank == fifthRank + 4 and (firstRank < thirdRank and firstRank > fifthRank))):
-                        return PSTRFLDRAW
+                        if swap:
+                            return UNPSF
+                        else:
+                            return PSTRFLDRAW
                     else:
-                        return PFLDRAW
+                        if swap:
+                            return UNPFL
+                        else:
+                            return PFLDRAW
                 #Otherwise, the hand is assumed to be a pair (since the caller should not call this method if the hand contains quads, trips or more than one pair)
                 return PAIR
             else:
@@ -160,33 +176,51 @@ class PokerPerson(object):
                 fourthRank = hand[3].getValue()
                 
                 #Open ended?
-                if firstRank - fourthRank == 3:
-                    if flushing and hand[4].getSuit() != hand[0].getSuit() and hand[4].getSuit() != hand[3].getSuit():
-                        return STRFLDRAW
-                    else:
-                        return STRDRAW
                 if hand[1].getValue() - hand[4].getValue() == 3:
-                    if flushing and hand[0].getSuit() != hand[1].getSuit() and hand[0].getSuit() != hand[4].getSuit():
-                        return STRFLDRAW
+                    if flushing:
+                        if hand[0].getSuit() != hand[1].getSuit() and hand[0].getSuit() != hand[4].getSuit():
+                            return STRFLDRAW
+                        elif hand[4].getSuit() != hand[0].getSuit() and firstRank - hand[1].getValue() == 2:
+                            return UNSTRFL
+                        else:
+                            return UNFL
                     else:
                         return STRDRAW
+                if firstRank - fourthRank == 3 and firstRank < 14:
+                    if flushing:
+                        if hand[4].getSuit() != hand[0].getSuit() and hand[4].getSuit() != hand[3].getSuit():
+                            return UNSTRFL
+                        elif hand[0].getSuit() != hand[4].getSuit():
+                            if fourthRank - hand[4].getValue() == 2:
+                                return STRFLDRAW
+                            else:
+                                return FLDRAW
+                        else:
+                            return UNFL
+                    else:
+                        return UNSTR
                 #Broadway? (must check open-ended first, since a hand can both be open ended and have a broadway draw)
                 if firstRank == 14 and (fourthRank >= 10):
                     if flushing:
                         if hand[4].getSuit() != hand[0].getSuit() and hand[4].getSuit() != hand[3].getsuit():
-                            return STRFLDRAW
-                        else:
+                            return UNSTRFL
+                        elif hand[0].getSuit() != hand[4].getSuit():
                             return FLDRAW
+                        else:
+                            return UNFL
                     else:
                         return BWDRAW
                 #Flush draw with or without gutshot?
                 if flushing:
                     if firstRank - fourthRank == 4 and hand[4].getSuit() != hand[0].getSuit() and hand[4].getSuit() != hand[3].getSuit():
-                        return STRFLDRAW
+                        return UNSTRFL
                     if hand[1].getValue() - hand[4].getValue() == 4 and hand[0].getSuit() != hand[1].getSuit() and hand[0].getSuit() != hand[4].getSuit():
                         return STRFLDRAW
                     #If there was no straight draw containing the same cards as the flush draw, classify this as a flush draw
-                    return FLDRAW
+                    if hand[0].getSuit() != hand[1].getSuit() and hand[0].getSuit() != hand[4].getSuit():
+                        return FLDRAW
+                    else:
+                        return UNFL
                 
         return HICARD
 
@@ -473,6 +507,7 @@ class Player(PokerPerson):
         self._strat = list()        #To hold a list that determines the strategy of the player
         self._hand = list()
         self._sorted = False        #Should only be true if sortHand() has been called since last time the player was dealt something.
+        self._pattern = -1          #Category of hand held (see config.py for the range)
         self._rating = 0            #The player's rating of the hand
         self._played = 0            #Number of hands played
         self._status = MOVE_UP      #For determining if the player is seated/moving up/moving down or busto
@@ -583,11 +618,79 @@ class Player(PokerPerson):
         return self._downs
 
     def printHandInfo(self):
-        """Prints what cards is in the hand, and how the player rates the hand (1 = best, 99 = worst)"""
+        """Prints info about the hand based on its pattern/category and the most significant card."""
 
         for card in self._hand:
             card.printCard()
-        print("Rated: " + str(self.getRating()))
+
+        firstCard = self._hand[0]
+        firstDraw = self._hand[1]
+
+        msg = ""    #Message to be printed about the hand
+
+        if self._pattern < 0:
+            #Illegal value
+            msg = "Illegal value for the hand category."
+        elif self._pattern == HICARD:
+            msg = "high card " + firstCard.strValue() + "."
+        elif self._pattern == BWDRAW:
+            msg = "broadway straight draw."
+        elif self._pattern == STRDRAW:
+            msg = firstDraw.strValue() + " high open-ender."
+        elif self._pattern == FLDRAW:
+            msg = firstDraw.strValue() + " high flush draw."
+        elif self._pattern == STRFLDRAW:
+            msg = firstDraw.strValue() + " high straight flush draw."
+        elif self._pattern <= PAIR:
+            msg = "a pair of " + firstCard.strValue(-1) + "s"
+            if firstCard.getValue() > firstDraw.getValue():
+                hiPair = True
+            else:
+                hiPair = False
+                
+            if self._pattern == PBWDRAW:
+                msg += " with a broadway straight draw."
+            elif self._pattern == PSTRDRAW:
+                msg += " with a(n) "
+                if hiPair:
+                    msg += firstCard.strValue()
+                else:
+                    msg += firstDraw.strValue()
+                msg += " high open-ender."
+            elif self._pattern == PFLDRAW:
+                msg += " with a(n) "
+                if hiPair:
+                    msg += firstCard.strValue()
+                else:
+                    msg += firstDraw.strValue()
+                msg += " high flush draw."
+            elif self._pattern == PSTRFLDRAW:
+                msg += " with a(n) "
+                if hiPair:
+                    msg += firstCard.strValue()
+                else:
+                    msg += firstDraw.strValue()
+                msg += " high straight flush draw."
+            elif self._pattern == PAIR:
+                msg += "."
+        elif self._pattern == TWO_PAIR:
+            msg = firstCard.strValue(-1) + "s up."
+        elif self._pattern == TRIPS:
+            msg = "trip " + firstCard.strValue(-1) + "s."
+        elif self._pattern == STRAIGHT:
+            msg = firstCard.strValue() + "-high straight."
+        elif self._pattern == FLUSH:
+            msg = firstCard.strValue() + "-high flush."
+        elif self._pattern == FULL_HOUSE:
+            msg = firstCard.strValue(-1) + "s full."
+        elif self._pattern == QUADS:
+            msg = "quad " + firstCard.strValue(-1) + "s."
+        elif self._pattern == STRFL:
+            msg = firstCard.strValue() + "-high straight flush."
+        else:
+            msg = "Unknown hand type."
+
+        print(msg)
 
     def moveIn(self):
         """Bet the maximum amount on a hand. Used for testing. The finished simulator should be based on a limit structure."""
@@ -659,63 +762,50 @@ class Player(PokerPerson):
                 
             #Check for straights and flushes
             pattern = self.findSequence(cards)
- 
-        self.printHandInfo(pattern, cards[0])
+
+        #If the hand contained a draw, sort it so the first card in the hand is not part of the draw
+        if pattern == UNPSF:
+            temp = cards.pop(1)
+            cards.insert(0, temp)
+            pattern = PSTRFLDRAW
+        elif pattern == UNPFL:
+            temp = cards.pop(1)
+            cards.insert(0, temp)
+            pattern = PFLDRAW
+        elif pattern == UNSTRFL:
+            temp = cards.pop(-1)
+            cards.insert(0, temp)
+            pattern = STRFLDRAW
+        elif pattern == UNFL:
+            suit = cards[0].getSuit()
+            for i in range(1, len(cards)):
+                if cards[i].getSuit() != suit:
+                    temp = cards.pop(i)
+                    cards.insert(0, temp)
+                    pattern = FLDRAW
+                    break
+        elif pattern == UNSTR:
+            temp = cards.pop(-1)
+            cards.insert(0, temp)
+            pattern = STRDRAW
+
+        self._pattern = pattern
+        self._sorted = True
+        self.printHandInfo()
         self._hand = cards
 
     def rateHand(self):
         """Give a rating to the hand based on global constants. If the categories in the config file is changed, this function needs to be changed too."""
 
-        #A more adaptable way to do this would be desirable at a later stage
-
-        hand = self.getHand()
-        rankCount = sum(card.getValue() == hand[0].getValue() for card in hand)
-
-        if rankCount == 4:
-            self.setRating(TRIP_K)
-        elif rankCount == 3:
-            if hand[3].getValue() == hand[4].getValue():
-                self.setRating(TRIP_K)
-            elif hand[0].getValue() >= 13:
-                self.setRating(TRIP_K)
-            elif hand[0].getValue() >= 7:
-                self.setRating(TRIP_7)
-            else:
-                self.setRating(A_UP)
-        elif rankCount == 2:
-            if hand[2].getValue() == hand[3].getValue():
-                if hand[0].getValue() == 14:
-                    self.setRating(A_UP)
-                elif hand[0].getValue() == 13:
-                    self.setRating(K_UP)
-                elif hand[0].getValue() == 12:
-                    self.setRating(Q_UP)
-                elif hand[0].getValue() >= 10:
-                    self.setRating(T_UP)
-                elif hand[0].getValue() >= 8:
-                    self.setRating(E_UP)
-                else:
-                    self.setRating(ACES)
-            else:
-                self.setRating(ACES + ((14 - hand[0].getValue()) * 3))
-        elif rankCount != 1:
-            print("Player hand error.")
-        else:
-            if (hand[0].getValue() == 5) or (hand[0].getValue() - hand[4].getValue() == 4):
-                self.setRating(TRIP_K)
-            elif sum(card.getSuit() == hand[0].getSuit() for card in hand) == 5:
-                self.setRating(TRIP_K)
-            elif hand[0].getValue() == 14:
-                if hand[1].getValue() == 13:
-                    self.setRating(AK_START)
-                elif hand[1].getValue() == 12:
-                    self.setRating(AQ_START)
-                elif hand[1].getValue() == 11:
-                    self.setRating(AJ_START)
-                else:
-                    self.setRating(TRASH)
-            else:
-                self.setRating(TRASH)
+        if self._pattern > FULL_HOUSE:
+            self._rating = KINGS_FULL
+        elif self._pattern = FULL_HOUSE:
+            if self._hand[0].getValue() >= 13:
+                self._rating = KINGS_FULL
+            elif >= 10:
+                self._rating = T_FULL
+            elif >= 6:
+                self._rating = 6_FULL
 
     def actPre(self, wagers):
         """Decide on waging before the draw. Dependent on exact ordering of the player's strat list."""

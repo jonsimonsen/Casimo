@@ -37,6 +37,13 @@ QUADS       = 44441
 STRFL       = 54321
 NO_HAND     = -1
 
+###patterns that needs sorting
+UNSTR   = 6
+UNFL    = 11
+UNSTRFL = 16
+UNPFL   = 103
+UNPSF   = 153
+
 ###testing hands
 
 STRFLH  = [12, 11, 10, 9, 8]
