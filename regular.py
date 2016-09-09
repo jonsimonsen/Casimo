@@ -24,3 +24,11 @@ REG_A_CB    = 19        #Calling a single bet
 REG_A_CR    = 5         #Calling a double raise
 REG_A_CRR   = 3         #Calling a triple raise
 REG_A_CCAP  = 2         #Calling a capped pot
+
+#BD
+
+REG_UTG     = 496       #Minimum hand for getting involved
+REG_HIJ     = 536
+REG_BTN     = 616
+REG_SB      = 830
+

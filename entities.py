@@ -1,6 +1,6 @@
 #Other libs
 from random import randint
-from config import *
+from conftemp import *
 
 class Card(object):
     """A playing card. Has a suit and a value with ranges that should be defined in config.py"""
@@ -96,19 +96,99 @@ class PokerPerson(object):
 
         print("Please make sure to implement a readHand method for the descendant of this ADT.")
 
-    def findSequence(self, hand):
-        """Returns the pattern found (straight, flush, straightflush or hicard). It is assumed that the caller has already verified that there are no duplicated ranks in the hand."""
+    def findSequence(self, hand, drawing = True):
+        """Returns the pattern found (straight, flush, straightflush or hicard). Unless drawing is False, it also looks at drawing patterns. Make sure to follow the rules given below.
+
+        hand: The hand to be examined. It must be sorted and follow the rules given below. Look for a sortHand() method to sort the hand correctly.
+        drawing: If true, look for drawing patterns. Otherwise, only consider the current value/category of the hand.
+
+        If drawing = False, the hand must not contain any duplicate ranks (pairs, trips, quads).
+        If drawing = True, the hand may contain one pair but no other duplicate ranks.
+        The method does not test that the provided hand follows these rules, but the return value can not be trusted if the rules are not followed.
+        
+        """
 
         suitCount = sum(card.getSuit() == hand[0].getSuit() for card in hand) #Number of cards having the same suit as the first card
-        if(hand[0].getValue() == 5) or (hand[0].getValue() - hand[4].getValue() == 4):
+        firstRank = hand[0].getValue()
+
+        #Test for straights/flushes
+        if(firstRank == 5) or (firstRank - hand[4].getValue() == 4):
             if suitCount == 5:
                 return STRFL
-            else:
+            elif firstRank != hand[1].getValue(): #To verify that the hand does not in fact contain a pair (invalidating the possibility of a straight)
                 return STRAIGHT
         elif suitCount == 5:
             return FLUSH
-        else:
-            return HICARD
+
+        #Test for draws
+        if drawing:
+            #Test for flush draws
+            if(suitCount == 4) or (sum(card.getSuit() == hand[1].getSuit() for card in hand) == 4):
+                flushing = True
+            else:
+                flushing = False
+            
+            #If paired, test the last four cards for straight/flush draws (else test all five cards)
+            if firstRank == hand[1].getValue():
+                thirdRank = hand[2].getValue()
+                fifthRank = hand[4].getValue()
+                #Broadway?
+                if fifthRank >= 10 and (firstRank == 14 or (thirdRank == 14 and firstRank >= 10)):
+                    if flushing:
+                        return PSTRFLDRAW
+                    else:
+                        return PBWDRAW
+                #Open ended?
+                if((thirdRank - fifthRank == 2 and (firstRank == thirdRank + 1 or firstRank == fifthRank - 1))
+                   or thirdRank - fifthRank == 3 and firstRank < thirdRank and firstRank > fifthRank):
+                    if flushing:
+                        return PSTRFLDRAW
+                    else:
+                        return PSTRDRAW
+                #Flush draw with or without gutshot?
+                if flushing:
+                    if((thirdRank == fifthRank + 2 and (firstRank == thirdRank + 2 or firstRank == fifthRank - 2)) or
+                       (thirdRank == fifthRank + 3 and (firstRank == thirdRank + 1 or firstRank == fifthRank - 1)) or
+                       (thirdRank == fifthRank + 4 and (firstRank < thirdRank and firstRank > fifthRank))):
+                        return PSTRFLDRAW
+                    else:
+                        return PFLDRAW
+                #Otherwise, the hand is assumed to be a pair (since the caller should not call this method if the hand contains quads, trips or more than one pair)
+                return PAIR
+            else:
+                #Unpaired hand...
+                fourthRank = hand[3].getValue()
+                
+                #Open ended?
+                if firstRank - fourthRank == 3:
+                    if flushing and hand[4].getSuit() != hand[0].getSuit() and hand[4].getSuit() != hand[3].getSuit():
+                        return STRFLDRAW
+                    else:
+                        return STRDRAW
+                if hand[1].getValue() - hand[4].getValue() == 3:
+                    if flushing and hand[0].getSuit() != hand[1].getSuit() and hand[0].getSuit() != hand[4].getSuit():
+                        return STRFLDRAW
+                    else:
+                        return STRDRAW
+                #Broadway? (must check open-ended first, since a hand can both be open ended and have a broadway draw)
+                if firstRank == 14 and (fourthRank >= 10):
+                    if flushing:
+                        if hand[4].getSuit() != hand[0].getSuit() and hand[4].getSuit() != hand[3].getsuit():
+                            return STRFLDRAW
+                        else:
+                            return FLDRAW
+                    else:
+                        return BWDRAW
+                #Flush draw with or without gutshot?
+                if flushing:
+                    if firstRank - fourthRank == 4 and hand[4].getSuit() != hand[0].getSuit() and hand[4].getSuit() != hand[3].getSuit():
+                        return STRFLDRAW
+                    if hand[1].getValue() - hand[4].getValue() == 4 and hand[0].getSuit() != hand[1].getSuit() and hand[0].getSuit() != hand[4].getSuit():
+                        return STRFLDRAW
+                    #If there was no straight draw containing the same cards as the flush draw, classify this as a flush draw
+                    return FLDRAW
+                
+        return HICARD
 
 class Dealer(PokerPerson):
     """A poker dealer.
@@ -458,10 +538,11 @@ class Player(PokerPerson):
         return self._hand
 
     def setHand(self, hand):
-        """Give a hand to the player"""
+        """Give a hand to the player. The player will then call sortHand()."""
 
         self._hand = hand
         self._played += 1   #If using this when drawing cards, this line must be made conditional
+        self._sortHand()
 
     def getRating(self):
         """Return the player's rating of the hand."""
@@ -508,7 +589,7 @@ class Player(PokerPerson):
             card.printCard()
         print("Rated: " + str(self.getRating()))
 
-    def allin(self):
+    def moveIn(self):
         """Bet the maximum amount on a hand. Used for testing. The finished simulator should be based on a limit structure."""
 
         self.chipUp(MIN_STAKE * -6)     #2 big bets predraw, 4 postdraw
@@ -523,7 +604,7 @@ class Player(PokerPerson):
         foot = 0                    #Index of the first unprocessed card
         head = len(cards) - 1       #Index of the last unprocessed card
         counter = 0                 #To count the number of cards having the same rank as the card at foot
-        pattern = 0                 #Look in config.py for an overview of the possible patterns
+        pattern = HICARD            #Look in config.py for an overview of the possible patterns
 
         #Sort, with aces first and deuces last
         cards.sort(key = lambda card: card._value, reverse = True)
@@ -580,7 +661,7 @@ class Player(PokerPerson):
             pattern = self.findSequence(cards)
  
         self.printHandInfo(pattern, cards[0])
-        return cards
+        self._hand = cards
 
     def rateHand(self):
         """Give a rating to the hand based on global constants. If the categories in the config file is changed, this function needs to be changed too."""
@@ -679,10 +760,17 @@ class Player(PokerPerson):
         return self.getWager()
 
 class Table(object):
-    """A poker table"""
+    """A poker table.
+
+        _player: A list of the players that are seated here
+        _pot: The amount of chips that have been collected for the winner(s) of the current round.
+        _button: The index of the player that has the dealer button at the table.
+        _rounds: The number of rounds/hands that have been played at the table.
+        
+    """
 
     def __init__(self):
-        """Setting up variables for the table"""
+        """Create a new poker table."""
 
         self._players = list()
         self._pot = 0       #Amount of chips in the middle
@@ -694,15 +782,19 @@ class Table(object):
         return self._pot
 
     def addToPot(self, amount):
-        """Add amount to _pot"""
+        """Add chips to _pot.
+
+            amount: The number of chips to add
+        
+        """
         self._pot += amount
 
     def resetPot(self):
-        """Set _pot to 0"""
+        """Set _pot to 0. Should only be called after the pot has been given to the winner(s)."""
         self._pot = 0
 
     def getButton(self):
-        """Getter for _button"""
+        """Getter for _button."""
         return self._button
 
     def passButton(self):
@@ -716,7 +808,16 @@ class Table(object):
         return self._rounds
 
     def seat(self, player, position = -1):
-        """Seat a player at the table"""
+        """Seat a player at the table.
+
+        player: The player that is to be seated.
+        position: The index where the player should be inserted in the list of players.
+
+        If a negative position is given, the player is seated in the position where the big blind will be posted.
+        The status of the player will be set to SEATED.
+        There is currently no error checking for trying to seat a player at an invalid position or a full table.
+        
+        """
 
         if position < 0:
             pos = (self.getButton() + 2) % 5
@@ -727,14 +828,23 @@ class Table(object):
         self._players.insert(pos, player)
 
     def playHand(self, stake, dealer = None):
-        """Play one hand at the table"""
+        """Play one hand at the table.
+
+        stake: The amount of cash that corresponds to a big blind.
+        dealer: A dealer must be supplied to give players their hands. Otherwise, they'll just bet the max amount and flip for the pot.
+
+        returns: The player that is about to post the big blind if that player doesn't meet the requirements for playing at the table.
+        Otherwise, it returns None.
+        
+        Cash isn't really used at the table, but the method needs to know if the table is at the lowest stakes available.
+"""
 
         wagers = 0  #The amount that the players must match to stay in the hand
 
         #If there's no dealer, players just move in and draws for who wins the pot
         if(dealer == None):
             for player in self._players:
-                player.allin()
+                player.moveIn()
                 player.countHand()
                 self.addToPot(6 * MIN_STAKE)
 
