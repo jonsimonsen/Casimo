@@ -5,7 +5,7 @@ from conftest import *
 #Initialise variables
 cardRack = Dealer()
 
-#main loop
+#test cases
 
 for subgroup in TSORT:
     for case in subgroup:

@@ -91,12 +91,197 @@ class PokerPerson(object):
 
         print("Please don't try to initialize an object of this ADT.")
 
-    def readHand(self, hand):
-        """Default method for reading and classifying a poker hand."""
+    def sortHand(self, hand, drawing = False):
+        """Sorts the hand. Prints what hand it is. Then returns the sorted hand."""
 
-        print("Please make sure to implement a readHand method for the descendant of this ADT.")
+        cards = list(self._hand)    #cards to be sorted/classified
+        foot = 0                    #Index of the first unprocessed card
+        head = len(cards) - 1       #Index of the last unprocessed card
+        counter = 0                 #To count the number of cards having the same rank as the card at foot
+        pattern = HICARD            #Look in config.py for an overview of the possible patterns
 
-    def findSequence(self, hand, drawing = True):
+        #Sort, with aces first and deuces last
+        cards.sort(key = lambda card: card._value, reverse = True)
+
+        #Check for hands containing more than one card of equal rank (pairs, trips, two pair etc.)
+        #The cards will be sorted so paired cards appear before unpaired and trips before pairs (in a full house)
+        while(foot <= head):
+            counter = sum(c.getValue() == cards[foot].getValue() for c in cards)
+            if counter == 1:
+                #Move the card to the back. Move head forward, so the card will not be considered again.
+                #Since all unpaired are treated this way, their order is preserved.
+                cards.append(cards.pop(foot))
+                head -= 1
+            else:
+                if counter == 4:
+                    pattern = QUADS
+                    foot = head + 1     #With quads at the foot, the hand is already sorted, so no need to loop again
+                elif counter == 3:
+                    if pattern == PAIR:
+                        #A pair has already been processed. Since the trips are more interesting, the pair is moved to the end of the list
+                        pattern = FULL_HOUSE
+                        cards.append(cards.pop(0))
+                        cards.append(cards.pop(0))
+                        foot = head + 1     #With a full house, all cards have been sorted, so no need to loop again
+                    else:
+                        pattern = TRIPS
+                        foot += counter     #The trips are in the right place. Move the foot to the first card that doesn't match their rank
+                elif counter == 2:
+                    if pattern == TRIPS:
+                        #The trips have been processed, and the pair is therefore correctly placed
+                        pattern = FULL_HOUSE
+                        foot = head + 1     #With a full house, all cards have been sorted, so no need to loop again
+                    elif pattern == PAIR:
+                        #Since none of the pairs are moved, their order is preserved
+                        pattern = TWO_PAIR
+                        foot = head + 1     #With two pairs, the fifth card will always be in the correct place by now
+                    else:
+                        #The pair is likely to be correctly placed, so move the foot to the first card that doesn't match the rank
+                        pattern = PAIR
+                        foot += counter
+                else:
+                    #It is assumed that there are four suits and no jokers, so the count should never be outside the interval [1,4]
+                    pattern = NO_HAND
+                    foot = head + 1
+                    print("Illegal hand")
+
+        #If no cards were of equal rank, the hand is either a straigh flush, a flush, a straight or a hi-card hand.
+        if(pattern == HICARD):
+            #Order a wheel (5-high straight) correctly
+            if cards[0].getValue() == 14 and cards[1].getValue() == 5:
+                cards.append(cards.pop(0))
+                
+            #Check for straights and flushes
+            pattern = self.findSequence(cards, drawing)
+        elif(pattern == PAIR) and drawing:
+            #Check for straight- and flush-draws
+            pattern = self.findSequence(cards, drawing)
+
+        hiDraw = None
+
+        #If the hand contained a draw, sort it so the first card in the hand is not part of the draw
+        if drawing:
+            if pattern == UNPSF:
+                temp = cards.pop(1)
+                cards.insert(0, temp)
+                pattern = PSTRFLDRAW
+            elif pattern == UNPFL:
+                temp = cards.pop(1)
+                cards.insert(0, temp)
+                pattern = PFLDRAW
+            elif pattern == UNSTRFL:
+                temp = cards.pop(-1)
+                cards.insert(0, temp)
+                pattern = STRFLDRAW
+            elif pattern == UNFL:
+                suit = cards[0].getSuit()
+                for i in range(1, len(cards)):
+                    if cards[i].getSuit() != suit:
+                        temp = cards.pop(i)
+                        cards.insert(0, temp)
+                        pattern = FLDRAW
+                        break
+            elif pattern == UNSTR:
+                temp = cards.pop(-1)
+                cards.insert(0, temp)
+                pattern = STRDRAW
+
+        if pattern > HICARD and pattern < PAIR:
+            if pattern >= PBWDRAW:
+                if cards[1].getValue() > cards[2].getValue:
+                    hiDraw = cards[1]
+                else:
+                    hiDraw = cards[2]
+            else:
+                hiDraw = cards[1]
+
+        #self._pattern = pattern
+        #self._sorted = True
+        self.printHandInfo(pattern, cards[0], hiDraw)
+        #self._hand = cards
+        return (cards, pattern)
+
+    def printHandInfo(self, category, firstCard, firstDraw):
+        """Prints info about the hand based on its pattern/category and the most significant card."""
+
+        #for card in self._hand:
+        #    card.printCard()
+
+        #firstCard = self._hand[0]
+        #firstDraw = self._hand[1]
+
+        msg = ""    #Message to be printed about the hand
+
+        if category < 0:
+            #Illegal value
+            msg = "Illegal value for the hand category."
+        elif category == HICARD:
+            msg = "high card " + firstCard.strValue() + "."
+        elif category == BWDRAW:
+            msg = "broadway straight draw."
+        elif category == STRDRAW:
+            msg = firstDraw.strValue() + " high open-ender."
+        elif category == FLDRAW:
+            msg = firstDraw.strValue() + " high flush draw."
+        elif category == STRFLDRAW:
+            msg = firstDraw.strValue() + " high straight flush draw."
+        elif category <= PAIR:
+            msg = "a pair of " + firstCard.strValue(-1) + "s"
+            if firstCard.getValue() > firstDraw.getValue():
+                hiPair = True
+            else:
+                hiPair = False
+                
+            if category == PBWDRAW:
+                msg += " with a broadway straight draw."
+            elif category == PSTRDRAW:
+                msg += " with a(n) "
+                if hiPair:
+                    msg += firstCard.strValue()
+                else:
+                    msg += firstDraw.strValue()
+                msg += " high open-ender."
+            elif category == PFLDRAW:
+                msg += " with a(n) "
+                if hiPair:
+                    msg += firstCard.strValue()
+                else:
+                    msg += firstDraw.strValue()
+                msg += " high flush draw."
+            elif category == PSTRFLDRAW:
+                msg += " with a(n) "
+                if hiPair:
+                    msg += firstCard.strValue()
+                else:
+                    msg += firstDraw.strValue()
+                msg += " high straight flush draw."
+            elif category == PAIR:
+                msg += "."
+        elif category == TWO_PAIR:
+            msg = firstCard.strValue(-1) + "s up."
+        elif category == TRIPS:
+            msg = "trip " + firstCard.strValue(-1) + "s."
+        elif category == STRAIGHT:
+            msg = firstCard.strValue() + "-high straight."
+        elif category == FLUSH:
+            msg = firstCard.strValue() + "-high flush."
+        elif category == FULL_HOUSE:
+            msg = firstCard.strValue(-1) + "s full."
+        elif category == QUADS:
+            msg = "quad " + firstCard.strValue(-1) + "s."
+        elif category == STRFL:
+            msg = firstCard.strValue() + "-high straight flush."
+        else:
+            msg = "Unknown hand type."
+
+        print(msg)
+
+#    def readHand(self, hand):
+#        """Default method for reading and classifying a poker hand."""
+#
+#        print("Please make sure to implement a readHand method for the descendant of this ADT.")
+
+    def findSequence(self, hand, drawing = False):
         """Returns the pattern found (straight, flush, straightflush or hicard). Unless drawing is False, it also looks at drawing patterns. Make sure to follow the rules given below.
 
         hand: The hand to be examined. It must be sorted and follow the rules given below. Look for a sortHand() method to sort the hand correctly.
@@ -347,7 +532,7 @@ class Dealer(PokerPerson):
                 cards.append(cards.pop(0))
                 
             #Check for straights and flushes
-            pattern = self.findSequence(cards, False) #Drawing is false, since the dealer should only be concerned about the rank of the hand.
+            pattern = self.findSequence(cards)
  
         self.printHandInfo(pattern, cards[0])
         return cards
@@ -421,7 +606,7 @@ class Dealer(PokerPerson):
         elif counter != 1:
             return NO_HAND
         else:
-            return self.findSequence(hand, False) #Drawing is false, since the dealer should only be concerned about the rank of the hand.
+            return self.findSequence(hand)
          
     def _printCards(self):
         """Print the cards of the entire deck (for testing)"""
