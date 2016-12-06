@@ -146,15 +146,16 @@ class PokerPerson(object):
                     else:
                         return PBWDRAW
                 #Open ended?
-                if((thirdRank - fifthRank == 2 and (firstRank == thirdRank + 1 or firstRank == fifthRank - 1))
-                   or thirdRank - fifthRank == 3 and firstRank < thirdRank and firstRank > fifthRank):
-                    if flushing:
-                        if swap:
-                            return UNPSF
+                if(firstRank != 14 and thirdRank != 14): #Cannot be openended if it contains an ace
+                    if((thirdRank - fifthRank == 2 and (firstRank == thirdRank + 1 or firstRank == fifthRank - 1))
+                       or thirdRank - fifthRank == 3 and firstRank < thirdRank and firstRank > fifthRank):
+                        if flushing:
+                            if swap:
+                                return UNPSF
+                            else:
+                                return PSTRFLDRAW
                         else:
-                            return PSTRFLDRAW
-                    else:
-                        return PSTRDRAW
+                            return PSTRDRAW
                 #Flush draw with or without gutshot?
                 if flushing:
                     if((thirdRank == fifthRank + 2 and (firstRank == thirdRank + 2 or firstRank == fifthRank - 2)) or
@@ -268,15 +269,7 @@ class Dealer(PokerPerson):
         returns a list containg the cards of the dealt hand.
 """
 
-        return self.dealCards() #The remainder should be refactored/moved from this method
-        cards = list()
-
-        #Deal a hand.
-        cards = self.dealCards()
-
-        #Sort the hand and display what kind of hand it is, then return it
-        hand = self.sortHand(cards)
-        return hand
+        return self.sortHand(self.dealCards())
 
     def dealCards(self, n = HAND_SIZE):
         """Deal a given number of cards from the deck.
@@ -354,11 +347,11 @@ class Dealer(PokerPerson):
                 cards.append(cards.pop(0))
                 
             #Check for straights and flushes
-            pattern = self.findSequence(cards)
+            pattern = self.findSequence(cards, False) #Drawing is false, since the dealer should only be concerned about the rank of the hand.
  
         self.printHandInfo(pattern, cards[0])
         return cards
-    
+
     def showDown(self, players, potsize):
         """Awards the pot to the player with the best hand."""
 
@@ -367,7 +360,7 @@ class Dealer(PokerPerson):
         winners = list()
 
         for player in players:
-            hand = player.getHand()
+            hand = self.sortHand(player.getHand())
             cmpVal = self.cmpHands(hand, bestHand)
 
             if cmpVal > 0:
@@ -428,7 +421,7 @@ class Dealer(PokerPerson):
         elif counter != 1:
             return NO_HAND
         else:
-            return self.findSequence(hand)
+            return self.findSequence(hand, False) #Drawing is false, since the dealer should only be concerned about the rank of the hand.
          
     def _printCards(self):
         """Print the cards of the entire deck (for testing)"""
@@ -489,10 +482,8 @@ class Dealer(PokerPerson):
         for ind in template:
             cards.append(self._deck.pop(ind))
 
-        #Sort the hand and display what kind of hand it is. The return it.
-        hand = self.readHand(cards)
-        return hand
-
+        #Sort the hand and display what kind of hand it is. Then return it.
+        return self.sortHand(cards)
 
 class Player(PokerPerson):
     """A poker player"""
@@ -799,13 +790,13 @@ class Player(PokerPerson):
 
         if self._pattern > FULL_HOUSE:
             self._rating = KINGS_FULL
-        elif self._pattern = FULL_HOUSE:
+        elif self._pattern == FULL_HOUSE:
             if self._hand[0].getValue() >= 13:
                 self._rating = KINGS_FULL
-            elif >= 10:
+            elif self._hand[0].getValue() >= 10:
                 self._rating = T_FULL
-            elif >= 6:
-                self._rating = 6_FULL
+            elif self._hand[0].getValue() >= 6:
+                self._rating = F_FULL
 
     def actPre(self, wagers):
         """Decide on waging before the draw. Dependent on exact ordering of the player's strat list."""
