@@ -91,10 +91,15 @@ class PokerPerson(object):
 
         print("Please don't try to initialize an object of this ADT.")
 
+    def processHand(self, hand):
+        """Default method for reading, sorting and classifying a poker hand."""
+
+        print("Please make sure to implement a processHand method for the descendant of this ADT.")
+
     def sortHand(self, hand, drawing = False):
         """Sorts the hand. Prints what hand it is. Then returns the sorted hand."""
 
-        cards = list(self._hand)    #cards to be sorted/classified
+        cards = list(hand)          #cards to be sorted/classified
         foot = 0                    #Index of the first unprocessed card
         head = len(cards) - 1       #Index of the last unprocessed card
         counter = 0                 #To count the number of cards having the same rank as the card at foot
@@ -195,91 +200,15 @@ class PokerPerson(object):
             else:
                 hiDraw = cards[1]
 
+        #Printing each card in the hand. Might want to use an argument to determine if this is done.
+        for card in cards:
+            card.printCard()
+
         #self._pattern = pattern
         #self._sorted = True
         self.printHandInfo(pattern, cards[0], hiDraw)
         #self._hand = cards
         return (cards, pattern)
-
-    def printHandInfo(self, category, firstCard, firstDraw):
-        """Prints info about the hand based on its pattern/category and the most significant card."""
-
-        #for card in self._hand:
-        #    card.printCard()
-
-        #firstCard = self._hand[0]
-        #firstDraw = self._hand[1]
-
-        msg = ""    #Message to be printed about the hand
-
-        if category < 0:
-            #Illegal value
-            msg = "Illegal value for the hand category."
-        elif category == HICARD:
-            msg = "high card " + firstCard.strValue() + "."
-        elif category == BWDRAW:
-            msg = "broadway straight draw."
-        elif category == STRDRAW:
-            msg = firstDraw.strValue() + " high open-ender."
-        elif category == FLDRAW:
-            msg = firstDraw.strValue() + " high flush draw."
-        elif category == STRFLDRAW:
-            msg = firstDraw.strValue() + " high straight flush draw."
-        elif category <= PAIR:
-            msg = "a pair of " + firstCard.strValue(-1) + "s"
-            if firstCard.getValue() > firstDraw.getValue():
-                hiPair = True
-            else:
-                hiPair = False
-                
-            if category == PBWDRAW:
-                msg += " with a broadway straight draw."
-            elif category == PSTRDRAW:
-                msg += " with a(n) "
-                if hiPair:
-                    msg += firstCard.strValue()
-                else:
-                    msg += firstDraw.strValue()
-                msg += " high open-ender."
-            elif category == PFLDRAW:
-                msg += " with a(n) "
-                if hiPair:
-                    msg += firstCard.strValue()
-                else:
-                    msg += firstDraw.strValue()
-                msg += " high flush draw."
-            elif category == PSTRFLDRAW:
-                msg += " with a(n) "
-                if hiPair:
-                    msg += firstCard.strValue()
-                else:
-                    msg += firstDraw.strValue()
-                msg += " high straight flush draw."
-            elif category == PAIR:
-                msg += "."
-        elif category == TWO_PAIR:
-            msg = firstCard.strValue(-1) + "s up."
-        elif category == TRIPS:
-            msg = "trip " + firstCard.strValue(-1) + "s."
-        elif category == STRAIGHT:
-            msg = firstCard.strValue() + "-high straight."
-        elif category == FLUSH:
-            msg = firstCard.strValue() + "-high flush."
-        elif category == FULL_HOUSE:
-            msg = firstCard.strValue(-1) + "s full."
-        elif category == QUADS:
-            msg = "quad " + firstCard.strValue(-1) + "s."
-        elif category == STRFL:
-            msg = firstCard.strValue() + "-high straight flush."
-        else:
-            msg = "Unknown hand type."
-
-        print(msg)
-
-#    def readHand(self, hand):
-#        """Default method for reading and classifying a poker hand."""
-#
-#        print("Please make sure to implement a readHand method for the descendant of this ADT.")
 
     def findSequence(self, hand, drawing = False):
         """Returns the pattern found (straight, flush, straightflush or hicard). Unless drawing is False, it also looks at drawing patterns. Make sure to follow the rules given below.
@@ -410,6 +339,75 @@ class PokerPerson(object):
                 
         return HICARD
 
+    def printHandInfo(self, category, firstCard, firstDraw):
+        """Prints info about the hand based on its pattern/category and the most significant card."""
+
+        msg = ""    #Message to be printed about the hand
+
+        if category < 0:
+            #Illegal value
+            msg = "Illegal value for the hand category."
+        elif category == HICARD:
+            msg = "high card " + firstCard.strValue() + "."
+        elif category == BWDRAW:
+            msg = "broadway straight draw."
+        elif category == STRDRAW:
+            msg = firstDraw.strValue() + " high open-ender."
+        elif category == FLDRAW:
+            msg = firstDraw.strValue() + " high flush draw."
+        elif category == STRFLDRAW:
+            msg = firstDraw.strValue() + " high straight flush draw."
+        elif category <= PAIR:
+            msg = "a pair of " + firstCard.strValue(-1) + "s"
+            if category < PAIR and firstCard.getValue() > firstDraw.getValue():
+                hiPair = True
+            else:
+                hiPair = False
+                
+            if category == PBWDRAW:
+                msg += " with a broadway straight draw."
+            elif category == PSTRDRAW:
+                msg += " with a(n) "
+                if hiPair:
+                    msg += firstCard.strValue()
+                else:
+                    msg += firstDraw.strValue()
+                msg += " high open-ender."
+            elif category == PFLDRAW:
+                msg += " with a(n) "
+                if hiPair:
+                    msg += firstCard.strValue()
+                else:
+                    msg += firstDraw.strValue()
+                msg += " high flush draw."
+            elif category == PSTRFLDRAW:
+                msg += " with a(n) "
+                if hiPair:
+                    msg += firstCard.strValue()
+                else:
+                    msg += firstDraw.strValue()
+                msg += " high straight flush draw."
+            elif category == PAIR:
+                msg += "."
+        elif category == TWO_PAIR:
+            msg = firstCard.strValue(-1) + "s up."
+        elif category == TRIPS:
+            msg = "trip " + firstCard.strValue(-1) + "s."
+        elif category == STRAIGHT:
+            msg = firstCard.strValue() + "-high straight."
+        elif category == FLUSH:
+            msg = firstCard.strValue() + "-high flush."
+        elif category == FULL_HOUSE:
+            msg = firstCard.strValue(-1) + "s full."
+        elif category == QUADS:
+            msg = "quad " + firstCard.strValue(-1) + "s."
+        elif category == STRFL:
+            msg = firstCard.strValue() + "-high straight flush."
+        else:
+            msg = "Unknown hand type."
+
+        print(msg)
+
 class Dealer(PokerPerson):
     """A poker dealer.
 
@@ -454,7 +452,7 @@ class Dealer(PokerPerson):
         returns a list containg the cards of the dealt hand.
 """
 
-        return self.sortHand(self.dealCards())
+        return self.processHand(self.dealCards())
 
     def dealCards(self, n = HAND_SIZE):
         """Deal a given number of cards from the deck.
@@ -471,71 +469,11 @@ class Dealer(PokerPerson):
 
         return hand
 
-    def sortHand(self, hand):
+    def processHand(self, hand):
         """Sorts the hand. Prints what hand it is. Then returns the sorted hand."""
 
-        cards = list(hand)      #cards to be sorted/classified
-        foot = 0                #Index of the first unprocessed card
-        head = len(cards) - 1   #Index of the last unprocessed card
-        counter = 0             #To count the number of cards having the same rank as the card at foot
-        pattern = 0             #Look in config.py for an overview of the possible patterns
-
-        #Sort, with aces first and deuces last
-        cards.sort(key = lambda card: card._value, reverse = True)
-
-        #Check for hands containing more than one card of equal rank (pairs, trips, two pair etc.)
-        #The cards will be sorted so paired cards appear before unpaired and trips before pairs (in a full house)
-        while(foot <= head):
-            counter = sum(c.getValue() == cards[foot].getValue() for c in cards)
-            if counter == 1:
-                #Move the card to the back. Move head forward, so the card will not be considered again.
-                #Since all unpaired are treated this way, their order is preserved.
-                cards.append(cards.pop(foot))
-                head -= 1
-            else:
-                if counter == 4:
-                    pattern = QUADS
-                    foot = head + 1     #With quads at the foot, the hand is already sorted, so no need to loop again
-                elif counter == 3:
-                    if pattern == PAIR:
-                        #A pair has already been processed. Since the trips are more interesting, the pair is moved to the end of the list
-                        pattern = FULL_HOUSE
-                        cards.append(cards.pop(0))
-                        cards.append(cards.pop(0))
-                        foot = head + 1     #With a full house, all cards have been sorted, so no need to loop again
-                    else:
-                        pattern = TRIPS
-                        foot += counter     #The trips are in the right place. Move the foot to the first card that doesn't match their rank
-                elif counter == 2:
-                    if pattern == TRIPS:
-                        #The trips have been processed, and the pair is therefore correctly placed
-                        pattern = FULL_HOUSE
-                        foot = head + 1     #With a full house, all cards have been sorted, so no need to loop again
-                    elif pattern == PAIR:
-                        #Since none of the pairs are moved, their order is preserved
-                        pattern = TWO_PAIR
-                        foot = head + 1     #With two pairs, the fifth card will always be in the correct place by now
-                    else:
-                        #The pair is likely to be correctly placed, so move the foot to the first card that doesn't match the rank
-                        pattern = PAIR
-                        foot += counter
-                else:
-                    #It is assumed that there are four suits and no jokers, so the count should never be outside the interval [1,4]
-                    pattern = NO_HAND
-                    foot = head + 1
-                    print("Illegal hand")
-
-        #If no cards were of equal rank, the hand is either a straigh flush, a flush, a straight or a hi-card hand.
-        if(pattern == 0):
-            #Order a wheel (5-high straight) correctly
-            if cards[0].getValue() == 14 and cards[1].getValue() == 5:
-                cards.append(cards.pop(0))
-                
-            #Check for straights and flushes
-            pattern = self.findSequence(cards)
- 
-        self.printHandInfo(pattern, cards[0])
-        return cards
+        cards = self.sortHand(self, hand)
+        return cards[0]
 
     def showDown(self, players, potsize):
         """Awards the pot to the player with the best hand."""
@@ -545,7 +483,7 @@ class Dealer(PokerPerson):
         winners = list()
 
         for player in players:
-            hand = self.sortHand(player.getHand())
+            hand = self.processHand(player.getHand())
             cmpVal = self.cmpHands(hand, bestHand)
 
             if cmpVal > 0:
@@ -620,37 +558,6 @@ class Dealer(PokerPerson):
         for card in self._deck:
             card.printCard()
 
-    def printHandInfo(self, category, firstcard):
-        """Prints info about the hand based on its category, suitedness and most significant card"""
-
-        msg = ""    #Message to be printed about the hand
-
-        if category < 0:
-            #Illegal value
-            msg = "Illegal value for the hand category."
-        elif category == HICARD:
-            msg = "high card " + firstcard.strValue() + "."
-        elif category == PAIR:
-            msg = "a pair of " + firstcard.strValue(-1) + "s."
-        elif category == TWO_PAIR:
-            msg = firstcard.strValue(-1) + "s up."
-        elif category == TRIPS:
-            msg = "trip " + firstcard.strValue(-1) + "s."
-        elif category == STRAIGHT:
-            msg = firstcard.strValue() + "-high straight."
-        elif category == FLUSH:
-            msg = firstcard.strValue() + "-high flush."
-        elif category == FULL_HOUSE:
-            msg = firstcard.strValue(-1) + "s full."
-        elif category == QUADS:
-            msg = "quad " + firstcard.strValue(-1) + "s."
-        elif category == STRFL:
-            msg = firstcard.strValue() + "-high straight flush."
-        else:
-            msg = "Unknown hand type."
-
-        print(msg)
-
     def _createHand(self, template):
         """Method that creates specific hands. Details omitted to avoid unauthorized use."""
 
@@ -682,7 +589,7 @@ class Player(PokerPerson):
         self._type = -1             #0 = loose, 1 = regular, 2 = tight (maybe best to just include this into the strat-list)
         self._strat = list()        #To hold a list that determines the strategy of the player
         self._hand = list()
-        self._sorted = False        #Should only be true if sortHand() has been called since last time the player was dealt something.
+        self._sorted = False        #Should only be true if processHand() has been called since last time the player was dealt something.
         self._pattern = -1          #Category of hand held (see config.py for the range)
         self._rating = 0            #The player's rating of the hand
         self._played = 0            #Number of hands played
@@ -793,195 +700,78 @@ class Player(PokerPerson):
         """Getter for _downs"""
         return self._downs
 
-    def printHandInfo(self):
-        """Prints info about the hand based on its pattern/category and the most significant card."""
-
-        for card in self._hand:
-            card.printCard()
-
-        firstCard = self._hand[0]
-        firstDraw = self._hand[1]
-
-        msg = ""    #Message to be printed about the hand
-
-        if self._pattern < 0:
-            #Illegal value
-            msg = "Illegal value for the hand category."
-        elif self._pattern == HICARD:
-            msg = "high card " + firstCard.strValue() + "."
-        elif self._pattern == BWDRAW:
-            msg = "broadway straight draw."
-        elif self._pattern == STRDRAW:
-            msg = firstDraw.strValue() + " high open-ender."
-        elif self._pattern == FLDRAW:
-            msg = firstDraw.strValue() + " high flush draw."
-        elif self._pattern == STRFLDRAW:
-            msg = firstDraw.strValue() + " high straight flush draw."
-        elif self._pattern <= PAIR:
-            msg = "a pair of " + firstCard.strValue(-1) + "s"
-            if firstCard.getValue() > firstDraw.getValue():
-                hiPair = True
-            else:
-                hiPair = False
-                
-            if self._pattern == PBWDRAW:
-                msg += " with a broadway straight draw."
-            elif self._pattern == PSTRDRAW:
-                msg += " with a(n) "
-                if hiPair:
-                    msg += firstCard.strValue()
-                else:
-                    msg += firstDraw.strValue()
-                msg += " high open-ender."
-            elif self._pattern == PFLDRAW:
-                msg += " with a(n) "
-                if hiPair:
-                    msg += firstCard.strValue()
-                else:
-                    msg += firstDraw.strValue()
-                msg += " high flush draw."
-            elif self._pattern == PSTRFLDRAW:
-                msg += " with a(n) "
-                if hiPair:
-                    msg += firstCard.strValue()
-                else:
-                    msg += firstDraw.strValue()
-                msg += " high straight flush draw."
-            elif self._pattern == PAIR:
-                msg += "."
-        elif self._pattern == TWO_PAIR:
-            msg = firstCard.strValue(-1) + "s up."
-        elif self._pattern == TRIPS:
-            msg = "trip " + firstCard.strValue(-1) + "s."
-        elif self._pattern == STRAIGHT:
-            msg = firstCard.strValue() + "-high straight."
-        elif self._pattern == FLUSH:
-            msg = firstCard.strValue() + "-high flush."
-        elif self._pattern == FULL_HOUSE:
-            msg = firstCard.strValue(-1) + "s full."
-        elif self._pattern == QUADS:
-            msg = "quad " + firstCard.strValue(-1) + "s."
-        elif self._pattern == STRFL:
-            msg = firstCard.strValue() + "-high straight flush."
-        else:
-            msg = "Unknown hand type."
-
-        print(msg)
-
     def moveIn(self):
         """Bet the maximum amount on a hand. Used for testing. The finished simulator should be based on a limit structure."""
 
         self.chipUp(MIN_STAKE * -6)     #2 big bets predraw, 4 postdraw
 
-    def sortHand(self):
-        """Sorts the hand. Prints what hand it is. Then returns the sorted hand."""
+    def processHand(self):
+        """Sorts the hand. Prints what hand it is. Updates _pattern and _sorted accordingly."""
 
         if self._sorted:
             return #The hand is already sorted
 
-        cards = list(self._hand)    #cards to be sorted/classified
-        foot = 0                    #Index of the first unprocessed card
-        head = len(cards) - 1       #Index of the last unprocessed card
-        counter = 0                 #To count the number of cards having the same rank as the card at foot
-        pattern = HICARD            #Look in config.py for an overview of the possible patterns
+        hand = self.sortHand(self._hand)
 
-        #Sort, with aces first and deuces last
-        cards.sort(key = lambda card: card._value, reverse = True)
-
-        #Check for hands containing more than one card of equal rank (pairs, trips, two pair etc.)
-        #The cards will be sorted so paired cards appear before unpaired and trips before pairs (in a full house)
-        while(foot <= head):
-            counter = sum(c.getValue() == cards[foot].getValue() for c in cards)
-            if counter == 1:
-                #Move the card to the back. Move head forward, so the card will not be considered again.
-                #Since all unpaired are treated this way, their order is preserved.
-                cards.append(cards.pop(foot))
-                head -= 1
-            else:
-                if counter == 4:
-                    pattern = QUADS
-                    foot = head + 1     #With quads at the foot, the hand is already sorted, so no need to loop again
-                elif counter == 3:
-                    if pattern == PAIR:
-                        #A pair has already been processed. Since the trips are more interesting, the pair is moved to the end of the list
-                        pattern = FULL_HOUSE
-                        cards.append(cards.pop(0))
-                        cards.append(cards.pop(0))
-                        foot = head + 1     #With a full house, all cards have been sorted, so no need to loop again
-                    else:
-                        pattern = TRIPS
-                        foot += counter     #The trips are in the right place. Move the foot to the first card that doesn't match their rank
-                elif counter == 2:
-                    if pattern == TRIPS:
-                        #The trips have been processed, and the pair is therefore correctly placed
-                        pattern = FULL_HOUSE
-                        foot = head + 1     #With a full house, all cards have been sorted, so no need to loop again
-                    elif pattern == PAIR:
-                        #Since none of the pairs are moved, their order is preserved
-                        pattern = TWO_PAIR
-                        foot = head + 1     #With two pairs, the fifth card will always be in the correct place by now
-                    else:
-                        #The pair is likely to be correctly placed, so move the foot to the first card that doesn't match the rank
-                        pattern = PAIR
-                        foot += counter
-                else:
-                    #It is assumed that there are four suits and no jokers, so the count should never be outside the interval [1,4]
-                    pattern = NO_HAND
-                    foot = head + 1
-                    print("Illegal hand")
-
-        #If no cards were of equal rank, the hand is either a straigh flush, a flush, a straight or a hi-card hand.
-        if(pattern == 0):
-            #Order a wheel (5-high straight) correctly
-            if cards[0].getValue() == 14 and cards[1].getValue() == 5:
-                cards.append(cards.pop(0))
-                
-            #Check for straights and flushes
-            pattern = self.findSequence(cards)
-
-        #If the hand contained a draw, sort it so the first card in the hand is not part of the draw
-        if pattern == UNPSF:
-            temp = cards.pop(1)
-            cards.insert(0, temp)
-            pattern = PSTRFLDRAW
-        elif pattern == UNPFL:
-            temp = cards.pop(1)
-            cards.insert(0, temp)
-            pattern = PFLDRAW
-        elif pattern == UNSTRFL:
-            temp = cards.pop(-1)
-            cards.insert(0, temp)
-            pattern = STRFLDRAW
-        elif pattern == UNFL:
-            suit = cards[0].getSuit()
-            for i in range(1, len(cards)):
-                if cards[i].getSuit() != suit:
-                    temp = cards.pop(i)
-                    cards.insert(0, temp)
-                    pattern = FLDRAW
-                    break
-        elif pattern == UNSTR:
-            temp = cards.pop(-1)
-            cards.insert(0, temp)
-            pattern = STRDRAW
-
-        self._pattern = pattern
+        self._hand = hand[0]
+        self._pattern = hand[1]
         self._sorted = True
-        self.printHandInfo()
-        self._hand = cards
 
     def rateHand(self):
         """Give a rating to the hand based on global constants. If the categories in the config file is changed, this function needs to be changed too."""
 
+        firstRank = self._hand[0].getValue
+
         if self._pattern > FULL_HOUSE:
             self._rating = KINGS_FULL
         elif self._pattern == FULL_HOUSE:
-            if self._hand[0].getValue() >= 13:
+            if firstRank >= 13:
                 self._rating = KINGS_FULL
-            elif self._hand[0].getValue() >= 10:
+            elif firstRank >= 10:
                 self._rating = T_FULL
-            elif self._hand[0].getValue() >= 6:
+            elif firstRank >= 6:
                 self._rating = F_FULL
+            else:
+                self._rating = A_FLUSH
+        elif self._pattern == FLUSH:
+            if firstRank >= 14:
+                self._rating = A_FLUSH
+            elif firstRank >= 11:
+                self._rating = J_FLUSH
+            else:
+                self._rating = A_STRAIGHT
+        elif self._pattern == STRAIGHT:
+            if firstRank >= 14:
+                self._rating = A_STRAIGHT
+            elif firstRank >= 10:
+                self._rating = T_STRAIGHT
+            else:
+                self._rating = E_STRAIGHT
+        elif self._pattern == TRIPS:
+            if firstRank >= 14:
+                self._rating == TRIP_A
+            elif firstRank >= 12:
+                self._rating == TRIP_Q
+            elif firstRank >= 9:
+                self._rating == TRIP_I
+            else:
+                self._rating == TRIP_B
+        elif self._pattern == TWO_PAIR:
+            if firstRank >= 14:
+                self._rating = A_UP
+            elif firstRank >= 12:
+                self._rating = Q_UP
+            else:
+                self._rating = C_UP
+        elif self._pattern == PAIR:
+            if firstRank >= 14:
+                self._rating = P_A
+            else:
+                self._rating = P_A + P_DELTA * (14 - firstRank)
+        else:
+            self._rating = TRASH
+
+        #The rating should be adjusted based on the strenth of the hicard and possible draws.
 
     def actPre(self, wagers):
         """Decide on waging before the draw. Dependent on exact ordering of the player's strat list."""
