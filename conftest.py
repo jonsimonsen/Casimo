@@ -1,6 +1,6 @@
 """Test hand templates for Casimo"""
 
-#sorted
+#Sorted
 
 ##STRFL
 RSTRFLC     = [12, 11, 10,  9,  8]
@@ -75,9 +75,10 @@ HIAOL       = [51, 43, 41, 40, 26]
 HIGON       = [44, 42, 41, 40, 26]
 THI = [HIAON, HIAOL, HIGON]
 
+###All
 TSORT = [TSTRFL, TQFH, TFL, TSTR, TTRIP, TPAIRS, TPAIR, THI]
 
-#unsorted
+#Unsorted
 
 ##STRFL
 URSTRFL     = [11,  9,  8,  9,  8]
@@ -107,30 +108,72 @@ UESTR       = [ 0,  0,  0,  0, 47] #Ace 4 spots sooner bc of popping
 UTSTR = [URSTR, UKSTR, UESTR]
 
 ##Trips
-#TRIPA       = [51, 38, 25, 24, 23]
-#TRIPK       = [50, 37, 24, 12, 10]
-#TRIPB       = [39, 26, 13, 12, 11]
-#TTRIP = [TRIPA, TRIPK, TRIPB]
+UTRIPA       = [38, 38, 38, 25, 47] #A32
+UTRIPK       = [24, 35, 49, 35, 47] #KAQ
+UTRIPB       = [39, 11, 11, 11, 23] #2AK
+UTTRIP = [UTRIPA, UTRIPK, UTRIPB]
 
 ##Two Pairs
-#AUPK        = [51, 38, 24, 11,  0]
-#AUPB        = [51, 38, 26, 13, 11]
-#KUPB        = [50, 37, 26, 13, 10]
-#CUPB        = [40, 27, 26, 13, 12]
-#TPAIRS = [AUPK, AUPB, KUPB, CUPB]
+UAUPK        = [51, 38, 11, 23,  0] #AK2
+UAUPB        = [51, 13, 25, 11, 35] #A2K
+UKUPB        = [13, 48, 36, 25, 46] #K2Q
+UCUPB        = [51, 13, 13, 24, 24] #32A
+UTPAIRS = [UAUPK, UAUPB, UKUPB, UCUPB]
 
 ##Pair
-#ACESON      = [51, 38, 37, 36, 35]
-#KINGSON     = [50, 37, 25, 23, 22]
-#DUCKSON     = [39, 26, 25, 24, 23]
-#DUCKSOL     = [39, 26, 16, 15, 14]
-#TREYSOL     = [40, 27, 16, 15, 13]
-#TPAIR = [ACESON, KINGSON, DUCKSON, DUCKSOL, TREYSOL]
+UACESON      = [37, 36, 49, 35, 35] #AKQJ
+UKINGSON     = [37, 22, 23, 22, 22] #KAQJ
+UDUCKSON     = [26, 25, 23, 36, 23] #2AKQ
+UDUCKSOL     = [15, 15, 24, 36, 14] #2543
+UTREYSOL     = [27, 13, 15, 37, 14] #3542
+UTPAIR = [UACESON, UKINGSON, UDUCKSON, UDUCKSOL, UTREYSOL]
 
 ##Hicard
-#HIAON       = [51, 50, 49, 48, 33]
-#HIAOL       = [51, 43, 41, 40, 26]
-#HIGON       = [44, 42, 41, 40, 26]
-#THI = [HIAON, HIAOL, HIGON]
+UHIAON       = [49, 49, 33, 48, 47]
+UHIAOL       = [26, 40, 39, 48, 40]
+UHIGON       = [44, 40, 26, 40, 39]
+UTHI = [UHIAON, UHIAOL, UHIGON]
 
-TUNSORT =[UTSTRFL, UTQFH, UTFL, UTSTR]
+###All
+TUNSORT =[UTSTRFL, UTQFH, UTFL, UTSTR, UTTRIP, UTPAIRS, UTPAIR, UTHI]
+
+#Draws
+
+##Paired
+
+###STRFL
+HPOESTRFL   = [50, 37, 36, 35, 34]
+LPOESTRFL   = [42, 41, 40, 39, 26]
+HPBWSTRFL   = [51, 50, 49, 48, 38]
+HPLBWSTRFL  = [51, 49, 48, 47, 38]
+LPBWSTRFL   = [51, 50, 49, 48, 45]
+LPLBWSTRFL  = [51, 50, 49, 47, 44]
+HPWSTRFL    = [51, 12,  2,  1,  0]
+HPHWSTRFL   = [51, 12,  3,  2,  1]
+LPWSTRFL    = [13, 12,  2,  1,  0]
+LPHWSTRFL   = [13, 12,  3,  1,  0]
+PTSTRFL = [HPOESTRFL, LPOESTRFL, HPBWSTRFL, HPLBWSTRFL, LPBWSTRFL, LPLBWSTRFL, HPWSTRFL, HPHWSTRFL, LPWSTRFL, LPHWSTRFL]
+
+###FLUSH
+HPFL        = [51, 38, 37, 36, 33]
+LPFL        = [51, 50, 49, 46, 33]
+PTFL = [HPFL, LPFL]
+
+###STRAIGHT
+HPOESTR     = [50, 49, 37, 35, 34]
+LPOESTR     = [42, 41, 39, 27, 26]
+HPBW        = [51, 50, 38, 36, 35]
+HPLBW       = [51, 49, 38, 35, 34]
+LPBW        = [51, 50, 48, 36, 35]
+LPLBW       = [51, 50, 47, 36, 34]
+HPW         = [51, 39, 12,  2,  1]
+HPHW        = [51, 42, 12,  2,  1]
+LPW         = [14, 13, 12,  2,  0]
+LPHW        = [14, 13, 12,  3,  0]
+PTSTR = [HPOESTR, LPOESTR, HPBW, HPLBW, LPBW, LPLBW, HPW, HPHW, LPW, LPHW]
+
+##Unpaired
+
+###STRFL
+
+####fake...
