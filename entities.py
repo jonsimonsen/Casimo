@@ -175,8 +175,13 @@ class PokerPerson(object):
                 cards.insert(0, temp)
                 pattern = PFLDRAW
             elif pattern == UNSTRFL:
-                temp = cards.pop(-1)
-                cards.insert(0, temp)
+                if cards[0].getValue() == 14 and cards[2].getValue() <= 5: #To rearrange wheel flush draws
+                    temp = cards.pop(0)
+                    cards.append(temp)
+                else:
+                    temp = cards.pop(-1)
+                    cards.insert(0, temp)
+
                 pattern = STRFLDRAW
             elif pattern == UNFL:
                 suit = cards[0].getSuit()
@@ -297,7 +302,8 @@ class PokerPerson(object):
                     if flushing:
                         if hand[0].getSuit() != hand[1].getSuit() and hand[0].getSuit() != hand[4].getSuit():
                             return STRFLDRAW
-                        elif hand[4].getSuit() != hand[0].getSuit() and firstRank - hand[1].getValue() == 2:
+                        elif ((hand[4].getSuit() != hand[0].getSuit() and firstRank - hand[1].getValue() == 2) or
+                              (firstRank == 14 and hand[1].getValue() == 6 and hand[1].getSuit() != hand[0].getSuit())):
                             return UNSTRFL
                         else:
                             return UNFL
@@ -329,7 +335,8 @@ class PokerPerson(object):
                         return BWDRAW
                 #Flush draw with or without gutshot?
                 if flushing:
-                    if firstRank - fourthRank == 4 and hand[4].getSuit() != hand[0].getSuit() and hand[4].getSuit() != hand[3].getSuit():
+                    if ((firstRank - fourthRank == 4 and hand[4].getSuit() != hand[0].getSuit() and hand[4].getSuit() != hand[3].getSuit()) or
+                        (firstRank == 14 and hand[2].getValue() <= 5 and hand[0].getSuit() == hand[4].getSuit() and hand[1].getSuit() != hand[0].getSuit())):
                         return UNSTRFL
                     if hand[1].getValue() - hand[4].getValue() == 4 and hand[0].getSuit() != hand[1].getSuit() and hand[0].getSuit() != hand[4].getSuit():
                         return STRFLDRAW

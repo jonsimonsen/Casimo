@@ -201,9 +201,37 @@ KGSFL       = [50, 49, 47, 46, 31]
 FGSFL       = [43, 42, 41, 39, 32]
 WFL         = [51, 41, 40, 39, 30]
 HWFL        = [51, 42, 41, 40, 31]
+
 DSTRFL = [HOESTRFL, LOESTRFL, BWFL, LBWFL, KGSFL, FGSFL, WFL, HWFL]
 
 ###STR and FL
-#TODO...
+HOEFL       = [50, 49, 48, 45, 34]
+HOELFL      = [51, 49, 48, 46, 34]
+LOEFL       = [44, 41, 40, 39, 29]
+LOEHFL      = [51, 43, 41, 40, 29]
+BWPFL       = [51, 50, 49, 46, 35]
+LBWPFL      = [49, 48, 47, 44, 38]
+WPFL        = [44, 41, 40, 39, 38]
+HWPFL       = [51, 44, 42, 41, 27]
 
-TDSORT = [DSTRFL]
+DSTRPFL = [HOEFL, HOELFL, LOEFL, LOEHFL, BWPFL, LBWPFL, WPFL, HWPFL]
+
+###FLUSH
+HFL = [51, 50, 49, 46, 32]
+KFL = [50, 49, 46, 45, 38]
+CFL = [45, 44, 41, 40, 26]
+BFL = [44, 41, 40, 39, 32]
+
+DFLUSH = [HFL, KFL, CFL, BFL]
+
+###STRAIGHT
+HSTR    = [50, 49, 48, 34, 31]
+LSTR    = [42, 41, 40, 32, 26]
+BW      = [51, 50, 49, 35, 32]
+LBW     = [49, 48, 47, 38, 31]
+WHEEL   = [51, 44, 28, 27, 26]
+HWHEEL  = [42, 41, 40, 38, 32]
+
+DSTR = [HSTR, LSTR, BW, LBW, WHEEL, HWHEEL]
+
+TDSORT = [DSTRFL, DSTRPFL, DFLUSH, DSTR]
