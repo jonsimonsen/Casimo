@@ -191,12 +191,15 @@ class PokerPerson(object):
                 cards.insert(0, temp)
                 pattern = STRDRAW
 
+        #If there's a wheel flush draw, put the ace in the last position (if it's not paired)
+        if pattern == PSTRFLDRAW:
+            if cards[2].getValue() == 14 and cards[0].getValue() <= 5:
+                temp = cards.pop(2)
+                cards.append(temp)
+
         if pattern > HICARD and pattern < PAIR:
             if pattern >= PBWDRAW:
-                if cards[1].getValue() > cards[2].getValue:
-                    hiDraw = cards[1]
-                else:
-                    hiDraw = cards[2]
+                hiDraw = cards[2]
             else:
                 hiDraw = cards[1]
 
@@ -204,10 +207,7 @@ class PokerPerson(object):
         for card in cards:
             card.printCard()
 
-        #self._pattern = pattern
-        #self._sorted = True
         self.printHandInfo(pattern, cards[0], hiDraw)
-        #self._hand = cards
         return (cards, pattern)
 
     def findSequence(self, hand, drawing = False):
@@ -240,8 +240,8 @@ class PokerPerson(object):
             #Test for flush draws
             if suitCount == 4:
                 flushing = True
-            elif sum(card.getSuit() == hand[1].getSuit() for card in hand) == 4:
                 swap = True
+            elif sum(card.getSuit() == hand[1].getSuit() for card in hand) == 4:
                 flushing = True
             else:
                 flushing = False
@@ -274,7 +274,9 @@ class PokerPerson(object):
                 if flushing:
                     if((thirdRank == fifthRank + 2 and (firstRank == thirdRank + 2 or firstRank == fifthRank - 2)) or
                        (thirdRank == fifthRank + 3 and (firstRank == thirdRank + 1 or firstRank == fifthRank - 1)) or
-                       (thirdRank == fifthRank + 4 and (firstRank < thirdRank and firstRank > fifthRank))):
+                       (thirdRank == fifthRank + 4 and (firstRank < thirdRank and firstRank > fifthRank)) or
+                       (thirdRank == 14 and firstRank <= 5 and hand[3].getValue() <= 5) or
+                       (firstRank == 14 and thirdRank <= 5)):
                         if swap:
                             return UNPSF
                         else:
@@ -317,7 +319,7 @@ class PokerPerson(object):
                 #Broadway? (must check open-ended first, since a hand can both be open ended and have a broadway draw)
                 if firstRank == 14 and (fourthRank >= 10):
                     if flushing:
-                        if hand[4].getSuit() != hand[0].getSuit() and hand[4].getSuit() != hand[3].getsuit():
+                        if hand[4].getSuit() != hand[0].getSuit() and hand[4].getSuit() != hand[3].getSuit():
                             return UNSTRFL
                         elif hand[0].getSuit() != hand[4].getSuit():
                             return FLDRAW
@@ -359,8 +361,8 @@ class PokerPerson(object):
             msg = firstDraw.strValue() + " high straight flush draw."
         elif category <= PAIR:
             msg = "a pair of " + firstCard.strValue(-1) + "s"
-            if category < PAIR and firstCard.getValue() > firstDraw.getValue():
-                hiPair = True
+            if category < PAIR and firstCard.getValue() > firstDraw.getValue() and (firstCard.getValue() < 14 or firstDraw.getValue() > 5):
+                hiPair = True #The expression in the parantheses are to avoid that wheel draws are considered ace-high.
             else:
                 hiPair = False
                 
@@ -472,7 +474,7 @@ class Dealer(PokerPerson):
     def processHand(self, hand):
         """Sorts the hand. Prints what hand it is. Then returns the sorted hand."""
 
-        cards = self.sortHand(self, hand)
+        cards = self.sortHand(hand)
         return cards[0]
 
     def showDown(self, players, potsize):
@@ -575,7 +577,7 @@ class Dealer(PokerPerson):
             cards.append(self._deck.pop(ind))
 
         #Sort the hand and display what kind of hand it is. Then return it.
-        return self.sortHand(cards)
+        return self.processHand(cards)
 
 class Player(PokerPerson):
     """A poker player"""
@@ -656,11 +658,12 @@ class Player(PokerPerson):
         return self._hand
 
     def setHand(self, hand):
-        """Give a hand to the player. The player will then call sortHand()."""
+        """Give a hand to the player. The player will then call processHand()."""
 
         self._hand = hand
+        self._sorted = False
         self._played += 1   #If using this when drawing cards, this line must be made conditional
-        self._sortHand()
+        self.processHand()
 
     def getRating(self):
         """Return the player's rating of the hand."""
@@ -711,7 +714,7 @@ class Player(PokerPerson):
         if self._sorted:
             return #The hand is already sorted
 
-        hand = self.sortHand(self._hand)
+        hand = self.sortHand(self._hand, True)
 
         self._hand = hand[0]
         self._pattern = hand[1]
