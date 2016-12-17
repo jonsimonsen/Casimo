@@ -202,6 +202,11 @@ class PokerPerson(object):
                 temp = cards.pop(2)
                 cards.append(temp)
 
+        #If there's a broadway draw, put the small card in the first position
+        if pattern == BWDRAW:
+            temp = cards.pop(-1)
+            cards.insert(0, temp)
+
         if pattern > HICARD and pattern < PAIR:
             if pattern >= PBWDRAW:
                 hiDraw = cards[2]
@@ -665,12 +670,13 @@ class Player(PokerPerson):
         return self._hand
 
     def setHand(self, hand):
-        """Give a hand to the player. The player will then call processHand()."""
+        """Give a hand to the player. The player will then process the hand."""
 
-        self._hand = hand
         self._sorted = False
+        cards = self.processHand(hand)
+        if cards is not None:
+            self._hand = cards
         self._played += 1   #If using this when drawing cards, this line must be made conditional
-        self.processHand()
 
     def getRating(self):
         """Return the player's rating of the hand."""
@@ -715,22 +721,22 @@ class Player(PokerPerson):
 
         self.chipUp(MIN_STAKE * -6)     #2 big bets predraw, 4 postdraw
 
-    def processHand(self):
+    def processHand(self, hand):
         """Sorts the hand. Prints what hand it is. Updates _pattern and _sorted accordingly."""
 
         if self._sorted:
-            return #The hand is already sorted
+            return None #The hand is already sorted
 
-        hand = self.sortHand(self._hand, True)
+        cards = self.sortHand(hand, True)
 
-        self._hand = hand[0]
-        self._pattern = hand[1]
+        self._pattern = cards[1]
         self._sorted = True
+        return cards[0]
 
     def rateHand(self):
         """Give a rating to the hand based on global constants. If the categories in the config file is changed, this function needs to be changed too."""
 
-        firstRank = self._hand[0].getValue
+        firstRank = self._hand[0].getValue()
 
         if self._pattern > FULL_HOUSE:
             self._rating = KINGS_FULL
@@ -778,10 +784,42 @@ class Player(PokerPerson):
                 self._rating = P_A
             else:
                 self._rating = P_A + P_DELTA * (14 - firstRank)
+        elif self._pattern >= PBWDRAW:
+            pair = P_A + P_DELTA * (14 - firstRank)
+            if self._pattern == PSTRFLDRAW:
+                self._rating = max(pair, SFDRAW)
+            elif self._pattern == PFLDRAW or self._pattern == PSTRDRAW:
+                self._rating = max(pair, SEQDRAW)
+            elif self._rating == PBRDRAW:
+                self._rating = pair #The pair will always be worth more than the broadway draw
+            else:
+                self._rating = TRASH #This should never happen, since there should not be any other categories within this elseif
+        elif self._pattern > HICARD:
+            if self._pattern == STRFLDRAW:
+                self._rating = SFDRAW
+            elif self._pattern == FLDRAW or self._pattern == STRDRAW:
+                self._rating = SEQDRAW
+            elif self._pattern == BWDRAW:
+                self._rating = BRDRAW
+            else:
+                self._rating = TRASH #This should never happen, since there should not be any other categories within this elseif
+        elif firstRank == 14:
+            secondRank = self._hand[1].getValue()
+            
+            if secondRank == 13:
+                self._rating = AK_HI
+            elif secondRank == 12:
+                self._rating = AQ_HI
+            elif secondRank == 11:
+                self._rating = AJ_HI
+            elif secondRank == 10:
+                self._rating = AT_HI
+            else:
+                self._rating = TRASH
+        elif firstRank == 13 and self._hand[1].getValue() == 12:
+            self._rating = AT_HI
         else:
             self._rating = TRASH
-
-        #The rating should be adjusted based on the strenth of the hicard and possible draws.
 
     def actPre(self, wagers):
         """Decide on waging before the draw. Dependent on exact ordering of the player's strat list."""

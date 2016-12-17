@@ -8,31 +8,56 @@ callStation = Player()
 
 #test cases
 
-print('\nSorted:\n')
+print('Sorted')
+print('------\n')
 
 for subgroup in TSORT:
     for case in subgroup:
-        cardRack._createHand(case)
+        if isinstance(case, str):
+            print(case)
+        else:
+            cardRack._createHand(case)
+        print('')
 
-print('\nUnsorted:\n')
+print('Unsorted')
+print('--------\n')
 
 for unsubgroup in TUNSORT:
     for uncase in unsubgroup:
-        cardRack._createHand(uncase)
+        if isinstance(uncase, str):
+            print(uncase)
+        else:
+            cardRack._createHand(uncase)
+        print('')
 
-print('\nPair and draw:\n')
+print('Pair and draw')
+print('-------------\n')
 
 for pdgroup in TPSORT:
     for pdcase in pdgroup:
-        callStation.setHand(cardRack._createHand(pdcase))
+        if isinstance(pdcase, str):
+            print(pdcase)
+        else:
+            callStation.setHand(cardRack._createHand(pdcase))
+        print('')
 
-print('\nFake draws:\n')
+print('Fake draws')
+print('----------\n')
 
-for fakes in FSTRFL:
-    callStation.setHand(cardRack._createHand(fakes))
+for fake in FSTRFL:
+    if isinstance(fake, str):
+        print(fake)
+    else:
+        callStation.setHand(cardRack._createHand(fake))
+    print('')
 
-print('\nDrawing hands:\n')
+print('Drawing hands')
+print('-------------\n')
 
 for dgroup in TDSORT:
     for dcase in dgroup:
-        callStation.setHand(cardRack._createHand(dcase))
+        if isinstance(dcase, str):
+            print(dcase)
+        else:
+            callStation.setHand(cardRack._createHand(dcase))
+        print('')

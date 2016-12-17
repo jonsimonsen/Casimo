@@ -1,5 +1,17 @@
 """Test hand templates for Casimo"""
 
+#Strings
+SFSTR = "Straight flush:"
+QFSTR = "Quads/Full house:"
+FLSTR = "Flush:"
+STRSTR = "Straight:"
+TRSTR = "Trips:"
+TPSTR = "Two pair:"
+PRSTR = "Pair:"
+HISTR = "Hi card:"
+FSFSTR = "Fake straight flush:"
+SPFSTR = "Straight and flush:"
+
 #Sorted
 
 ##STRFL
@@ -11,7 +23,7 @@ KSTRFL      = [50, 49, 48, 47, 46]
 FSTRFL      = [43, 42, 41, 40, 39]
 ESTRFLS     = [42, 41, 40, 39, 47] #Ace 4 spots sooner bc of popping
 ESTRFLC     = [ 3,  2,  1,  0,  8]
-TSTRFL = [RSTRFLC, RSTRFLD, RSTRFLH, RSTRFLS, KSTRFL, FSTRFL, ESTRFLS, ESTRFLC]
+TSTRFL = [SFSTR, RSTRFLC, RSTRFLD, RSTRFLH, RSTRFLS, KSTRFL, FSTRFL, ESTRFLS, ESTRFLC]
 
 ##Quads/FH
 QUADA       = [51, 38, 25, 12, 11]
@@ -20,7 +32,7 @@ QUADB       = [39, 26, 13,  0, 11]
 FULLA       = [51, 38, 25, 24, 11]
 FULLK       = [50, 37, 24, 24, 12]
 FULLB       = [39, 26, 13, 24, 12]
-TQFH = [QUADA, QUADK, QUADB, FULLA, FULLK, FULLB]
+TQFH = [QFSTR, QUADA, QUADK, QUADB, FULLA, FULLK, FULLB]
 
 ##Flushes
 RFLC        = [12, 11, 10,  9,  7]
@@ -38,7 +50,7 @@ WFLX        = [51, 43, 42, 40, 39]
 WFLY        = [51, 43, 42, 41, 39]
 WFLZ        = [51, 44, 42, 41, 40]
 WFLZO       = [51, 43, 42, 41, 40]
-TFL = [RFLC, RFLD, RFLH, RFLS, LFLC, LFLS, RFLX, RFLY, RFLZ, RFLZO,
+TFL = [FLSTR, RFLC, RFLD, RFLH, RFLS, LFLC, LFLS, RFLX, RFLY, RFLZ, RFLZO,
        WFL, WFLX, WFLY, WFLZ, WFLZO]
 
 ##Straights
@@ -46,20 +58,20 @@ RSTR        = [25, 11, 10,  9,  8]
 KSTR        = [24, 10,  9,  8,  7]
 FSTR        = [17,  3,  2,  1,  0]
 ESTR        = [ 3,  2,  1,  0, 21] #Ace 4 spots sooner bc of popping
-TSTR = [RSTR, KSTR, FSTR, ESTR]
+TSTR = [STRSTR, RSTR, KSTR, FSTR, ESTR]
 
 ##Trips
 TRIPA       = [51, 38, 25, 24, 23]
 TRIPK       = [50, 37, 24, 12, 10]
 TRIPB       = [39, 26, 13, 12, 11]
-TTRIP = [TRIPA, TRIPK, TRIPB]
+TTRIP = [TRSTR, TRIPA, TRIPK, TRIPB]
 
 ##Two Pairs
 AUPK        = [51, 38, 24, 11,  0]
 AUPB        = [51, 38, 26, 13, 11]
 KUPB        = [50, 37, 26, 13, 10]
 CUPB        = [40, 27, 26, 13, 12]
-TPAIRS = [AUPK, AUPB, KUPB, CUPB]
+TPAIRS = [TPSTR, AUPK, AUPB, KUPB, CUPB]
 
 ##Pair
 ACESON      = [51, 38, 37, 36, 35]
@@ -67,13 +79,13 @@ KINGSON     = [50, 37, 25, 23, 22]
 DUCKSON     = [39, 26, 25, 24, 23]
 DUCKSOL     = [39, 26, 16, 15, 14]
 TREYSOL     = [40, 27, 16, 15, 13]
-TPAIR = [ACESON, KINGSON, DUCKSON, DUCKSOL, TREYSOL]
+TPAIR = [PRSTR, ACESON, KINGSON, DUCKSON, DUCKSOL, TREYSOL]
 
 ##Hicard
 HIAON       = [51, 50, 49, 48, 33]
 HIAOL       = [51, 43, 41, 40, 26]
 HIGON       = [44, 42, 41, 40, 26]
-THI = [HIAON, HIAOL, HIGON]
+THI = [HISTR, HIAON, HIAOL, HIGON]
 
 ###All
 TSORT = [TSTRFL, TQFH, TFL, TSTR, TTRIP, TPAIRS, TPAIR, THI]
@@ -84,7 +96,7 @@ TSORT = [TSTRFL, TQFH, TFL, TSTR, TTRIP, TPAIRS, TPAIR, THI]
 URSTRFL     = [11,  9,  8,  9,  8]
 UKSTRFL     = [50, 46, 46, 46, 46]
 UESTRFL     = [39, 39, 40, 39, 39] #Ace 4 spots sooner bc of popping
-UTSTRFL = [URSTRFL, UKSTRFL, UESTRFL]
+UTSTRFL = [SFSTR, URSTRFL, UKSTRFL, UESTRFL]
 
 ##Quads/FH
 UQUADA      = [51, 38, 25, 36, 12] #AK
@@ -93,32 +105,32 @@ UQUADB      = [26, 13, 24,  0, 35] #2A
 UFULLA      = [24, 24, 36, 48, 11] #AK
 UFULLK      = [50, 37, 24, 12, 35] #KA
 UFULLB      = [13, 50, 25, 24, 36] #2A
-UTQFH = [UQUADA, UQUADK, UQUADB, UFULLA, UFULLK, UFULLB]
+UTQFH = [QFSTR, UQUADA, UQUADK, UQUADB, UFULLA, UFULLK, UFULLB]
 
 ##Flushes
 URFL        = [46, 47, 48, 47, 47]
 ULFL        = [ 5,  3,  2,  0,  0]
 UWFL        = [43, 40, 49, 40, 39]
-UTFL = [URFL, ULFL, UWFL]
+UTFL = [FLSTR, URFL, ULFL, UWFL]
 
 ##Straights
 URSTR       = [11, 10,  9,  8, 21]
 UKSTR       = [23, 21, 11, 20, 19]
 UESTR       = [ 0,  0,  0,  0, 47] #Ace 4 spots sooner bc of popping
-UTSTR = [URSTR, UKSTR, UESTR]
+UTSTR = [STRSTR, URSTR, UKSTR, UESTR]
 
 ##Trips
 UTRIPA       = [38, 38, 38, 25, 47] #A32
 UTRIPK       = [24, 35, 49, 35, 47] #KAQ
 UTRIPB       = [39, 11, 11, 11, 23] #2AK
-UTTRIP = [UTRIPA, UTRIPK, UTRIPB]
+UTTRIP = [TRSTR, UTRIPA, UTRIPK, UTRIPB]
 
 ##Two Pairs
 UAUPK        = [51, 38, 11, 23,  0] #AK2
 UAUPB        = [51, 13, 25, 11, 35] #A2K
 UKUPB        = [13, 48, 36, 25, 46] #K2Q
 UCUPB        = [51, 13, 13, 24, 24] #32A
-UTPAIRS = [UAUPK, UAUPB, UKUPB, UCUPB]
+UTPAIRS = [TPSTR, UAUPK, UAUPB, UKUPB, UCUPB]
 
 ##Pair
 UACESON      = [37, 36, 49, 35, 35] #AKQJ
@@ -126,13 +138,13 @@ UKINGSON     = [37, 22, 23, 22, 22] #KAQJ
 UDUCKSON     = [26, 25, 23, 36, 23] #2AKQ
 UDUCKSOL     = [15, 15, 24, 36, 14] #2543
 UTREYSOL     = [27, 13, 15, 37, 14] #3542
-UTPAIR = [UACESON, UKINGSON, UDUCKSON, UDUCKSOL, UTREYSOL]
+UTPAIR = [PRSTR, UACESON, UKINGSON, UDUCKSON, UDUCKSOL, UTREYSOL]
 
 ##Hicard
 UHIAON       = [49, 49, 33, 48, 47]
 UHIAOL       = [26, 40, 39, 48, 40]
 UHIGON       = [44, 40, 26, 40, 39]
-UTHI = [UHIAON, UHIAOL, UHIGON]
+UTHI = [HISTR, UHIAON, UHIAOL, UHIGON]
 
 ###All
 TUNSORT =[UTSTRFL, UTQFH, UTFL, UTSTR, UTTRIP, UTPAIRS, UTPAIR, UTHI]
@@ -152,13 +164,13 @@ HPWSTRFL    = [51, 12,  2,  1,  0]
 HPHWSTRFL   = [51, 12,  3,  2,  1]
 LPWSTRFL    = [13, 12,  2,  1,  0]
 LPHWSTRFL   = [13, 12,  3,  1,  0]
-PTSTRFL = [HPOESTRFL, LPOESTRFL, HPBWSTRFL, HPLBWSTRFL, LPBWSTRFL, LPLBWSTRFL,
+PTSTRFL = [SFSTR, HPOESTRFL, LPOESTRFL, HPBWSTRFL, HPLBWSTRFL, LPBWSTRFL, LPLBWSTRFL,
            HPWSTRFL, HPHWSTRFL, LPWSTRFL, LPHWSTRFL]
 
 ###FLUSH
 HPFL        = [51, 38, 37, 36, 33]
 LPFL        = [51, 50, 49, 46, 33]
-PTFL = [HPFL, LPFL]
+PTFL = [FLSTR, HPFL, LPFL]
 
 ###STRAIGHT
 HPOESTR     = [50, 49, 37, 35, 34]
@@ -171,7 +183,7 @@ HPW         = [51, 39, 12,  2,  1]
 HPHW        = [51, 42, 12,  2,  1]
 LPW         = [14, 13, 12,  2,  0]
 LPHW        = [14, 13, 12,  3,  0]
-PTSTR = [HPOESTR, LPOESTR, HPBW, HPLBW, LPBW, LPLBW, HPW, HPHW, LPW, LPHW]
+PTSTR = [STRSTR, HPOESTR, LPOESTR, HPBW, HPLBW, LPBW, LPLBW, HPW, HPHW, LPW, LPHW]
 
 TPSORT = [PTSTRFL, PTFL, PTSTR]
 
@@ -186,10 +198,10 @@ FBWFL       = [51, 50, 49, 48, 34]
 FLBWFL      = [51, 49, 48, 47, 37]
 FKGSFL      = [50, 49, 47, 46, 35]
 FFGSFL      = [43, 42, 41, 39, 27]
-FWFL        = [42, 41, 40, 39, 30]
-FHWFL       = [43, 42, 41, 39, 27]
+FWFL        = [51, 41, 40, 39, 29]
+FHWFL       = [51, 42, 41, 40, 26]
 
-FSTRFL = [FHOESTRFL, LFHOESTRFL, FLOESTRFL, HFLOESTRFL,
+FSTRFL = [FSFSTR, FHOESTRFL, LFHOESTRFL, FLOESTRFL, HFLOESTRFL,
           FBWFL, FLBWFL, FKGSFL, FFGSFL, FWFL, FHWFL]
 
 ###STRFL
@@ -202,7 +214,7 @@ FGSFL       = [43, 42, 41, 39, 32]
 WFL         = [51, 41, 40, 39, 30]
 HWFL        = [51, 42, 41, 40, 31]
 
-DSTRFL = [HOESTRFL, LOESTRFL, BWFL, LBWFL, KGSFL, FGSFL, WFL, HWFL]
+DSTRFL = [SFSTR, HOESTRFL, LOESTRFL, BWFL, LBWFL, KGSFL, FGSFL, WFL, HWFL]
 
 ###STR and FL
 HOEFL       = [50, 49, 48, 45, 34]
@@ -214,7 +226,7 @@ LBWPFL      = [49, 48, 47, 44, 38]
 WPFL        = [44, 41, 40, 39, 38]
 HWPFL       = [51, 44, 42, 41, 27]
 
-DSTRPFL = [HOEFL, HOELFL, LOEFL, LOEHFL, BWPFL, LBWPFL, WPFL, HWPFL]
+DSTRPFL = [SPFSTR, HOEFL, HOELFL, LOEFL, LOEHFL, BWPFL, LBWPFL, WPFL, HWPFL]
 
 ###FLUSH
 HFL = [51, 50, 49, 46, 32]
@@ -222,7 +234,7 @@ KFL = [50, 49, 46, 45, 38]
 CFL = [45, 44, 41, 40, 26]
 BFL = [44, 41, 40, 39, 32]
 
-DFLUSH = [HFL, KFL, CFL, BFL]
+DFLUSH = [FLSTR, HFL, KFL, CFL, BFL]
 
 ###STRAIGHT
 HSTR    = [50, 49, 48, 34, 31]
@@ -232,6 +244,6 @@ LBW     = [49, 48, 47, 38, 31]
 WHEEL   = [51, 44, 28, 27, 26]
 HWHEEL  = [42, 41, 40, 38, 32]
 
-DSTR = [HSTR, LSTR, BW, LBW, WHEEL, HWHEEL]
+DSTR = [STRSTR, HSTR, LSTR, BW, LBW, WHEEL, HWHEEL]
 
 TDSORT = [DSTRFL, DSTRPFL, DFLUSH, DSTR]
