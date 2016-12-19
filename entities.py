@@ -492,7 +492,7 @@ class Dealer(PokerPerson):
     def showDown(self, players, potsize):
         """Awards the pot to the player with the best hand."""
 
-        bestHand = self.dealHand(NUTLOW)
+        bestHand = self._createHand(NUTLOW)
         cmpVal = 0
         winners = list()
 
@@ -739,10 +739,10 @@ class Player(PokerPerson):
         firstRank = self._hand[0].getValue()
 
         if self._pattern > FULL_HOUSE:
-            self._rating = KINGS_FULL
+            self._rating = K_FULL
         elif self._pattern == FULL_HOUSE:
             if firstRank >= 13:
-                self._rating = KINGS_FULL
+                self._rating = K_FULL
             elif firstRank >= 10:
                 self._rating = T_FULL
             elif firstRank >= 6:
@@ -787,10 +787,10 @@ class Player(PokerPerson):
         elif self._pattern >= PBWDRAW:
             pair = P_A + P_DELTA * (14 - firstRank)
             if self._pattern == PSTRFLDRAW:
-                self._rating = max(pair, SFDRAW)
+                self._rating = min(pair, SFDRAW)
             elif self._pattern == PFLDRAW or self._pattern == PSTRDRAW:
-                self._rating = max(pair, SEQDRAW)
-            elif self._rating == PBRDRAW:
+                self._rating = min(pair, SEQDRAW)
+            elif self._rating == PBWDRAW:
                 self._rating = pair #The pair will always be worth more than the broadway draw
             else:
                 self._rating = TRASH #This should never happen, since there should not be any other categories within this elseif
@@ -971,7 +971,7 @@ class Table(object):
                 self._players[(target + i) % SEATS].setHand(dealer.dealHand())
                 self._players[(target + i) % SEATS].rateHand()
                 print("Player #" + str(i) + " has:")
-                self._players[(target + i) % SEATS].printHandInfo()
+                #self._players[(target + i) % SEATS].printHandInfo()
 
             #Round of betting
             wagers = 2  #Matching the big blind
