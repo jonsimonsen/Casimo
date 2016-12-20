@@ -4,9 +4,7 @@ from loose import *
 from regular import *
 from tight import *
 
-#Global constants
-HANDS_PER_ROUND = 100   #Number of hands played in each round (per table)
-ROUNDS = 10             #Number of rounds to run the simulator
+print(GREETING)
 
 #initialising variables
 playerTypes = [LOOSE, REGULAR, TIGHT]

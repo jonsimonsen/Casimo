@@ -2,6 +2,13 @@
 
 #Global constants
 
+##General
+HANDS_PER_ROUND = 20    #Number of hands played in each round (per table)
+ROUNDS = 10             #Number of rounds to run the simulator
+HEADING = 'Welcome to Casimo, the casino simulator.\n\n'
+TAILING = 'It will simulate ' + str(ROUNDS) + ' rounds of poker hands with ' + str(HANDS_PER_ROUND) + ' hands per round.\n'
+GREETING = HEADING + TAILING
+
 ##Dealing
 
 ###hands/cards

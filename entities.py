@@ -96,7 +96,7 @@ class PokerPerson(object):
 
         print("Please make sure to implement a processHand method for the descendant of this ADT.")
 
-    def sortHand(self, hand, drawing = False):
+    def sortHand(self, hand, drawing = False, testMode = False):
         """Sorts the hand. Prints what hand it is. Then returns the sorted hand."""
 
         cards = list(hand)          #cards to be sorted/classified
@@ -213,9 +213,10 @@ class PokerPerson(object):
             else:
                 hiDraw = cards[1]
 
-        #Printing each card in the hand. Might want to use an argument to determine if this is done.
-        for card in cards:
-            card.printCard()
+        #Print each card in the hand if in test mode.
+        if testMode:
+            for card in cards:
+                card.printCard()
 
         self.printHandInfo(pattern, cards[0], hiDraw)
         return (cards, pattern)
