@@ -2,6 +2,7 @@
 Casino simulator (intending to make a simulator for 5-card draw poker). <br />
 Version 0.5 has been finalized. See a summary of its features under "History" below. <br />
 Since it has been difficult to make a reasonably competent AI for the players, further versions might not be available in the near future. <br />
+UPDATE: Version 0.6 is available. Note that players do not play reasonable in 0.6, so go back to 0.5 if decent play is desired.
 
 # Implementation
 The simulator is being programmed in Python
@@ -13,14 +14,16 @@ From version 0.2, the output tends to be too large for a terminal. Try writing t
   python casimo.py > filename.txt <br />
 Make sure that the path you choose for the output does not cause overwriting of important files. <br />
 Sample output can be found in the file output.txt <br />
-Version 0.3 contains code for a dealer, and can be run by typing: <br />
-  python one_hand.py <br />
+Version 0.6 contains code for testing a variety of hand types, and can be run by typing: <br />
+  python test_hand.py <br />
   
 # Testing
 v0.4: The largest test was run with these parameters: 50k hands/3 different stakes/32 tables per limit/GROWRATE of 1 <br />
 It seems like the tight players are superior (all 5 highrollers and all players at the highest limit were tight). <br />
 The loose players are getting pummeled. Only 4 loose players remained at the end. <br />
 It's somewhat surprising that the regular players are not performing better. A tweak of the ranges should be considered. <br />
+
+v0.6: Contains tests to verify that a dealer and a player sorts and reads hands correctly (test_hand.py)
 
 # History
 v0.1: <br />
@@ -115,4 +118,11 @@ Summary: <br />
   -Players move up and down depending on their chip stack relative to global constants. <br />
   -The cashier takes care of players moving between stakes and leaving. Players that have left are kept in a list that can be used for statistical analysis. <br />
   -A dealer generates new hands and sorts them for the players. The dealer also distributes the pot between players at showdown. <br />
-  
+
+v0.6: <br />
+  -Refactored dealers and players so both inherit for a base PokerPerson class. <br />
+  -Players also sorts their hands (in addition to the dealer). This is done according to player preferences. <br />
+  -A new basis for detailed player strategy has been made. The player actions have not been adjusted to this yet, resulting in extremely tight play until a fix is ready. <br />
+  -New tests have been made to verify that dealers and players sort and categorise hands correctly. <br />
+  -Did some additional cleanup/refactoring and removed some obsolete files/code. <br />
+  -Some slight upgrades have been made to the output of the simulator, but further adjustments should be made because of changes due to some of the refactored code. <br />
