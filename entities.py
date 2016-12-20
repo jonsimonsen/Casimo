@@ -1,6 +1,6 @@
 #Other libs
 from random import randint
-from conftemp import *
+from config import *
 
 class Card(object):
     """A playing card. Has a suit and a value with ranges that should be defined in config.py"""

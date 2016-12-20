@@ -1,6 +1,6 @@
 #Imports
 from entities import *
-from conftest import *
+from config import *
 
 #Initialise variables
 cardRack = Dealer()
