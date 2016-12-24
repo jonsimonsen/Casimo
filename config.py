@@ -78,31 +78,56 @@ BUSTO       = 3
 
 ###hand rankings
 
-K_FULL      = 1
-T_FULL      = 2
-F_FULL      = 3
-A_FLUSH     = 4
-J_FLUSH     = 6
-A_STRAIGHT  = 8
-T_STRAIGHT  = 12
-E_STRAIGHT  = 16
-TRIP_A      = 24
-TRIP_Q      = 32
-TRIP_I      = 48
-TRIP_B      = 64
-A_UP        = 96
-Q_UP        = 128
-C_UP        = 192
-P_A         = 256
-P_DELTA     = 40
-SFDRAW      = 420
-SEQDRAW     = 480
-BRDRAW      = 700
-AK_HI       = 780
-AQ_HI       = 830
-AJ_HI       = 870
-AT_HI       = 940   #Includes KQ-hi
+J_FULL      = 1
+D_FULL      = 2
+AQ_FLUSH    = 3
+KT_FLUSH    = 4
+JG_FLUSH    = 5
+K_STRAIGHT  = 6
+J_STRAIGHT  = 7
+T_STRAIGHT  = 8
+H_STRAIGHT  = 9
+F_STRAIGHT  = 10
+TRIP_A      = 11
+TRIP_K      = 14
+TRIP_Q      = 16
+TRIP_J      = 18
+TRIP_T      = 21
+TRIP_I      = 23
+TRIP_H      = 26
+TRIP_G      = 28
+TRIP_F      = 30
+TRIP_E      = 33
+TRIP_D      = 35
+TRIP_C      = 37
+TRIP_B      = 40
+A_UP        = 42
+K_UP        = 53
+Q_UP        = 62
+J_UP        = 71
+T_UP        = 79
+I_UP        = 86
+H_UP        = 92
+G_UP        = 97
+F_UP        = 102
+E_UP        = 105
+D_UP        = 108
+C_UP        = 110
+P_A         = 111
+P_DELTA     = 47
+SFDRAW      = 320
+SEQDRAW     = 370
+BRDRAW      = 670
+AK_HI       = 721
+AQ_HI       = 814
+AJ_HI       = 882
+KQ_HI       = 929
+AT_HI       = 997
 TRASH       = 999
+
+TRIP_X = (TRIP_B, TRIP_C, TRIP_D, TRIP_E, TRIP_F, TRIP_G, TRIP_H, TRIP_I,
+          TRIP_T, TRIP_J, TRIP_Q, TRIP_K, TRIP_A)
+X_UP = (C_UP, D_UP, E_UP, F_UP, G_UP, H_UP, I_UP, T_UP, J_UP, Q_UP, K_UP, A_UP)
 
 ##Managers
 

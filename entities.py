@@ -740,46 +740,49 @@ class Player(PokerPerson):
         firstRank = self._hand[0].getValue()
 
         if self._pattern > FULL_HOUSE:
-            self._rating = K_FULL
+            self._rating = J_FULL
         elif self._pattern == FULL_HOUSE:
-            if firstRank >= 13:
-                self._rating = K_FULL
-            elif firstRank >= 10:
-                self._rating = T_FULL
-            elif firstRank >= 6:
-                self._rating = F_FULL
+            if firstRank >= 11:
+                self._rating = J_FULL
+            elif firstRank >= 4:
+                self._rating = D_FULL
             else:
-                self._rating = A_FLUSH
+                self._rating = AQ_FLUSH
         elif self._pattern == FLUSH:
+            secondRank = self._hand[1].getValue()
             if firstRank >= 14:
-                self._rating = A_FLUSH
-            elif firstRank >= 11:
-                self._rating = J_FLUSH
+                if secondRank >= 12:
+                    self._rating = AQ_FLUSH
+                else:
+                    self._rating = KT_FLUSH
+            elif firstRank == 13:
+                if secondRank >= 10:
+                    self_rating = KT_FLUSH
+                else:
+                    self._rating = JG_FLUSH
+            elif firstRank == 12:
+                self._rating = JG_FLUSH
+            elif firstRank == 11 and secondRank >= 7:
+                self._rating = JG_FLUSH
             else:
-                self._rating = A_STRAIGHT
+                self._rating = K_STRAIGHT
         elif self._pattern == STRAIGHT:
-            if firstRank >= 14:
-                self._rating = A_STRAIGHT
+            if firstRank >= 13:
+                self._rating = K_STRAIGHT
+            elif firstRank >= 11:
+                self._rating = J_STRAIGHT
             elif firstRank >= 10:
                 self._rating = T_STRAIGHT
+            elif firstRank >= 8:
+                self._rating = H_STRAIGHT
+            elif firstRank >= 6:
+                self._rating = F_STRAIGHT
             else:
-                self._rating = E_STRAIGHT
+                self._rating = TRIP_A
         elif self._pattern == TRIPS:
-            if firstRank >= 14:
-                self._rating == TRIP_A
-            elif firstRank >= 12:
-                self._rating == TRIP_Q
-            elif firstRank >= 9:
-                self._rating == TRIP_I
-            else:
-                self._rating == TRIP_B
+            self._rating == TRIP_X[firstRank - 2]
         elif self._pattern == TWO_PAIR:
-            if firstRank >= 14:
-                self._rating = A_UP
-            elif firstRank >= 12:
-                self._rating = Q_UP
-            else:
-                self._rating = C_UP
+            self._rating = X_UP[firstRank - 3]
         elif self._pattern == PAIR:
             if firstRank >= 14:
                 self._rating = P_A
@@ -818,7 +821,7 @@ class Player(PokerPerson):
             else:
                 self._rating = TRASH
         elif firstRank == 13 and self._hand[1].getValue() == 12:
-            self._rating = AT_HI
+            self._rating = KQ_HI
         else:
             self._rating = TRASH
 
