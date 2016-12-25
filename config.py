@@ -75,6 +75,7 @@ SEATED      = 0
 MOVE_UP     = 1
 MOVE_DOWN   = 2
 BUSTO       = 3
+PD_DELTA    = 50 #For use in formula in actPre
 
 ###hand rankings
 
@@ -117,7 +118,7 @@ P_A         = 111
 P_DELTA     = 47
 SFDRAW      = 320
 SEQDRAW     = 370
-BRDRAW      = 670
+BRDRAW      = 720
 AK_HI       = 721
 AQ_HI       = 814
 AJ_HI       = 882

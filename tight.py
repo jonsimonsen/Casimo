@@ -1,18 +1,5 @@
 #Global constants for a tight player
 
-##Before draw
-
-TIG_B_R     = 19    #Raise range
-TIG_B_RR    = 5     #Reraise range
-TIG_B_CAP   = 2     #Capping range
-
-TIG_B_CR    = 10    #Calling a single raise
-TIG_B_CDR   = 3     #Calling a double raise
-TIG_B_CCAP  = 1     #Calling a triple raise
-
-TIGHT = (TIG_B_R, TIG_B_RR, TIG_B_CAP,
-         TIG_B_CR, TIG_B_CDR, TIG_B_CCAP)
-
 ##After draw
 
 TIG_A_B     = 3     #Betting range
@@ -24,3 +11,11 @@ TIG_A_CB    = 10    #Calling a single bet
 TIG_A_CR    = 3     #Calling a double raise
 TIG_A_CRR   = 1     #Calling a triple raise
 TIG_A_CCAP  = 1     #Calling a capped pot
+
+##Predraw
+
+TIG_BRAN    = 280
+TIG_BCFAC   = 0.24
+TIG_BRFAC   = 4
+TIG_BFAC    = 2.5
+TIG_PRE = (TIG_BRAN, TIG_BCFAC, TIG_BRFAC, TIG_BFAC)

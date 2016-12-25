@@ -825,14 +825,15 @@ class Player(PokerPerson):
         else:
             self._rating = TRASH
 
-    def actPre(self, wagers):
+    def actPre(self, wagers, pos):
         """Decide on waging before the draw. Dependent on exact ordering of the player's strat list."""
 
         waged = self.getWager()
         rating = self.getRating()
 
         if(wagers == 2): #No raise yet
-            if rating > self._strat[0]:     #Since limping has not been implemented, this is the least aggressive strat parameter
+            cutoff = self._strat[0] + PD_DELTA * pos^2
+            if rating > cutoff:             #Since limping has not been implemented, this is the least aggressive strat parameter
                 if waged < 2:               #Unless in big blind, fold and concede chips to the pot
                     self.chipUp(-waged)
             else:
@@ -988,7 +989,7 @@ class Table(object):
                     ind += 1    #Player is out, check next seat
                 else:
                     #Ask player for an action (return value determines if it's a raise, call/check or fold)
-                    newWage = self._players[(target + ind) % SEATS].actPre(wagers)
+                    newWage = self._players[(target + ind) % SEATS].actPre(wagers, ind % SEATS)
 
                     if(newWage == wagers + 2):
                         wagers = newWage    #The player raised
