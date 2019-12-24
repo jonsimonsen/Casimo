@@ -16,7 +16,7 @@ Make sure that the path you choose for the output does not cause overwriting of 
 Sample output can be found in the file output.txt <br />
 Version 0.6 contains code for testing a variety of hand types, and can be run by typing: <br />
   python test_hand.py <br />
-  
+
 # Testing
 v0.4: The largest test was run with these parameters: 50k hands/3 different stakes/32 tables per limit/GROWRATE of 1 <br />
 It seems like the tight players are superior (all 5 highrollers and all players at the highest limit were tight). <br />
@@ -36,7 +36,7 @@ v0.1: <br />
 
 v0.15: <br />
   -Added a cashier class to give players cash when they leave and keep a list of these players. <br />
-  -The stake manager now removes busted from a table and directs them to the cashier. <br />
+  -The stake manager now removes busted players from a table and directs them to the cashier. <br />
   -Tables that are not full are kept in a separate list from full tables. <br />
   -The simulator runs until there are no full tables left, and makes reports when reaching that point. <br />
 
@@ -49,14 +49,14 @@ v0.2: <br />
 
 Minor issues: <br />
   -Fixed logical errors in conversion between chips and cash that was present in a temporary version in a side branch. <br />
-  
+
 v0.25: <br />
   -Added a recruiter class. So far, it only contains a few methods. It should eventually be able to produce different kinds of players. <br />
   -Made some cleanup and tested at a bigger scale (3 stakes, higher number of tables, more hands played). <br /> <br />
-  
+
 Minor issues: <br />
   -Fixed erroneous global constant that caused busted players to sometimes have a negative amount of cash (from side branch). <br />
-  
+
 v0.29: <br />
   -Preparation for v0.3. <br />
   -Files dealer.py and one_hand.py. At the moment, they're separate from the rest of the files. <br />
@@ -70,16 +70,16 @@ v0.3: <br />
   -Finished implementing the functionality for sorting and categorising hands. <br />
   -All global constants for dealers/cards are now found in config.py (Planning to move stuff here from the other classes too). <br />
   -Functionality for testing/dealing specific hands are implemented. Not intended for use by unsophisticated users. <br />
-  
+
 Minor issues: <br />
   -Should improve message passing between some of the functions. <br />
   -Does not identify drawing hands yet. Some hands could belong in several categories (pair with draw, straight draw and flush draw etc.). <br />
-  
+
 v0.31: <br />
   -Added the ability to return sorted hands from readHand to its caller, and from dealHand to its caller (issue 1 in v0.3). <br />
   -Decided that the dealer should not be concerned with drawing (issue 2). Should probably handle this in the Player class eventually. <br />
   -Final version before trying to combine dealers with tables/managers/players. <br />
-  
+
 v0.32: <br />
   -Imports the dealer class into entities.py <br />
   -Moved global constants to config.py <br />
@@ -94,23 +94,23 @@ v0.35: <br />
 Issues/shortcomings: <br />
   -There were several bugs in the first attempts. An example was related to popping from a list while in the process of iterating over it. <br />
   -A lack of a well planned design before starting on this version has led to some messy code. Some refactoring should be looked into soon. <br />
-  -Doing a larger scale test, and comparing the successfulness of each strat should be added soon. <br />
+  -Doing a larger scale test, and comparing each strat should be added soon. <br />
 
 v.0.4: <br />
   -The code has been partly refactored. An example is making actual getter- and setter-functions. More can be done here. <br />
-  -It was looked into using heritage for some of the classes. None of the classes has enough similarities yet to make this a high priority. <br />
+  -Using heritage for some of the classes was considered. None of the classes has enough similarities yet to make this a high priority. <br />
   -Some larger tests have been run (see the paragraph about testing). <br />
-  
+
 v0.5: <br />
   -Further refactoring, including more getters/setters and removal of some duplication. <br />
-  -A decent amount of testing has been done, and the most apparent shortcommings have been fixed. Therefore, this is merged into the master branch. <br />
-  
+  -A decent amount of testing has been done, and the most apparent shortcomings have been fixed. Therefore, this is merged into the master branch. <br />
+
 Issues/potential improvements: <br />
   -The simulator does not handle drawing cards, so currently only has one betting round. <br />
-  -The player types that are available could be tweaked somewhat. An example is that the regulars seems to play slightly to loose to be able to reach high limits. <br />
+  -The player types that are available could be tweaked somewhat. An example is that the regulars seems to play slightly too loose to be able to reach high limits. <br />
   -Some values that are now manipulated directly in functions, should probably rely on setter methods instead. <br />
   -Large scale tests suggest that the code needs to be more efficient to be able to simulate a large number of hands in an acceptable amount of time. <br />
-  
+
 Summary: <br />
   -Supports multiple tables at different stakes. New players start with a reasonable stack at the lowest stakes. <br />
   -A recruiter class generates the new players by randomly picking a strategy for them (loose/regular or tight). <br />
@@ -120,9 +120,14 @@ Summary: <br />
   -A dealer generates new hands and sorts them for the players. The dealer also distributes the pot between players at showdown. <br />
 
 v0.6: <br />
-  -Refactored dealers and players so both inherit for a base PokerPerson class. <br />
-  -Players also sorts their hands (in addition to the dealer). This is done according to player preferences. <br />
+  -Refactored dealers and players so both inherit from a base PokerPerson class. <br />
+  -Players also sort their hands (in addition to the dealer). This is done according to player preferences. <br />
   -A new basis for detailed player strategy has been made. The player actions have not been adjusted to this yet, resulting in extremely tight play until a fix is ready. <br />
-  -New tests have been made to verify that dealers and players sort and categorise hands correctly. <br />
+  -New tests have been made to verify that dealers and players sort and categorize hands correctly. <br />
   -Did some additional cleanup/refactoring and removed some obsolete files/code. <br />
   -Some slight upgrades have been made to the output of the simulator, but further adjustments should be made because of changes due to some of the refactored code. <br />
+
+v0.7: <br />
+  -Fixed typos and poor wording in this README. <br />
+  -Planning to implement a new basis for players that is hopefully easier to implement. <br />
+  
