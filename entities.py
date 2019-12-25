@@ -155,7 +155,7 @@ class PokerPerson(object):
             #Order a wheel (5-high straight) correctly
             if cards[0].getValue() == 14 and cards[1].getValue() == 5:
                 cards.append(cards.pop(0))
-                
+
             #Check for straights and flushes
             pattern = self.findSequence(cards, drawing)
         elif(pattern == PAIR) and drawing:
@@ -230,7 +230,7 @@ class PokerPerson(object):
         If drawing = False, the hand must not contain any duplicate ranks (pairs, trips, quads).
         If drawing = True, the hand may contain one pair but no other duplicate ranks.
         The method does not test that the provided hand follows these rules, but the return value can not be trusted if the rules are not followed.
-        
+
         """
 
         suitCount = sum(card.getSuit() == hand[0].getSuit() for card in hand) #Number of cards having the same suit as the first card
@@ -256,7 +256,7 @@ class PokerPerson(object):
                 flushing = True
             else:
                 flushing = False
-            
+
             #If paired, test the last four cards for straight/flush draws (else test all five cards)
             if firstRank == hand[1].getValue():
                 thirdRank = hand[2].getValue()
@@ -302,7 +302,7 @@ class PokerPerson(object):
             else:
                 #Unpaired hand...
                 fourthRank = hand[3].getValue()
-                
+
                 #Open ended?
                 if hand[1].getValue() - hand[4].getValue() == 3:
                     if flushing:
@@ -351,7 +351,7 @@ class PokerPerson(object):
                         return FLDRAW
                     else:
                         return UNFL
-                
+
         return HICARD
 
     def printHandInfo(self, category, firstCard, firstDraw):
@@ -378,7 +378,7 @@ class PokerPerson(object):
                 hiPair = True #The expression in the parantheses are to avoid that wheel draws are considered ace-high.
             else:
                 hiPair = False
-                
+
             if category == PBWDRAW:
                 msg += " with a broadway straight draw."
             elif category == PSTRDRAW:
@@ -458,7 +458,7 @@ class Dealer(PokerPerson):
     def resetDeck(self):
         """Reassemble the deck by making _deck a copy of _cards."""
 
-        #Copy the dummy deck     
+        #Copy the dummy deck
         self._deck = list(self._cards)
 
     def dealHand(self):
@@ -509,7 +509,7 @@ class Dealer(PokerPerson):
                 winners.append(player)
 
         #print("winners: " + str(len(winners)) + "\n")
-        
+
         winnings = potsize // len(winners)
         rest = potsize % len(winners)
 
@@ -560,7 +560,7 @@ class Dealer(PokerPerson):
             return NO_HAND
         else:
             return self.findSequence(hand)
-         
+
     def _printCards(self):
         """Print the cards of the entire deck (for testing)"""
 
@@ -585,7 +585,7 @@ class Dealer(PokerPerson):
 
         #Reset the deck to make sure that the intended cards are drawn
         self.resetDeck()
-            
+
         for ind in template:
             cards.append(self._deck.pop(ind))
 
@@ -806,7 +806,7 @@ class Player(PokerPerson):
                 self._rating = TRASH #This should never happen, since there should not be any other categories within this elseif
         elif firstRank == 14:
             secondRank = self._hand[1].getValue()
-            
+
             if secondRank == 13:
                 self._rating = AK_HI
             elif secondRank == 12:
@@ -867,11 +867,11 @@ class Player(PokerPerson):
 class Table(object):
     """A poker table.
 
-        _player: A list of the players that are seated here
+        _players: A list of the players that are seated here
         _pot: The amount of chips that have been collected for the winner(s) of the current round.
         _button: The index of the player that has the dealer button at the table.
         _rounds: The number of rounds/hands that have been played at the table.
-        
+
     """
 
     def __init__(self):
@@ -890,7 +890,7 @@ class Table(object):
         """Add chips to _pot.
 
             amount: The number of chips to add
-        
+
         """
         self._pot += amount
 
@@ -921,7 +921,7 @@ class Table(object):
         If a negative position is given, the player is seated in the position where the big blind will be posted.
         The status of the player will be set to SEATED.
         There is currently no error checking for trying to seat a player at an invalid position or a full table.
-        
+
         """
 
         if position < 0:
@@ -940,7 +940,7 @@ class Table(object):
 
         returns: The player that is about to post the big blind if that player doesn't meet the requirements for playing at the table.
         Otherwise, it returns None.
-        
+
         Cash isn't really used at the table, but the method needs to know if the table is at the lowest stakes available.
 """
 
@@ -967,7 +967,7 @@ class Table(object):
 
             #Deal hands
             target = (target + 1) % SEATS
-            
+
             for i in range(SEATS):
                 self._players[(target + i) % SEATS].setHand(dealer.dealHand())
                 self._players[(target + i) % SEATS].rateHand()
@@ -993,7 +993,7 @@ class Table(object):
                         #The player didn't contribute the correct amount to stay in the pot (folded)
                         self.addToPot(newWage)
                         self._players[(target + ind) % SEATS].setWager(0)
-                        
+
                     ind += 1
 
             #Award the pot to the player with the best hand
@@ -1089,11 +1089,11 @@ class Manager(object):
 
     def resetDowns(self):
         """Make sure that _downList is empty."""
-        self._downList = list()        
+        self._downList = list()
 
     def fetchPlayers(self, n = 1):
         """Fills the waitlist with n players"""
-        
+
         self._waitList.extend(self._recruiter.findPlayers(n))
 
     def startTables(self):
@@ -1185,7 +1185,7 @@ class Manager(object):
 
         mainhead = "Report for " + str(self.getStake()) + " unit stakes after " + str(self.getRounds()) + " hands played.\n"
         print(mainhead)
-        
+
         for i in range(len(self._tables)):
             header = "Table #" + str(i) + " after " + str(self._tables[i].getRounds()) + " hands.\n"
             print(header)
