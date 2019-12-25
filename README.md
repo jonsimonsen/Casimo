@@ -13,7 +13,7 @@ Run from terminal by navigating to the folder containing the py files and typing
 From version 0.2, the output tends to be too large for a terminal. Try writing to a file by using the syntax <br />
   python casimo.py > filename.txt <br />
 Make sure that the path you choose for the output does not cause overwriting of important files. <br />
-Sample output can be found in the file output.txt <br />
+Sample output can no longer be found in the file output.txt.  <br />
 Version 0.6 contains code for testing a variety of hand types, and can be run by typing: <br />
   python test_hand.py <br />
 
@@ -130,4 +130,3 @@ v0.6: <br />
 v0.7: <br />
   -Fixed typos and poor wording in this README. <br />
   -Planning to implement a new basis for players that is hopefully easier to implement. <br />
-  

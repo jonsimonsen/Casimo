@@ -601,7 +601,7 @@ class Player(PokerPerson):
         self._chips = balance       #Default should be one buy-in at the smallest stakes unless something else is given
         self._cash = 0              #Cash that is not converted to chips (if moving up, the remainder of cash that cannot be used to buy new chips end up here)
         self._wager = 0             #Chips that is on the table, but is not yet in the pot
-        self._type = -1             #0 = loose, 1 = regular, 2 = tight (maybe best to just include this into the strat-list)
+        self._type = ''
         self._strat = list()        #To hold a list that determines the strategy of the player
         self._hand = list()
         self._sorted = False        #Should only be true if processHand() has been called since last time the player was dealt something.
@@ -650,20 +650,16 @@ class Player(PokerPerson):
     def getType(self):
         """Return a string saying what type of player this is."""
 
-        if(self._type == 0):
-            return " loose "
-        elif(self._type == 1):
-            return "regular"
-        elif(self._type == 2):
-            return " tight "
+        if len(self._type) == 0:
+            return 'unknown'
         else:
-            return "unknown"
+            return self._type
 
-    def setStrat(self, cat, strat):
+    def setStrat(self):
         """Initilize player type and strat according to the given parameters"""
 
-        self._type = cat
-        self._strat = strat
+
+        self._strat = ?
 
     def getHand(self):
         """Return the player's hand"""
@@ -728,7 +724,7 @@ class Player(PokerPerson):
         if self._sorted:
             return None #The hand is already sorted
 
-        cards = self.sortHand(hand, True)
+        cards = self.sortHand(hand, False)
 
         self._pattern = cards[1]
         self._sorted = True

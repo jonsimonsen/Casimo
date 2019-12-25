@@ -7,7 +7,7 @@ from tight import *
 print(GREETING)
 
 #initialising variables
-playerTypes = [LOOSE, REGULAR, TIGHT]
+playerTypes = ['maniac', 'loose', 'regular', 'tight', 'nit']
 moneyBags = Cashier()
 sheepDog = Recruiter(playerTypes)
 cardRack = Dealer()
@@ -22,5 +22,5 @@ for i in range(ROUNDS):
     for j in range(HANDS_PER_ROUND):
         boss.startHand()
     boss.makeReport()
-    
+
 moneyBags.makeReport()
