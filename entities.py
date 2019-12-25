@@ -595,14 +595,14 @@ class Dealer(PokerPerson):
 class Player(PokerPerson):
     """A poker player"""
 
-    def __init__(self, balance = MIN_STAKE * BUY_IN):
+    def __init__(self, type = '', balance = MIN_STAKE * BUY_IN):
         """Setting up variables for the player."""
 
         self._chips = balance       #Default should be one buy-in at the smallest stakes unless something else is given
         self._cash = 0              #Cash that is not converted to chips (if moving up, the remainder of cash that cannot be used to buy new chips end up here)
         self._wager = 0             #Chips that is on the table, but is not yet in the pot
-        self._type = ''
-        self._strat = list()        #To hold a list that determines the strategy of the player
+        self._type = type
+        self._strat = self.setStrat()   #To hold a list that determines the strategy of the player
         self._hand = list()
         self._sorted = False        #Should only be true if processHand() has been called since last time the player was dealt something.
         self._pattern = -1          #Category of hand held (see config.py for the range)
@@ -656,10 +656,15 @@ class Player(PokerPerson):
             return self._type
 
     def setStrat(self):
-        """Initilize player type and strat according to the given parameters"""
+        """Initilize player strat according to the file for its player type"""
 
+        if len(self._type) == 0:
+            print('Error: Undefined player type has no strat\n')
+            return
 
-        self._strat = ?
+        command = 'from ' + self._type + ' import STRAT'
+        exec(command)
+        self._strat = STRAT
 
     def getHand(self):
         """Return the player's hand"""
@@ -1263,9 +1268,8 @@ class Recruiter(object):
         recruits = list()
 
         for i in range(n):
-            newFace = Player()
             newType = randint(0, len(self._playerTypes) - 1)
-            newFace.setStrat(newType, self._playerTypes[newType])
+            newFace = Player(self._playerTypes[newType])
             recruits.append(newFace)
 
         return recruits

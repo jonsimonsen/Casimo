@@ -29,3 +29,5 @@ LOS_BASE = 30       #Minimum raising hand from first position
 LOS_FBOOST = 20     #Percentwise boost to minimum requirements per fold
 LOS_CLIMIT = 5      #Penalty to base for calling or reraising a raiser
 #(fold the worst 5 % of hands that are inside the raiser's assumed range)
+
+STRAT = [LOS_BASE, LOS_FBOOST, LOS_CLIMIT]

@@ -26,6 +26,8 @@
 # TIG_A_CCAP  = 1     #Calling a capped pot
 
 TIG_BASE = 12       #Minimum raising hand from first position
-LOS_FBOOST = 33     #Percentwise boost to minimum requirements per fold
-LOS_CLIMIT = 12.5      #Penalty to base for calling or reraising a raiser
+TIG_FBOOST = 33     #Percentwise boost to minimum requirements per fold
+TIG_CLIMIT = 12.5      #Penalty to base for calling or reraising a raiser
 #(fold the worst 12.5 % of hands that are inside the raiser's assumed range)
+
+STRAT = [TIG_BASE, TIG_FBOOST, TIG_CLIMIT]

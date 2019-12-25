@@ -36,3 +36,5 @@ REG_BASE = 20       #Minimum raising hand from first position
 REG_FBOOST = 25     #Percentwise boost to minimum requirements per fold
 REG_CLIMIT = 10      #Penalty to base for calling or reraising a raiser
 #(fold the worst 10 % of hands that are inside the raiser's assumed range)
+
+STRAT = [REG_BASE, REG_FBOOST, REG_CLIMIT]
