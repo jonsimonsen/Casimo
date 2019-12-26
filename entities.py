@@ -740,88 +740,92 @@ class Player(PokerPerson):
 
         firstRank = self._hand[0].getValue()
 
-        if self._pattern > FULL_HOUSE:
-            self._rating = K_FULL
-        elif self._pattern == FULL_HOUSE:
-            if firstRank >= 13:
-                self._rating = K_FULL
-            elif firstRank >= 10:
-                self._rating = T_FULL
-            elif firstRank >= 6:
-                self._rating = F_FULL
-            else:
-                self._rating = A_FLUSH
-        elif self._pattern == FLUSH:
-            if firstRank >= 14:
-                self._rating = A_FLUSH
-            elif firstRank >= 11:
-                self._rating = J_FLUSH
-            else:
-                self._rating = A_STRAIGHT
-        elif self._pattern == STRAIGHT:
-            if firstRank >= 14:
-                self._rating = A_STRAIGHT
-            elif firstRank >= 10:
-                self._rating = T_STRAIGHT
-            else:
-                self._rating = E_STRAIGHT
+        if self._pattern > TRIPS:
+            self._rating = TRIP_K
         elif self._pattern == TRIPS:
-            if firstRank >= 14:
-                self._rating == TRIP_A
-            elif firstRank >= 12:
-                self._rating == TRIP_Q
-            elif firstRank >= 9:
-                self._rating == TRIP_I
+            if firstRank >= 13:
+                self._rating = TRIP_K
+            elif firstRank >= 7:
+                self._rating = TRIP_G
             else:
-                self._rating == TRIP_B
+                self._rating = A_UP
         elif self._pattern == TWO_PAIR:
             if firstRank >= 14:
                 self._rating = A_UP
-            elif firstRank >= 12:
-                self._rating = Q_UP
+            elif firstRank >= 13:
+                self._rating = K_UP
+            elif firstRank >= 11:
+                self._rating = J_UP
+            elif firstRank >= 9:
+                self._rating = I_UP
+            elif firstRank >= 7:
+                self._rating = G_UP
             else:
-                self._rating = C_UP
+                self._rating = ACES[0]
         elif self._pattern == PAIR:
-            if firstRank >= 14:
-                self._rating = P_A
-            else:
-                self._rating = P_A + P_DELTA * (14 - firstRank)
-        elif self._pattern >= PBWDRAW:
-            pair = P_A + P_DELTA * (14 - firstRank)
-            if self._pattern == PSTRFLDRAW:
-                self._rating = min(pair, SFDRAW)
-            elif self._pattern == PFLDRAW or self._pattern == PSTRDRAW:
-                self._rating = min(pair, SEQDRAW)
-            elif self._rating == PBWDRAW:
-                self._rating = pair #The pair will always be worth more than the broadway draw
-            else:
-                self._rating = TRASH #This should never happen, since there should not be any other categories within this elseif
-        elif self._pattern > HICARD:
-            if self._pattern == STRFLDRAW:
-                self._rating = SFDRAW
-            elif self._pattern == FLDRAW or self._pattern == STRDRAW:
-                self._rating = SEQDRAW
-            elif self._pattern == BWDRAW:
-                self._rating = BRDRAW
-            else:
-                self._rating = TRASH #This should never happen, since there should not be any other categories within this elseif
+            self._rating = PAIRS[firstRank][1]
+        # elif self._pattern >= PBWDRAW:
+        #     pair = P_A + P_DELTA * (14 - firstRank)
+        #     if self._pattern == PSTRFLDRAW:
+        #         self._rating = min(pair, SFDRAW)
+        #     elif self._pattern == PFLDRAW or self._pattern == PSTRDRAW:
+        #         self._rating = min(pair, SEQDRAW)
+        #     elif self._rating == PBWDRAW:
+        #         self._rating = pair #The pair will always be worth more than the broadway draw
+        #     else:
+        #         self._rating = TRASH #This should never happen, since there should not be any other categories within this elseif
+        # elif self._pattern > HICARD:
+        #     if self._pattern == STRFLDRAW:
+        #         self._rating = SFDRAW
+        #     elif self._pattern == FLDRAW or self._pattern == STRDRAW:
+        #         self._rating = SEQDRAW
+        #     elif self._pattern == BWDRAW:
+        #         self._rating = BRDRAW
+        #     else:
+        #         self._rating = TRASH #This should never happen, since there should not be any other categories within this elseif
+        ##Suggested cleanup: Do secondRank init in an else, and nest the cases inside
         elif firstRank == 14:
             secondRank = self._hand[1].getValue()
 
             if secondRank == 13:
-                self._rating = AK_HI
+                self._rating = AK_HI[1]
             elif secondRank == 12:
-                self._rating = AQ_HI
+                self._rating = AQ_HI[1]
             elif secondRank == 11:
-                self._rating = AJ_HI
+                self._rating = AJ_HI[1]
             elif secondRank == 10:
-                self._rating = AT_HI
+                self._rating = AT_HI[1]
             else:
-                self._rating = TRASH
-        elif firstRank == 13 and self._hand[1].getValue() == 12:
-            self._rating = AT_HI
+                self._rating = A_HI[1]
+        elif firstRank == 13:
+            secondRank = self._hand[1].getValue()
+
+            if secondRank == 12:
+                self._rating = KQ_HI[1]
+            elif secondRank == 11:
+                self._rating = KJ_HI[1]
+            elif secondRank == 10:
+                self._rating = KT_HI[1]
+            else:
+                self._rating = K_HI[1]
+        elif firstRank == 12:
+            secondRank = self._hand[1].getValue()
+
+            if secondRank == 11:
+                self._rating = QJ_HI[1]
+            elif secondRank == 10:
+                self._rating = QT_HI[1]
+            else:
+                self._rating = Q_HI[1]
+        elif firstRank == 11:
+            if self._hand[1].getValue() == 10:
+                self._rating = JT_HI[1]
+            else:
+                self._rating = J_HI[1]
+        elif firstRank == 10:
+            self._rating = T_HI[1]
         else:
-            self._rating = TRASH
+            self._rating = I_HI[1]
 
     def actPre(self, wagers):
         """Decide on waging before the draw. Dependent on exact ordering of the player's strat list."""
