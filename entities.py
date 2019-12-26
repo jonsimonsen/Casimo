@@ -83,10 +83,35 @@ class Card(object):
 
         print("\t" + self.strValue() + " of " + self.strSuit())
 
+class HandRange(object):
+    """A class for hand ranges and similar info about how a player has played a hand."""
+
+    def __init__(self, mean = 50, spread = 50):
+        """Initialization of the range"""
+        self._mean = mean
+        self._spread = spread
+        #might include measures of aggression/commitment if needed
+
+    def adjustMean(self, factor):
+        """Adjust mean by the factor"""
+        self._mean *= factor
+
+    def getMean(self):
+        """Getter for _mean"""
+        return self._mean
+
+    def adjustSpread(self, factor):
+        """Adjust spread by the factor"""
+        self._spread *= factor
+
+    def getSpread(self):
+        """Getter for _spread"""
+        return self._spread
+
 class PokerPerson(object):
     """An adt class for persons sitting at a poker table (players and dealer)."""
 
-    def __init(self):
+    def __init__(self):
         """Default initialization of the ADT."""
 
         print("Please don't try to initialize an object of this ADT.")
